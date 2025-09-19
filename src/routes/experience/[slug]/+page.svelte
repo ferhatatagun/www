@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { getAssetURL } from '$lib/data/assets';
 	import { title } from '@data/experience';
 	import { getTimeDiff } from '$lib/utils';
@@ -14,6 +13,7 @@
 	import Banner from '$lib/components/Banner/Banner.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+    import { siteOrigin } from '$lib/data/site';
 
 	export let data: { experience?: Experience };
 
@@ -21,6 +21,18 @@
 </script>
 
 <TabTitle title={computedTitle} />
+
+<svelte:head>
+    {#if data.experience}
+        <link rel="canonical" href={`${siteOrigin}/experience/${data.experience.slug}`} />
+        <meta name="description" content={data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${siteOrigin}/experience/${data.experience.slug}`} />
+        <meta property="og:title" content={computedTitle} />
+        <meta property="og:description" content={data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`} />
+        <meta property="og:image" content={getAssetURL(data.experience.logo)} />
+    {/if}
+</svelte:head>
 
 <div class="pb-10 overflow-x-hidden col flex-1">
 	{#if data.experience === undefined}
@@ -46,7 +58,11 @@
 					</div>
 					<div class="row-center flex-wrap text-[0.9em] text-[var(--tertiary-text)] m-b-2">
 						{#each data.experience.links as item}
-							<Chip href={item.to}>
+							<Chip
+								href={item.to}
+								target={item.label === 'GitHub' ? '_blank' : ''}
+								rel={item.label === 'GitHub' ? 'noopener noreferrer' : ''}
+							>
 								<div class="row-center gap-2">
 									<UIcon icon="i-carbon-link" />
 									<span>{item.label}</span>
@@ -58,7 +74,7 @@
 						{#each data.experience.skills as item}
 							<Chip
 								classes="inline-flex flex-row items-center justify-center"
-								href={`${base}/skills/${item.slug}`}
+								href={`/skills/${item.slug}`}
 							>
 								<CardLogo
 									src={getAssetURL(item.logo)}

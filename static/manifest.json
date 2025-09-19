@@ -1,0 +1,276 @@
+{
+	"id": "ferhatataguncom",
+	"name": "Ferhat Atagün",
+	"short_name": "ferhatatagun",
+	"description": "This is a ferhatataguncom app",
+	"scope": "/",
+	"start_url": "/",
+	"display": "standalone",
+	"display_override": ["window-controls-overlay"],
+	"theme_color": "#181818",
+	"background_color": "#FFFFFF",
+	"orientation": "any",
+	"prefer_related_applications": false,
+	"protocol_handlers": [
+		{
+			"protocol": "mailto",
+			"url": "/newEmail?to=%s"
+		}
+	],
+	"launch_handler": {
+		"client_mode": "focus-existing"
+	},
+	"icons": [
+		{
+			"src": "./imgs/favicons/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/favicons/favicon-32x32.png",
+			"sizes": "32x32",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/pwa/manifest-icon-192.maskable.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/pwa/manifest-icon-512.maskable.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"screenshots": [
+		{
+			"src": "./imgs/pwa/screenshots/main-screen.png",
+			"sizes": "2940x1598",
+			"type": "image/png"
+		},
+    {
+      "src": "./imgs/pwa/screenshots/skills-screen.png",
+      "sizes": "2940x1598",
+      "type": "image/png"
+    },
+		{
+			"src": "./imgs/pwa/screenshots/projects-screen.png",
+			"sizes": "2940x1598",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/pwa/screenshots/education-screen.png",
+			"sizes": "2940x1598",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/pwa/screenshots/experience-screen.png",
+			"sizes": "2940x1598",
+			"type": "image/png"
+		},
+		{
+			"src": "./imgs/pwa/screenshots/resume-screen.png",
+			"sizes": "2940x1598",
+			"type": "image/png"
+		}
+	],
+	"features": ["Cross Platform", "Fast", "Simple"],
+	"categories": ["social", "productivity", "utilities"],
+	"shortcuts": [
+		{
+			"name": "Open Main",
+			"short_name": "Main",
+			"description": "Open the Main page",
+			"url": "/",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Open Skills",
+			"short_name": "Skills",
+			"description": "Open the Skills page",
+			"url": "/skills",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Open Projects",
+			"short_name": "Projects",
+			"description": "Open the Projects page",
+			"url": "/projects",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Open Experience",
+			"short_name": "Experience",
+			"description": "Open the Experience page",
+			"url": "/experience",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Open Education",
+			"short_name": "Education",
+			"description": "Open the Education page",
+			"url": "/education",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		},
+		{
+			"name": "Open Resume",
+			"short_name": "Resume",
+			"description": "Open the Resume page",
+			"url": "/resume",
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "192x192"
+				}
+			]
+		}
+	],
+	"widgets": [
+		{
+			"name": "Main Widget",
+			"tag": "mainWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Main page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/main-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		},
+		{
+			"name": "Skills Widget",
+			"tag": "skillsWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Skills page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/skills-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		},
+		{
+			"name": "Projects Widget",
+			"tag": "projectsWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Projects page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/projects-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		},
+		{
+			"name": "Experience Widget",
+			"tag": "experienceWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Experience page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/experience-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		},
+		{
+			"name": "Education Widget",
+			"tag": "educationWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Education page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/education-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		},
+		{
+			"name": "Resume Widget",
+			"tag": "resumeWidget",
+			"ms_ac_template": "widget/ac.json",
+			"data": "widget/data.json",
+			"description": "Widget for the Resume page.",
+			"screenshots": [
+				{
+					"src": "./imgs/pwa/screenshots/resume-screen.png",
+					"sizes": "500x500",
+					"label": "Widget screenshot"
+				}
+			],
+			"icons": [
+				{
+					"src": "./imgs/favicons/favicon-16x16.png",
+					"sizes": "48x48"
+				}
+			]
+		}
+	],
+	"related_applications": []
+}

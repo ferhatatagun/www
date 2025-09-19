@@ -1,30 +1,32 @@
-# Slick Portfolio With Svelte.
+# Ferhat Atagün - ferhatatagun.com
 
 Vercel-like style portfolio template for developers.
 
-If you want to use the template as it is, you can :
+## How to Use
 
-- update files in `src/lib/data` with your data.
-- update `src/lib/index.scss` for custom styling.
-- update `static/favicon.ico` to customize the tab's icon.
+To use the template as it is:
+- Update files in `src/lib/data` with your data.
+- Update `src/lib/index.scss` for custom styling.
+- Update `static/favicon.ico` to customize the tab's icon.
 
-Feel free to explore and hack the template to your needs if you feel like it.
+Feel free to explore and hack the template to your needs.
 
-Before deploying to `GitHub Pages`:
+## Deploying to GitHub Pages
 
-- make sure to change the `base` parameter in `svelte.config.js`.
-- make sure to update the target branch of the `deploy.yml` file, it is set to build from `master` branch by default.
-- Allow `GitHub Pages` in your repo settings with correct permissions:
-  - Persmission:
-    - go to your repo `Settings` > `Actions` > `General`
-    - in `Actions permissions` : check `Allow all actions and reusable workflows`
-  - Pages:
-    - go to your repo's `Settings` > `Pages`
-    - in Source section, select `Deploy from a branch`.
-    - in Branch section, select `gh-pages` and `/ (root)` and click on save
+Before deploying:
+1. Change the `base` parameter in `svelte.config.js`.
+2. Update the target branch in `deploy.yml` (default is `master`).
+3. Allow GitHub Pages in your repo settings:
+   - **Permissions:**
+     - Go to `Settings` > `Actions` > `General`
+     - In `Actions permissions`, check `Allow all actions and reusable workflows`
+   - **Pages:**
+     - Go to `Settings` > `Pages`
+     - In Source section, select `Deploy from a branch`
+     - In Branch section, select `gh-pages` and `/ (root)`, then save
 
-if you did all the above `CORRECTLY`, and no workflow was launched, try to push another commit (maybe an empty one), otherwise you can create an issue and link your repo.
+If the workflow does not launch, try pushing another commit (even an empty one). If issues persist, create an issue and link your repo.
 
-## Known issues:
+## Known Issues
 
-- Svelte no longer support `node 14`, use a newer version instead.
+- Svelte no longer supports `node 14`, use a newer version instead.

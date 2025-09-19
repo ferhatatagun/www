@@ -8,6 +8,7 @@
 	import { useTitle } from '$lib/utils/helpers';
 	import { isBlank } from '@riadh-adrani/utils';
 	import { getPlatfromIcon } from '$lib/utils';
+	import { siteOrigin } from '$lib/data/site';
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -15,10 +16,28 @@
 
 		return !isBlank(email) && reg.test(email);
 	};
+	const pageTitle = useTitle(title, titleSuffix);
+	const canonical = `${siteOrigin}/`;
+	const summary = description;
+	const image = `${siteOrigin}/icons/fa-fav-icon.png`;
+	const siteName = 'Ferhat Atagün';
 </script>
 
 <svelte:head>
-	<title>{useTitle(title, titleSuffix)}</title>
+	<title>{pageTitle}</title>
+	<link rel="canonical" href={canonical} />
+	<meta name="description" content={summary} />
+	<meta name="robots" content="index, follow" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={canonical} />
+	<meta property="og:title" content={pageTitle} />
+	<meta property="og:description" content={summary} />
+	<meta property="og:site_name" content={siteName} />
+	<meta property="og:image" content={image} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={summary} />
+	<meta name="twitter:image" content={image} />
 </svelte:head>
 <div
 	class="col self-center flex-1 md:flex-row md:slef-stretch justify-center lg:justify-between items-center p-y-0px p-x-10px"

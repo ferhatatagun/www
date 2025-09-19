@@ -8,11 +8,19 @@
 
 	let result: Array<Experience> = [...items];
 
+	const sortByPeriod = (a: Experience, b: Experience) => {
+		const dateA = a.period.to || a.period.from;
+		const dateB = b.period.to || b.period.from;
+		return dateB.getTime() - dateA.getTime();
+	};
+
+	result.sort(sortByPeriod);
+
 	const onSearch = (e: CustomEvent<{ search: string }>) => {
 		const query = e.detail.search;
 
 		if (isBlank(query)) {
-			result = items;
+			result = [...items].sort(sortByPeriod);
 			return;
 		}
 
@@ -21,10 +29,21 @@
 				it.name.toLowerCase().includes(query) ||
 				it.company.toLowerCase().includes(query) ||
 				it.description.toLowerCase().includes(query)
-		);
+		).sort(sortByPeriod);
 	};
 </script>
 
+<svelte:head>
+    <title>{title}</title>
+    <link rel="canonical" href={`https://ferhatatagun.com/experience`} />
+    <meta name="description" content="İş deneyimleri ve görevler: geçmiş roller ve sorumluluklar." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://ferhatatagun.com/experience`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="İş deneyimleri ve görevler: geçmiş roller ve sorumluluklar." />
+    <meta property="og:site_name" content="Ferhat Atagün" />
+</svelte:head>
 <SearchPage {title} on:search={onSearch}>
 	<div class="col items-center relative mt-10 flex-1">
 		{#if result.length === 0}
@@ -39,7 +58,7 @@
 			{#each result as job, index (job.slug)}
 				<div
 					class={`flex ${
-						index % 2 !== 0 ? 'flex-row' : 'flex-row-reverse'
+						(index % 2 !== 0) ? 'flex-row' : 'flex-row-reverse'
 					} relative items-center w-full my-[10px]`}
 				>
 					<div class="flex-1 hidden lg:flex" />

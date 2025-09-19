@@ -6,7 +6,7 @@ export enum Platform {
 	Twitter = 'twitter',
 	Linkedin = 'linkedin',
 	Email = 'email',
-	Facebook = 'facebook',
+	Medium = 'medium',
 	Youtube = 'youtube'
 }
 

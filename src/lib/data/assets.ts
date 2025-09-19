@@ -2,19 +2,25 @@ import type { Asset } from '$lib/types';
 import { theme } from '$lib/stores/theme';
 import { base } from '$app/paths';
 
-const gh = (file: string) => `${base}/logos/${file}`;
+const gh = (file: string) => `${base}/icons/${file}`;
 
 const a = (light: string, dark?: string): Asset =>
 	dark ? { dark: gh(dark), light: gh(light) } : gh(light);
 
 const Assets = {
+	Hasura: a('hasura.svg'),
 	AWS: a('aws.svg'),
 	Bootstrap: a('bootstrap.svg'),
 	C: a('c.svg'),
 	Cpp: a('cpp.svg'),
 	Celery: a('celery.svg'),
 	Django: a('django.svg'),
-	FastApi: a('fastapi'),
+	FastApi: a('fastapi.svg'),
+	PoolsApi: a('poolsapi.svg'),
+	OMDbApi: a('omdbapi.svg'),
+	Graphql: a('graphql.svg'),
+	Supabase: a('supabase.svg'),
+	Jenkins: a('jenkins.svg'),
 	Flask: a('flask.svg'),
 	Go: a('go.svg'),
 	Kafka: a('kafka.svg'),
@@ -29,10 +35,19 @@ const Assets = {
 	Docker: a('docker.svg'),
 	Kubernetes: a('kubernetees.svg'),
 	Csharp: a('csharp.svg'),
+	DotNet: a('dot-net.svg'),
+	Spring: a('spring.svg'),
 	Xamarin: a('xamarin.svg'),
 	TypeScript: a('ts.png'),
 	VueJs: a('vue.png'),
 	ReactJs: a('react.svg'),
+	ReactNative: a('react-native.svg'),
+	NextJs: a('nextjs.svg'),
+	Gatsby: a('gatsby.svg'),
+	RemixJs: a('remixjs.svg'),
+	Remotion: a('remotion.svg'),
+	MillionJs: a('millionjs.svg'),
+	Biome: a('biome.svg'),
 	Dart: a('dart.png'),
 	Kotlin: a('kotlin.png'),
 	Python: a('python.png'),
@@ -62,6 +77,7 @@ const Assets = {
 	Premiere: a('premiere.svg'),
 	Photoshop: a('photoshop.svg'),
 	CSS: a('css.svg'),
+	MJML: a('mjml.svg'),
 	AfterEffects: a('after-effects.svg'),
 	Illustrator: a('illustrator.svg'),
 	Nuxt: a('nuxt.png'),
@@ -70,7 +86,28 @@ const Assets = {
 	Jest: a('jest.png'),
 	Unocss: a('unocss.svg'),
 	Ruvy: a('ruvy.svg'),
-	Postcss: a('postcss.svg')
+	Postcss: a('postcss.svg'),
+	HangiKredi: a('hangikredi.svg'),
+	RND: a('rnd.svg'),
+	Netuce: a('netuce.svg'),
+	Netmera: a('netmera.svg'),
+	BeaversWorkshop: a('beaversworkshop.svg'),
+	LiteralWebDizayn: a('empty-logo.svg'),
+	SonmezHome: a('empty-logo.svg'),
+	SaloonMobilya: a('empty-logo.svg'),
+	PlatinGroup: a('empty-logo.svg'),
+	FrontendArchitecture: a('frontend-architecture.svg'),
+	TeamWork: a('teamwork.svg'),
+	Reactive: a('reactive.svg'),
+	ServiceWorker: a('service-worker.svg'),
+	Pwa: a('pwa.svg'),
+	Github: a('github.svg'),
+	MonorepoMicrofrontend: a('monorepo-microfrontend.svg'),
+	Utility: a('utility.svg'),
+	Figma: a('figma.svg'),
+	AyvansarsyUniversity: a('istanbul-ayvansaray-universitesi.jpeg'),
+	AnadoluUniversity: a('anadolu-university.png'),
+	FavLogo: a('fa-fav-icon.png')
 };
 
 export default Assets;

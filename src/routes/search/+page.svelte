@@ -2,7 +2,6 @@
 	import { title } from '@data/search';
 	import { filterItemsByQuery, type ItemOrSkill } from '$lib/utils/helpers';
 	import { onMount } from 'svelte';
-	import { base } from '$app/paths';
 	import * as experiences from '@data/experience';
 	import * as projects from '@data/projects';
 	import * as skills from '@data/skills';
@@ -67,6 +66,18 @@
 	}
 </script>
 
+<svelte:head>
+    <title>{title}</title>
+    <link rel="canonical" href={`https://ferhatatagun.com/search`} />
+    <meta name="description" content="Sitede proje, beceri ve deneyim arayın." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://ferhatatagun.com/search`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Sitede proje, beceri ve deneyim arayın." />
+    <meta property="og:site_name" content="Ferhat Atagün" />
+</svelte:head>
+
 <SearchPage {title} on:search={(e) => (query = e.detail.search)}>
 	<div class="flex flex-col items-stretch gap-10 p-2" />
 	{#if !query}
@@ -84,7 +95,7 @@
 			{:else}
 				<div class="flex flex-row flex-wrap gap-1">
 					{#each result as item}
-						<Chip href={`${base}/${item.to}`} classes="flex flex-row items-center gap-2">
+						<Chip href={`/${item.to}`} classes="flex flex-row items-center gap-2">
 							<UIcon icon={item.icon} />
 							<span>{item.name}</span>
 						</Chip>

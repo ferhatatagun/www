@@ -28,6 +28,7 @@
 		{ label: experience.location, icon: 'i-carbon-location' },
 		{ label: experience.contract, icon: 'i-carbon-hourglass' }
 	] as const;
+
 </script>
 
 <Card

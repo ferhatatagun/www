@@ -12,6 +12,30 @@ export default defineConfig({
 			]
 		}
 	},
+	cli: {
+		entry: {
+			patterns: ['src/**/*.{html,js,ts,svelte}'],
+			outFile: 'static/uno.css'
+		}
+	},
+	safelist: [
+		// Navigation icons
+		'i-carbon-code',
+		'i-carbon-search',
+		'i-carbon-moon',
+		'i-carbon-sun',
+		// Navbar icons
+		'i-carbon-software-resource-cluster',
+		'i-carbon-cube',
+		'i-carbon-development',
+		'i-carbon-education',
+		'i-carbon-result',
+		// Content icons
+		'i-carbon-link',
+		'i-carbon-text-font',
+		'i-carbon-image',
+		'i-carbon-search-locate-mirror'
+	],
 	presets: [
 		presetUno(),
 		presetWebFonts({

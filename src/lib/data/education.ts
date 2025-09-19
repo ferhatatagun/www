@@ -3,28 +3,28 @@ import type { Education } from '../types';
 
 export const items: Array<Education> = [
 	{
-		degree: 'Bachelor degree of Computer Science',
+		degree: 'Associate Degree in Computer Programming',
 		description: '',
-		location: 'Tunisia',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'ISTIC',
-		period: { from: new Date(2020, 0, 1), to: new Date(2022, 5, 1) },
+		location: 'Turkey',
+		logo: Assets.AyvansarsyUniversity,
+		name: 'Istanbul Ayvansaray University',
+		organization: 'Istanbul Ayvansaray University',
+		period: { from: new Date(2016, 0, 1), to: new Date(2018, 5, 1) },
 		shortDescription: '',
-		slug: 'dummy-education-item',
-		subjects: ['C', 'Algorithm', 'Algebra', 'Python', 'C++', 'Java', 'English']
+		slug: 'istanbul-ayvansaray-university',
+		subjects: ['Software Engineering', 'General Computer Programming']
 	},
 	{
-		degree: 'PhD of Computer Science',
+		degree: 'Bachelor Degree in Management Information Systems',
 		description: '',
-		location: 'USA',
-		logo: Assets.Unknown,
-		name: '',
-		organization: 'MIT',
-		period: { from: new Date(2023, 0, 1) },
+		location: 'Turkey',
+		logo: Assets.AnadoluUniversity,
+		name: 'Anadolu University',
+		organization: 'Anadolu University',
+		period: { from: new Date(2018, 0, 1), to: new Date(2021, 5, 1) },
 		shortDescription: '',
-		slug: 'dummy-education-item-2',
-		subjects: ['Assembly', 'Rust', 'Computer Architecture', 'Algorithms and Data structures']
+		slug: 'anadolu-university',
+		subjects: ['Management Information Systems']
 	}
 ];
 

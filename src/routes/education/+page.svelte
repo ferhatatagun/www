@@ -29,6 +29,18 @@
 	};
 </script>
 
+<svelte:head>
+    <title>{title}</title>
+    <link rel="canonical" href={`https://ferhatatagun.com/education`} />
+    <meta name="description" content="Eğitim geçmişi: okullar, bölümler ve dersler." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://ferhatatagun.com/education`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Eğitim geçmişi: okullar, bölümler ve dersler." />
+    <meta property="og:site_name" content="Ferhat Atagün" />
+</svelte:head>
+
 <SearchPage {title} {search} on:search={onSearch}>
 	<div class="col items-center relative mt-10 flex-1">
 		{#if result.length === 0}

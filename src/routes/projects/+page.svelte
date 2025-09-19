@@ -2,6 +2,7 @@
 	import { items, title } from '@data/projects';
 	import * as skills from '@data/skills';
 	import { onMount } from 'svelte';
+    import { siteOrigin } from '$lib/data/site';
 
 	import type { Project, Skill } from '$lib/types';
 
@@ -69,6 +70,18 @@
 		}
 	});
 </script>
+
+<svelte:head>
+    <title>{title}</title>
+    <link rel="canonical" href={`${siteOrigin}/projects`} />
+    <meta name="description" content="Projeler: açık kaynak ve profesyonel çalışmaların listesi." />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`${siteOrigin}/projects`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content="Projeler: açık kaynak ve profesyonel çalışmaların listesi." />
+    <meta property="og:site_name" content="Ferhat Atagün" />
+</svelte:head>
 
 <SearchPage {title} on:search={onSearch}>
 	<div class="projects-filters">

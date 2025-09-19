@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { title, groupByCategory } from '@data/skills';
 	import { getAssetURL } from '$lib/data/assets';
+	import { siteOrigin } from '$lib/data/site';
 
 	import SearchPage from '$lib/components/SearchPage.svelte';
 	import Card from '$lib/components/Card/Card.svelte';
@@ -17,6 +17,18 @@
 		console.log(result);
 	};
 </script>
+
+<svelte:head>
+	<title>{title}</title>
+	<link rel="canonical" href={`${siteOrigin}/skills`} />
+	<meta name="description" content="Teknolojiler, diller ve araçlar: beceri etiketleri ve detayları." />
+	<meta name="robots" content="index, follow" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content={`${siteOrigin}/skills`} />
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content="Teknolojiler, diller ve araçlar: beceri etiketleri ve detayları." />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+</svelte:head>
 
 <SearchPage {title} on:search={onSearch}>
 	{#if result.length === 0}
@@ -38,7 +50,7 @@
 							<Card
 								classes={['cursor-pointer decoration-none']}
 								tiltDegree={1}
-								href={`${base}/skills/${skill.slug}`}
+								href={`/skills/${skill.slug}`}
 								bgImg={getAssetURL(skill.logo)}
 								color={skill.color}
 							>

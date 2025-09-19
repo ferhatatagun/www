@@ -3,7 +3,6 @@
 	import * as projects from '@data/projects';
 	import * as experiences from '@data/experience';
 
-	import { base } from '$app/paths';
 	import { getAssetURL } from '$lib/data/assets';
 
 	import type { Skill } from '$lib/types';
@@ -16,6 +15,7 @@
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import Banner from '$lib/components/Banner/Banner.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { siteOrigin } from '$lib/data/site';
 
 	type Related = {
 		display: string;
@@ -70,6 +70,18 @@
 
 <TabTitle title={computedTitle} />
 
+<svelte:head>
+    {#if data.skill}
+        <link rel="canonical" href={`${siteOrigin}/skills/${data.skill.slug}`} />
+        <meta name="description" content={data.skill.description ?? `${data.skill.name} hakkında notlar`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`${siteOrigin}/skills/${data.skill.slug}`} />
+        <meta property="og:title" content={computedTitle} />
+        <meta property="og:description" content={data.skill.description ?? `${data.skill.name} hakkında notlar`} />
+        <meta property="og:image" content={getAssetURL(data.skill.logo)} />
+    {/if}
+</svelte:head>
+
 <div class="pb-10 overflow-x-hidden col flex-1">
 	{#if data.skill === undefined}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
@@ -101,7 +113,7 @@
 					{#each related as item}
 						<Chip
 							classes="inline-flex flex-row items-center justify-center"
-							href={`${base}${item.url}`}
+							href={item.url}
 						>
 							<CardLogo src={item.img} alt={item.name} radius={'0px'} size={15} classes="mr-2" />
 							<span class="text-[0.9em]">{item.display}</span>
