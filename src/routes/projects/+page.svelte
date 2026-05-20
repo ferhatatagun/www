@@ -74,12 +74,12 @@
 <svelte:head>
     <title>{title}</title>
     <link rel="canonical" href={`${siteOrigin}/projects`} />
-    <meta name="description" content="Projects: open source and professional work." />
+    <meta name="description" content="Open-source AI developer tools and professional frontend work." />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`${siteOrigin}/projects`} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Projects: open source and professional work." />
+    <meta property="og:description" content="Open-source AI developer tools and professional frontend work." />
     <meta property="og:site_name" content="Ferhat Atagün" />
 </svelte:head>
 

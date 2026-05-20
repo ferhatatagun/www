@@ -8,7 +8,7 @@ export const name = 'Ferhat';
 export const lastName = 'Atagün';
 
 export const description =
-	'Frontend developer in Istanbul, at HangiKredi. I build interfaces for AI — and open-source developer tools that make working with the Claude API legible.';
+	'Frontend team lead in Istanbul, at HangiKredi. I build interfaces for AI — and open-source developer tools that make working with the Claude API legible.';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/ferhatatagun' },
