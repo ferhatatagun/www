@@ -69,12 +69,12 @@
 <svelte:head>
     <title>{title}</title>
     <link rel="canonical" href={`https://ferhatatagun.com/search`} />
-    <meta name="description" content="Sitede proje, beceri ve deneyim arayın." />
+    <meta name="description" content="Search projects, skills and experience on this site." />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/search`} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Sitede proje, beceri ve deneyim arayın." />
+    <meta property="og:description" content="Search projects, skills and experience on this site." />
     <meta property="og:site_name" content="Ferhat Atagün" />
 </svelte:head>
 

@@ -31,7 +31,7 @@
 			const state = window.history.state;
 
 			window.history.replaceState(state, '', url);
-			
+
 			if ($page.url.pathname.startsWith(`${base}/search`)) {
 				if (searchInput) {
 					searchInput.focus();

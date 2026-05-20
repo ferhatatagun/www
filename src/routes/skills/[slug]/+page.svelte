@@ -66,6 +66,8 @@
 	$: computedTitle = data.skill ? `${data.skill.name} - ${title}` : title;
 
 	$: related = data.skill ? getRelatedProjects() : [];
+
+	$: isAISkill = data.skill?.slug === 'ai-llm-tools';
 </script>
 
 <TabTitle title={computedTitle} />
@@ -73,16 +75,16 @@
 <svelte:head>
     {#if data.skill}
         <link rel="canonical" href={`${siteOrigin}/skills/${data.skill.slug}`} />
-        <meta name="description" content={data.skill.description ?? `${data.skill.name} hakkında notlar`} />
+        <meta name="description" content={data.skill.description ?? `Notes on ${data.skill.name}`} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${siteOrigin}/skills/${data.skill.slug}`} />
         <meta property="og:title" content={computedTitle} />
-        <meta property="og:description" content={data.skill.description ?? `${data.skill.name} hakkında notlar`} />
+        <meta property="og:description" content={data.skill.description ?? `Notes on ${data.skill.name}`} />
         <meta property="og:image" content={getAssetURL(data.skill.logo)} />
     {/if}
 </svelte:head>
 
-<div class="pb-10 overflow-x-hidden col flex-1">
+<div class="pb-10 overflow-x-hidden col flex-1" class:skill-page--ai={isAISkill}>
 	{#if data.skill === undefined}
 		<div class="p-5 col-center gap-3 m-y-auto text-[var(--accent-text)]">
 			<UIcon icon="i-carbon-software-resource-cluster" classes="text-3.5em" />
@@ -90,7 +92,7 @@
 		</div>
 	{:else}
 		<div class="flex flex-col items-center overflow-x-hidden">
-			<Banner img={getAssetURL(data.skill.logo)}>
+			<Banner img={getAssetURL(data.skill.logo)} classes={isAISkill ? 'skill-banner--ai' : ''}>
 				<MainTitle>{data.skill.name}</MainTitle>
 			</Banner>
 			<div class="pt-3 pb-1 overflow-x-hidden w-full">
@@ -124,3 +126,23 @@
 		</div>
 	{/if}
 </div>
+
+<style lang="scss">
+	.skill-page--ai {
+		position: relative;
+	}
+	.skill-page--ai::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 4px;
+		background: var(--ai-gradient);
+		border-radius: 0 0 4px 4px;
+	}
+	:global(.skill-banner--ai) {
+		border-color: rgba(139, 92, 246, 0.4) !important;
+		box-shadow: 0 0 20px var(--ai-glow);
+	}
+</style>

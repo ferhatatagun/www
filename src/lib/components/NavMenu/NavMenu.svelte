@@ -6,6 +6,7 @@
 
 	import { base } from '$app/paths';
 	import UIcon from '../Icon/UIcon.svelte';
+	import AILogoEnhance from '../AILogoEnhance/AILogoEnhance.svelte';
 	import Assets, { getAssetURL } from '$lib/data/assets';
 
 	$: currentRoute = $page.url.pathname;
@@ -27,8 +28,12 @@
 			href={`${base}/`}
 			class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"
 		>
-			<UIcon icon="i-carbon-code" classes="text-1em" />
-      <img class="w-20px h-20px aspect-square ml-1" src={getAssetURL(Assets.FavLogo)} alt={`${HOME.name} ${HOME.lastName}`} />
+			<AILogoEnhance
+				src={getAssetURL(Assets.FavLogo)}
+				alt={`${HOME.name} ${HOME.lastName}`}
+				logoSize={20}
+				className="ml-0"
+			/>
 			<span
 				class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis"
 				>{HOME.name} {HOME.lastName}

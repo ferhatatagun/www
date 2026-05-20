@@ -107,7 +107,8 @@ const Assets = {
 	Figma: a('figma.svg'),
 	AyvansarsyUniversity: a('istanbul-ayvansaray-universitesi.jpeg'),
 	AnadoluUniversity: a('anadolu-university.png'),
-	FavLogo: a('fa-fav-icon.png')
+	FavLogo: a('fa-fav-icon.png'),
+	AI: a('ai.svg')
 };
 
 export default Assets;

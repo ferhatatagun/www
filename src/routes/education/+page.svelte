@@ -32,12 +32,12 @@
 <svelte:head>
     <title>{title}</title>
     <link rel="canonical" href={`https://ferhatatagun.com/education`} />
-    <meta name="description" content="Eğitim geçmişi: okullar, bölümler ve dersler." />
+    <meta name="description" content="Education: schools, departments and courses." />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/education`} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Eğitim geçmişi: okullar, bölümler ve dersler." />
+    <meta property="og:description" content="Education: schools, departments and courses." />
     <meta property="og:site_name" content="Ferhat Atagün" />
 </svelte:head>
 

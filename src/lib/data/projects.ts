@@ -4,6 +4,66 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'claudoscope',
+		color: '#f0a06b',
+		description:
+			'A bring-your-own-key playground for the Anthropic Messages API that visualizes the parts you normally never see — prompt caching, token composition, latency and cost — live as the response streams. Built with a hand-rolled SSE parser instead of the SDK to keep the browser bundle lean.',
+		shortDescription:
+			'X-ray your Claude API calls: prompt caching, tokens and cost, visualized live.',
+		links: [
+			{ to: 'https://claudoscope-labs.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/claudoscope', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'claudoscope',
+		period: {
+			from: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'X-Ray', src: '/imgs/projects/claudoscope.png' }]
+	},
+	{
+		slug: 'agent-replay',
+		color: '#6ba8f0',
+		description:
+			"Paste a Claude agent trace and replay it step by step on a cinematic timeline — every thought, tool call, tool result and decision becomes its own colour-coded step. A small parser flattens the Anthropic Messages API shape into an ordered timeline. No key, no backend.",
+		shortDescription:
+			"Replay a Claude agent's tool-calling loop, step by step on a cinematic timeline.",
+		links: [
+			{ to: 'https://agentreplay.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/agent-replay', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'agent-replay',
+		period: {
+			from: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'Timeline', src: '/imgs/projects/agent-replay.png' }]
+	},
+	{
+		slug: 'prompt-lab',
+		color: '#8b5cf6',
+		description:
+			'Run one input through two prompts or two models at the same time, watch both stream in parallel, then compare output, cost and latency on a scored verdict. Turns "which prompt is better" from a guess into a measurement. Bring your own key, no backend.',
+		shortDescription:
+			'A/B test your Claude prompts side by side — output, cost and latency, compared.',
+		links: [
+			{ to: 'https://prompt-lab-promptly.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/prompt-lab', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'prompt-lab',
+		period: {
+			from: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'Arena', src: '/imgs/projects/prompt-lab.png' }]
+	},
+	{
 		slug: 'portfolio',
 		color: '#ff3e00',
 		description:

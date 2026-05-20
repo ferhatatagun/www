@@ -8,12 +8,12 @@
 <svelte:head>
     <title>{title}</title>
     <link rel="canonical" href={`https://ferhatatagun.com/resume`} />
-    <meta name="description" content="Ferhat Atagün özgeçmişi (PDF)." />
+    <meta name="description" content="Ferhat Atagün resume (PDF)." />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/resume`} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="Ferhat Atagün özgeçmişi (PDF)." />
+    <meta property="og:description" content="Ferhat Atagün resume (PDF)." />
     <meta property="og:site_name" content="Ferhat Atagün" />
 </svelte:head>
 

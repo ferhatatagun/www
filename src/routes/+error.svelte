@@ -1,41 +1,124 @@
 <script>
-    import { page } from '$app/stores';
+	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 </script>
 
-<section class="bg-white dark:bg-gray-900">
-    <div class="container min-h-screen px-6 py-12 mx-auto lg:flex lg:items-center lg:gap-12">
-        {#if $page?.error}
-        <div class="w-full lg:w-1/2">
-            {#if $page?.status}
-                <p class="text-sm font-medium text-blue-500 dark:text-blue-400">{$page.status} error</p>
-            {/if}
-            <h1 class="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">Page not found</h1>
-            {#if $page?.status === 404}
-              <p class="mt-4 text-gray-500 dark:text-gray-400">Sorry, the page you are looking for doesn't exist.<br />  Here are some helpful links:</p>
-            {/if}
-             {#if $page?.error?.message}
-              {#if $page?.status !== 404}
-                <p class="mt-4 text-gray-500 dark:text-gray-400">{$page.error.message}</p>
-              {/if}
-            {/if}
+<section class="error-page">
+	<div class="error-page-inner">
+		{#if $page?.error}
+			<div class="error-page-content">
+				{#if $page?.status}
+					<p class="error-page-status">{$page.status} error</p>
+				{/if}
+				<h1 class="error-page-title">Page not found</h1>
+				{#if $page?.status === 404}
+					<p class="error-page-desc">
+						The page you are looking for does not exist. Here are some helpful links:
+					</p>
+				{/if}
+				{#if $page?.error?.message}
+					{#if $page?.status !== 404}
+						<p class="error-page-desc">{$page.error.message}</p>
+					{/if}
+				{/if}
 
-            <div class="flex items-center mt-6 gap-x-3">
-                <button on:click={() => history.back()} class="flex items-center justify-center w-1/2 px-5 py-2 text-sm text-gray-700 transition-colors duration-200 bg-white border rounded-lg gap-x-2 sm:w-auto dark:hover:bg-gray-800 dark:bg-gray-900 hover:bg-gray-100 dark:text-gray-200 dark:border-gray-700">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 rtl:rotate-180">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
-                    </svg>
-                    <span>Go back</span>
-                </button>
+				<div class="error-page-actions">
+					<button
+						type="button"
+						on:click={() => history.back()}
+						class="error-page-btn error-page-btn-secondary"
+					>
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="error-page-btn-icon" aria-hidden="true">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+						</svg>
+						Go back
+					</button>
+					<a href={base || '/'} class="error-page-btn error-page-btn-primary">Home</a>
+					<a href={`${base}/blog`} class="error-page-btn error-page-btn-primary">Blog</a>
+					<a href={`${base}/skills`} class="error-page-btn error-page-btn-primary">Skills</a>
+				</div>
+			</div>
+		{/if}
 
-                <a href="/" class="no-underline w-1/2 px-5 py-2 text-sm tracking-wide text-white transition-colors duration-200 bg-blue-500 rounded-lg shrink-0 sm:w-auto hover:bg-blue-600 dark:hover:bg-blue-500 dark:bg-blue-600">
-                    Take me home
-                </a>
-            </div>
-        </div>
-        {/if}
-
-        <div class="relative w-full mt-12 lg:w-1/2 lg:mt-0">
-            <img class="w-full max-w-lg lg:mx-auto" src="/icons/404.svg" alt="404 Illustration">
-        </div>
-    </div>
+		<div class="error-page-visual">
+			<img src={`${base}/icons/404.svg`} alt="" width="320" height="240" />
+		</div>
+	</div>
 </section>
+
+<style>
+	.error-page {
+		background-color: var(--main);
+		color: var(--main-text);
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		padding: 2rem 1.5rem;
+	}
+	.error-page-inner {
+		max-width: 900px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 2rem;
+	}
+	.error-page-content {
+		flex: 1;
+		min-width: 280px;
+	}
+	.error-page-status {
+		font-size: 0.875rem;
+		color: var(--accent-text);
+		margin: 0 0 0.5rem 0;
+	}
+	.error-page-title {
+		font-size: 1.5rem;
+		font-weight: 600;
+		margin: 0 0 1rem 0;
+		color: var(--main-text);
+	}
+	.error-page-desc {
+		color: var(--tertiary-text);
+		margin: 0 0 1.5rem 0;
+		line-height: 1.5;
+	}
+	.error-page-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
+		align-items: center;
+	}
+	.error-page-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+		border-radius: 8px;
+		text-decoration: none;
+		border: 1px solid var(--border);
+		background: var(--main-hover);
+		color: var(--main-text);
+		cursor: pointer;
+	}
+	.error-page-btn-primary {
+		background: var(--accent-text);
+		color: var(--main);
+		border-color: transparent;
+	}
+	.error-page-btn-primary:hover {
+		opacity: 0.9;
+	}
+	.error-page-btn-icon {
+		width: 1.25rem;
+		height: 1.25rem;
+	}
+	.error-page-visual {
+		flex: 0 0 auto;
+	}
+	.error-page-visual img {
+		max-width: 100%;
+		height: auto;
+	}
+</style>

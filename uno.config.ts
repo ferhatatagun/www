@@ -25,6 +25,7 @@ export default defineConfig({
 		'i-carbon-moon',
 		'i-carbon-sun',
 		// Navbar icons
+		'i-carbon-document',
 		'i-carbon-software-resource-cluster',
 		'i-carbon-cube',
 		'i-carbon-development',
@@ -34,7 +35,8 @@ export default defineConfig({
 		'i-carbon-link',
 		'i-carbon-text-font',
 		'i-carbon-image',
-		'i-carbon-search-locate-mirror'
+		'i-carbon-search-locate-mirror',
+		'i-carbon-machine-learning-model'
 	],
 	presets: [
 		presetUno(),

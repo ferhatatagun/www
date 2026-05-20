@@ -36,12 +36,12 @@
 <svelte:head>
     <title>{title}</title>
     <link rel="canonical" href={`https://ferhatatagun.com/experience`} />
-    <meta name="description" content="İş deneyimleri ve görevler: geçmiş roller ve sorumluluklar." />
+    <meta name="description" content="Work experience and roles: past positions and responsibilities." />
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/experience`} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content="İş deneyimleri ve görevler: geçmiş roller ve sorumluluklar." />
+    <meta property="og:description" content="Work experience and roles: past positions and responsibilities." />
     <meta property="og:site_name" content="Ferhat Atagün" />
 </svelte:head>
 <SearchPage {title} on:search={onSearch}>

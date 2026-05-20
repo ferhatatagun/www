@@ -26,10 +26,11 @@ import { omit, type StringWithAutoComplete } from '@riadh-adrani/utils';
 const defineSkillCategory = <S extends string>(data: SkillCategory<S>): SkillCategory<S> => data;
 
 const categories = [
+	defineSkillCategory({ name: 'AI & LLM', slug: 'ai-llm' }),
 	defineSkillCategory({ name: 'Programming Languages', slug: 'pro-lang' }),
 	defineSkillCategory({ name: 'Frameworks', slug: 'framework' }),
 	defineSkillCategory({ name: 'Libraries', slug: 'library' }),
-	defineSkillCategory({ name: 'Langauges', slug: 'lang' }),
+	defineSkillCategory({ name: 'Languages', slug: 'lang' }),
 	defineSkillCategory({ name: 'Databases', slug: 'db' }),
 	defineSkillCategory({ name: 'ORMs', slug: 'orm' }),
 	defineSkillCategory({ name: 'DevOps', slug: 'devops' }),
@@ -56,6 +57,15 @@ const defineSkill = <S extends string>(
 };
 
 export const items = [
+	defineSkill({
+		slug: 'ai-llm-tools',
+		color: '#8b5cf6',
+		description:
+			'Software development with AI and large language models (LLM): Model Context Protocol (MCP), GPT/OpenAI API, Cursor, Claude, prompt engineering and AI-assistant integration. Context management with MCP servers, agentic workflow and productivity in daily development.',
+		logo: Assets.AI,
+		name: 'AI & LLM Tools',
+		category: 'ai-llm'
+	}),
 	defineSkill({
 		slug: 'utility',
 		color: '#8950FC',
@@ -168,7 +178,7 @@ export const items = [
 		color: '#21232a',
 		description: expressjsMd,
 		logo: Assets.ExpressJs,
-		name: 'Express.J',
+		name: 'Express.js',
 		category: 'framework'
 	}),
 	defineSkill({
@@ -255,6 +265,24 @@ export const items = [
 			'The activity of working together in a group with other people, especially when this is successful...',
 		logo: Assets.TeamWork,
 		name: 'Teamwork',
+		category: 'management'
+	}),
+	defineSkill({
+		slug: 'team-leadership',
+		color: '#2563eb',
+		description:
+			'Leading a technical team: setting direction, mentoring, code review, and aligning work with product goals.',
+		logo: Assets.TeamWork,
+		name: 'Team Leadership',
+		category: 'management'
+	}),
+	defineSkill({
+		slug: 'team-management',
+		color: '#1d4ed8',
+		description:
+			'Managing team capacity, priorities, and delivery; facilitating ceremonies and stakeholder communication.',
+		logo: Assets.TeamWork,
+		name: 'Team Management',
 		category: 'management'
 	}),
 	defineSkill({

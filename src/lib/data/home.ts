@@ -8,7 +8,7 @@ export const name = 'Ferhat';
 export const lastName = 'Atagün';
 
 export const description =
-	'I am a constantly improving software developer living in Turkey/Istanbul, working as a Frontend Developer within HangiKredi. I love being a part of the development of web technologies.';
+	'Frontend developer in Istanbul, at HangiKredi. I build interfaces for AI — and open-source developer tools that make working with the Claude API legible.';
 
 export const links: Array<{ platform: Platform; link: string }> = [
 	{ platform: Platform.GitHub, link: 'https://github.com/ferhatatagun' },
@@ -35,6 +35,7 @@ export const links: Array<{ platform: Platform; link: string }> = [
 ];
 
 export const skills = getSkills(
+	'ai-llm-tools',
 	'js',
 	'node',
 	'nextjs',
@@ -43,7 +44,6 @@ export const skills = getSkills(
 	'ts',
 	'html',
 	'reactjs',
-	'nextjs',
 	'svelte',
 	'gatsby'
 );

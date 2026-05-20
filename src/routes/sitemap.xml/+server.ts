@@ -2,6 +2,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import { items as projectItems } from '@data/projects';
 import { items as skillItems } from '@data/skills';
 import { items as experienceItems } from '@data/experience';
+import { items as blogItems } from '@data/blog';
 
 const normalizePath = (path: string): string => {
 	const normalized = path.startsWith('/') ? path : `/${path}`;
@@ -16,6 +17,8 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const staticPages = [
 		'/',
+		'/blog',
+		'/blog/feed.xml',
 		'/projects',
 		'/education',
 		'/experience',
@@ -27,8 +30,9 @@ export const GET: RequestHandler = async ({ url }) => {
 	const projectPages = projectItems.map((p) => `/projects/${p.slug}`);
 	const skillPages = skillItems.map((s) => `/skills/${s.slug}`);
 	const experiencePages = experienceItems.map((e) => `/experience/${e.slug}`);
+	const blogPages = blogItems.map((b) => `/blog/${b.slug}`);
 
-	const pages = [...staticPages, ...projectPages, ...skillPages, ...experiencePages];
+	const pages = [...staticPages, ...projectPages, ...skillPages, ...experiencePages, ...blogPages];
 
 	const lastMod = new Date().toISOString();
 

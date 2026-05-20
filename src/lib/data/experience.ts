@@ -122,7 +122,6 @@ export const items: Array<Experience> = [
 			'ts',
 			'reactjs',
 			'service-worker',
-			'javascript',
 			'angular',
 			'react-native',
 			'reactive-programming',
