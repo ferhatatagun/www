@@ -64,6 +64,26 @@ export const items: Array<Project> = [
 		screenshots: [{ label: 'Arena', src: '/imgs/projects/prompt-lab.png' }]
 	},
 	{
+		slug: 'tool-lab',
+		color: '#a78bfa',
+		description:
+			"An interactive Claude tool-use sandbox: define tools in a live JSON editor, send a user message, and when the model calls a tool, type the mock result by hand. The loop runs end to end with you in the role of every tool — the thing you want while iterating on agent design before writing the real tool implementations.",
+		shortDescription:
+			'Interactive Claude tool-use sandbox — define tools, mock responses, watch the agent loop live.',
+		links: [
+			{ to: 'https://claude-tool-lab.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/tool-lab', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'tool-lab',
+		period: {
+			from: new Date(2026, 4, 21)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'Sandbox', src: '/imgs/projects/tool-lab.png' }]
+	},
+	{
 		slug: 'portfolio',
 		color: '#ff3e00',
 		description:
