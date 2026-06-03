@@ -51,7 +51,7 @@
 		{ name: 'claudoscope', href: 'https://claudoscope-labs.vercel.app' },
 		{ name: 'agent-replay', href: 'https://agentreplay.vercel.app' },
 		{ name: 'prompt-lab', href: 'https://prompt-lab-promptly.vercel.app' },
-		{ name: 'tool-lab', href: 'https://claude-tool-lab.vercel.app' }
+		{ name: 'tool-lab', href: 'https://tool-lab-bice.vercel.app' }
 	];
 </script>
 

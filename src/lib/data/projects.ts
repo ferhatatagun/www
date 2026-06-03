@@ -71,7 +71,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'Interactive Claude tool-use sandbox — define tools, mock responses, watch the agent loop live.',
 		links: [
-			{ to: 'https://claude-tool-lab.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://tool-lab-bice.vercel.app', label: 'Live', newTab: true },
 			{ to: 'https://github.com/ferhatatagun/tool-lab', label: 'GitHub', newTab: true }
 		],
 		logo: Assets.AI,
