@@ -6,6 +6,7 @@ import post4Raw from '$lib/md/blog/neden-bazen-sadece-bos-ekrana-bakiyorum.md?ra
 import post5Raw from '$lib/md/blog/bitmemis-projeler-mezarligim.md?raw';
 import post6Raw from '$lib/md/blog/best-practice-dedigin-yarisi-ezber.md?raw';
 import post7EnRaw from '$lib/md/blog/rules-and-commands-that-stick-en.md?raw';
+import post8EnRaw from '$lib/md/blog/browser-only-claude-streaming-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -37,7 +38,8 @@ const contentMap: Record<string, string> = {
 
 const contentMapEn: Record<string, string> = {
 	'cursor-ide-ve-prompt-muhendisligi': post3EnRaw,
-	'rules-and-commands-that-stick': post7EnRaw
+	'rules-and-commands-that-stick': post7EnRaw,
+	'browser-only-claude-streaming': post8EnRaw
 };
 
 export const title = 'Blog';
@@ -101,6 +103,14 @@ export const items: BlogPost[] = [
 			'How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.',
 		date: '2025-01-18',
 		tags: ['Cursor', 'Rules', 'Commands', 'Workflow', 'AI']
+	},
+	{
+		slug: 'browser-only-claude-streaming',
+		title: 'Building a streaming Claude client in the browser — without the SDK',
+		excerpt:
+			'Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.',
+		date: '2026-06-03',
+		tags: ['Claude', 'Anthropic', 'SSE', 'Streaming', 'TypeScript', 'Browser']
 	}
 ];
 
