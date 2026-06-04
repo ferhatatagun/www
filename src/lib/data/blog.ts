@@ -8,6 +8,7 @@ import post6Raw from '$lib/md/blog/best-practice-dedigin-yarisi-ezber.md?raw';
 import post7EnRaw from '$lib/md/blog/rules-and-commands-that-stick-en.md?raw';
 import post8EnRaw from '$lib/md/blog/browser-only-claude-streaming-en.md?raw';
 import post9EnRaw from '$lib/md/blog/prompt-caching-nobody-measures-en.md?raw';
+import post10EnRaw from '$lib/md/blog/stop-choosing-prompts-by-vibes-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -41,7 +42,8 @@ const contentMapEn: Record<string, string> = {
 	'cursor-ide-ve-prompt-muhendisligi': post3EnRaw,
 	'rules-and-commands-that-stick': post7EnRaw,
 	'browser-only-claude-streaming': post8EnRaw,
-	'prompt-caching-nobody-measures': post9EnRaw
+	'prompt-caching-nobody-measures': post9EnRaw,
+	'stop-choosing-prompts-by-vibes': post10EnRaw
 };
 
 export const title = 'Blog';
@@ -121,6 +123,14 @@ export const items: BlogPost[] = [
 			"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM']
+	},
+	{
+		slug: 'stop-choosing-prompts-by-vibes',
+		title: "Your prompt isn't better. You just remember it being better.",
+		excerpt:
+			'Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.',
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'A/B Testing', 'LLM', 'Evals']
 	}
 ];
 
