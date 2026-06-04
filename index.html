@@ -1,37 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="/slick-portfolio-svelte/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/entry/start.e2921e91.js">
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/chunks/scheduler.7a274a43.js">
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/chunks/singletons.01847011.js">
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/chunks/paths.5f648bd9.js">
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/entry/app.b655d971.js">
-		<link rel="modulepreload" href="/slick-portfolio-svelte/_app/immutable/chunks/index.28409b7f.js">
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="/manifest.json" />
+  <link rel="icon" href="/favicon.ico" />
+
+  <link rel="icon" type="image/png" href="/imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="/imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="/imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="/imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link rel="modulepreload" href="/_app/immutable/entry/start.410bc50a.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.738a5312.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/singletons.51f10cf9.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.64cba487.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/paths.e593e26f.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.06af6097.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.abd91e48.js">
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">
 			<script>
 				{
-					__sveltekit_1u459mg = {
-						assets: "/slick-portfolio-svelte",
-						base: "/slick-portfolio-svelte",
+					__sveltekit_ehpont = {
+						base: "",
 						env: {}
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/slick-portfolio-svelte/_app/immutable/entry/start.e2921e91.js"),
-						import("/slick-portfolio-svelte/_app/immutable/entry/app.b655d971.js")
+						import("/_app/immutable/entry/start.410bc50a.js"),
+						import("/_app/immutable/entry/app.06af6097.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});
 				}
 			</script>
 		</div>
-	</body>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
 </html>

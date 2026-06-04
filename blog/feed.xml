@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog | Ferhat Atagün</title>
+    <link>https://ferhatatagun.com/blog</link>
+    <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
+    <language>en</language>
+    <lastBuildDate>Thu, 04 Jun 2026 07:57:13 GMT</lastBuildDate>
+    <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Building a streaming Claude client in the browser — without the SDK</title>
+    <link>https://ferhatatagun.com/blog/browser-only-claude-streaming</link>
+    <description>Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.</description>
+    <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/browser-only-claude-streaming</guid>
+  </item>
+  <item>
+    <title>Rules and Commands That Actually Stick</title>
+    <link>https://ferhatatagun.com/blog/rules-and-commands-that-stick</link>
+    <description>How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.</description>
+    <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/rules-and-commands-that-stick</guid>
+  </item>
+  <item>
+    <title>Neden Bazen Sadece Boş Ekrana Bakıyorum</title>
+    <link>https://ferhatatagun.com/blog/neden-bazen-sadece-bos-ekrana-bakiyorum</link>
+    <description>Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.</description>
+    <pubDate>Sun, 12 Jan 2025 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/neden-bazen-sadece-bos-ekrana-bakiyorum</guid>
+  </item>
+  <item>
+    <title>Bitmemiş Projeler Mezarlığım ve Neden Rahatım</title>
+    <link>https://ferhatatagun.com/blog/bitmemis-projeler-mezarligim</link>
+    <description>Yarım kalan side project&apos;ler başarısızlık mı? Bence bazen sadece keşfin kendisi.</description>
+    <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/bitmemis-projeler-mezarligim</guid>
+  </item>
+  <item>
+    <title>&quot;Best Practice&quot; Dediklerimizin Yarısı Ezber</title>
+    <link>https://ferhatatagun.com/blog/best-practice-dedigin-yarisi-ezber</link>
+    <description>DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.</description>
+    <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/best-practice-dedigin-yarisi-ezber</guid>
+  </item>
+  <item>
+    <title>Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor</title>
+    <link>https://ferhatatagun.com/blog/yapay-zeka-ve-yazilim-gelistirme-2024</link>
+    <description>LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.</description>
+    <pubDate>Sun, 01 Dec 2024 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/yapay-zeka-ve-yazilim-gelistirme-2024</guid>
+  </item>
+  <item>
+    <title>Model Context Protocol (MCP) Nedir?</title>
+    <link>https://ferhatatagun.com/blog/mcp-model-context-protocol-nedir</link>
+    <description>MCP, AI asistanlarının dosya sistemine, API&apos;lere ve araçlara güvenli erişimini standartlaştıran açık protokol.</description>
+    <pubDate>Fri, 15 Nov 2024 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/mcp-model-context-protocol-nedir</guid>
+  </item>
+  <item>
+    <title>Cursor IDE ve Prompt Mühendisliği</title>
+    <link>https://ferhatatagun.com/blog/cursor-ide-ve-prompt-muhendisligi</link>
+    <description>Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.</description>
+    <pubDate>Fri, 01 Nov 2024 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/cursor-ide-ve-prompt-muhendisligi</guid>
+  </item>
+  </channel>
+</rss>
