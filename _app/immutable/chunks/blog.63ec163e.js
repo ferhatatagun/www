@@ -32,7 +32,7 @@ Bu sayede “bu API’yi kullanarak bir React formu ekle” gibi istekler tek se
 ## Özet
 
 Yapay zeka araçları deneyimi artırıyor; MCP ile bağlam, Cursor ile ise günlük akış doğal hale geliyor. Doğru prompt ve kurallarla kaliteyi koruyarak hız kazanmak mümkün.
-`,m=`# Model Context Protocol (MCP) Nedir?
+`,p=`# Model Context Protocol (MCP) Nedir?
 
 **Model Context Protocol**, AI asistanlarının dosya sistemine, API’lere ve diğer araçlara **güvenli ve standart** bir şekilde erişmesini sağlayan açık bir protokoldür. Anthropic ve ekosistem tarafından destekleniyor.
 
@@ -67,7 +67,7 @@ Böylece bir MCP sunucusu yazdığınızda, bu sunucu MCP destekleyen her istemc
 ## Sonuç
 
 MCP, AI asistanlarının “bağlam” ihtiyacını tek bir protokolde topluyor. Geliştirici araçları bu protokolü destekledikçe, aynı MCP sunucusu ile farklı editör ve asistanlarla çalışmak mümkün olacak.
-`,p=`# Cursor IDE ve Prompt Mühendisliği
+`,m=`# Cursor IDE ve Prompt Mühendisliği
 
 Cursor, VS Code tabanlı bir IDE olarak AI’ı doğrudan editörün içine taşıyor. Etkili kullanım için **prompt mühendisliği** ve **bağlam yönetimi** önemli.
 
@@ -871,4 +871,118 @@ You don't need a framework for this. You don't need a vendor. You need fifteen m
 I shipped this in [**tool-lab**](https://tool-lab-bice.vercel.app) — define tools, mock responses, watch the agent loop. BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/tool-lab](https://github.com/ferhatatagun/tool-lab).
 
 The same SSE client also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,h={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":g,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":f},u={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":k,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T,"build-the-sandbox-first":_},z="Blog",s=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"]},{slug:"build-the-sandbox-first",title:"Build the sandbox before you write a single tool",excerpt:"Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"]}],I=[...s].sort((e,t)=>t.date.localeCompare(e.date));function S(e){return s.find(t=>t.slug===e)}function x(e,t="tr"){return t==="en"?u[e]:h[e]}function A(e,t){return t==="en"&&e.titleEn?e.titleEn:e.title}function C(e,t){return t==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function P(e){const t=h[e]??u[e];if(!t)return 0;const n=t.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function B(e){const t=S(e);if(!t)return[];const n=a=>a.slug!==e&&a.tags.some(o=>t.tags.includes(o)),d=(a,o)=>{const r=a.tags.filter(i=>t.tags.includes(i)).length,l=o.tags.filter(i=>t.tags.includes(i)).length;return l!==r?l-r:o.date.localeCompare(a.date)};return I.filter(n).sort(d).slice(0,2)}function R(){const e=new Set;return s.forEach(t=>t.tags.forEach(n=>e.add(n))),[...e].sort()}export{P as a,S as b,B as c,x as d,A as e,C as f,R as g,I as s,z as t};
+`,I=`# How I debug Claude agents by replaying their trace
+
+Your agent did something weird in production. A user reported it, you found the failed run in your logs, and you're now staring at a JSON file that's 400 messages long, half of them are \`tool_result\` blocks the size of small databases, and somewhere in there is the moment the agent decided to do the wrong thing.
+
+You can't re-run the agent: the API state has moved on, the tool would behave differently now, the prompt has been updated three times since. You have only the trace.
+
+The way most of us read agent traces is: open the JSON in an editor, ctrl+F for the tool name we suspect, scroll through walls of escaped strings, try to mentally reconstruct the sequence. It takes thirty minutes, by the end of which you have one of three answers — "yeah I see what went wrong," "I'm pretty sure I see what went wrong," or "I have no idea what went wrong." About a third of the time it's the third one, and you go ship a band-aid that may or may not fix the actual problem.
+
+The thing nobody talks about is that this isn't a hard problem. The JSON contains all the information. The issue is purely *presentational* — it's nearly impossible to read.
+
+**TL;DR**
+
+- Agent traces are a sequence of decisions but stored as a wall of nested JSON. The signal is there; the format is the problem.
+- The right primitive isn't a JSON viewer — it's a timeline. Each thought, tool call, tool result, and final answer becomes its own discrete, color-coded step.
+- Once you can scrub through the trace step by step, the failure point becomes visually obvious in seconds instead of minutes.
+- This is post-hoc, not interactive. You don't need to re-run the agent or hit the API — replay works on the raw trace alone.
+- A browser-only tool can do this in 4 seconds. No backend, no key, just paste the JSON.
+
+## What an agent trace actually contains
+
+When you save a Claude agent run, you usually persist the \`messages\` array — the full conversation including the model's responses and the tool results you fed back. A six-step agent run looks roughly like:
+
+\`\`\`jsonc
+[
+  { "role": "user", "content": "Find me the cheapest flight from IST to LAX next Tuesday" },
+  { "role": "assistant", "content": [
+    { "type": "text", "text": "I'll search for flights and check prices." },
+    { "type": "tool_use", "id": "tu_01", "name": "search_flights", "input": {...} }
+  ]},
+  { "role": "user", "content": [
+    { "type": "tool_result", "tool_use_id": "tu_01", "content": "[<2KB of JSON>]" }
+  ]},
+  { "role": "assistant", "content": [
+    { "type": "text", "text": "Looking at three of those..." },
+    { "type": "tool_use", "id": "tu_02", "name": "get_price", "input": {...} }
+  ]},
+  // ...four more steps...
+]
+\`\`\`
+
+Every interesting moment of the agent's behaviour is in there: which tool it picked, what arguments it constructed, what it said about its own reasoning, how it interpreted the result. The structure is fundamentally a **sequence of discrete events**, not a "document."
+
+But you read it as a document, because that's what an editor shows you. The brain has to do the work of converting "alternating role: assistant / role: user with tool_result content blocks" into "step 3 was a tool call to get_price with argument X, which returned Y, which the agent then interpreted as Z."
+
+That conversion is what kills your debugging time. Doing it manually for a 12-step trace takes minutes. Doing it for a 60-step agent on a complex task takes hours.
+
+## The right primitive: a timeline of decisions
+
+The reframe is: stop reading the trace as JSON, start watching it as a sequence of decisions. Each step is one of:
+
+- 💭 **Thought** — the model wrote text (the part of its response that isn't a tool call)
+- 🔧 **Tool call** — the model invoked a tool with specific arguments
+- 📥 **Tool result** — what came back, fed into the next turn
+- ✅ **Final answer** — the model's \`end_turn\`, no more tools
+
+Color-code those four event types. Lay them out in order, one card per event. You now have a timeline you can scrub, step through, and play back. The information density per card is high enough that you can read the entire trace at a glance, and zoom in only on the cards that look suspicious.
+
+The structural insight: agent debugging is closer to debugging a script with breakpoints than to reading source code. You want to step through, not skim. JSON gives you no steps; the timeline gives you nothing else.
+
+## The bugs that become obvious in this view
+
+Three failure modes I see repeatedly when I drop a trace into the timeline:
+
+**1. The wrong tool, picked silently.** The model called \`search_archive\` when it should have called \`search_recent\`. In JSON this is one line out of 200 that flies past your eye. In the timeline it's a card with a tool name you didn't expect, and you click on it.
+
+**2. Hallucinated arguments.** The model called the right tool but with an argument shape that doesn't match the schema — usually because the schema is ambiguous. In JSON you see \`{"q": "foo", "limit": "10"}\` and don't notice that \`limit\` should have been an integer. In the timeline the tool result card right after shows a 400 error and you trace it back one step.
+
+**3. The infinite loop precursor.** Some agents get stuck in a pattern where they keep calling the same tool with slightly different inputs, never reaching a conclusion. In JSON it's a wall of near-identical blocks. In the timeline it's a visual rhythm — five purple cards in a row with the same tool name — that you can see in your peripheral vision the moment you scroll.
+
+In all three cases, the bug isn't subtle. It just *looks* subtle when it's hidden in JSON.
+
+## What replay gives you that re-running doesn't
+
+The temptation when an agent fails is to re-run it with print statements, see what happens, iterate. Don't. Three reasons:
+
+**It costs API calls.** A failed agent that called 15 tools costs you 15× input tokens to re-run. With caching maybe less; either way, the bill is real. Replay is free.
+
+**The API state has moved.** The tool you call today might return different data than the tool returned during the original run. You're not debugging the original failure anymore; you're debugging *whatever happens now*, which might be a totally different bug.
+
+**The model is stochastic.** Even at temperature 0, retries can produce different outputs. Re-running an agent and getting a *different* failure mode means you've now got two bugs to investigate. The trace is the canonical artifact of what actually happened.
+
+Replay sidesteps all three. You're inspecting a frozen artifact, deterministically, at whatever speed you want. The bug doesn't move while you're looking at it.
+
+## What this looks like in agent-replay
+
+[**agent-replay**](https://agentreplay.vercel.app) is the tool I built for this. Paste your trace into a JSON pane on the left. The right pane renders it as a cinematic timeline:
+
+- Each event is a card with an icon and color
+- You can press space to play through the trace at 1× speed (one event per second), or scrub manually
+- Click any card to see the full content — the thought text, the tool call's input JSON, the raw tool result, expanded
+- Filter by event type — "show me only the tool calls" or "show me only the assistant thoughts" — when you want to focus
+- The whole thing is in your browser; no key needed, no backend, your trace never leaves the tab
+
+There's a sample trace seeded on \`?demo=1\` if you want to see what a 12-step agent looks like without copying your own data anywhere.
+
+The thing I keep finding: the moment I'm debugging is no longer "where in the JSON did the agent screw up." It's "which card looks wrong, and what does the next card show as a consequence." A 30-minute investigation becomes a 30-second one. Not because the tool is doing anything clever — it's just showing the same data in the right shape.
+
+## What I'd recommend you do this week
+
+Three escalating moves:
+
+1. **Today (5 minutes):** Find the last weird agent run you have a trace for. Paste it into agent-replay. See how long it takes to find the failure point. If it's faster than your usual JSON-scrolling approach, you just changed your debugging workflow.
+
+2. **This week (an afternoon):** Add a trace-export endpoint to your agent. Every agent run, finished or failed, dumps the \`messages\` array to S3 or a database row. You need the trace before you need to debug it, not after.
+
+3. **This quarter (a habit):** When a user reports "the agent did something weird," your first move is to pull the trace and open it in a timeline view, *before* you read the user's report carefully. Most of the time you'll know what happened before you finish reading the bug report.
+
+Agent debugging is presented as an emerging engineering discipline. It isn't — it's a tooling problem we've solved many times before for non-AI systems. We just haven't built the tools yet for this one. Once the trace is in the right shape, the bugs are obvious. The work is laying out the data, not interpreting it.
+
+---
+
+I shipped this in [**agent-replay**](https://agentreplay.vercel.app) — paste a trace, scrub the timeline. No key, no backend, runs in the browser. Source: [github.com/ferhatatagun/agent-replay](https://github.com/ferhatatagun/agent-replay).
+
+The same SSE client (for traces that include streaming events) also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
+`,h={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":p,"cursor-ide-ve-prompt-muhendisligi":m,"neden-bazen-sadece-bos-ekrana-bakiyorum":g,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":f},u={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":k,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T,"build-the-sandbox-first":_,"debug-claude-agents-by-replaying-traces":I},A="Blog",s=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"]},{slug:"build-the-sandbox-first",title:"Build the sandbox before you write a single tool",excerpt:"Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"]},{slug:"debug-claude-agents-by-replaying-traces",title:"How I debug Claude agents by replaying their trace",excerpt:"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Debugging","LLM","Observability"]}],S=[...s].sort((e,t)=>t.date.localeCompare(e.date));function x(e){return s.find(t=>t.slug===e)}function z(e,t="tr"){return t==="en"?u[e]:h[e]}function C(e,t){return t==="en"&&e.titleEn?e.titleEn:e.title}function P(e,t){return t==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function B(e){const t=h[e]??u[e];if(!t)return 0;const n=t.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function E(e){const t=x(e);if(!t)return[];const n=a=>a.slug!==e&&a.tags.some(o=>t.tags.includes(o)),d=(a,o)=>{const r=a.tags.filter(i=>t.tags.includes(i)).length,l=o.tags.filter(i=>t.tags.includes(i)).length;return l!==r?l-r:o.date.localeCompare(a.date)};return S.filter(n).sort(d).slice(0,2)}function R(){const e=new Set;return s.forEach(t=>t.tags.forEach(n=>e.add(n))),[...e].sort()}export{B as a,x as b,E as c,z as d,C as e,P as f,R as g,S as s,A as t};
