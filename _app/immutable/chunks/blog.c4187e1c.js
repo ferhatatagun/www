@@ -1,4 +1,4 @@
-const m=`# Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor
+const h=`# Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor
 
 Günlük geliştirme pratiğinde LLM araçları artık vazgeçilmez hale geldi. Bu yazıda **Model Context Protocol (MCP)**, **GPT** tabanlı asistanlar ve **Cursor** ile nasıl daha etkili kod yazılabileceğinden bahsediyorum.
 
@@ -32,7 +32,7 @@ Bu sayede “bu API’yi kullanarak bir React formu ekle” gibi istekler tek se
 ## Özet
 
 Yapay zeka araçları deneyimi artırıyor; MCP ile bağlam, Cursor ile ise günlük akış doğal hale geliyor. Doğru prompt ve kurallarla kaliteyi koruyarak hız kazanmak mümkün.
-`,p=`# Model Context Protocol (MCP) Nedir?
+`,m=`# Model Context Protocol (MCP) Nedir?
 
 **Model Context Protocol**, AI asistanlarının dosya sistemine, API’lere ve diğer araçlara **güvenli ve standart** bir şekilde erişmesini sağlayan açık bir protokoldür. Anthropic ve ekosistem tarafından destekleniyor.
 
@@ -67,7 +67,7 @@ Böylece bir MCP sunucusu yazdığınızda, bu sunucu MCP destekleyen her istemc
 ## Sonuç
 
 MCP, AI asistanlarının “bağlam” ihtiyacını tek bir protokolde topluyor. Geliştirici araçları bu protokolü destekledikçe, aynı MCP sunucusu ile farklı editör ve asistanlarla çalışmak mümkün olacak.
-`,k=`# Cursor IDE ve Prompt Mühendisliği
+`,p=`# Cursor IDE ve Prompt Mühendisliği
 
 Cursor, VS Code tabanlı bir IDE olarak AI’ı doğrudan editörün içine taşıyor. Etkili kullanım için **prompt mühendisliği** ve **bağlam yönetimi** önemli.
 
@@ -131,7 +131,7 @@ You don’t have to repeat these in every chat.
 ## Summary
 
 In Cursor, productivity improves with the right context (@file, @web) and clear, short prompts. Using \`.cursorrules\` for consistency helps you get more predictable output from AI.
-`,h=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
+`,k=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
 
 Evet. Bazen açıyorum IDE'yi, bir dosyayı, sonra hiçbir tuşa basmıyorum. Beş dakika, on dakika. Ekran boş, imleç yanıp sönüyor. Bu "verimlilik" değil. Ama işin bir parçası.
 
@@ -467,4 +467,145 @@ If you've been waiting to put the Claude API in a browser tool because the SDK f
 The four tools, all open-source and BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
 
 Source for the SSE client described here: [github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts](https://github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts).
-`,d={"yapay-zeka-ve-yazilim-gelistirme-2024":m,"mcp-model-context-protocol-nedir":p,"cursor-ide-ve-prompt-muhendisligi":k,"neden-bazen-sadece-bos-ekrana-bakiyorum":h,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":g},u={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":v},S="Blog",i=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]}],w=[...i].sort((e,a)=>a.date.localeCompare(e.date));function z(e){return i.find(a=>a.slug===e)}function C(e,a="tr"){return a==="en"?u[e]:d[e]}function P(e,a){return a==="en"&&e.titleEn?e.titleEn:e.title}function x(e,a){return a==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function _(e){const a=d[e]??u[e];if(!a)return 0;const n=a.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function B(e){const a=z(e);if(!a)return[];const n=t=>t.slug!==e&&t.tags.some(r=>a.tags.includes(r)),c=(t,r)=>{const s=t.tags.filter(o=>a.tags.includes(o)).length,l=r.tags.filter(o=>a.tags.includes(o)).length;return l!==s?l-s:r.date.localeCompare(t.date)};return w.filter(n).sort(c).slice(0,2)}function I(){const e=new Set;return i.forEach(a=>a.tags.forEach(n=>e.add(n))),[...e].sort()}export{_ as a,z as b,B as c,C as d,P as e,x as f,I as g,w as s,S as t};
+`,w=`# Prompt caching is the cheapest Claude optimization. Nobody measures it.
+
+Pull up the last week of Anthropic API bills from any team shipping a Claude-powered product. Two out of three of them are paying for context they could be reading from cache for one-tenth the price. Most of them don't know it, because the dashboard doesn't tell them and the SDKs don't either — by the time the response lands, the only number anyone looks at is \`output_tokens\`, and even then mostly when something seems expensive.
+
+The information is in every response. Anthropic puts it in \`usage\`:
+
+\`\`\`json
+"usage": {
+  "input_tokens": 312,
+  "cache_creation_input_tokens": 4180,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 187
+}
+\`\`\`
+
+Four numbers. The first time a cached prompt runs you pay 1.25× the input price to *write* the cache. Every subsequent call within the TTL pays 0.1× to *read* it. The ratio between those two lines is the difference between a $3,000/month bill and a $300/month one. And almost no one is graphing it.
+
+**TL;DR**
+
+- Every Claude response carries cache-hit data in \`usage\`. Most apps log it nowhere.
+- The first call after a cache miss costs \`1.25× input\` extra; every hit after costs \`0.1× input\`. Break-even is two reads.
+- The cache TTL is 5 minutes by default. A request pattern that fires once every six minutes is paying the write penalty forever and getting zero benefit.
+- The fix is observability, not code: graph cache hit ratio over time, alert when it dips, and you'll find the bug before the invoice does.
+- A 150-line browser tool is enough to do this for any project that streams from the Messages API.
+
+## What the four numbers actually mean
+
+When you send a request with \`cache_control: { type: "ephemeral" }\` somewhere in your messages, the API checks if it's seen an identical prefix in the last 5 minutes. There are three outcomes:
+
+1. **Cache miss, new content.** The full prompt is processed normally. \`input_tokens\` reflects the uncached portion; \`cache_creation_input_tokens\` reflects what got written into cache for next time.
+2. **Cache hit.** The cached prefix is read at 10% the price. \`cache_read_input_tokens\` shows what was read; \`input_tokens\` is just the new suffix.
+3. **TTL expired.** Same shape as a miss — you pay the creation surcharge again.
+
+So a single response tells you exactly which of these three happened. Not "approximately." Exactly. Per request. For free.
+
+The pricing math (Sonnet 4.5, June 2026) shapes up like this for a 5,000-token system prompt that gets queried once and then again four minutes later:
+
+| Scenario              | First call             | Second call          | Total       |
+|-----------------------|------------------------|----------------------|-------------|
+| No caching            | 5,000 × $3 = $0.015    | 5,000 × $3 = $0.015  | **$0.030**  |
+| Cache, hit            | 5,000 × $3.75 = $0.019 | 5,000 × $0.30 = $0.0015 | **$0.020** |
+| Cache, miss (TTL out) | 5,000 × $3.75 = $0.019 | 5,000 × $3.75 = $0.019 | **$0.038** |
+
+The third row is the failure mode. You enabled caching, you're paying the write penalty, and nobody's actually hitting the cache. Without measurement, this row looks identical to the second in your code — same headers, same prompt structure, same response — but it's 90% more expensive than not caching at all.
+
+## How a bad cache hit ratio sneaks in
+
+Three patterns I've watched teams ship and then quietly bleed money over:
+
+**1. Per-user system prompts.** Someone interpolated the user's name or org ID into the system prompt to feel "personalized." Every cache write is now per-user, and unless that user fires a second request within five minutes, every call pays the creation surcharge. The fix is moving the personalization into the user message and keeping the system prompt static — but you only see this fix is needed when the hit ratio graph is flat at zero.
+
+**2. Subtly drifting prompts.** Maybe you append the current timestamp, maybe a "today is" line, maybe you regenerate a list of available tools that arrives in a non-deterministic order. The cache key is the exact byte sequence; one character of drift and you've invalidated the whole prefix. Tools that serialize tool definitions before sending are an especially fun source of this — \`JSON.stringify\` on an object with shuffled keys produces different bytes, no hit.
+
+**3. Wrong TTL for your traffic pattern.** A chatbot that gets ~one message every ten minutes has a structural mismatch with a 5-minute ephemeral cache. You're paying the write penalty on every conversation turn. Either bump to the 1-hour cache (more expensive write, way longer life) or accept that caching isn't economical for your traffic shape — but you need the data to make either decision.
+
+All three of these are invisible from a code review. They're only visible in the usage telemetry.
+
+## The minimum viable observability
+
+You don't need a metrics stack for this. You need to log four fields per request and chart them. The unhelpful version is the one most teams have:
+
+\`\`\`ts
+logger.info("claude response", { tokens: r.usage.output_tokens });
+\`\`\`
+
+The version that pays for itself in one week is:
+
+\`\`\`ts
+const u = r.usage;
+const hitRate = u.cache_read_input_tokens / 
+                (u.cache_read_input_tokens + u.cache_creation_input_tokens || 1);
+
+logger.info("claude.usage", {
+  input: u.input_tokens,
+  output: u.output_tokens,
+  cache_create: u.cache_creation_input_tokens ?? 0,
+  cache_read: u.cache_read_input_tokens ?? 0,
+  hit_rate: hitRate,
+  cost_estimate: estimateCost(u, model),
+});
+\`\`\`
+
+The \`hit_rate\` field is the one that matters. Group by route, by model, by user-agent — whatever your traffic dimensions are. Anything trending toward zero on a cache-using endpoint is a money leak.
+
+The \`cost_estimate\` is what makes the dashboard land in conversations with non-engineers. Anthropic publishes pricing per token tier; the conversion is mechanical:
+
+\`\`\`ts
+function estimateCost(u: Usage, model: string) {
+  const p = pricing[model]; // { input, output, cache_write, cache_read }
+  return (
+    u.input_tokens * p.input +
+    u.output_tokens * p.output +
+    (u.cache_creation_input_tokens ?? 0) * p.cache_write +
+    (u.cache_read_input_tokens ?? 0) * p.cache_read
+  ) / 1_000_000;
+}
+\`\`\`
+
+That's it. Five lines of arithmetic and you've got per-request dollars on every Claude call your app makes.
+
+## Why I built a tool for this anyway
+
+I built [**claudoscope**](https://claudoscope-labs.vercel.app) because I wanted to see this data live, while the response was streaming, without instrumenting whatever app I was iterating on. The use case is "I'm about to ship a prompt change, did my cache behavior just regress?" — the slow, expensive way is deploying it and looking at logs an hour later; the fast way is pasting the request into a tool that tells you in 4 seconds.
+
+The whole thing is a browser-only client. Bring your own key, no backend. Every event from the SSE stream is parsed and the \`usage\` object is broken out into a panel:
+
+\`\`\`
+┌─ X-Ray ────────────────────────────────────────┐
+│ input         312      $0.0009                 │
+│ cache write 4,180      $0.0157  ◄─ first run  │
+│ cache read      0      $0.0000                 │
+│ output        187      $0.0028                 │
+│ ─────────────                                  │
+│ total                  $0.0194                 │
+│                                                │
+│ hit ratio: 0% (cold) — re-run within 5m       │
+└────────────────────────────────────────────────┘
+\`\`\`
+
+Hit "send" a second time within the TTL and the bars rearrange — cache write goes to zero, cache read fills, the cost number drops by 90%. It's the kind of thing that's obvious once you see it move and invisible if you don't.
+
+It's about 100KB gzipped and the source is in [one file](https://github.com/ferhatatagun/claudoscope). The pricing tier logic is in another. There's no third file.
+
+## What I'd actually recommend you do today
+
+The order of operations, in increasing effort:
+
+1. **Right now (5 minutes):** Open claudoscope, paste your most expensive prompt, run it twice. Look at the difference. If the hit ratio isn't ~99% on the second call, you have a cacheability bug, not an optimization opportunity.
+2. **This week (an afternoon):** Add the usage logging block above to every Claude call site in your app. Ship it. Don't bother building a dashboard yet — \`grep\` your logs and you'll find the worst offenders in fifteen minutes.
+3. **This month (a sprint):** Move the four \`usage\` fields into your real metrics pipeline (Datadog/Honeycomb/Grafana/whatever). Graph cache hit ratio by endpoint. Alert when it drops below your floor.
+4. **Optional (if you're me):** Build the visualizer because seeing it move in real time is the thing that makes it stick.
+
+Three out of four of those are configuration, not code. The interesting part isn't the implementation; it's that almost nobody has done it. The teams I've talked to who do have it — without exception — found a cache misconfiguration in the first week of dashboards and saved more than the work cost them. The teams who don't have it are usually paying the cache creation surcharge for nothing.
+
+The Anthropic API gives you everything you need to know whether your caching is working. The only question is whether you look.
+
+---
+
+I shipped this visualization in [**claudoscope**](https://claudoscope-labs.vercel.app) — bring-your-own-key, no backend, runs in the browser. Source: [github.com/ferhatatagun/claudoscope](https://github.com/ferhatatagun/claudoscope).
+
+The same SSE client also powers three sibling tools — [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
+`,d={"yapay-zeka-ve-yazilim-gelistirme-2024":h,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":k,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":g},c={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":v,"prompt-caching-nobody-measures":w},T="Blog",i=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]}],z=[...i].sort((e,n)=>n.date.localeCompare(e.date));function _(e){return i.find(n=>n.slug===e)}function S(e,n="tr"){return n==="en"?c[e]:d[e]}function x(e,n){return n==="en"&&e.titleEn?e.titleEn:e.title}function C(e,n){return n==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function P(e){const n=d[e]??c[e];if(!n)return 0;const a=n.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(a/200))}function A(e){const n=_(e);if(!n)return[];const a=t=>t.slug!==e&&t.tags.some(r=>n.tags.includes(r)),u=(t,r)=>{const s=t.tags.filter(o=>n.tags.includes(o)).length,l=r.tags.filter(o=>n.tags.includes(o)).length;return l!==s?l-s:r.date.localeCompare(t.date)};return z.filter(a).sort(u).slice(0,2)}function I(){const e=new Set;return i.forEach(n=>n.tags.forEach(a=>e.add(a))),[...e].sort()}export{P as a,_ as b,A as c,S as d,x as e,C as f,I as g,z as s,T as t};

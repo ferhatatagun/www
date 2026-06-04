@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 07:57:13 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 13:29:35 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Prompt caching is the cheapest Claude optimization. Nobody measures it.</title>
+    <link>https://ferhatatagun.com/blog/prompt-caching-nobody-measures</link>
+    <description>Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.</description>
+    <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/prompt-caching-nobody-measures</guid>
+  </item>
   <item>
     <title>Building a streaming Claude client in the browser — without the SDK</title>
     <link>https://ferhatatagun.com/blog/browser-only-claude-streaming</link>
