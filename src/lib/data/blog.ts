@@ -7,6 +7,7 @@ import post5Raw from '$lib/md/blog/bitmemis-projeler-mezarligim.md?raw';
 import post6Raw from '$lib/md/blog/best-practice-dedigin-yarisi-ezber.md?raw';
 import post7EnRaw from '$lib/md/blog/rules-and-commands-that-stick-en.md?raw';
 import post8EnRaw from '$lib/md/blog/browser-only-claude-streaming-en.md?raw';
+import post9EnRaw from '$lib/md/blog/prompt-caching-nobody-measures-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -39,7 +40,8 @@ const contentMap: Record<string, string> = {
 const contentMapEn: Record<string, string> = {
 	'cursor-ide-ve-prompt-muhendisligi': post3EnRaw,
 	'rules-and-commands-that-stick': post7EnRaw,
-	'browser-only-claude-streaming': post8EnRaw
+	'browser-only-claude-streaming': post8EnRaw,
+	'prompt-caching-nobody-measures': post9EnRaw
 };
 
 export const title = 'Blog';
@@ -111,6 +113,14 @@ export const items: BlogPost[] = [
 			'Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.',
 		date: '2026-06-03',
 		tags: ['Claude', 'Anthropic', 'SSE', 'Streaming', 'TypeScript', 'Browser']
+	},
+	{
+		slug: 'prompt-caching-nobody-measures',
+		title: 'Prompt caching is the cheapest Claude optimization. Nobody measures it.',
+		excerpt:
+			"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM']
 	}
 ];
 
