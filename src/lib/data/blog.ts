@@ -9,6 +9,7 @@ import post7EnRaw from '$lib/md/blog/rules-and-commands-that-stick-en.md?raw';
 import post8EnRaw from '$lib/md/blog/browser-only-claude-streaming-en.md?raw';
 import post9EnRaw from '$lib/md/blog/prompt-caching-nobody-measures-en.md?raw';
 import post10EnRaw from '$lib/md/blog/stop-choosing-prompts-by-vibes-en.md?raw';
+import post11EnRaw from '$lib/md/blog/build-the-sandbox-first-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -43,7 +44,8 @@ const contentMapEn: Record<string, string> = {
 	'rules-and-commands-that-stick': post7EnRaw,
 	'browser-only-claude-streaming': post8EnRaw,
 	'prompt-caching-nobody-measures': post9EnRaw,
-	'stop-choosing-prompts-by-vibes': post10EnRaw
+	'stop-choosing-prompts-by-vibes': post10EnRaw,
+	'build-the-sandbox-first': post11EnRaw
 };
 
 export const title = 'Blog';
@@ -131,6 +133,14 @@ export const items: BlogPost[] = [
 			'Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.',
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'A/B Testing', 'LLM', 'Evals']
+	},
+	{
+		slug: 'build-the-sandbox-first',
+		title: 'Build the sandbox before you write a single tool',
+		excerpt:
+			'Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.',
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'Agents', 'Tool Use', 'Prompt Engineering', 'LLM']
 	}
 ];
 
