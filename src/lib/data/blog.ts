@@ -10,6 +10,7 @@ import post8EnRaw from '$lib/md/blog/browser-only-claude-streaming-en.md?raw';
 import post9EnRaw from '$lib/md/blog/prompt-caching-nobody-measures-en.md?raw';
 import post10EnRaw from '$lib/md/blog/stop-choosing-prompts-by-vibes-en.md?raw';
 import post11EnRaw from '$lib/md/blog/build-the-sandbox-first-en.md?raw';
+import post12EnRaw from '$lib/md/blog/debug-claude-agents-by-replaying-traces-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -45,7 +46,8 @@ const contentMapEn: Record<string, string> = {
 	'browser-only-claude-streaming': post8EnRaw,
 	'prompt-caching-nobody-measures': post9EnRaw,
 	'stop-choosing-prompts-by-vibes': post10EnRaw,
-	'build-the-sandbox-first': post11EnRaw
+	'build-the-sandbox-first': post11EnRaw,
+	'debug-claude-agents-by-replaying-traces': post12EnRaw
 };
 
 export const title = 'Blog';
@@ -141,6 +143,14 @@ export const items: BlogPost[] = [
 			'Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.',
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Agents', 'Tool Use', 'Prompt Engineering', 'LLM']
+	},
+	{
+		slug: 'debug-claude-agents-by-replaying-traces',
+		title: 'How I debug Claude agents by replaying their trace',
+		excerpt:
+			"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability']
 	}
 ];
 
