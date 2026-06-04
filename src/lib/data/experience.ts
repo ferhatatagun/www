@@ -52,6 +52,28 @@ import { ContractType, type Experience } from '../types';
 
 export const items: Array<Experience> = [
 	{
+		slug: 'open-source-ai-devtools',
+		company: 'Open Source',
+		description:
+			"Designing and shipping a suite of four browser-only developer tools for the Anthropic Claude API — claudoscope (live x-ray of prompt caching and token economics), agent-replay (cinematic timeline replay of agent tool-calling loops), prompt-lab (side-by-side A/B testing of prompts and models), tool-lab (interactive tool-use sandbox with hand-mocked responses). All BYOK, no backend, ~150-line hand-rolled SSE client shared across the suite. Five long-form write-ups on ferhatatagun.com and Medium documenting the design decisions, prompt-caching economics, agent debugging, and prompt iteration methodology.",
+		contract: ContractType.SelfEmployed,
+		type: 'AI Developer Tools',
+		location: 'Remote · Open Source (MIT)',
+		period: {
+			from: new Date(2026, 4, 20)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		name: 'Creator — Claude Dev-Tool Suite',
+		color: '#8b5cf6',
+		links: [
+			{ to: 'https://ferhatatagun.com/tools', label: 'Suite', newTab: true },
+			{ to: 'https://github.com/ferhatatagun', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		shortDescription:
+			'Creator of a four-tool open-source suite that makes the Claude API legible — caching, agent loops, prompt economics, tool-use design.'
+	},
+	{
 		slug: 'frontend-team-lead',
 		company: 'HangiKredi',
 		description: 'Leading the frontend team and managing frontend architecture.',
