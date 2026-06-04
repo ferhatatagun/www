@@ -32,7 +32,7 @@ Bu sayede “bu API’yi kullanarak bir React formu ekle” gibi istekler tek se
 ## Özet
 
 Yapay zeka araçları deneyimi artırıyor; MCP ile bağlam, Cursor ile ise günlük akış doğal hale geliyor. Doğru prompt ve kurallarla kaliteyi koruyarak hız kazanmak mümkün.
-`,p=`# Model Context Protocol (MCP) Nedir?
+`,m=`# Model Context Protocol (MCP) Nedir?
 
 **Model Context Protocol**, AI asistanlarının dosya sistemine, API’lere ve diğer araçlara **güvenli ve standart** bir şekilde erişmesini sağlayan açık bir protokoldür. Anthropic ve ekosistem tarafından destekleniyor.
 
@@ -67,7 +67,7 @@ Böylece bir MCP sunucusu yazdığınızda, bu sunucu MCP destekleyen her istemc
 ## Sonuç
 
 MCP, AI asistanlarının “bağlam” ihtiyacını tek bir protokolde topluyor. Geliştirici araçları bu protokolü destekledikçe, aynı MCP sunucusu ile farklı editör ve asistanlarla çalışmak mümkün olacak.
-`,m=`# Cursor IDE ve Prompt Mühendisliği
+`,p=`# Cursor IDE ve Prompt Mühendisliği
 
 Cursor, VS Code tabanlı bir IDE olarak AI’ı doğrudan editörün içine taşıyor. Etkili kullanım için **prompt mühendisliği** ve **bağlam yönetimi** önemli.
 
@@ -131,7 +131,7 @@ You don’t have to repeat these in every chat.
 ## Summary
 
 In Cursor, productivity improves with the right context (@file, @web) and clear, short prompts. Using \`.cursorrules\` for consistency helps you get more predictable output from AI.
-`,b=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
+`,g=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
 
 Evet. Bazen açıyorum IDE'yi, bir dosyayı, sonra hiçbir tuşa basmıyorum. Beş dakika, on dakika. Ekran boş, imleç yanıp sönüyor. Bu "verimlilik" değil. Ama işin bir parçası.
 
@@ -150,7 +150,7 @@ Buna isim koymak zorunda değiliz. "Deep work" falan da demiyorum. Sadece şu: B
 Takımda "ne yaptın bugün?" diye sorulunca "ekrana baktım" demek garip geliyor. Ama yaptığım buydu. Sonuç: ertesi gün tasarımı değiştirdim, iki saatte toparladım. O bakma anı olmasa belki bir gün daha yanlış yolda gidecektim.
 
 Özet falan yok. Sadece diyorum ki: Bazen hiçbir şey yazmıyorsan da bir şey yapıyorsun. Yeter ki o "hiçbir şey" gerçekten düşünmek olsun, kaçış değil.
-`,k=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
+`,b=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
 
 GitHub'da private repo sayımı söylemeyeceğim. Ama "yarım kaldı" diyebileceğim proje sayısı bir elin parmaklarını geçiyor. Bir süre bunu başarısızlık gibi hissettim. Sonra fikrim değişti.
 
@@ -173,7 +173,7 @@ Tabii bir de şu var: Bazen yarım bıraktığın şey yıllar sonra başka bir 
 Benim mezarlığımda yatan projelerin çoğu böyle. Hedef "ürün çıkarmak" değildi, "şunu anlamak"tı. Anladım, dosyalar duruyor. Sorun yok.
 
 Eğer senin de yarım projelerin varsa: Belki başarısızlık değildir. Belki sadece o fikrin ömrü o kadardı. Yeni fikre yer açıyorsun.
-`,g=`# "Best Practice" Dediklerimizin Yarısı Ezber
+`,f=`# "Best Practice" Dediklerimizin Yarısı Ezber
 
 "Best practice böyle yapılır." Kaç kere duydun? Ben çok duydum. Sonra baktım: Aynı "best practice" bir projede hayat kurtarıyor, başka projede sadece gürültü. Demek ki best practice değil, bağlama göre iyi gelen bir tercih.
 
@@ -194,7 +194,7 @@ Bir tarafta "kod kendini anlatsın, yorum yazma" diyenler var. Diğer tarafta "k
 Best practice'leri tamamen atalım demiyorum. Ama "çünkü best practice" tek başına gerekçe olmasın. "Bu projede, bu takımda, bu kısıtla neden mantıklı?" sorusunu sor. Bazen cevap "çünkü herkes böyle yapıyor" olacak — o da bir cevap, ama bilinçli olsun. Bazen cevap "burada bu kural işe yaramıyor, farklı yapıyoruz" olacak. Onu da söyleyebilmek lazım.
 
 Kurallar düşünmeyi kolaylaştırsın, düşünmenin yerine geçmesin.
-`,f=`# Rules and Commands That Actually Stick
+`,k=`# Rules and Commands That Actually Stick
 
 Project rules and slash commands only work if you use them. Sounds obvious. But most teams write a long \`.cursorrules\` once, forget it, and keep repeating the same instructions in every chat. Here’s how to make rules and commands stick.
 
@@ -742,4 +742,133 @@ You don't need to outsmart your future self. You just need to make it possible f
 I shipped this in [**prompt-lab**](https://prompt-lab-promptly.vercel.app) — two prompts side by side, BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/prompt-lab](https://github.com/ferhatatagun/prompt-lab).
 
 The same SSE client also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,u={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":p,"cursor-ide-ve-prompt-muhendisligi":m,"neden-bazen-sadece-bos-ekrana-bakiyorum":b,"bitmemis-projeler-mezarligim":k,"best-practice-dedigin-yarisi-ezber":g},d={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T},S="Blog",r=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"]}],z=[...r].sort((e,t)=>t.date.localeCompare(e.date));function _(e){return r.find(t=>t.slug===e)}function x(e,t="tr"){return t==="en"?d[e]:u[e]}function I(e,t){return t==="en"&&e.titleEn?e.titleEn:e.title}function A(e,t){return t==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function C(e){const t=u[e]??d[e];if(!t)return 0;const n=t.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function B(e){const t=_(e);if(!t)return[];const n=a=>a.slug!==e&&a.tags.some(o=>t.tags.includes(o)),h=(a,o)=>{const s=a.tags.filter(i=>t.tags.includes(i)).length,l=o.tags.filter(i=>t.tags.includes(i)).length;return l!==s?l-s:o.date.localeCompare(a.date)};return z.filter(n).sort(h).slice(0,2)}function P(){const e=new Set;return r.forEach(t=>t.tags.forEach(n=>e.add(n))),[...e].sort()}export{C as a,_ as b,B as c,x as d,I as e,A as f,P as g,z as s,S as t};
+`,_=`# Build the sandbox before you write a single tool
+
+The first time you ship a Claude agent that uses tools you'll do it the obvious way: design the schema, write the actual tool function, hit the API, parse the \`tool_use\` block, run the function, feed the result back, loop. It works. It also has a fundamental ordering bug:
+
+You wrote the tools before you knew if they were the right tools.
+
+By the time you've stood up a database query function, two API calls, and a thing that hits the file system, you've sunk maybe a day. You run the agent. It calls a non-existent tool. It hallucinates an argument shape that doesn't match your schema. It picks the wrong tool when both would have worked. *Now* you're going to redesign the schema, and the four real tool implementations you wrote are going in the bin or being rewritten.
+
+The thing that makes this worse is that the failure mode looks like an "agent quality" problem when it's actually a "premature implementation" problem. The model knew what it wanted; you'd just built the wrong scaffolding around it.
+
+**TL;DR**
+
+- Tool implementations are the slowest part of agent development; tool *design* is the fastest part to get wrong.
+- Decouple them: write the tool schemas, run the agent loop with mocked responses, see how the model picks and uses the tools — then write the real implementations only for the tools that survived.
+- The right mental model is "you play the role of every tool, by hand" — slow for the agent, fast for you, brutal for bad designs.
+- This is a fifteen-minute exercise for a five-tool agent that would otherwise take a day, and it catches design mistakes before they touch your codebase.
+- The whole thing fits in a browser tool with no backend.
+
+## What "premature implementation" actually looks like
+
+A worked example. I was building a code review agent. My first instinct was four tools:
+
+\`\`\`ts
+const tools = [
+  { name: "read_file", description: "read a file from the repo", ... },
+  { name: "search_code", description: "grep across the repo", ... },
+  { name: "get_diff", description: "show the diff for this PR", ... },
+  { name: "post_comment", description: "leave a review comment", ... },
+];
+\`\`\`
+
+I implemented all four. Real filesystem access. Real git invocation. Real GitHub API call. Probably four hours total. Then I ran the agent on a real PR.
+
+What happened: the agent called \`get_diff\` first (good), then called \`search_code\` for every single identifier in the diff (catastrophic — the diff had 200 lines, 50 unique identifiers, my rate limit ran out). It never called \`read_file\` because the diff already contained the context. It called \`post_comment\` once at the end with a 4,000-word essay instead of inline comments.
+
+Three of my four "real" tools were either misused or unused. The agent design was wrong, not the implementations. If I'd run the loop with mocked responses first, I would have:
+
+1. Noticed it called \`search_code\` 50 times → split the tool into \`search_code(query, limit=5)\` with an explicit budget
+2. Noticed it never used \`read_file\` → deleted it, saved myself an hour
+3. Noticed \`post_comment\` was being used as \`post_essay\` → split into \`post_inline_comment(line, body)\` and \`post_summary(body)\`
+
+That intervention takes fifteen minutes when the tools are mocked. It takes a day when they're real.
+
+## The role-play pattern
+
+The trick is shockingly simple: write your tool schemas, send a real user message to Claude, and when the model produces a \`tool_use\` block, *you* hand-type the result and feed it back. The loop runs end-to-end, but you're playing every tool.
+
+In code, this is the same agent loop everyone writes:
+
+\`\`\`ts
+while (true) {
+  const res = await callClaude({ messages, tools });
+  if (res.stop_reason === "end_turn") break;
+  
+  const toolUses = res.content.filter(b => b.type === "tool_use");
+  const toolResults = toolUses.map(t => ({
+    type: "tool_result",
+    tool_use_id: t.id,
+    content: PROMPT_USER_FOR_RESULT(t.name, t.input),  // <-- you fill this in
+  }));
+  
+  messages.push({ role: "assistant", content: res.content });
+  messages.push({ role: "user", content: toolResults });
+}
+\`\`\`
+
+The only difference between this and a "real" agent loop is the \`PROMPT_USER_FOR_RESULT\` call — instead of executing a function, it shows you what the model called and what arguments it used, and waits for you to type the answer.
+
+What that produces is surprisingly information-dense:
+
+- **Did the model pick the tool I expected?** If it took a different path you didn't anticipate, your schema is signaling something other than what you meant.
+- **Did the input shape match my JSON schema?** If the model is straining to fit the schema, the schema is too rigid or too loose.
+- **How many tools did it chain?** A 12-step tool chain to answer one question is a sign you decomposed the toolset wrong.
+- **Did it ask follow-up questions before tool use?** That's good — it means the model is trying to disambiguate. If it doesn't, your prompt isn't asking it to.
+
+You see all of this in a five-minute conversation, before you've written a single line of real implementation.
+
+## When you can stop role-playing
+
+The sandbox isn't a permanent state. It's a phase. You run it until you've answered three questions:
+
+1. **Are these the right tools?** — Some get deleted, some get split, some get merged. Usually 30-50% of your initial toolset doesn't survive contact with a real prompt.
+2. **Are the schemas tight enough?** — You see the model picking awkward argument values; you constrain the schema (enum instead of string, required instead of optional). 
+3. **Does the agent loop terminate?** — Some agents will keep calling tools forever if their stopping criteria are vague. The mock-response loop surfaces this immediately because *you're* the one getting stuck typing responses.
+
+When those three are stable on a handful of real prompts, you write the real implementations. The implementation work is now de-risked: you know which tools to actually build, and the schemas are settled.
+
+The thing you save isn't the implementation time itself — it's the rework. Writing a tool from scratch is fast. Rewriting a tool because its schema was wrong, then updating the prompt because the new schema needs different framing, then re-running every regression input, is what eats days.
+
+## What this looks like in tool-lab
+
+[**tool-lab**](https://tool-lab-bice.vercel.app) is what I built to do this without setting up a project each time. Three panes:
+
+\`\`\`
+┌─ Tools (JSON editor) ─────────┬─ Conversation ────────────────────┐
+│ [                             │  user: review this PR             │
+│   { "name": "read_file", ... },│  assistant: I'll get the diff.    │
+│   { "name": "search_code"...},│    → tool_use: get_diff()         │
+│   { "name": "get_diff", ... },│    ← tool_result: <YOU TYPE>      │
+│   { "name": "post_comment"...}│  assistant: ...                   │
+│ ]                             │                                    │
+└───────────────────────────────┴───────────────────────────────────┘
+\`\`\`
+
+You paste your tool schemas on the left. Type the user message. The model streams its response into the right pane. When it lands a \`tool_use\` block, the conversation pauses with a text field for the result. You type whatever the tool would have returned — JSON, a string, an error, whatever. Hit continue. The loop runs again with your fake result included.
+
+It's about 12KB of relevant logic on top of the shared SSE client I wrote about [here](https://ferhatatagun.com/blog/browser-only-claude-streaming). BYOK, no backend, your tool schemas and conversations live in \`localStorage\` only. There's a demo conversation seeded on \`?demo=1\` so you can see the loop run without writing tools yourself.
+
+The thing I keep noticing: the tool-lab session for any new agent takes ten to twenty minutes. The agent design that comes out of it is consistently 30-50% smaller than what I would have written from intuition. Smaller agents with fewer, more focused tools are also dramatically easier to reason about when they go wrong in production — which is the other dividend of doing the sandbox phase.
+
+## What I'd recommend you do this week
+
+Three escalating moves:
+
+1. **Today (10 minutes):** Pick an agent you're already building. Paste its tool schemas into tool-lab, send a real user message, see what happens. If the agent picks the wrong tools or uses the right ones in surprising ways, you've just learned something.
+
+2. **This sprint (an afternoon):** Make "sandbox before implementation" the default for new agents on your team. Stand up the tool schemas first, role-play five representative prompts, then write the implementations only for tools that survived. Track the count: how many initial tools made it through.
+
+3. **This quarter (a habit):** When something goes wrong with an agent in production — wrong tool picked, weird argument shape, infinite loop — drop the trace into the sandbox before debugging the implementation. The bug is often in the design, not the code.
+
+Tool implementations are not the hard part of agent development. *Tool design* is. The thing that separates teams that ship reliable agents from teams that ship agents that "mostly work" isn't the quality of their tool functions; it's how many bad tool designs they killed before writing the function.
+
+You don't need a framework for this. You don't need a vendor. You need fifteen minutes and a willingness to play the role of every tool, by hand, until you know which ones deserve to be real.
+
+---
+
+I shipped this in [**tool-lab**](https://tool-lab-bice.vercel.app) — define tools, mock responses, watch the agent loop. BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/tool-lab](https://github.com/ferhatatagun/tool-lab).
+
+The same SSE client also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
+`,h={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":g,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":f},u={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":k,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T,"build-the-sandbox-first":_},z="Blog",s=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"]},{slug:"build-the-sandbox-first",title:"Build the sandbox before you write a single tool",excerpt:"Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"]}],I=[...s].sort((e,t)=>t.date.localeCompare(e.date));function S(e){return s.find(t=>t.slug===e)}function x(e,t="tr"){return t==="en"?u[e]:h[e]}function A(e,t){return t==="en"&&e.titleEn?e.titleEn:e.title}function C(e,t){return t==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function P(e){const t=h[e]??u[e];if(!t)return 0;const n=t.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function B(e){const t=S(e);if(!t)return[];const n=a=>a.slug!==e&&a.tags.some(o=>t.tags.includes(o)),d=(a,o)=>{const r=a.tags.filter(i=>t.tags.includes(i)).length,l=o.tags.filter(i=>t.tags.includes(i)).length;return l!==r?l-r:o.date.localeCompare(a.date)};return I.filter(n).sort(d).slice(0,2)}function R(){const e=new Set;return s.forEach(t=>t.tags.forEach(n=>e.add(n))),[...e].sort()}export{P as a,S as b,B as c,x as d,A as e,C as f,R as g,I as s,z as t};

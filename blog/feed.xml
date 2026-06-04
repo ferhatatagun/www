@@ -5,7 +5,7 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 13:52:42 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jun 2026 22:23:59 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Prompt caching is the cheapest Claude optimization. Nobody measures it.</title>
@@ -20,6 +20,13 @@
     <description>Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.</description>
     <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/stop-choosing-prompts-by-vibes</guid>
+  </item>
+  <item>
+    <title>Build the sandbox before you write a single tool</title>
+    <link>https://ferhatatagun.com/blog/build-the-sandbox-first</link>
+    <description>Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.</description>
+    <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/build-the-sandbox-first</guid>
   </item>
   <item>
     <title>Building a streaming Claude client in the browser — without the SDK</title>
