@@ -1,4 +1,4 @@
-const h=`# Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor
+const c=`# Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor
 
 Günlük geliştirme pratiğinde LLM araçları artık vazgeçilmez hale geldi. Bu yazıda **Model Context Protocol (MCP)**, **GPT** tabanlı asistanlar ve **Cursor** ile nasıl daha etkili kod yazılabileceğinden bahsediyorum.
 
@@ -32,7 +32,7 @@ Bu sayede “bu API’yi kullanarak bir React formu ekle” gibi istekler tek se
 ## Özet
 
 Yapay zeka araçları deneyimi artırıyor; MCP ile bağlam, Cursor ile ise günlük akış doğal hale geliyor. Doğru prompt ve kurallarla kaliteyi koruyarak hız kazanmak mümkün.
-`,m=`# Model Context Protocol (MCP) Nedir?
+`,p=`# Model Context Protocol (MCP) Nedir?
 
 **Model Context Protocol**, AI asistanlarının dosya sistemine, API’lere ve diğer araçlara **güvenli ve standart** bir şekilde erişmesini sağlayan açık bir protokoldür. Anthropic ve ekosistem tarafından destekleniyor.
 
@@ -67,7 +67,7 @@ Böylece bir MCP sunucusu yazdığınızda, bu sunucu MCP destekleyen her istemc
 ## Sonuç
 
 MCP, AI asistanlarının “bağlam” ihtiyacını tek bir protokolde topluyor. Geliştirici araçları bu protokolü destekledikçe, aynı MCP sunucusu ile farklı editör ve asistanlarla çalışmak mümkün olacak.
-`,p=`# Cursor IDE ve Prompt Mühendisliği
+`,m=`# Cursor IDE ve Prompt Mühendisliği
 
 Cursor, VS Code tabanlı bir IDE olarak AI’ı doğrudan editörün içine taşıyor. Etkili kullanım için **prompt mühendisliği** ve **bağlam yönetimi** önemli.
 
@@ -131,7 +131,7 @@ You don’t have to repeat these in every chat.
 ## Summary
 
 In Cursor, productivity improves with the right context (@file, @web) and clear, short prompts. Using \`.cursorrules\` for consistency helps you get more predictable output from AI.
-`,k=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
+`,b=`# Neden Bazen Sadece Boş Ekrana Bakıyorum
 
 Evet. Bazen açıyorum IDE'yi, bir dosyayı, sonra hiçbir tuşa basmıyorum. Beş dakika, on dakika. Ekran boş, imleç yanıp sönüyor. Bu "verimlilik" değil. Ama işin bir parçası.
 
@@ -150,7 +150,7 @@ Buna isim koymak zorunda değiliz. "Deep work" falan da demiyorum. Sadece şu: B
 Takımda "ne yaptın bugün?" diye sorulunca "ekrana baktım" demek garip geliyor. Ama yaptığım buydu. Sonuç: ertesi gün tasarımı değiştirdim, iki saatte toparladım. O bakma anı olmasa belki bir gün daha yanlış yolda gidecektim.
 
 Özet falan yok. Sadece diyorum ki: Bazen hiçbir şey yazmıyorsan da bir şey yapıyorsun. Yeter ki o "hiçbir şey" gerçekten düşünmek olsun, kaçış değil.
-`,b=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
+`,k=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
 
 GitHub'da private repo sayımı söylemeyeceğim. Ama "yarım kaldı" diyebileceğim proje sayısı bir elin parmaklarını geçiyor. Bir süre bunu başarısızlık gibi hissettim. Sonra fikrim değişti.
 
@@ -221,7 +221,7 @@ For commands, put the ones you use daily in a place you actually click: Cursor�
 Every few weeks, look at what you had to correct in reviews or re-prompt. Those are candidates for new rules or commands. And if a rule never gets followed (or you keep disabling it), delete it or shorten it. Dead rules add noise and teach the team to ignore the file.
 
 Rules and commands aren’t a one-time setup. They’re a small loop: notice a repeated mistake → add or tweak a rule → see if behavior improves → repeat. The ones that stick are the ones that fix a pain you actually feel.
-`,v=`# Building a streaming Claude client in the browser — without the SDK
+`,w=`# Building a streaming Claude client in the browser — without the SDK
 
 I wanted to call Claude from a browser. The Anthropic SDK said no — sort of.
 
@@ -467,7 +467,7 @@ If you've been waiting to put the Claude API in a browser tool because the SDK f
 The four tools, all open-source and BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
 
 Source for the SSE client described here: [github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts](https://github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts).
-`,w=`# Prompt caching is the cheapest Claude optimization. Nobody measures it.
+`,v=`# Prompt caching is the cheapest Claude optimization. Nobody measures it.
 
 Pull up the last week of Anthropic API bills from any team shipping a Claude-powered product. Two out of three of them are paying for context they could be reading from cache for one-tenth the price. Most of them don't know it, because the dashboard doesn't tell them and the SDKs don't either — by the time the response lands, the only number anyone looks at is \`output_tokens\`, and even then mostly when something seems expensive.
 
@@ -608,4 +608,138 @@ The Anthropic API gives you everything you need to know whether your caching is 
 I shipped this visualization in [**claudoscope**](https://claudoscope-labs.vercel.app) — bring-your-own-key, no backend, runs in the browser. Source: [github.com/ferhatatagun/claudoscope](https://github.com/ferhatatagun/claudoscope).
 
 The same SSE client also powers three sibling tools — [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,d={"yapay-zeka-ve-yazilim-gelistirme-2024":h,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":k,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":g},c={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":v,"prompt-caching-nobody-measures":w},T="Blog",i=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]}],z=[...i].sort((e,n)=>n.date.localeCompare(e.date));function _(e){return i.find(n=>n.slug===e)}function S(e,n="tr"){return n==="en"?c[e]:d[e]}function x(e,n){return n==="en"&&e.titleEn?e.titleEn:e.title}function C(e,n){return n==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function P(e){const n=d[e]??c[e];if(!n)return 0;const a=n.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(a/200))}function A(e){const n=_(e);if(!n)return[];const a=t=>t.slug!==e&&t.tags.some(r=>n.tags.includes(r)),u=(t,r)=>{const s=t.tags.filter(o=>n.tags.includes(o)).length,l=r.tags.filter(o=>n.tags.includes(o)).length;return l!==s?l-s:r.date.localeCompare(t.date)};return z.filter(a).sort(u).slice(0,2)}function I(){const e=new Set;return i.forEach(n=>n.tags.forEach(a=>e.add(a))),[...e].sort()}export{P as a,_ as b,A as c,S as d,x as e,C as f,I as g,z as s,T as t};
+`,T=`# Your prompt isn't better. You just remember it being better.
+
+Every developer who has shipped a Claude-powered feature has had this conversation with themselves:
+
+> "OK, the old prompt was too long, this one's tighter — *feels* like it's giving better answers… and faster too, I think? Let's ship it."
+
+You ship it. A week later something feels off — maybe outputs are flakier on the edge cases, maybe the bill went up, maybe a coworker tells you "the AI doesn't get it anymore." You don't remember the exact previous prompt. You don't have a baseline. You change it back. Or you don't, and live with a quiet regression for a month.
+
+I have done this maybe forty times. Most of us have. The reason isn't that prompt iteration is hard. The reason is that *evaluating* prompt iteration is hard, and we don't have the tooling for it, so we substitute taste — which works fine until it doesn't.
+
+**TL;DR**
+
+- "It feels better" is not data. Your sample size is one query, your memory is recent, your prior is sunk cost.
+- The minimum useful comparison is the same input through two prompts in parallel, surfacing three numbers: output (do they say the same thing?), latency (how long did each take?), cost (how much did each spend?).
+- Models change too — comparing GPT-style verbose system prompts on Sonnet 4.5 vs Haiku 4.5 surfaces ~10× cost differences for outputs you'd score the same.
+- Running them in parallel makes it fair: same time of day, same API state, same input. Running them sequentially in a chat window does not.
+- A browser-only tool can do this in 4 seconds. You don't need a benchmarking framework. You need to see them side by side.
+
+## What "vibes" actually costs
+
+The trap with prompt tuning is that the *only* dimension a chat-style UI shows you is the output text. You read it, decide if it sounds right, and move on. Three things get hidden:
+
+**1. Latency.** Did this take 3 seconds or 11? You squinted, kind of remembered, but you weren't watching a stopwatch. Across a thousand production requests this difference is the gap between "snappy" and "slow."
+
+**2. Cost.** The verbose system prompt that produces beautiful structured output uses 4,000 input tokens. The terse one uses 600. They both produce ~800 output tokens. At Sonnet pricing that's the difference between $14 and $4 per thousand calls. You don't see this difference looking at one response.
+
+**3. Output drift.** "Cleaner" outputs sometimes mean the model lost a useful constraint. The polite preamble you stripped out was actually doing something. The structured format you added looks neat but truncates on long inputs. Side-by-side reveals this; sequential doesn't, because you remember the gist of the previous answer, not the specifics.
+
+The whole point of A/B testing is to lift all three of these into the same field of view, on the same input, at the same time. That's it. That's the entire idea. The reason most of us don't do it is that we don't have the tool — and the friction of switching between two tabs, hitting send twice, copying output into a diff viewer, and looking up cost in the dashboard is enough to make us shrug and ship.
+
+## Same input, two prompts, parallel
+
+The mechanism is unspectacular:
+
+\`\`\`ts
+const [outA, outB] = await Promise.all([
+  runClaude({ system: promptA, messages, model }),
+  runClaude({ system: promptB, messages, model }),
+]);
+\`\`\`
+
+That's the core. Two requests fired in parallel against the same \`messages\`. The trick is that both streams are happening simultaneously — same network conditions, same API load, same time-of-day cache warmth. Sequential A→B isn't a fair comparison; if the API was congested for the first call and cached the second, you're measuring weather, not signal.
+
+What you do with the two outputs is where it gets interesting. The boring version: log both, eyeball, pick one. The version that actually works: side-by-side render, each with its own latency clock, each with its own token count and cost dollars, each with a diff highlight if you want to see exactly where they disagree.
+
+The thing I've found is that 80% of the time both prompts produce *substantively equivalent* outputs. The reason to pick one is purely on cost or latency — there's no semantic improvement, you just got a 4× cheaper version of the same answer. The remaining 20% is where the outputs actually diverge meaningfully, and that's where eyeballs are needed, but at least now you know to look.
+
+## What "better" looks like in numbers
+
+A concrete example from last week. I had two versions of a system prompt for a code-review tool:
+
+**Version A** — 1,800 tokens, full taxonomy of issue types, examples for each, explicit JSON schema:
+
+\`\`\`
+You are a senior staff engineer reviewing a pull request. For each
+issue you find, classify it under one of:
+- correctness (the code is wrong)
+- security (the code is exploitable)
+- performance (the code is slow)
+- maintainability (the code is hard to read)
+...
+\`\`\`
+
+**Version B** — 280 tokens, no taxonomy, schema implied by an example:
+
+\`\`\`
+Review this code. For each problem, return JSON like:
+[{"severity": "high"|"medium"|"low", "line": 42, "issue": "..."}]
+Don't comment on style; focus on bugs and security.
+\`\`\`
+
+Same input (a 600-line Python file). Both went to Sonnet 4.5. Side-by-side run:
+
+|                   | Version A         | Version B         |
+|-------------------|-------------------|-------------------|
+| Input tokens      | 2,640             | 1,120             |
+| Output tokens     | 820               | 740               |
+| Latency           | 5.3s              | 3.1s              |
+| Cost              | $0.0202           | $0.0145           |
+| Issues found      | 7                 | 6                 |
+
+Looking at the diff: both flagged the same 5 critical issues. Version A also flagged a \`# TODO\` as a maintainability issue and split a complex function into two suggested refactors. Version B was tighter — it caught fewer minor things but every single thing it caught was actionable.
+
+I shipped B. Not because it was "better" in a soft sense; because it was 28% cheaper and 41% faster for outputs that a human would consider equivalent on the work that mattered. *That* is what an A/B framework gives you that a chat UI doesn't: a basis for the decision that isn't "feels right."
+
+If I had only run version B sequentially after deleting version A, I would have lost the comparison and convinced myself version B was either much better or much worse than it actually was.
+
+## The cross-model angle
+
+The same setup also surfaces something subtle that I think most teams underuse: the **right model is also a prompt choice**.
+
+Same prompt, two models — Sonnet 4.5 vs Haiku 4.5 — on the same input:
+
+|                    | Sonnet 4.5  | Haiku 4.5  |
+|--------------------|-------------|------------|
+| Latency            | 4.1s        | 0.9s       |
+| Cost (input+output)| $0.011      | $0.0008    |
+| Output quality     | 9/10        | 8/10       |
+
+For the right kind of task, that's a ~13× cost reduction with a quality drop most users would never notice in a UI. The wrong kind of task — anything requiring complex multi-step reasoning — and Haiku will whiff in ways Sonnet wouldn't, and the comparison protects you from that too. You don't have to *guess* which kind of task you have; you can measure it on five real inputs in five minutes.
+
+## How prompt-lab does this
+
+I built [**prompt-lab**](https://prompt-lab-promptly.vercel.app) because the friction of A/B testing prompts in my own work was high enough that I was skipping the step and shipping by vibes. The tool's whole job is to remove that friction:
+
+- Two prompt panes. Paste prompt A on the left, prompt B on the right.
+- One input pane. Type the user message once.
+- Hit run. Both responses stream into their respective panes simultaneously.
+- Below each pane: a small scoreboard with input tokens, output tokens, latency, cost.
+- At the bottom: a verdict line — "A: $0.0202 / 5.3s · B: $0.0145 / 3.1s · B 28% cheaper, 41% faster."
+
+That's the entire UI. It's a browser tool, BYOK, no backend. It's about 8KB of relevant logic plus the streaming client from the [previous post](https://medium.com/@ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-4ce8a9407d2c).
+
+You can also do same-prompt-different-model, or different-prompt-different-model. The arena doesn't care which one you're testing — you set the two columns and hit run.
+
+## What I'd recommend you do this week
+
+Three steps, increasing in effort:
+
+1. **Today (5 minutes):** Open prompt-lab. Take whatever prompt your team is currently shipping. Make a shorter version of it. Run them both on three real inputs. If the shorter one wins on cost+latency with no semantic loss on the inputs you care about, you just paid for your week.
+
+2. **This sprint (an afternoon):** Build a small eval harness. Pick 10 representative inputs that span your real traffic. Run every prompt change through them before merging. Doesn't need to be fancy — a JSON file of inputs and a script that diffs outputs is enough to catch the worst regressions.
+
+3. **This quarter (a project):** Make A/B comparison part of your prompt review process. Every PR that changes a prompt should include the run output for the same 10 inputs, with the cost and latency numbers in the description. Same energy as showing test results in a code review.
+
+The economics of LLM apps are increasingly about prompt design and model choice. The teams that compete will be the ones that measure both. The teams that don't will keep shipping vibes-based prompt changes and wondering why the bill keeps creeping up while users complain it "feels worse."
+
+You don't need to outsmart your future self. You just need to make it possible for them to look back and know what was actually changing.
+
+---
+
+I shipped this in [**prompt-lab**](https://prompt-lab-promptly.vercel.app) — two prompts side by side, BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/prompt-lab](https://github.com/ferhatatagun/prompt-lab).
+
+The same SSE client also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
+`,u={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":p,"cursor-ide-ve-prompt-muhendisligi":m,"neden-bazen-sadece-bos-ekrana-bakiyorum":b,"bitmemis-projeler-mezarligim":k,"best-practice-dedigin-yarisi-ezber":g},d={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T},S="Blog",r=[{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"]},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"]}],z=[...r].sort((e,t)=>t.date.localeCompare(e.date));function _(e){return r.find(t=>t.slug===e)}function x(e,t="tr"){return t==="en"?d[e]:u[e]}function I(e,t){return t==="en"&&e.titleEn?e.titleEn:e.title}function A(e,t){return t==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function C(e){const t=u[e]??d[e];if(!t)return 0;const n=t.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(n/200))}function B(e){const t=_(e);if(!t)return[];const n=a=>a.slug!==e&&a.tags.some(o=>t.tags.includes(o)),h=(a,o)=>{const s=a.tags.filter(i=>t.tags.includes(i)).length,l=o.tags.filter(i=>t.tags.includes(i)).length;return l!==s?l-s:o.date.localeCompare(a.date)};return z.filter(n).sort(h).slice(0,2)}function P(){const e=new Set;return r.forEach(t=>t.tags.forEach(n=>e.add(n))),[...e].sort()}export{C as a,_ as b,B as c,x as d,I as e,A as f,P as g,z as s,S as t};
