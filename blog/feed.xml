@@ -5,7 +5,7 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2026 13:22:13 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 14:17:14 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>What I learned shipping four open-source Claude dev-tools in two weekends</title>
@@ -27,6 +27,13 @@
     <description>Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don&apos;t need to send the request. A worked example where &apos;feels about the same&apos; was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.</description>
     <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/see-the-prompt-before-you-ship-it</guid>
+  </item>
+  <item>
+    <title>Prompt&apos;u shiplemeden önce gör</title>
+    <link>https://ferhatatagun.com/blog/prompt-shipping-once-onunu-gor</link>
+    <description>Token cost, context-window pozisyonu ve prompt-caching layout&apos;u — hepsi prompt&apos;tan tek başına bilinebilir. &quot;Yaklaşık aynı&quot; hissinin gizlediği 6.3× input-uzunluk farkını yakalayan pre-flight alışkanlığı.</description>
+    <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/prompt-shipping-once-onunu-gor</guid>
   </item>
   <item>
     <title>Prompt&apos;un daha iyi değil. Sadece daha iyi hatırlıyorsun.</title>
