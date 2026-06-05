@@ -93,7 +93,14 @@
 	<meta property="og:url" content={canonical} />
 	<meta property="og:title" content={pageTitle} />
 	<meta property="og:description" content={description} />
+	<meta property="og:image" content={`${siteOrigin}/og-cards/_blog-index.png`} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={pageTitle} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={`${siteOrigin}/og-cards/_blog-index.png`} />
 	<link rel="alternate" type="application/rss+xml" title={pageTitle} href={`${siteOrigin}${base}/blog/feed.xml`} />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',

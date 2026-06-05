@@ -37,6 +37,7 @@
 
 	$: pageTitle = useTitle(displayTitle, titleSuffix);
 	const canonical = `${siteOrigin}/blog/${post.slug}`;
+	const ogImage = `${siteOrigin}/og-cards/${post.slug}.png`;
 
 	$: shareText = encodeURIComponent(`${displayTitle} — Ferhat Atagün`);
 	const shareUrl = encodeURIComponent(canonical);
@@ -53,8 +54,15 @@
 	<meta property="og:url" content={canonical} />
 	<meta property="og:title" content={displayTitle} />
 	<meta property="og:description" content={displayExcerpt} />
+	<meta property="og:image" content={ogImage} />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
 	<meta property="og:site_name" content="Ferhat Atagün" />
 	<meta property="article:published_time" content={post.date} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={displayTitle} />
+	<meta name="twitter:description" content={displayExcerpt} />
+	<meta name="twitter:image" content={ogImage} />
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'BlogPosting',
