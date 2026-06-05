@@ -32,19 +32,55 @@
 	const personSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',
+		'@id': `${siteOrigin}/#person`,
 		name: fullName,
 		url: siteOrigin,
+		jobTitle: 'Frontend Team Lead',
+		worksFor: { '@type': 'Organization', name: 'HangiKredi', url: 'https://www.hangikredi.com' },
 		description: homeDescription,
 		image,
-		sameAs
+		sameAs,
+		knowsAbout: [
+			'Anthropic Claude API',
+			'Model Context Protocol',
+			'prompt engineering',
+			'frontend architecture',
+			'React',
+			'Next.js',
+			'TypeScript',
+			'SvelteKit'
+		]
 	};
 	const websiteSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
+		'@id': `${siteOrigin}/#website`,
 		name: siteName,
 		url: siteOrigin,
 		description: homeDescription,
-		author: { '@type': 'Person', name: fullName, url: siteOrigin }
+		author: { '@id': `${siteOrigin}/#person` },
+		publisher: { '@id': `${siteOrigin}/#person` },
+		inLanguage: ['en', 'tr']
+	};
+	/** Suite as a CollectionPage that the tool deploys reference via their
+	    own JSON-LD isPartOf field. Closes the entity graph: tool → suite → person. */
+	const suiteSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'CollectionPage',
+		'@id': `${siteOrigin}/tools#suite`,
+		name: 'Open-source Claude dev-tools',
+		url: `${siteOrigin}/tools`,
+		description:
+			'Five browser-only developer tools for the Anthropic Claude API: claudoscope, agent-replay, prompt-lab, tool-lab, context-lens. All BYOK, no backend.',
+		author: { '@id': `${siteOrigin}/#person` },
+		creator: { '@id': `${siteOrigin}/#person` },
+		hasPart: [
+			{ '@type': 'SoftwareApplication', name: 'claudoscope', url: 'https://claudoscope-labs.vercel.app' },
+			{ '@type': 'SoftwareApplication', name: 'agent-replay', url: 'https://agentreplay.vercel.app' },
+			{ '@type': 'SoftwareApplication', name: 'prompt-lab', url: 'https://prompt-lab-promptly.vercel.app' },
+			{ '@type': 'SoftwareApplication', name: 'tool-lab', url: 'https://tool-lab-bice.vercel.app' },
+			{ '@type': 'SoftwareApplication', name: 'context-lens', url: 'https://context-lens-sigma.vercel.app' }
+		]
 	};
 
 	const featuredTools = [
@@ -73,6 +109,7 @@
 	<meta name="twitter:image" content={image} />
 	{@html `<script type="application/ld+json">${JSON.stringify(personSchema)}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(suiteSchema)}</script>`}
 </svelte:head>
 <div class="home-page-wrapper relative min-h-screen flex flex-col">
 	<ParticleBackground

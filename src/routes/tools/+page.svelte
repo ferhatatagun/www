@@ -8,9 +8,50 @@
 	const tools = projects.filter((p) => p.type === 'AI Developer Tool');
 	const pageTitle = 'Open-source AI dev-tools — Ferhat Atagün';
 	const description =
-		'Four open-source tools that make the Claude API legible — observe API calls, replay agent traces, A/B test prompts, and sandbox tool-use loops. Same design language, distinct angle each.';
+		'Five open-source tools that make the Claude API legible — pre-flight a prompt, observe API calls, replay agent traces, A/B test prompts, and sandbox tool-use loops. Same design language, distinct angle each.';
 	const canonical = `${siteOrigin}/tools`;
 	const image = `${siteOrigin}/imgs/projects/claudoscope.png`;
+
+	/** ItemList schema that links the 5 tools as a connected suite, all
+	    authored by the canonical Person entity at /#person. Each tool's
+	    layout JSON-LD references this CollectionPage by @id, closing the
+	    graph: tool ↔ suite ↔ person. */
+	const suiteJsonLd = {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'CollectionPage',
+				'@id': `${siteOrigin}/tools#suite`,
+				name: 'Open-source Claude dev-tools',
+				url: canonical,
+				description,
+				author: { '@id': `${siteOrigin}/#person` },
+				creator: { '@id': `${siteOrigin}/#person` }
+			},
+			{
+				'@type': 'ItemList',
+				name: 'Five Claude dev-tools',
+				numberOfItems: tools.length,
+				itemListElement: tools.map((t, i) => {
+					const live = t.links.find((l) => l.label === 'Live')?.to;
+					return {
+						'@type': 'ListItem',
+						position: i + 1,
+						item: {
+							'@type': 'SoftwareApplication',
+							name: t.name,
+							description: t.shortDescription,
+							url: live ?? canonical,
+							applicationCategory: 'DeveloperApplication',
+							operatingSystem: 'Any (web browser)',
+							offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+							author: { '@id': `${siteOrigin}/#person` }
+						}
+					};
+				})
+			}
+		]
+	};
 
 	function linkTo(t: (typeof tools)[number], label: 'Live' | 'GitHub'): string | undefined {
 		return t.links.find((l) => l.label === label)?.to;
@@ -110,6 +151,7 @@
 	<meta name="twitter:title" content={pageTitle} />
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={image} />
+	{@html `<script type="application/ld+json">${JSON.stringify(suiteJsonLd)}</script>`}
 </svelte:head>
 
 <div class="tools-page p-x-6 md:p-x-10 p-y-8 max-w-1200px mx-auto w-full">

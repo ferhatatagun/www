@@ -69,8 +69,8 @@
 		headline: displayTitle,
 		description: displayExcerpt,
 		datePublished: post.date,
-		author: { '@type': 'Person', name: 'Ferhat Atagün', url: siteOrigin },
-		publisher: { '@type': 'Organization', name: 'Ferhat Atagün', url: siteOrigin },
+		author: { '@type': 'Person', '@id': `${siteOrigin}/#person`, name: 'Ferhat Atagün', url: siteOrigin },
+		publisher: { '@type': 'Person', '@id': `${siteOrigin}/#person`, name: 'Ferhat Atagün', url: siteOrigin },
 		mainEntityOfPage: { '@type': 'WebPage', '@id': canonical }
 	})}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify({
