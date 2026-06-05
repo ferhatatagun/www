@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2026 07:57:25 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 08:01:30 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>What I learned shipping four open-source Claude dev-tools in two weekends</title>
+    <link>https://ferhatatagun.com/blog/four-tools-in-two-weekends</link>
+    <description>A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the &quot;one tool per insight&quot; decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.</description>
+    <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/four-tools-in-two-weekends</guid>
+  </item>
   <item>
     <title>Prompt&apos;un daha iyi değil. Sadece daha iyi hatırlıyorsun.</title>
     <link>https://ferhatatagun.com/blog/prompt-secimi-his-degil-olcum</link>

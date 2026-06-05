@@ -1,4 +1,4 @@
-import{A as e}from"./assets.cd8b95df.js";import"./index.d2794e2c.js";const h=`[![Cybernetically enhanced web apps: Svelte](https://sveltejs.github.io/assets/banner.png)](https://svelte.dev)
+import{A as e}from"./assets.02762837.js";import"./index.d2794e2c.js";const h=`[![Cybernetically enhanced web apps: Svelte](https://sveltejs.github.io/assets/banner.png)](https://svelte.dev)
 
 [![license](https://img.shields.io/npm/l/svelte.svg)](LICENSE.md) [![Chat](https://img.shields.io/discord/457912077277855764?label=chat&logo=discord)](https://svelte.dev/chat)
 
