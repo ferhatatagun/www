@@ -17,6 +17,7 @@ import postTr3Raw from '$lib/md/blog/prompt-secimi-his-degil-olcum.md?raw';
 import postTr4Raw from '$lib/md/blog/tek-bir-tool-yazmadan-once-sandbox.md?raw';
 import postTr5Raw from '$lib/md/blog/claude-agent-debug-trace-replay.md?raw';
 import post13EnRaw from '$lib/md/blog/four-tools-in-two-weekends-en.md?raw';
+import postTr6Raw from '$lib/md/blog/iki-hafta-sonu-dort-tool.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -48,7 +49,8 @@ const contentMap: Record<string, string> = {
 	'prompt-caching-kimsenin-olcmedigi': postTr2Raw,
 	'prompt-secimi-his-degil-olcum': postTr3Raw,
 	'tek-bir-tool-yazmadan-once-sandbox': postTr4Raw,
-	'claude-agent-debug-trace-replay': postTr5Raw
+	'claude-agent-debug-trace-replay': postTr5Raw,
+	'iki-hafta-sonu-dort-tool': postTr6Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -169,6 +171,14 @@ export const items: BlogPost[] = [
 		title: 'What I learned shipping four open-source Claude dev-tools in two weekends',
 		excerpt:
 			'A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the "one tool per insight" decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.',
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM']
+	},
+	{
+		slug: 'iki-hafta-sonu-dort-tool',
+		title: 'İki hafta sonunda dört açık kaynak Claude dev-tool shiplerken neler öğrendim',
+		excerpt:
+			'Dört tool\'lu Claude dev-tool suite\'i üzerine meta yazı: SDK\'nın kırılması neden işi mümkün kılan kısıt oldu, "içgörü başına bir tool" ayrıştırması, BYOK + tarayıcı-only neden güvenilirlik çarpanı, ve yeniden başlasam önden yapacağım dört şey.',
 		date: '2026-06-05',
 		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM']
 	},
