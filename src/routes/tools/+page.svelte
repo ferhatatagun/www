@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { items as projects } from '@data/projects';
 	import { siteOrigin } from '$lib/data/site';
+	import { base } from '$app/paths';
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
 
@@ -14,6 +15,72 @@
 	function linkTo(t: (typeof tools)[number], label: 'Live' | 'GitHub'): string | undefined {
 		return t.links.find((l) => l.label === label)?.to;
 	}
+
+	/** Tool ↔ writing map. Each tool has at least one long-form post that explains
+	    why it exists. Curated, not auto-derived. */
+	const writingByTool: Record<
+		string,
+		Array<{ title: string; slug: string; lang: 'EN' | 'TR' }>
+	> = {
+		claudoscope: [
+			{
+				title: 'Building a streaming Claude client in the browser — without the SDK',
+				slug: 'browser-only-claude-streaming',
+				lang: 'EN'
+			},
+			{
+				title: 'Prompt caching is the cheapest Claude optimization. Nobody measures it.',
+				slug: 'prompt-caching-nobody-measures',
+				lang: 'EN'
+			},
+			{
+				title: 'Tarayıcıda Claude’a streaming çağrı — SDK olmadan',
+				slug: 'tarayicida-claude-streaming-sdk-siz',
+				lang: 'TR'
+			},
+			{
+				title: "Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor.",
+				slug: 'prompt-caching-kimsenin-olcmedigi',
+				lang: 'TR'
+			}
+		],
+		'prompt-lab': [
+			{
+				title: "Your prompt isn't better. You just remember it being better.",
+				slug: 'stop-choosing-prompts-by-vibes',
+				lang: 'EN'
+			},
+			{
+				title: "Prompt'un daha iyi değil. Sadece daha iyi hatırlıyorsun.",
+				slug: 'prompt-secimi-his-degil-olcum',
+				lang: 'TR'
+			}
+		],
+		'tool-lab': [
+			{
+				title: 'Build the sandbox before you write a single tool',
+				slug: 'build-the-sandbox-first',
+				lang: 'EN'
+			},
+			{
+				title: "Tek bir tool yazmadan önce sandbox'ı kur",
+				slug: 'tek-bir-tool-yazmadan-once-sandbox',
+				lang: 'TR'
+			}
+		],
+		'agent-replay': [
+			{
+				title: 'How I debug Claude agents by replaying their trace',
+				slug: 'debug-claude-agents-by-replaying-traces',
+				lang: 'EN'
+			},
+			{
+				title: "Claude agent'larını trace replay ile debug ediyorum",
+				slug: 'claude-agent-debug-trace-replay',
+				lang: 'TR'
+			}
+		]
+	};
 </script>
 
 <svelte:head>
@@ -96,7 +163,37 @@
 		{/each}
 	</div>
 
-	<footer class="text-center md:text-left mt-10 text-[var(--tertiary-text)] text-[0.95em]">
+	<section class="writing-section mt-14">
+		<h2 class="m-0 text-[1.5em] font-700 text-[var(--main-text)]">Read the writing</h2>
+		<p class="text-[var(--tertiary-text)] text-[0.95em] font-300 mt-2 max-w-680px">
+			Each tool has one or two long-form posts explaining the engineering decision
+			behind it — the protocol-level details, the failure modes it surfaces, and what
+			it changes about how you ship.
+		</p>
+
+		<div class="writing-grid mt-6">
+			{#each tools as t}
+				{@const posts = writingByTool[t.slug] ?? []}
+				{#if posts.length}
+					<div class="writing-card">
+						<div class="writing-card__tool" style:color={t.color}>{t.name}</div>
+						<ul class="writing-card__list">
+							{#each posts as p}
+								<li>
+									<a class="writing-link" href={`${base}/blog/${p.slug}`}>
+										<span class="writing-lang" data-lang={p.lang}>{p.lang}</span>
+										<span>{p.title}</span>
+									</a>
+								</li>
+							{/each}
+						</ul>
+					</div>
+				{/if}
+			{/each}
+		</div>
+	</section>
+
+	<footer class="text-center md:text-left mt-12 text-[var(--tertiary-text)] text-[0.95em]">
 		All four are open source, MIT licensed, and BYOK where a key is needed. Source on
 		<a
 			href="https://github.com/ferhatatagun"
@@ -134,5 +231,76 @@
 	}
 	.tool-shot:hover img {
 		filter: brightness(1.05);
+	}
+
+	.writing-grid {
+		display: grid;
+		gap: 18px;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+
+		@media (max-width: 850px) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	.writing-card {
+		padding: 16px 18px;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		background: var(--main);
+		transition: border-color 0.2s ease;
+	}
+	.writing-card:hover {
+		border-color: var(--accent-text);
+	}
+	.writing-card__tool {
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.85em;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		margin-bottom: 10px;
+	}
+	.writing-card__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	.writing-card__list li {
+		margin: 6px 0;
+	}
+	.writing-link {
+		display: flex;
+		gap: 8px;
+		align-items: baseline;
+		color: var(--secondary-text);
+		text-decoration: none;
+		font-size: 0.94em;
+		line-height: 1.4;
+		transition: color 0.2s ease;
+	}
+	.writing-link:hover {
+		color: var(--main-text);
+	}
+	.writing-link:hover span:last-child {
+		text-decoration: underline;
+		text-underline-offset: 3px;
+	}
+	.writing-lang {
+		display: inline-block;
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.7em;
+		font-weight: 600;
+		padding: 2px 5px;
+		border-radius: 3px;
+		flex-shrink: 0;
+		letter-spacing: 0.05em;
+	}
+	.writing-lang[data-lang='EN'] {
+		background: rgba(139, 92, 246, 0.18);
+		color: #a78bfa;
+	}
+	.writing-lang[data-lang='TR'] {
+		background: rgba(244, 114, 182, 0.18);
+		color: #f472b6;
 	}
 </style>
