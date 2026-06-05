@@ -18,6 +18,7 @@ import postTr4Raw from '$lib/md/blog/tek-bir-tool-yazmadan-once-sandbox.md?raw';
 import postTr5Raw from '$lib/md/blog/claude-agent-debug-trace-replay.md?raw';
 import post13EnRaw from '$lib/md/blog/four-tools-in-two-weekends-en.md?raw';
 import postTr6Raw from '$lib/md/blog/iki-hafta-sonu-dort-tool.md?raw';
+import post14EnRaw from '$lib/md/blog/see-the-prompt-before-you-ship-it-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -61,7 +62,8 @@ const contentMapEn: Record<string, string> = {
 	'stop-choosing-prompts-by-vibes': post10EnRaw,
 	'build-the-sandbox-first': post11EnRaw,
 	'debug-claude-agents-by-replaying-traces': post12EnRaw,
-	'four-tools-in-two-weekends': post13EnRaw
+	'four-tools-in-two-weekends': post13EnRaw,
+	'see-the-prompt-before-you-ship-it': post14EnRaw
 };
 
 export const title = 'Blog';
@@ -181,6 +183,14 @@ export const items: BlogPost[] = [
 			'Dört tool\'lu Claude dev-tool suite\'i üzerine meta yazı: SDK\'nın kırılması neden işi mümkün kılan kısıt oldu, "içgörü başına bir tool" ayrıştırması, BYOK + tarayıcı-only neden güvenilirlik çarpanı, ve yeniden başlasam önden yapacağım dört şey.',
 		date: '2026-06-05',
 		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM']
+	},
+	{
+		slug: 'see-the-prompt-before-you-ship-it',
+		title: 'See the prompt before you ship it',
+		excerpt:
+			"Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don't need to send the request. A worked example where 'feels about the same' was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.",
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Tokens', 'Prompt Engineering', 'Cost', 'LLM']
 	},
 	{
 		slug: 'tarayicida-claude-streaming-sdk-siz',

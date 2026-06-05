@@ -79,6 +79,13 @@
 				slug: 'claude-agent-debug-trace-replay',
 				lang: 'TR'
 			}
+		],
+		'context-lens': [
+			{
+				title: 'See the prompt before you ship it',
+				slug: 'see-the-prompt-before-you-ship-it',
+				lang: 'EN'
+			}
 		]
 	};
 </script>
