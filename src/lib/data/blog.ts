@@ -16,6 +16,7 @@ import postTr2Raw from '$lib/md/blog/prompt-caching-kimsenin-olcmedigi.md?raw';
 import postTr3Raw from '$lib/md/blog/prompt-secimi-his-degil-olcum.md?raw';
 import postTr4Raw from '$lib/md/blog/tek-bir-tool-yazmadan-once-sandbox.md?raw';
 import postTr5Raw from '$lib/md/blog/claude-agent-debug-trace-replay.md?raw';
+import post13EnRaw from '$lib/md/blog/four-tools-in-two-weekends-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -57,7 +58,8 @@ const contentMapEn: Record<string, string> = {
 	'prompt-caching-nobody-measures': post9EnRaw,
 	'stop-choosing-prompts-by-vibes': post10EnRaw,
 	'build-the-sandbox-first': post11EnRaw,
-	'debug-claude-agents-by-replaying-traces': post12EnRaw
+	'debug-claude-agents-by-replaying-traces': post12EnRaw,
+	'four-tools-in-two-weekends': post13EnRaw
 };
 
 export const title = 'Blog';
@@ -161,6 +163,14 @@ export const items: BlogPost[] = [
 			"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability']
+	},
+	{
+		slug: 'four-tools-in-two-weekends',
+		title: 'What I learned shipping four open-source Claude dev-tools in two weekends',
+		excerpt:
+			'A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the "one tool per insight" decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.',
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM']
 	},
 	{
 		slug: 'tarayicida-claude-streaming-sdk-siz',
