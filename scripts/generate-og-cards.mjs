@@ -81,7 +81,7 @@ console.log(`Found ${posts.length} posts.`);
 
 /* --- Language detection (mirrors blog.ts logic) ----------------------- */
 
-const TR_SLUGS_RE = /^(yapay-zeka|mcp-model|cursor-ide|neden-bazen|bitmemis|best-practice|tarayicida|prompt-caching-kim|prompt-secimi|tek-bir-tool|claude-agent-debug|iki-hafta)/;
+const TR_SLUGS_RE = /^(yapay-zeka|mcp-model|cursor-ide|neden-bazen|bitmemis|best-practice|tarayicida|prompt-caching-kim|prompt-secimi|tek-bir-tool|claude-agent-debug|iki-hafta|prompt-shipping)/;
 function langOf(slug, title) {
 	if (TR_SLUGS_RE.test(slug)) return 'tr';
 	if (/[şçğıöüŞÇĞİÖÜ]/.test(title)) return 'tr';

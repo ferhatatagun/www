@@ -19,6 +19,7 @@ import postTr5Raw from '$lib/md/blog/claude-agent-debug-trace-replay.md?raw';
 import post13EnRaw from '$lib/md/blog/four-tools-in-two-weekends-en.md?raw';
 import postTr6Raw from '$lib/md/blog/iki-hafta-sonu-dort-tool.md?raw';
 import post14EnRaw from '$lib/md/blog/see-the-prompt-before-you-ship-it-en.md?raw';
+import postTr7Raw from '$lib/md/blog/prompt-shipping-once-onunu-gor.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -51,7 +52,8 @@ const contentMap: Record<string, string> = {
 	'prompt-secimi-his-degil-olcum': postTr3Raw,
 	'tek-bir-tool-yazmadan-once-sandbox': postTr4Raw,
 	'claude-agent-debug-trace-replay': postTr5Raw,
-	'iki-hafta-sonu-dort-tool': postTr6Raw
+	'iki-hafta-sonu-dort-tool': postTr6Raw,
+	'prompt-shipping-once-onunu-gor': postTr7Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -189,6 +191,14 @@ export const items: BlogPost[] = [
 		title: 'See the prompt before you ship it',
 		excerpt:
 			"Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don't need to send the request. A worked example where 'feels about the same' was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.",
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Tokens', 'Prompt Engineering', 'Cost', 'LLM']
+	},
+	{
+		slug: 'prompt-shipping-once-onunu-gor',
+		title: "Prompt'u shiplemeden önce gör",
+		excerpt:
+			'Token cost, context-window pozisyonu ve prompt-caching layout\'u — hepsi prompt\'tan tek başına bilinebilir. "Yaklaşık aynı" hissinin gizlediği 6.3× input-uzunluk farkını yakalayan pre-flight alışkanlığı.',
 		date: '2026-06-05',
 		tags: ['Claude', 'Anthropic', 'Tokens', 'Prompt Engineering', 'Cost', 'LLM']
 	},

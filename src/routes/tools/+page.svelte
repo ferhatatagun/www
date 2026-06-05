@@ -85,6 +85,11 @@
 				title: 'See the prompt before you ship it',
 				slug: 'see-the-prompt-before-you-ship-it',
 				lang: 'EN'
+			},
+			{
+				title: "Prompt'u shiplemeden önce gör",
+				slug: 'prompt-shipping-once-onunu-gor',
+				lang: 'TR'
 			}
 		]
 	};
