@@ -5,7 +5,7 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2026 07:26:44 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 07:36:30 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Prompt&apos;un daha iyi değil. Sadece daha iyi hatırlıyorsun.</title>
@@ -13,6 +13,20 @@
     <description>Çoğu ekip prompt&apos;u hisle iterate edip hafızayla shipliyor. Minimum işe yarayan karşılaştırma: aynı input üzerinde iki prompt&apos;u paralel çalıştırıp output, latency ve cost&apos;u yan yana görmek — side-by-side&apos;ın sıralı versiyonun göremediği şey.</description>
     <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/prompt-secimi-his-degil-olcum</guid>
+  </item>
+  <item>
+    <title>Tek bir tool yazmadan önce sandbox&apos;ı kur</title>
+    <link>https://ferhatatagun.com/blog/tek-bir-tool-yazmadan-once-sandbox</link>
+    <description>Çoğu agent ekibi önce tool&apos;ları yazıyor, sonra tasarımın yanlış olduğunu keşfediyor. Tool yanıtlarını mock&apos;la, loop&apos;u el ile rol-yap, kötü tool tasarımlarını codebase&apos;ine dokunmadan on beş dakikada öldür.</description>
+    <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/tek-bir-tool-yazmadan-once-sandbox</guid>
+  </item>
+  <item>
+    <title>Claude agent&apos;larını trace replay ile debug ediyorum</title>
+    <link>https://ferhatatagun.com/blog/claude-agent-debug-trace-replay</link>
+    <description>Agent trace&apos;leri garip bir çalışmayı debug etmek için gereken her şeyi içeriyor, ama wall of nested JSON olarak saklanıyor. Yeniden çerçeveleme: onları döküman olarak okumayı bırak, kararların timeline&apos;ı olarak izle. Bir editörde 30 dakika alan bug&apos;lar 30 saniyede bariz oluyor.</description>
+    <pubDate>Fri, 05 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/claude-agent-debug-trace-replay</guid>
   </item>
   <item>
     <title>Prompt caching is the cheapest Claude optimization. Nobody measures it.</title>
