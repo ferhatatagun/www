@@ -13,6 +13,7 @@ import post11EnRaw from '$lib/md/blog/build-the-sandbox-first-en.md?raw';
 import post12EnRaw from '$lib/md/blog/debug-claude-agents-by-replaying-traces-en.md?raw';
 import postTr1Raw from '$lib/md/blog/tarayicida-claude-streaming-sdk-siz.md?raw';
 import postTr2Raw from '$lib/md/blog/prompt-caching-kimsenin-olcmedigi.md?raw';
+import postTr3Raw from '$lib/md/blog/prompt-secimi-his-degil-olcum.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -41,7 +42,8 @@ const contentMap: Record<string, string> = {
 	'bitmemis-projeler-mezarligim': post5Raw,
 	'best-practice-dedigin-yarisi-ezber': post6Raw,
 	'tarayicida-claude-streaming-sdk-siz': postTr1Raw,
-	'prompt-caching-kimsenin-olcmedigi': postTr2Raw
+	'prompt-caching-kimsenin-olcmedigi': postTr2Raw,
+	'prompt-secimi-his-degil-olcum': postTr3Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -171,6 +173,14 @@ export const items: BlogPost[] = [
 			"Her Claude response'u cache-hit verisi taşıyor. Çoğu uygulama bunu hiçbir yere loglamıyor — ve bunun bedelini ödüyor. Kimsenin grafiklemediği hit oranı metriği, ve kendini bir haftada amorti eden dört alanlı log satırı.",
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM']
+	},
+	{
+		slug: 'prompt-secimi-his-degil-olcum',
+		title: "Prompt'un daha iyi değil. Sadece daha iyi hatırlıyorsun.",
+		excerpt:
+			'Çoğu ekip prompt\'u hisle iterate edip hafızayla shipliyor. Minimum işe yarayan karşılaştırma: aynı input üzerinde iki prompt\'u paralel çalıştırıp output, latency ve cost\'u yan yana görmek — side-by-side\'ın sıralı versiyonun göremediği şey.',
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'LLM', 'A/B Testing']
 	}
 ];
 
