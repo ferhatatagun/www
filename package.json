@@ -48,6 +48,7 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"dayjs": "^1.11.10"
+		"dayjs": "^1.11.10",
+		"fuse.js": "^7.4.1"
 	}
 }

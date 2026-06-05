@@ -14,6 +14,8 @@
 	import { titleSuffix } from '@data/app';
 	import { useTitle } from '$lib/utils/helpers';
 	import { siteOrigin } from '$lib/data/site';
+	import Fuse from 'fuse.js';
+	import { onMount } from 'svelte';
 
 	const pageTitle = useTitle(title, titleSuffix);
 	const canonical = `${siteOrigin}/blog`;
@@ -40,6 +42,39 @@
 	type Lang = 'all' | 'en' | 'tr';
 	let selectedLang: Lang = 'all';
 	let selectedTopic: string | null = null;
+	let query = '';
+	let searchInput: HTMLInputElement | undefined;
+
+	const fuse = new Fuse(sortedItems, {
+		keys: [
+			{ name: 'title', weight: 3 },
+			{ name: 'excerpt', weight: 2 },
+			{ name: 'tags', weight: 1 }
+		],
+		threshold: 0.35,
+		ignoreLocation: true,
+		minMatchCharLength: 2
+	});
+
+	$: searchHits = query.trim().length >= 2 ? fuse.search(query).map((r) => r.item) : null;
+
+	/** Global keyboard shortcut: / focuses the search input */
+	onMount(() => {
+		const handler = (e: KeyboardEvent) => {
+			const target = e.target as HTMLElement;
+			if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA')) return;
+			if (e.key === '/') {
+				e.preventDefault();
+				searchInput?.focus();
+			}
+			if (e.key === 'Escape' && document.activeElement === searchInput) {
+				query = '';
+				searchInput?.blur();
+			}
+		};
+		window.addEventListener('keydown', handler);
+		return () => window.removeEventListener('keydown', handler);
+	});
 
 	/** Determine the primary language of a post by which content map it lives in */
 	function postLang(p: BlogPost): 'en' | 'tr' {
@@ -56,8 +91,8 @@
 		.map((s) => sortedItems.find((p) => p.slug === s))
 		.filter((p): p is BlogPost => !!p);
 
-	$: filteredPosts = sortedItems
-		.filter((p) => !featuredSlugs.includes(p.slug))
+	/** When searching, ignore featured-section pinning and filter all posts. */
+	$: filteredPosts = (searchHits ?? sortedItems.filter((p) => !featuredSlugs.includes(p.slug)))
 		.filter((p) => {
 			if (selectedLang === 'all') return true;
 			return postLang(p) === selectedLang;
@@ -70,6 +105,7 @@
 	function resetFilters() {
 		selectedLang = 'all';
 		selectedTopic = null;
+		query = '';
 	}
 
 	function goRandom() {
@@ -136,8 +172,8 @@
 			</p>
 		</header>
 
-		<!-- FEATURED -->
-		{#if featuredPosts.length > 0}
+		<!-- FEATURED — hidden during active search -->
+		{#if featuredPosts.length > 0 && !searchHits}
 			<section class="col gap-3">
 				<div class="section-label">
 					<span class="section-dot"></span>
@@ -179,7 +215,30 @@
 		<section class="filters col gap-3">
 			<div class="section-label">
 				<span class="section-dot"></span>
-				All posts
+				{searchHits ? `${filteredPosts.length} result${filteredPosts.length === 1 ? '' : 's'}` : 'All posts'}
+			</div>
+
+			<!-- Search input -->
+			<div class="search-wrap">
+				<svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+					<circle cx="11" cy="11" r="7"/>
+					<line x1="21" y1="21" x2="16.65" y2="16.65"/>
+				</svg>
+				<input
+					bind:this={searchInput}
+					bind:value={query}
+					type="search"
+					class="search-input"
+					placeholder="Search titles, excerpts, tags…  (press / to focus)"
+					autocomplete="off"
+					spellcheck="false"
+					aria-label="Search posts"
+				/>
+				{#if query}
+					<button type="button" class="search-clear" on:click={() => (query = '')} aria-label="Clear search">×</button>
+				{:else}
+					<kbd class="search-kbd">/</kbd>
+				{/if}
 			</div>
 
 			<div class="filters__row">
@@ -246,9 +305,12 @@
 				{/each}
 			</div>
 
-			{#if selectedLang !== 'all' || selectedTopic}
+			{#if selectedLang !== 'all' || selectedTopic || query.length >= 2}
 				<div class="active-filters">
 					<span>Filtering:</span>
+					{#if query.length >= 2}
+						<span class="active-chip">"{query}"</span>
+					{/if}
 					{#if selectedLang !== 'all'}
 						<span class="active-chip">{selectedLang.toUpperCase()}</span>
 					{/if}
@@ -256,7 +318,6 @@
 						<span class="active-chip">{selectedTopic}</span>
 					{/if}
 					<button type="button" class="reset-btn" on:click={resetFilters}>Reset</button>
-					<span class="result-count">· {filteredPosts.length} of {sortedItems.length - featuredSlugs.length}</span>
 				</div>
 			{/if}
 		</section>
@@ -466,6 +527,75 @@
 	/* --- FILTERS --- */
 	.filters {
 		padding-top: 8px;
+	}
+
+	/* Search */
+	.search-wrap {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		padding: 10px 14px;
+		background: var(--main);
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		transition: border-color 0.2s, box-shadow 0.2s;
+	}
+	.search-wrap:focus-within {
+		border-color: #8b5cf6;
+		box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.12);
+	}
+	.search-icon {
+		color: var(--tertiary-text);
+		flex-shrink: 0;
+	}
+	.search-wrap:focus-within .search-icon {
+		color: #a78bfa;
+	}
+	.search-input {
+		flex: 1;
+		border: none;
+		background: transparent;
+		color: var(--main-text);
+		font-size: 0.92rem;
+		font-family: inherit;
+		outline: none;
+		min-width: 0;
+	}
+	.search-input::placeholder {
+		color: var(--tertiary-text);
+		font-weight: 300;
+	}
+	.search-input::-webkit-search-cancel-button {
+		display: none;
+	}
+	.search-kbd {
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.72rem;
+		font-weight: 600;
+		padding: 2px 7px;
+		border-radius: 4px;
+		background: var(--main-hover);
+		color: var(--tertiary-text);
+		border: 1px solid var(--border);
+	}
+	.search-clear {
+		width: 22px;
+		height: 22px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		background: var(--main-hover);
+		color: var(--tertiary-text);
+		border-radius: 50%;
+		font-size: 1.05rem;
+		line-height: 1;
+		cursor: pointer;
+		transition: background 0.15s, color 0.15s;
+	}
+	.search-clear:hover {
+		background: rgba(244, 114, 182, 0.15);
+		color: #f472b6;
 	}
 	.filters__row {
 		display: flex;
