@@ -5,7 +5,7 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Thu, 04 Jun 2026 22:46:18 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jun 2026 07:01:52 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
   <item>
     <title>Prompt caching is the cheapest Claude optimization. Nobody measures it.</title>
@@ -34,6 +34,20 @@
     <description>Agent traces contain everything you need to debug a weird run, but they&apos;re stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.</description>
     <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/debug-claude-agents-by-replaying-traces</guid>
+  </item>
+  <item>
+    <title>Tarayıcıda Claude&apos;a streaming çağrı — SDK olmadan</title>
+    <link>https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz</link>
+    <description>Resmi Anthropic SDK&apos;sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser&apos;ı, temiz iptal, anlamlı hatalar.</description>
+    <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz</guid>
+  </item>
+  <item>
+    <title>Prompt caching, Claude&apos;un en ucuz optimizasyonu. Kimse ölçmüyor.</title>
+    <link>https://ferhatatagun.com/blog/prompt-caching-kimsenin-olcmedigi</link>
+    <description>Her Claude response&apos;u cache-hit verisi taşıyor. Çoğu uygulama bunu hiçbir yere loglamıyor — ve bunun bedelini ödüyor. Kimsenin grafiklemediği hit oranı metriği, ve kendini bir haftada amorti eden dört alanlı log satırı.</description>
+    <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/prompt-caching-kimsenin-olcmedigi</guid>
   </item>
   <item>
     <title>Building a streaming Claude client in the browser — without the SDK</title>
