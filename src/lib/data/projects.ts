@@ -4,6 +4,26 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'context-lens',
+		color: '#c084fc',
+		description:
+			"Paste a Claude prompt — see how it tokenizes, where caching boundaries are, and what each call will cost on Sonnet, Haiku or Opus, before you ship. Pre-flight token analysis with both a no-key heuristic and the API-accurate count_tokens endpoint. The pre-flight companion to claudoscope's post-hoc x-ray.",
+		shortDescription:
+			'See a Claude prompt before you ship it — tokens, context-window position, cost, caching boundaries.',
+		links: [
+			{ to: 'https://context-lens.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/context-lens', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'context-lens',
+		period: {
+			from: new Date(2026, 5, 5)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'Preview', src: '/imgs/projects/context-lens.png' }]
+	},
+	{
 		slug: 'claudoscope',
 		color: '#f0a06b',
 		description:
