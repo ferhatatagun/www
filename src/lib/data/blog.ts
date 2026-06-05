@@ -14,6 +14,8 @@ import post12EnRaw from '$lib/md/blog/debug-claude-agents-by-replaying-traces-en
 import postTr1Raw from '$lib/md/blog/tarayicida-claude-streaming-sdk-siz.md?raw';
 import postTr2Raw from '$lib/md/blog/prompt-caching-kimsenin-olcmedigi.md?raw';
 import postTr3Raw from '$lib/md/blog/prompt-secimi-his-degil-olcum.md?raw';
+import postTr4Raw from '$lib/md/blog/tek-bir-tool-yazmadan-once-sandbox.md?raw';
+import postTr5Raw from '$lib/md/blog/claude-agent-debug-trace-replay.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -43,7 +45,9 @@ const contentMap: Record<string, string> = {
 	'best-practice-dedigin-yarisi-ezber': post6Raw,
 	'tarayicida-claude-streaming-sdk-siz': postTr1Raw,
 	'prompt-caching-kimsenin-olcmedigi': postTr2Raw,
-	'prompt-secimi-his-degil-olcum': postTr3Raw
+	'prompt-secimi-his-degil-olcum': postTr3Raw,
+	'tek-bir-tool-yazmadan-once-sandbox': postTr4Raw,
+	'claude-agent-debug-trace-replay': postTr5Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -181,6 +185,22 @@ export const items: BlogPost[] = [
 			'Çoğu ekip prompt\'u hisle iterate edip hafızayla shipliyor. Minimum işe yarayan karşılaştırma: aynı input üzerinde iki prompt\'u paralel çalıştırıp output, latency ve cost\'u yan yana görmek — side-by-side\'ın sıralı versiyonun göremediği şey.',
 		date: '2026-06-05',
 		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'LLM', 'A/B Testing']
+	},
+	{
+		slug: 'tek-bir-tool-yazmadan-once-sandbox',
+		title: "Tek bir tool yazmadan önce sandbox'ı kur",
+		excerpt:
+			'Çoğu agent ekibi önce tool\'ları yazıyor, sonra tasarımın yanlış olduğunu keşfediyor. Tool yanıtlarını mock\'la, loop\'u el ile rol-yap, kötü tool tasarımlarını codebase\'ine dokunmadan on beş dakikada öldür.',
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Agents', 'Tool Use', 'Prompt Engineering', 'LLM']
+	},
+	{
+		slug: 'claude-agent-debug-trace-replay',
+		title: "Claude agent'larını trace replay ile debug ediyorum",
+		excerpt:
+			"Agent trace'leri garip bir çalışmayı debug etmek için gereken her şeyi içeriyor, ama wall of nested JSON olarak saklanıyor. Yeniden çerçeveleme: onları döküman olarak okumayı bırak, kararların timeline'ı olarak izle. Bir editörde 30 dakika alan bug'lar 30 saniyede bariz oluyor.",
+		date: '2026-06-05',
+		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability']
 	}
 ];
 
