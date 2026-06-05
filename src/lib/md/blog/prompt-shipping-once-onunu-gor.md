@@ -6,7 +6,7 @@
 
 Bu suite'te shiplediğim diğer dört tool da post-hoc. [claudoscope](https://claudoscope-labs.vercel.app) biten bir response'u x-ray'liyor. [agent-replay](https://agentreplay.vercel.app) biten bir trace'i scrub ediyor. [prompt-lab](https://prompt-lab-promptly.vercel.app) biten iki çalıştırmayı karşılaştırıyor. [tool-lab](https://tool-lab-bice.vercel.app) agent loop'unu sandbox'lıyor. Hepsi "az önce ne oldu" mikroskopları. Hiçbiri "yapmak üzere olduğun şeye bak" lensi değil.
 
-[**context-lens**](https://context-lens.vercel.app) öyle. Bir system prompt ve user mesajı yapıştır; API'nin onları tam olarak nasıl sayacağını, 200K window içinde nerede durduğunu, caching boundary'lerinin nereye düştüğünü ve her çağrının ne kadara mal olacağını gör. Tahmini ölçüme çeviren pre-flight check.
+[**context-lens**](https://context-lens-sigma.vercel.app) öyle. Bir system prompt ve user mesajı yapıştır; API'nin onları tam olarak nasıl sayacağını, 200K window içinde nerede durduğunu, caching boundary'lerinin nereye düştüğünü ve her çağrının ne kadara mal olacağını gör. Tahmini ölçüme çeviren pre-flight check.
 
 **TL;DR**
 
@@ -82,6 +82,6 @@ LLM uygulamalarının 2026 ekonomisi model seçimi hakkında değil, çoğunlukl
 
 ---
 
-Bu [**context-lens**](https://context-lens.vercel.app)'a shipledim — Claude prompt'u yapıştır, shiplemeden ne kadar tutacağını gör. BYOK, backend yok, tarayıcıda çalışıyor. Kaynak: [github.com/ferhatatagun/context-lens](https://github.com/ferhatatagun/context-lens).
+Bu [**context-lens**](https://context-lens-sigma.vercel.app)'a shipledim — Claude prompt'u yapıştır, shiplemeden ne kadar tutacağını gör. BYOK, backend yok, tarayıcıda çalışıyor. Kaynak: [github.com/ferhatatagun/context-lens](https://github.com/ferhatatagun/context-lens).
 
 Aynı protokol-seviye yaklaşımı ayrıca dört kardeş tool'a güç veriyor — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). Hepsi açık kaynak, hepsi BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).

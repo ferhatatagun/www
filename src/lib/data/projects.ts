@@ -11,7 +11,7 @@ export const items: Array<Project> = [
 		shortDescription:
 			'See a Claude prompt before you ship it — tokens, context-window position, cost, caching boundaries.',
 		links: [
-			{ to: 'https://context-lens.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://context-lens-sigma.vercel.app', label: 'Live', newTab: true },
 			{ to: 'https://github.com/ferhatatagun/context-lens', label: 'GitHub', newTab: true }
 		],
 		logo: Assets.AI,

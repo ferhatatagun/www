@@ -6,7 +6,7 @@ All three of these are diagnosable in advance, in about four seconds, for free. 
 
 The other four tools I've shipped in this suite are all post-hoc too. [claudoscope](https://claudoscope-labs.vercel.app) x-rays a finished response. [agent-replay](https://agentreplay.vercel.app) scrubs a finished trace. [prompt-lab](https://prompt-lab-promptly.vercel.app) compares two finished runs. [tool-lab](https://tool-lab-bice.vercel.app) sandboxes the agent loop. They're all "look at what just happened" microscopes. None of them is a "look at what you're about to do" lens.
 
-[**context-lens**](https://context-lens.vercel.app) is. Paste a system prompt and a user message; see exactly how the API will count them, where in the 200K window you sit, where caching boundaries fall, and what each call will cost. The pre-flight check that turns a guess into a measurement.
+[**context-lens**](https://context-lens-sigma.vercel.app) is. Paste a system prompt and a user message; see exactly how the API will count them, where in the 200K window you sit, where caching boundaries fall, and what each call will cost. The pre-flight check that turns a guess into a measurement.
 
 **TL;DR**
 
@@ -84,6 +84,6 @@ The economics of LLM apps in 2026 are not about model selection, mostly. They're
 
 ---
 
-I shipped this in [**context-lens**](https://context-lens.vercel.app) — paste a Claude prompt, see what it costs before you ship. BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/context-lens](https://github.com/ferhatatagun/context-lens).
+I shipped this in [**context-lens**](https://context-lens-sigma.vercel.app) — paste a Claude prompt, see what it costs before you ship. BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/context-lens](https://github.com/ferhatatagun/context-lens).
 
 The same protocol-level approach also powers four sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
