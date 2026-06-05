@@ -11,6 +11,8 @@ import post9EnRaw from '$lib/md/blog/prompt-caching-nobody-measures-en.md?raw';
 import post10EnRaw from '$lib/md/blog/stop-choosing-prompts-by-vibes-en.md?raw';
 import post11EnRaw from '$lib/md/blog/build-the-sandbox-first-en.md?raw';
 import post12EnRaw from '$lib/md/blog/debug-claude-agents-by-replaying-traces-en.md?raw';
+import postTr1Raw from '$lib/md/blog/tarayicida-claude-streaming-sdk-siz.md?raw';
+import postTr2Raw from '$lib/md/blog/prompt-caching-kimsenin-olcmedigi.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -37,7 +39,9 @@ const contentMap: Record<string, string> = {
 	'cursor-ide-ve-prompt-muhendisligi': post3Raw,
 	'neden-bazen-sadece-bos-ekrana-bakiyorum': post4Raw,
 	'bitmemis-projeler-mezarligim': post5Raw,
-	'best-practice-dedigin-yarisi-ezber': post6Raw
+	'best-practice-dedigin-yarisi-ezber': post6Raw,
+	'tarayicida-claude-streaming-sdk-siz': postTr1Raw,
+	'prompt-caching-kimsenin-olcmedigi': postTr2Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -151,6 +155,22 @@ export const items: BlogPost[] = [
 			"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",
 		date: '2026-06-04',
 		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability']
+	},
+	{
+		slug: 'tarayicida-claude-streaming-sdk-siz',
+		title: "Tarayıcıda Claude'a streaming çağrı — SDK olmadan",
+		excerpt:
+			"Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar.",
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'SSE', 'Streaming', 'TypeScript', 'Tarayıcı']
+	},
+	{
+		slug: 'prompt-caching-kimsenin-olcmedigi',
+		title: "Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor.",
+		excerpt:
+			"Her Claude response'u cache-hit verisi taşıyor. Çoğu uygulama bunu hiçbir yere loglamıyor — ve bunun bedelini ödüyor. Kimsenin grafiklemediği hit oranı metriği, ve kendini bir haftada amorti eden dört alanlı log satırı.",
+		date: '2026-06-04',
+		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM']
 	}
 ];
 
