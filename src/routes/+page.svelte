@@ -139,7 +139,7 @@
 		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">
 			{description}
 		</p>
-		<div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2">
+		<div class="row justify-center md:justify-start p-y-15px p-x-0px gap-2 items-center flex-wrap">
 			{#each links as link}
 				<a
 					class="decoration-none"
@@ -150,6 +150,9 @@
 					<Icon icon={getPlatfromIcon(link.platform)} color={'var(--accent-text)'} size={'20px'} />
 				</a>
 			{/each}
+			<a href={`${base}/resume`} class="home-cv-chip decoration-none ml-1" title="Resume / CV (PDF)">
+				CV ↗
+			</a>
 		</div>
 		{#if blogPosts.length > 0}
 			<a
@@ -221,6 +224,24 @@
 </div>
 
 <style>
+	.home-cv-chip {
+		display: inline-flex;
+		align-items: center;
+		padding: 3px 9px;
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.72em;
+		font-weight: 500;
+		letter-spacing: 0.04em;
+		color: var(--tertiary-text);
+		border: 1px solid var(--border);
+		border-radius: 5px;
+		transition: border-color 0.2s, color 0.2s, background 0.2s;
+	}
+	.home-cv-chip:hover {
+		border-color: #8b5cf6;
+		color: #a78bfa;
+		background: rgba(139, 92, 246, 0.06);
+	}
 	.home-ai-strip__main:hover .home-ai-strip__title {
 		text-decoration: underline;
 	}

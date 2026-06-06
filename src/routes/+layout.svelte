@@ -17,6 +17,12 @@
 	<footer class="site-footer">
 		<span>© {new Date().getFullYear()} Ferhat Atagün</span>
 		<span class="site-footer__sep">·</span>
+		<a href="/resume" class="site-footer__link">Resume</a>
+		<span class="site-footer__sep">·</span>
+		<a href="/tools" class="site-footer__link">Tools</a>
+		<span class="site-footer__sep">·</span>
+		<a href="/blog" class="site-footer__link">Blog</a>
+		<span class="site-footer__sep">·</span>
 		<a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link">GitHub</a>
 		<span class="site-footer__sep">·</span>
 		<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link">Built with SvelteKit</a>
