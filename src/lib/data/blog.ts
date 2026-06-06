@@ -136,7 +136,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			'Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.',
 		date: '2026-06-03',
-		tags: ['Claude', 'Anthropic', 'SSE', 'Streaming', 'TypeScript', 'Browser']
+		tags: ['Claude', 'Anthropic', 'SSE', 'Streaming', 'TypeScript', 'Browser'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-4ce8a9407d2c'
 	},
 	{
 		slug: 'prompt-caching-nobody-measures',
@@ -144,7 +145,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",
 		date: '2026-06-04',
-		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM']
+		tags: ['Claude', 'Anthropic', 'Prompt Caching', 'Observability', 'Cost', 'LLM'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-3e597c6804d8'
 	},
 	{
 		slug: 'stop-choosing-prompts-by-vibes',
@@ -152,7 +154,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			'Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.',
 		date: '2026-06-04',
-		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'A/B Testing', 'LLM', 'Evals']
+		tags: ['Claude', 'Anthropic', 'Prompt Engineering', 'A/B Testing', 'LLM', 'Evals'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/33758334974c'
 	},
 	{
 		slug: 'build-the-sandbox-first',
@@ -160,7 +163,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			'Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.',
 		date: '2026-06-04',
-		tags: ['Claude', 'Anthropic', 'Agents', 'Tool Use', 'Prompt Engineering', 'LLM']
+		tags: ['Claude', 'Anthropic', 'Agents', 'Tool Use', 'Prompt Engineering', 'LLM'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-7a508c4b6723'
 	},
 	{
 		slug: 'debug-claude-agents-by-replaying-traces',
@@ -168,7 +172,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",
 		date: '2026-06-04',
-		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability']
+		tags: ['Claude', 'Anthropic', 'Agents', 'Debugging', 'LLM', 'Observability'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-093e0c2cf1e0'
 	},
 	{
 		slug: 'four-tools-in-two-weekends',
@@ -176,7 +181,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			'A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the "one tool per insight" decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.',
 		date: '2026-06-05',
-		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM']
+		tags: ['Claude', 'Anthropic', 'Open Source', 'Developer Tools', 'LLM'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-e721d4c41b98'
 	},
 	{
 		slug: 'iki-hafta-sonu-dort-tool',
@@ -192,7 +198,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			"Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don't need to send the request. A worked example where 'feels about the same' was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.",
 		date: '2026-06-05',
-		tags: ['Claude', 'Anthropic', 'Tokens', 'Prompt Engineering', 'Cost', 'LLM']
+		tags: ['Claude', 'Anthropic', 'Tokens', 'Prompt Engineering', 'Cost', 'LLM'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/see-the-prompt-before-you-ship-it-91ee42f72483'
 	},
 	{
 		slug: 'prompt-shipping-once-onunu-gor',

@@ -120,9 +120,9 @@
 						target="_blank"
 						rel="noopener noreferrer"
 						class="blog-source-link text-[0.85em] decoration-none"
-						title="Source / original"
+						title={post.sourceUrl.includes('medium.com') ? 'Read on Medium' : 'Source / original'}
 					>
-						Source
+						{post.sourceUrl.includes('medium.com') ? 'Medium ↗' : 'Source'}
 					</a>
 				{/if}
 			</div>
