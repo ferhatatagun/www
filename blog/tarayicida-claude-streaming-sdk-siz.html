@@ -154,39 +154,232 @@
 		<link href="../_app/immutable/assets/0.fa14a6a1.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.d5c99235.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.7715d6fa.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.d187e063.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.db381d41.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.eca18a26.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.053de0fa.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.e6742373.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.1f33dcc8.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.83d8eb4e.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.2104d5c0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.2df6fffc.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.dca0db4e.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.bc2183f4.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/each.5011d9f6.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores.f72ca37a.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index.084bccec.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/home.e891351a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.ac4a3b21.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.db9837ee.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.8e1c16e2.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/skills.5992d2c4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.497670ec.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.5ea20f2a.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/4.025bac86.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.85263f20.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/blog.ca114921.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.982b2d15.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/app.f96617cb.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.3c9a5560.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.746e3912.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.67966baa.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.33139310.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.7c217c46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.99016339.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/app.9b48cdb2.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/site.e6ac68e3.js"><title>Tarayıcıda Claude'a streaming çağrı — SDK olmadan | Ferhat Atagün</title><!-- HEAD_svelte-633q7y_START --><link rel="canonical" href="https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz"><meta name="description" content="Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar."><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz"><meta property="og:title" content="Tarayıcıda Claude'a streaming çağrı — SDK olmadan"><meta property="og:description" content="Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar."><meta property="og:image" content="https://ferhatatagun.com/og-cards/tarayicida-claude-streaming-sdk-siz.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Ferhat Atagün"><meta property="article:published_time" content="2026-06-04"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Tarayıcıda Claude'a streaming çağrı — SDK olmadan"><meta name="twitter:description" content="Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar."><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/tarayicida-claude-streaming-sdk-siz.png"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Tarayıcıda Claude'a streaming çağrı — SDK olmadan","description":"Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar.","datePublished":"2026-06-04","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz"}}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"Tarayıcıda Claude'a streaming çağrı — SDK olmadan","item":"https://ferhatatagun.com/blog/tarayicida-claude-streaming-sdk-siz"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-633q7y_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
   <link rel="stylesheet" href="/uno.css">
 </head>
 
 <body data-sveltekit-preload-data="hover">
-  <div style="display: contents">  <div class="body contents theme-light svelte-f6pi67"><a href="#main-content" class="skip-link svelte-f6pi67" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-w717844" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-w717844"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-w717844)" filter="url(#glow-ai-logo-w717844)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-w717844)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-f6pi67" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="font-[var(--title-f)] font-black tracking-[4px] text-center text-2.5em sm:text-[3em] md:text-[3.5em] lg:text-[4em] " style="background: linear-gradient(var(--main-text), var(--accent-text-hover)); -webkit-background-clip: text; background-clip: text;">Tarayıcıda Claude'a streaming çağrı — SDK olmadan</h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-06-04">4 Haziran 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>7 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Claude </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Anthropic </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SSE </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Streaming </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">TypeScript </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Tarayıcı </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=Taray%C4%B1c%C4%B1da%20Claude'a%20streaming%20%C3%A7a%C4%9Fr%C4%B1%20%E2%80%94%20SDK%20olmadan%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Ftarayicida-claude-streaming-sdk-siz" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Ftarayicida-claude-streaming-sdk-siz" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/browser-only-claude-streaming" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Building a streaming Claude client in the browser — without the SDK</a> </li><li><a href="/blog/four-tools-in-two-weekends" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">What I learned shipping four open-source Claude dev-tools in two weekends</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/debug-claude-agents-by-replaying-traces" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← How I debug Claude agents by replaying their trace</a> <a href="/blog/prompt-caching-kimsenin-olcmedigi" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor. →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-f6pi67"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a></footer> </div> 
+  <div style="display: contents">  <div class="body contents theme-light svelte-f6pi67"><a href="#main-content" class="skip-link svelte-f6pi67" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-f3i9q5h" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-f3i9q5h"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f3i9q5h)" filter="url(#glow-ai-logo-f3i9q5h)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f3i9q5h)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-f6pi67" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="font-[var(--title-f)] font-black tracking-[4px] text-center text-2.5em sm:text-[3em] md:text-[3.5em] lg:text-[4em] " style="background: linear-gradient(var(--main-text), var(--accent-text-hover)); -webkit-background-clip: text; background-clip: text;">Tarayıcıda Claude'a streaming çağrı — SDK olmadan</h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-06-04">4 Haziran 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>7 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Claude </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Anthropic </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SSE </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Streaming </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">TypeScript </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Tarayıcı </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><h1 id="tarayıcıda-claudea-streaming-çağrı--sdk-olmadan">Tarayıcıda Claude&#39;a streaming çağrı — SDK olmadan</h1>
+<p>Tarayıcıdan Claude&#39;u çağırmak istedim. Anthropic SDK hayır dedi — bir bakıma.</p>
+<p>Next.js uygulamasında <code>import Anthropic from &quot;@anthropic-ai/sdk&quot;</code> denediğimde bundler patladı. Hata <code>node:fs/promises</code>&#39;i gösteriyordu — SDK&#39;nın içinde, agent toolset modülünün diskten dosya okuyan bir parçası. Tarayıcıda çalışması mümkün değil. Üstelik opsiyonel kod da değil; SDK&#39;nın ana client entry&#39;si onu zincirleme çekiyor.</p>
+<p>Yani ya tarayıcı-temiz bir entry point gelene kadar (belki bir gün) bekleyecektim, ya da Messages API&#39;yi doğrudan konuşacaktım. Endpoint HTTP. Streaming formatı Server-Sent Events. Daha önce OpenAI için bunu yapmıştım — ne kadar zor olabilir ki?</p>
+<p>Sonuç: kullanılabilir bir client için yaklaşık 150 satır TypeScript. Üstelik benim yaptığım tool için SDK&#39;dan daha temiz çıktı. Ne gerektirdi, neden tarayıcı tarafında Claude API&#39;yle çalışan herhangi bir şey için bunu öneriyorum — yazının özü bu.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Resmi SDK Node-only modüller çekiyor, tarayıcı bundle&#39;larını kırıyor.</li>
+<li>Doğrudan <code>fetch</code> çalışıyor — yalnızca <code>anthropic-dangerous-direct-browser-access: true</code> header&#39;ını göndermen lazım.</li>
+<li>Streaming formatı düz SSE — event&#39;leri <code>\n\n</code> ile böl, <code>data:</code> satırlarını parse et.</li>
+<li>Tek ufak çetrefil yer: <code>tool_use</code> block&#39;larının <code>input</code>&#39;u <code>input_json_delta</code> chunk&#39;ları olarak geliyor; <code>content_block_stop</code>&#39;ta birleştirip parse ediyorsun.</li>
+<li>El yapımı olunca bundle ufak, soyutlama az, protokolün ne yaptığı şeffaf.</li>
+</ul>
+<h2 id="cors-kilidini-açmak">CORS kilidini açmak</h2>
+<p>Tarayıcı varsayılan olarak <code>https://api.anthropic.com</code>&#39;a <code>fetch()</code> etmene izin vermiyor. Anthropic bunu açan bir flag gönderiyor: <code>anthropic-dangerous-direct-browser-access: true</code> header&#39;ı eklediğinde CORS açılıyor. Header&#39;ın adı bizzat bir uyarı — tarayıcıda yazılan key DevTools açabilen herkese görünür. Bring-your-own-key bir developer tool için sorun değil; production&#39;da server-side key servis eden bir uygulama için ise kabul edilemez.</p>
+<p>Header yerine konunca minimum bir istek şuna benziyor:</p>
+<pre><code class="language-ts">await fetch(&quot;https://api.anthropic.com/v1/messages&quot;, {
+  method: &quot;POST&quot;,
+  headers: {
+    &quot;content-type&quot;: &quot;application/json&quot;,
+    &quot;x-api-key&quot;: apiKey,
+    &quot;anthropic-version&quot;: &quot;2023-06-01&quot;,
+    &quot;anthropic-dangerous-direct-browser-access&quot;: &quot;true&quot;,
+  },
+  body: JSON.stringify({
+    model,
+    max_tokens: 1024,
+    messages: [{ role: &quot;user&quot;, content: &quot;Hello.&quot; }],
+    stream: true,
+  }),
+});
+</code></pre>
+<p><code>stream: true</code> sana bir Server-Sent Events stream&#39;i veriyor. Response body bir <code>ReadableStream&lt;Uint8Array&gt;</code> — byte chunk&#39;larını text&#39;e decode ediyorsun. Event&#39;ler boş bir satırla ayrılıyor; her event birkaç satırdan oluşuyor (<code>event: &lt;type&gt;</code> ve <code>data: &lt;json&gt;</code>), anlamlı yük <code>data:</code>&#39;da yaşıyor.</p>
+<h2 id="stream-gerçekte-nasıl-görünüyor">Stream gerçekte nasıl görünüyor</h2>
+<p>Düz bir text response için SSE event sequence&#39;i şu:</p>
+<pre><code>event: message_start
+data: { &quot;type&quot;: &quot;message_start&quot;, &quot;message&quot;: { ..., &quot;usage&quot;: {...} } }
+
+event: content_block_start
+data: { &quot;type&quot;: &quot;content_block_start&quot;, &quot;index&quot;: 0,
+        &quot;content_block&quot;: { &quot;type&quot;: &quot;text&quot;, &quot;text&quot;: &quot;&quot; } }
+
+event: content_block_delta
+data: { &quot;type&quot;: &quot;content_block_delta&quot;, &quot;index&quot;: 0,
+        &quot;delta&quot;: { &quot;type&quot;: &quot;text_delta&quot;, &quot;text&quot;: &quot;Hello&quot; } }
+
+event: content_block_delta
+data: { &quot;type&quot;: &quot;content_block_delta&quot;, &quot;index&quot;: 0,
+        &quot;delta&quot;: { &quot;type&quot;: &quot;text_delta&quot;, &quot;text&quot;: &quot; there&quot; } }
+
+event: content_block_stop
+data: { &quot;type&quot;: &quot;content_block_stop&quot;, &quot;index&quot;: 0 }
+
+event: message_delta
+data: { &quot;type&quot;: &quot;message_delta&quot;, &quot;delta&quot;: { &quot;stop_reason&quot;: &quot;end_turn&quot; },
+        &quot;usage&quot;: { &quot;output_tokens&quot;: 12 } }
+
+event: message_stop
+data: { &quot;type&quot;: &quot;message_stop&quot; }
+</code></pre>
+<p>Her <code>content_block_delta</code> bir parçayı taşıyor. <code>text</code> alanlarını <code>index</code>&#39;e göre birleştirdiğinde stream&#39;lenen mesajı elde ediyorsun. Düz text için iş bu kadar.</p>
+<p>Üç şey bunu biraz daha ilginç yapıyor:</p>
+<ul>
+<li>Mesaj başına birden fazla content block (text + tool_use, ya da birkaç tool_use).</li>
+<li><code>tool_use</code> block&#39;unun <code>input</code>&#39;u partial JSON delta dizisi olarak geliyor, toplu değil.</li>
+<li>Kullanıcı Stop&#39;a bastığında temiz iptal.</li>
+</ul>
+<h2 id="streami-parse-etmek">Stream&#39;i parse etmek</h2>
+<p>Parser ufak. Chunk&#39;ları oku, bir buffer&#39;da birik, <code>\n\n</code>&#39;de böl (SSE event separator&#39;ı), her event&#39;i işle:</p>
+<pre><code class="language-ts">const reader = res.body!.getReader();
+const decoder = new TextDecoder();
+let buffer = &quot;&quot;;
+
+while (true) {
+  const { value, done } = await reader.read();
+  if (done) break;
+  buffer += decoder.decode(value, { stream: true });
+
+  let sep: number;
+  while ((sep = buffer.indexOf(&quot;\n\n&quot;)) !== -1) {
+    const rawEvent = buffer.slice(0, sep);
+    buffer = buffer.slice(sep + 2);
+
+    const dataLine = rawEvent.split(&quot;\n&quot;).find((l) =&gt; l.startsWith(&quot;data:&quot;));
+    if (!dataLine) continue;
+
+    const evt = JSON.parse(dataLine.slice(5).trim());
+    handle(evt);
+  }
+}
+</code></pre>
+<p><code>TextDecoder</code>&#39;a <code>{ stream: true }</code> vermek önemli — vermediğinde, çok byte&#39;lı bir karakter chunk sınırına denk düştüğünde UTF-8 bozuluyor. Anthropic bol em-dash gönderiyor; bana sorma nereden bildiğimi.</p>
+<p><code>handle(evt)</code> <code>evt.type</code>&#39;a göre switch yapıyor ve state&#39;i güncelliyor. Sadece text için, UI&#39;yi hareket ettiren tek event&#39;ler <code>content_block_delta</code> (mevcut text block&#39;una text ekle) ve <code>message_delta</code> (final usage). Full client&#39;ta <code>blocks: Block[]</code> dizisini <code>evt.index</code>&#39;e göre tutuyorum ve delta geldiğinde matching block&#39;u mutate ediyorum.</p>
+<h2 id="tool-use-kısmi-json-deltaları">Tool use: kısmi-JSON delta&#39;ları</h2>
+<p>İşin biraz çetrefilleştiği yer burası. Model bir tool çağırmaya karar verdiğinde, <code>content_block_start</code> geliyor — <code>content_block: { type: &quot;tool_use&quot;, id, name, input: {} }</code>. <code>input</code> boş. Argümanlar <code>content_block_delta</code> event&#39;lerinde şöyle bir şekilde geliyor:</p>
+<pre><code>event: content_block_delta
+data: { &quot;type&quot;: &quot;content_block_delta&quot;, &quot;index&quot;: 1,
+        &quot;delta&quot;: { &quot;type&quot;: &quot;input_json_delta&quot;, &quot;partial_json&quot;: &quot;{\&quot;cit&quot; } }
+
+event: content_block_delta
+data: { &quot;type&quot;: &quot;content_block_delta&quot;, &quot;index&quot;: 1,
+        &quot;delta&quot;: { &quot;type&quot;: &quot;input_json_delta&quot;, &quot;partial_json&quot;: &quot;y\&quot;:\&quot;Ist&quot; } }
+</code></pre>
+<p>Partial bir string&#39;i <code>JSON.parse</code> edemezsin. Bu yüzden block index başına biriktirip ancak <code>content_block_stop</code>&#39;ta parse ediyorum:</p>
+<pre><code class="language-ts">const toolUseJson: Record&lt;number, string&gt; = {};
+
+case &quot;content_block_start&quot;: {
+  const cb = evt.content_block;
+  if (cb.type === &quot;tool_use&quot;) {
+    blocks[evt.index] = { type: &quot;tool_use&quot;, id: cb.id, name: cb.name, input: {} };
+    toolUseJson[evt.index] = &quot;&quot;;
+  } else if (cb.type === &quot;text&quot;) {
+    blocks[evt.index] = { type: &quot;text&quot;, text: &quot;&quot; };
+  }
+  break;
+}
+
+case &quot;content_block_delta&quot;: {
+  const d = evt.delta;
+  if (d.type === &quot;text_delta&quot;) {
+    (blocks[evt.index] as TextBlock).text += d.text;
+  } else if (d.type === &quot;input_json_delta&quot;) {
+    toolUseJson[evt.index] += d.partial_json;
+  }
+  break;
+}
+
+case &quot;content_block_stop&quot;: {
+  const b = blocks[evt.index];
+  if (b?.type === &quot;tool_use&quot;) {
+    try {
+      b.input = JSON.parse(toolUseJson[evt.index] || &quot;{}&quot;);
+    } catch {
+      b.input = {};
+    }
+  }
+  break;
+}
+</code></pre>
+<p>Tool-use için yapılan tüm uyum bu kadar. UI block tamamlandığında temiz bir callback alıyor, <code>input</code> parse edilmiş bir nesne olarak hazır.</p>
+<p>Per-block birikimin güzel bir sonucu: text delta&#39;ları canlı render edilebiliyor — typing animasyonu, caret blink, hepsi — ama <code>tool_use</code> kartları yalnızca input&#39;u tam toplanınca beliriyor. Bu doğru bir his veriyor. Text sohbet; tool call komut.</p>
+<h2 id="i̇ptal">İptal</h2>
+<p>Bunu atlama. Kullanıcı Stop&#39;a bastığında streaming isteğin arka planda finish&#39;lenmemeli, gerçekten durmalı:</p>
+<pre><code class="language-ts">const ac = new AbortController();
+await fetch(ENDPOINT, { ..., signal: ac.signal });
+// daha sonra, kullanıcı Stop&#39;a bastığında:
+ac.abort();
+</code></pre>
+<p><code>reader.read()</code> abort sonrası bir sonraki iteration&#39;da exception fırlatıyor, <code>signal.aborted</code> true oluyor. Bunu yakala, gerçek bir hatadan ayır, temiz bir &quot;stopped&quot; state göster:</p>
+<pre><code class="language-ts">try {
+  // ... read loop ...
+  cb.onDone({ usage, stopReason });
+} catch (err) {
+  if (signal?.aborted) {
+    cb.onDone({ usage, stopReason: &quot;aborted&quot; });
+    return;
+  }
+  cb.onError(errorMessage(err));
+}
+</code></pre>
+<p>Kullanıcı zaten gördüğü partial response&#39;u + bir &quot;stopped&quot; rozetini alıyor, generic crash yerine.</p>
+<h2 id="anlamlı-hatalar">Anlamlı hatalar</h2>
+<p>API&#39;den gelen bir 401 birkaç şey anlamına gelebilir; bir 429 da öyle. Tarayıcı sana drill etmen gereken bir <code>Response</code> veriyor. Body&#39;yi JSON olarak parse et, <code>error.message</code>&#39;a bak, status code&#39;a göre fallback&#39;le, kullanıcının üzerinde aksiyon alabileceği bir şey göster:</p>
+<pre><code class="language-ts">async function readError(res: Response): Promise&lt;string&gt; {
+  try {
+    const body = await res.json();
+    const msg = body?.error?.message ?? body?.message;
+    if (msg) return `${res.status} · ${msg}`;
+  } catch {
+    /* devam */
+  }
+  if (res.status === 401) return &quot;401 · Geçersiz API key.&quot;;
+  if (res.status === 429) return &quot;429 · Rate limit — biraz bekle.&quot;;
+  return `${res.status} · İstek başarısız.`;
+}
+</code></pre>
+<p>Sıkıcı, ama &quot;uygulama çöktü&quot; ile &quot;key&#39;in geçersiz, düzelt&quot; arasındaki fark, bir tool ile bir oyuncak arasındaki fark.</p>
+<h2 id="bu-sana-ne-kazandırıyor">Bu sana ne kazandırıyor</h2>
+<p>Tüm SSE client — request, parsing, tool use, abort, errors — yaklaşık 150 satır TypeScript. Benim caseimde, React + Tailwind v4 + Framer Motion + diğerleri dahil <strong>gzipped ~100 KB</strong> bir browser bundle&#39;ı ile geliyor. SDK tek başına bundan büyük.</p>
+<p>Sana verdiği bir başka şey: dürüstlük. Claude API&#39;yle çalışmanın en ilginç kısmı streaming davranışı — caching açıldığında, token&#39;lar birikirken, tool call&#39;lar tek tek geldiğinde. SDK soyutlaması bunu sakladığı için önce SDK&#39;yı debug etmen gerekiyor, sonra uygulamayı. Doğrudan <code>fetch</code> ile, client&#39;ın <em>protokolün kendisi</em> haline geliyor; bir şey ters gittiğinde SSE event&#39;leri akarken okuyorsun.</p>
+<p>Bu yaklaşımı <a href="https://claudoscope-labs.vercel.app/?demo=1"><strong>claudoscope</strong></a>&#39;da kullandım — Claude API çağrıları için tarayıcı-only bir x-ray. Token ekonomisi görselleştirmesinin tamamı (cache read&#39;leri, cache write&#39;lar, uncached input, output, cost delta) yukarıdaki stream event&#39;lerinden hesaplanıyor. SDK yok, backend yok, server-side proxy yok.</p>
+<pre><code>src/
+  app/page.tsx              orchestration
+  lib/anthropic.ts          bu yazıdaki ~150 satırlık client
+  lib/pricing.ts            usage event&#39;lerinden tier-aware cost
+  components/XRayPanel.tsx  veriyi görünür kılan kısım
+</code></pre>
+<p>Aynı client şimdi üç kardeş tool&#39;a güç veriyor — <a href="https://agentreplay.vercel.app">agent-replay</a>, <a href="https://prompt-lab-promptly.vercel.app">prompt-lab</a>, <a href="https://tool-lab-bice.vercel.app">tool-lab</a> — değişiklik olmadan. SSE parsing senin olduğunda, kompoze edilebiliyor.</p>
+<p>SDK seninle didişiyor diye Claude API&#39;yi bir tarayıcı tool&#39;una koymayı erteliyorsan: bir öğleden sonralık iş, ve sonuç ufak, debug-edilebilir ve senin.</p>
+<hr>
+<p>Dört tool, hepsi açık kaynak ve BYOK: <a href="https://ferhatatagun.com/tools">ferhatatagun.com/tools</a>.</p>
+<p>Burada anlatılan SSE client&#39;ın kaynağı: <a href="https://github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts">github.com/ferhatatagun/claudoscope/blob/main/src/lib/anthropic.ts</a>.</p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=Taray%C4%B1c%C4%B1da%20Claude'a%20streaming%20%C3%A7a%C4%9Fr%C4%B1%20%E2%80%94%20SDK%20olmadan%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Ftarayicida-claude-streaming-sdk-siz" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Ftarayicida-claude-streaming-sdk-siz" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/browser-only-claude-streaming" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Building a streaming Claude client in the browser — without the SDK</a> </li><li><a href="/blog/four-tools-in-two-weekends" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">What I learned shipping four open-source Claude dev-tools in two weekends</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/debug-claude-agents-by-replaying-traces" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← How I debug Claude agents by replaying their trace</a> <a href="/blog/prompt-caching-kimsenin-olcmedigi" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor. →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-f6pi67"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-f6pi67" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-f6pi67" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a></footer> </div> 
 			
 			<script>
 				{
-					__sveltekit_1jo3zhs = {
+					__sveltekit_huiqhh = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						env: {}
 					};
@@ -196,8 +389,8 @@
 					const data = [{"type":"data","data":null,"uses":{}},null];
 
 					Promise.all([
-						import("../_app/immutable/entry/start.d5c99235.js"),
-						import("../_app/immutable/entry/app.83d8eb4e.js")
+						import("../_app/immutable/entry/start.7715d6fa.js"),
+						import("../_app/immutable/entry/app.2104d5c0.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 4],
