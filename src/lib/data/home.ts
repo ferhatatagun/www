@@ -29,6 +29,10 @@ export const links: Array<{ platform: Platform; link: string }> = [
 		link: 'https://medium.com/@ferhatatagun'
 	},
 	{
+		platform: Platform.DevTo,
+		link: 'https://dev.to/ferhatatagun'
+	},
+	{
 		platform: Platform.Email,
 		link: 'ferhatatagun2@gmail.com'
 	}

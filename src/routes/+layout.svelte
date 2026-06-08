@@ -23,6 +23,8 @@
 		<span class="site-footer__sep">·</span>
 		<a href="/blog" class="site-footer__link">Blog</a>
 		<span class="site-footer__sep">·</span>
+		<a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link">dev.to</a>
+		<span class="site-footer__sep">·</span>
 		<a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link">GitHub</a>
 		<span class="site-footer__sep">·</span>
 		<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link">Built with SvelteKit</a>

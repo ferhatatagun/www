@@ -254,6 +254,35 @@ export const items: BlogPost[] = [
 /** Blog posts sorted by date, newest first */
 export const sortedItems = [...items].sort((a, b) => b.date.localeCompare(a.date));
 
+/**
+ * dev.to mirror URLs for English posts. Each dev.to article carries a
+ * canonical_url back to this site, so the SEO authority stays here; this map
+ * is only used to surface a subtle "Also on dev.to" link on the post page
+ * so readers can comment / react on dev.to if they prefer.
+ *
+ * Keyed by the EN-content slug (which matches the route slug for these posts).
+ */
+export const devToMirrors: Record<string, string> = {
+	'browser-only-claude-streaming':
+		'https://dev.to/ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-5f80',
+	'prompt-caching-nobody-measures':
+		'https://dev.to/ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-1nga',
+	'stop-choosing-prompts-by-vibes':
+		'https://dev.to/ferhatatagun/your-prompt-isnt-better-you-just-remember-it-being-better-3h52',
+	'build-the-sandbox-first':
+		'https://dev.to/ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-2ja3',
+	'debug-claude-agents-by-replaying-traces':
+		'https://dev.to/ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-484',
+	'four-tools-in-two-weekends':
+		'https://dev.to/ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-1f4f',
+	'see-the-prompt-before-you-ship-it':
+		'https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao'
+};
+
+export function getDevToUrl(slug: string): string | undefined {
+	return devToMirrors[slug];
+}
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
 	return items.find((p) => p.slug === slug);
 }

@@ -5,7 +5,7 @@
 	import { useTitle } from '$lib/utils/helpers';
 	import { siteOrigin } from '$lib/data/site';
 	import { base } from '$app/paths';
-	import { getPostTitle, getPostExcerpt } from '@data/blog';
+	import { getPostTitle, getPostExcerpt, getDevToUrl } from '@data/blog';
 	import type { ContentLang } from '@data/blog';
 
 	export let data: {
@@ -43,6 +43,7 @@
 	const shareUrl = encodeURIComponent(canonical);
 	$: twitterShare = `https://twitter.com/intent/tweet?text=${shareText}&url=${shareUrl}`;
 	const linkedInShare = `https://www.linkedin.com/sharing/share-offsite/?url=${shareUrl}`;
+	const devToUrl = getDevToUrl(post.slug);
 </script>
 
 <svelte:head>
@@ -123,6 +124,17 @@
 						title={post.sourceUrl.includes('medium.com') ? 'Read on Medium' : 'Source / original'}
 					>
 						{post.sourceUrl.includes('medium.com') ? 'Medium ↗' : 'Source'}
+					</a>
+				{/if}
+				{#if devToUrl}
+					<a
+						href={devToUrl}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="blog-mirror-link text-[0.85em] decoration-none"
+						title="Also published on dev.to — comment/react there"
+					>
+						dev.to ↗
 					</a>
 				{/if}
 			</div>
@@ -246,6 +258,16 @@
 	}
 	.blog-source-link:hover {
 		color: #06b6d4;
+		text-decoration: underline;
+	}
+	.blog-mirror-link {
+		color: var(--tertiary-text);
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.78em;
+		letter-spacing: 0.02em;
+	}
+	.blog-mirror-link:hover {
+		color: #8b5cf6;
 		text-decoration: underline;
 	}
 	.blog-article__back:hover,
