@@ -5,10 +5,17 @@
 	import { onMount } from 'svelte';
 	import 'prismjs/themes/prism-tomorrow.css';
 
-	// Configure marked extensions once at module load — runs in both SSR and CSR
-	// so the same extensions apply during prerender and during hydration.
-	marked.use(gfmHeadingId());
-	marked.use(mangle());
+	// Configure marked extensions once at module load — runs in both SSR and
+	// CSR so the same extensions apply during prerender and during hydration.
+	// Guarded so prerendering many routes doesn't accumulate handlers and
+	// blow the worker heap (Vite SSR re-imports the module per route).
+	const __markedKey = '__omni_marked_configured__';
+	const __markedScope: Record<string, boolean> = (globalThis as unknown) as Record<string, boolean>;
+	if (!__markedScope[__markedKey]) {
+		marked.use(gfmHeadingId());
+		marked.use(mangle());
+		__markedScope[__markedKey] = true;
+	}
 
 	export let content: string;
 
