@@ -15,7 +15,13 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: 'index.html',
+			// Use 200.html (not index.html) so the SPA fallback doesn't
+			// overwrite the prerendered home page. With `fallback: 'index.html'`
+			// the static adapter writes the fallback shell to index.html *after*
+			// prerendering `/`, leaving a content-less SPA shell at the root
+			// — invisible to Google and OG scrapers. 200.html keeps the SPA
+			// safety net for unknown paths without clobbering /.
+			fallback: '200.html',
 			precompress: false,
 			strict: true
 		}),
