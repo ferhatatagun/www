@@ -25,6 +25,17 @@ const config = {
 			precompress: false,
 			strict: true
 		}),
+		prerender: {
+			// Markdown sources sometimes embed relative .md links (README
+			// translations, /contributing.md, etc.) that don't exist as site
+			// routes. Now that SSR actually parses the markdown into <a> tags,
+			// the prerender crawler tries to fetch them and treats 404s as
+			// build failures. Demote both to warnings so the prerender keeps
+			// going — they're cosmetic links inside post bodies, not site
+			// routes we own.
+			handleHttpError: 'warn',
+			handleMissingId: 'warn'
+		},
 		alias: {
 			$lib: './src/lib',
 			'@data': './src/lib/data',
