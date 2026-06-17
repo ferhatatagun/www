@@ -15,6 +15,18 @@
 	import { name as homeName, lastName as homeLastName, description as homeDescription, links as homeLinks } from '@data/home';
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import AICardIcon from '$lib/components/AICard/AICardIcon.svelte';
+	import { browser } from '$app/environment';
+	import { onMount } from 'svelte';
+
+	// Particle count adapts to viewport — 950 looks rich on desktop, melts a
+	// phone's GPU. Start with the desktop value (matches the SSR snapshot)
+	// then trim on mount if the screen is small.
+	let particleCount = 950;
+	onMount(() => {
+		if (browser && window.matchMedia('(max-width: 640px)').matches) {
+			particleCount = 420;
+		}
+	});
 
 	const isEmail = (email: string): boolean => {
 		const reg =
@@ -111,10 +123,10 @@
 	{@html `<script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify(suiteSchema)}</script>`}
 </svelte:head>
-<div class="home-page-wrapper relative min-h-screen flex flex-col">
+<div class="home-page-wrapper relative min-h-screen flex flex-col overflow-x-hidden">
 	<ParticleBackground
 		className="fixed inset-0 w-full h-full pointer-events-none z-0"
-		particleCount={950}
+		{particleCount}
 		mouseRadius={260}
 		mouseStrength={0.11}
 		mouseMode="attract"
@@ -132,9 +144,9 @@
 		scatterRandomAngle={0.4}
 	/>
 	<div
-		class="col flex-1 md:flex-row md:self-stretch justify-center lg:justify-between items-center gap-8 md:gap-12 lg:gap-16 p-y-6 p-x-10 relative z-1 w-full max-w-1200px mx-auto"
+		class="col flex-1 md:flex-row md:self-stretch justify-center lg:justify-between items-center gap-8 md:gap-12 lg:gap-16 p-y-6 px-4 sm:px-6 md:px-10 relative z-1 w-full max-w-1200px mx-auto min-w-0"
 	>
-	<div class="md:flex-1 gap-10px">
+	<div class="md:flex-1 gap-10px w-full min-w-0 max-w-full">
 		<MainTitle classes="md:text-left ">{name} {lastName},</MainTitle>
 		<p class="text-[var(--tertiary-text)]  text-center md:text-left text-[1.2em] font-extralight">
 			{description}
@@ -155,12 +167,17 @@
 			</a>
 		</div>
 		{#if blogPosts.length > 0}
-			<a
-				href={`${base}/blog`}
-				class="text-[var(--accent-text)] text-[0.9em] font-300 decoration-none hover:underline mt-2 inline-block"
-			>
-				AI & dev notes: Blog →
-			</a>
+			<div class="text-center md:text-left">
+				<a
+					href={`${base}/blog`}
+					class="home-blog-chip decoration-none"
+					title="AI & dev notes — blog"
+				>
+					<span class="home-blog-chip__prompt">$</span>
+					<span>cat /blog</span>
+					<span class="home-blog-chip__arrow">→</span>
+				</a>
+			</div>
 		{/if}
 		<div class="home-ai-strip home-ai-strip--pulse mt-6">
 			<AICard>
@@ -241,6 +258,38 @@
 		border-color: #8b5cf6;
 		color: #a78bfa;
 		background: rgba(139, 92, 246, 0.06);
+	}
+	.home-blog-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.45rem;
+		padding: 0.3rem 0.7rem;
+		margin-top: 0.5rem;
+		font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Monaco, monospace;
+		font-size: 0.78rem;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+		color: var(--secondary-text);
+		border: 1px solid var(--border);
+		border-radius: 6px;
+		background: linear-gradient(135deg, rgba(139, 92, 246, 0.04), transparent 60%);
+		transition: border-color 0.2s, color 0.2s, background 0.2s, transform 0.15s;
+	}
+	.home-blog-chip__prompt {
+		color: #a78bfa;
+	}
+	.home-blog-chip__arrow {
+		color: var(--tertiary-text);
+		transition: transform 0.18s ease, color 0.18s ease;
+	}
+	.home-blog-chip:hover {
+		border-color: #8b5cf6;
+		color: var(--main-text);
+		background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), transparent 60%);
+	}
+	.home-blog-chip:hover .home-blog-chip__arrow {
+		color: #a78bfa;
+		transform: translateX(2px);
 	}
 	.home-ai-strip__main:hover .home-ai-strip__title {
 		text-decoration: underline;

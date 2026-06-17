@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#18181b" />
+<meta name="robots" content="noindex" />
+<title>404 · ferhat@atagun:~$</title>
+<link rel="icon" href="/favicon.ico" />
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: #18181b;
+    color: #d4d4d8;
+    font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+  .term {
+    width: 100%;
+    max-width: 720px;
+    border: 1px solid #2a2a2e;
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(15, 15, 18, 0.95);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.9rem;
+    background: rgba(0, 0, 0, 0.35);
+    border-bottom: 1px solid #2a2a2e;
+  }
+  .dot { width: 0.7rem; height: 0.7rem; border-radius: 50%; display: inline-block; }
+  .dot.r { background: #ff5f56; }
+  .dot.y { background: #ffbd2e; }
+  .dot.g { background: #27c93f; }
+  .bar-title {
+    margin-left: 0.7rem;
+    font-size: 0.78rem;
+    color: #71717a;
+    letter-spacing: 0.02em;
+  }
+  .body { padding: 1.2rem 1.3rem 1.5rem; }
+  .line { margin: 0; }
+  .line.spaced { margin-top: 1rem; }
+  .prompt { color: #a78bfa; font-weight: 600; }
+  .sep { color: #71717a; }
+  .cwd { color: #38bdf8; }
+  .cmd { color: #f4f4f5; }
+  .cursor {
+    display: inline-block;
+    width: 0.5em;
+    color: #a78bfa;
+    animation: blink 1.1s steps(2, jump-none) infinite;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+  @media (prefers-reduced-motion: reduce) {
+    .cursor { animation: none; opacity: 0.6; }
+  }
+  .err { margin: 0; color: #f87171; }
+  .meta { margin: 0; color: #71717a; font-size: 0.85rem; }
+  .err code, .meta code {
+    background: rgba(167, 139, 250, 0.08);
+    padding: 0 0.3rem;
+    border-radius: 3px;
+    color: #f4f4f5;
+  }
+  ul.ls { list-style: none; margin: 0.2rem 0 0; padding: 0 0 0 1rem; }
+  ul.ls a {
+    display: inline-flex;
+    gap: 0.9rem;
+    align-items: baseline;
+    padding: 0.1rem 0.3rem;
+    border-radius: 3px;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+  ul.ls a:hover { background: rgba(167, 139, 250, 0.1); }
+  ul.ls a .perm { color: #71717a; }
+  ul.ls a .name { color: #a78bfa; }
+  ul.ls a:hover .name { color: #c4b5fd; text-decoration: underline; }
+  .back-btn {
+    background: none;
+    border: none;
+    color: #a78bfa;
+    font: inherit;
+    cursor: pointer;
+    padding: 0;
+  }
+  .back-btn:hover { text-decoration: underline; color: #c4b5fd; }
+  .back-hint { color: #71717a; font-size: 0.82rem; margin-left: 0.5rem; }
+</style>
+</head>
+<body>
+  <main class="term" role="main">
+    <header class="bar">
+      <span class="dot r" aria-hidden="true"></span>
+      <span class="dot y" aria-hidden="true"></span>
+      <span class="dot g" aria-hidden="true"></span>
+      <span class="bar-title">ferhat@atagun: ~ — zsh</span>
+    </header>
+    <div class="body">
+      <p class="line">
+        <span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~</span><span class="sep">$ </span><span class="cmd">cat <span id="path">/missing</span><span class="cursor">_</span></span>
+      </p>
+      <p class="err">cat: <code id="path-echo">/missing</code>: No such file or directory</p>
+      <p class="meta">exit code: <code>404</code> · this path does not exist on the server</p>
+
+      <p class="line spaced">
+        <span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~</span><span class="sep">$ </span><span class="cmd">ls -la /</span>
+      </p>
+      <ul class="ls">
+        <li><a href="/"><span class="perm">drwxr-xr-x</span><span class="name">cd /</span></a></li>
+        <li><a href="/blog"><span class="perm">drwxr-xr-x</span><span class="name">cd /blog</span></a></li>
+        <li><a href="/tools"><span class="perm">drwxr-xr-x</span><span class="name">cd /tools</span></a></li>
+        <li><a href="/resume"><span class="perm">drwxr-xr-x</span><span class="name">cd /resume</span></a></li>
+      </ul>
+
+      <p class="line spaced">
+        <span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~</span><span class="sep">$ </span><button type="button" class="back-btn" onclick="history.back()">cd -</button>
+        <span class="back-hint">(go back)</span>
+      </p>
+    </div>
+  </main>
+  <script>
+    // Cosmetic: surface the actual requested path so the terminal feels real.
+    // Optional — page works fine if JS is off.
+    (function () {
+      try {
+        var path = window.location.pathname || '/missing';
+        if (path === '/' || path === '/404.html') return;
+        document.getElementById('path').textContent = path;
+        document.getElementById('path-echo').textContent = path;
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>

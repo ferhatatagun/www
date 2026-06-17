@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global box-sizing reset.
+   UnoCSS/preset-uno doesn't apply preflight's box-sizing override the way
+   Tailwind does, leaving every element on content-box. Combining `w-full`
+   with `px-4` then made boxes wider than their parent by the padding —
+   on mobile this surfaced as an 80px horizontal overflow on the home page.
+   border-box makes width inclusive of padding, which is what every layout
+   on the site implicitly assumes. */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');

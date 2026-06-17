@@ -23,10 +23,9 @@ jobs:
           yarn install --immutable --immutable-cache --check-cache
           yarn build
           touch build/.nojekyll
-          # SPA fallback for GitHub Pages deep links. We renamed the adapter
-          # fallback to 200.html so it doesn't overwrite the prerendered home;
-          # copy that to 404.html for GH Pages' deep-link fallback.
-          cp build/200.html build/404.html
+          # 404.html is a standalone terminal-styled page shipped from
+          # static/404.html — the static adapter already copies it into
+          # build/. Do NOT overwrite it with the 200.html SPA shell.
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

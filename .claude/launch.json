@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "ferhataguncom-dev",
+      "runtimeExecutable": "yarn",
+      "runtimeArgs": ["dev", "--host", "127.0.0.1", "--port", "5180"],
+      "port": 5180
+    }
+  ]
+}

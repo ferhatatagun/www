@@ -7,6 +7,11 @@
 	import { onMount } from 'svelte';
 
 	onMount(() => onHydrated());
+
+	// Vite injects these via `define` from the git HEAD at build time.
+	const sha = typeof __BUILD_SHA__ !== 'undefined' ? __BUILD_SHA__ : 'dev';
+	const date = typeof __BUILD_DATE__ !== 'undefined' ? __BUILD_DATE__ : '';
+	const shaUrl = `https://github.com/ferhatatagun/www/commit/${sha}`;
 </script>
 
 <div class={`body contents ${$theme ? 'theme-dark' : 'theme-light'}`}>
@@ -28,6 +33,16 @@
 		<a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link">GitHub</a>
 		<span class="site-footer__sep">·</span>
 		<a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link">Built with SvelteKit</a>
+		<div class="site-footer__build">
+			<span class="site-footer__build-prompt">$</span>
+			<a href={shaUrl} target="_blank" rel="noopener noreferrer" class="site-footer__build-sha" title="View this build on GitHub">
+				build <span class="site-footer__build-hash">{sha}</span>
+			</a>
+			{#if date}
+				<span class="site-footer__build-sep">·</span>
+				<time datetime={date}>{date}</time>
+			{/if}
+		</div>
 	</footer>
 </div>
 
@@ -68,6 +83,36 @@
 	.site-footer__sep {
 		margin: 0 0.35rem;
 		opacity: 0.7;
+	}
+
+	.site-footer__build {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.45rem;
+		margin-top: 0.5rem;
+		font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Menlo, monospace;
+		font-size: 0.7rem;
+		color: var(--tertiary-text);
+		opacity: 0.7;
+		letter-spacing: 0.02em;
+	}
+	.site-footer__build-prompt {
+		color: #a78bfa;
+	}
+	.site-footer__build-sha {
+		text-decoration: none;
+		color: inherit;
+		transition: color 0.15s;
+	}
+	.site-footer__build-sha:hover {
+		color: #a78bfa;
+	}
+	.site-footer__build-hash {
+		color: var(--main-text);
+	}
+	.site-footer__build-sep {
+		color: #71717a;
 	}
 
 	.skip-link {
