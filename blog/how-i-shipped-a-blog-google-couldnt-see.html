@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.cfa52ed7.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.f8e43797.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.960cb469.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.02487342.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b3af026f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dd91c6ac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.2899568d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.d3441e5f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.104f75bf.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1b31e0d5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.a467b788.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.832cd9a6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.79f722ff.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.70c2bb02.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.0b2770f0.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.feae133d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.cc70b8cf.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.8af1fa3f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.49eca3f4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.2480ae42.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.3cd296a6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.fd6e4e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/app.9b48cdb2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/site.e6ac68e3.js"><title>How I shipped a blog Google couldn't see | Ferhat Atagün</title><!-- HEAD_svelte-633q7y_START --><link rel="canonical" href="https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see"><meta name="description" content="Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had."><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see"><meta property="og:title" content="How I shipped a blog Google couldn't see"><meta property="og:description" content="Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had."><meta property="og:image" content="https://ferhatatagun.com/og-cards/how-i-shipped-a-blog-google-couldnt-see.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Ferhat Atagün"><meta property="article:published_time" content="2026-06-14"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How I shipped a blog Google couldn't see"><meta name="twitter:description" content="Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had."><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/how-i-shipped-a-blog-google-couldnt-see.png"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"How I shipped a blog Google couldn't see","description":"Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had.","datePublished":"2026-06-14","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see"}}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"How I shipped a blog Google couldn't see","item":"https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-633q7y_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-b0q3qmo" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-b0q3qmo"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-b0q3qmo)" filter="url(#glow-ai-logo-b0q3qmo)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-b0q3qmo)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1rlt6qy"><span class="main-title__name svelte-1rlt6qy">How I shipped a blog Google couldn't see</span><span class="main-title__cursor svelte-1rlt6qy" aria-hidden="true" data-svelte-h="svelte-1mtawu5">_</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   <a href="https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc" target="_blank" rel="noopener noreferrer" class="blog-mirror-link text-[0.85em] decoration-none svelte-c9jxdx" title="Also published on dev.to — comment/react there">dev.to ↗</a></div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-06-14">June 14, 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>10 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SvelteKit </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SEO </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SSR </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Markdown </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Static Sites </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Prerendering </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><h1 id="how-i-shipped-a-blog-google-couldnt-see">How I shipped a blog Google couldn&#39;t see</h1>
+<p>Every blog post on my site looked fine. Open <code>/blog/something</code>, the
+article was there — title, paragraphs, code blocks, the works.</p>
+<p>Then I ran <code>curl https://ferhatatagun.com/blog/four-tools-in-two-weekends</code>
+on a hunch, and the HTML had <strong>zero</strong> of the body text. Title in <code>&lt;head&gt;</code>,
+layout chrome, a perfectly empty <code>&lt;div class=&quot;markdown-container&quot; /&gt;</code>, and
+nothing else. The article only rendered after JavaScript loaded — meaning
+the version Google indexed had no article in it.</p>
+<p>This had been the case for <em>every blog post on the site, for months</em>.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>The site used <code>adapter-static</code> with <code>prerender = true</code>, which suggests &quot;all routes are rendered to HTML at build time.&quot; That&#39;s true for the page chrome — but not the body.</li>
+<li>The Markdown component parsed <code>content</code> inside <code>onMount</code>, so the HTML on disk had a skeleton and nothing else. The article materialized only after hydration.</li>
+<li>Two ways this hides from you: every browser you test in runs the JS, so the page looks fine; and the page reports a healthy 200 response, so monitoring stays green.</li>
+<li>The fix is mechanical (parse markdown at module scope, inject via <code>{@html}</code>), but it cascaded: prerender OOMed on the worker heap, the prerender crawler followed embedded <code>.md</code> links and 404&#39;d, and the static adapter&#39;s fallback was clobbering the prerendered home. Each problem appeared only because the previous one was fixed.</li>
+</ul>
+<p>This is a write-up of the regression: what I missed, how it stayed hidden,
+the actual code-level fix, and the three secondary failures that the fix
+unblocked.</p>
+<h2 id="what-the-page-was-actually-serving">What the page was actually serving</h2>
+<p>The Svelte component looked harmless:</p>
+<pre><code class="language-svelte">&lt;script lang=&quot;ts&quot;&gt;
+    import { marked } from &#39;marked&#39;;
+    import { gfmHeadingId } from &#39;marked-gfm-heading-id&#39;;
+    import { mangle } from &#39;marked-mangle&#39;;
+    import createSanitizer from &#39;dompurify&#39;;
+    import Prism from &#39;prismjs&#39;;
+    import { onMount } from &#39;svelte&#39;;
+
+    let container: HTMLDivElement;
+    export let content: string;
+
+    onMount(() =&gt; {
+        marked.use(gfmHeadingId());
+        marked.use(mangle());
+        const sanitizer = createSanitizer(window);
+        const parsed = marked.parse(content);
+        container.innerHTML = sanitizer.sanitize(parsed);
+        Prism.highlightAllUnder(container);
+    });
+&lt;/script&gt;
+
+&lt;div bind:this={container} class=&quot;markdown-container&quot; /&gt;
+</code></pre>
+<p>The whole thing — parsing markdown, sanitising, highlighting — lives
+inside <code>onMount</code>. That callback fires only in the browser, after
+hydration. During SvelteKit&#39;s prerender pass, <code>onMount</code> never runs.
+So the HTML on disk contains exactly what&#39;s in the template: an empty
+<code>&lt;div class=&quot;markdown-container&quot; /&gt;</code>.</p>
+<p>The article body was being added <em>imperatively to the DOM at runtime</em>.
+That&#39;s invisible to Google. It&#39;s invisible to OG/Twitter card scrapers.
+It&#39;s invisible to anyone who fetches the URL with <code>curl</code>.</p>
+<p>Two checks that would have caught this and didn&#39;t:</p>
+<ol>
+<li><strong>My browser tabs were always rendering the right thing</strong>, because they
+ran the JS. Testing the live page by <em>looking at it</em> is testing the
+hydrated version, not the indexed version.</li>
+<li><strong>The page returned 200.</strong> Uptime monitors stayed green. Status pages
+stayed green. Lighthouse scored fine, because Lighthouse runs JS too.</li>
+</ol>
+<p>The only way to see the regression is to bypass JS. <code>curl</code> does. So does
+Googlebot&#39;s render preview. So does the View-source feature your browser
+hides three menus deep. I&#39;d been opening DevTools to inspect post-hydration
+DOM for months, and never View Source on the raw response.</p>
+<p>The numbers, once I looked:</p>
+<pre><code>$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | wc -c
+32280
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;claudoscope&quot;
+0
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;TL;DR&quot;
+0
+</code></pre>
+<p>The page is 32 KB and contains no part of the article body. &quot;claudoscope&quot;
+appears half a dozen times in the post; in the HTML, zero. Same for
+&quot;TL;DR&quot;. The HTML was 100% layout chrome.</p>
+<h2 id="why-prerender--true-wasnt-enough">Why <code>prerender = true</code> wasn&#39;t enough</h2>
+<p>The static adapter&#39;s prerender pass walks every route, calls the page&#39;s
+<code>load</code>, and renders the resulting component tree to HTML. It runs all the
+top-level Svelte component code. What it does <em>not</em> do is run lifecycle
+hooks like <code>onMount</code>, because those are explicitly contracted to be
+browser-only.</p>
+<p>So <code>prerender = true</code> was doing exactly what it advertises. The bug was
+that the data dependency lived behind a lifecycle that prerender skips.</p>
+<p>The fix is to make markdown parsing module-level, not lifecycle-level:</p>
+<pre><code class="language-svelte">&lt;script lang=&quot;ts&quot;&gt;
+    import { marked } from &#39;marked&#39;;
+    import { gfmHeadingId } from &#39;marked-gfm-heading-id&#39;;
+    import { mangle } from &#39;marked-mangle&#39;;
+    import { onMount } from &#39;svelte&#39;;
+    import &#39;prismjs/themes/prism-tomorrow.css&#39;;
+
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+
+    export let content: string;
+    $: parsed = marked.parse(content) as string;
+
+    let container: HTMLDivElement;
+
+    onMount(async () =&gt; {
+        const Prism = (await import(&#39;prismjs&#39;)).default;
+        await import(&#39;prismjs/components/prism-typescript&#39;);
+        if (container) Prism.highlightAllUnder(container);
+    });
+&lt;/script&gt;
+
+&lt;div bind:this={container} class=&quot;markdown-container&quot;&gt;{@html parsed}&lt;/div&gt;
+</code></pre>
+<p>Three things changed:</p>
+<ol>
+<li><code>marked.use(...)</code> moved to module scope. It now runs both during
+prerender and during hydration, configuring the same extensions in
+both environments.</li>
+<li><code>parsed = marked.parse(content)</code> is a reactive top-level statement.
+It runs synchronously inside the component&#39;s render pass, so its
+output is in the HTML that goes to disk.</li>
+<li>Prism syntax highlighting stays inside <code>onMount</code>, dynamic-imported.
+Prism touches <code>self</code> at import time, which is fine in the browser
+but not on the prerender worker. Highlighting is cosmetic — losing
+it on prerender is invisible until JS loads, which is acceptable.</li>
+</ol>
+<p>I also dropped DOMPurify. The original code piped marked&#39;s output
+through it before injecting. That was paying a sanitiser&#39;s bundle cost
+plus a render-time cost, but the input was our own <code>?raw</code>-imported
+markdown files, not user content. Defending against ourselves was
+defensive theatre. If a hostile actor can write to my markdown source,
+sanitising the output is the wrong layer to do it at.</p>
+<p>The result of the fix:</p>
+<pre><code>$ wc -c www/build/blog/four-tools-in-two-weekends.html
+45292
+$ grep -c &quot;claudoscope&quot; www/build/blog/four-tools-in-two-weekends.html
+3
+$ grep -c &quot;TL;DR&quot; www/build/blog/four-tools-in-two-weekends.html
+1
+$ grep -c &quot;&lt;h1 id=&quot; www/build/blog/four-tools-in-two-weekends.html
+1
+</code></pre>
+<p>45 KB instead of 32 KB. The 13 KB difference is the article body —
+the part Google had been seeing as empty.</p>
+<h2 id="the-home-page-was-even-worse">The home page was even worse</h2>
+<p>The home page had a different version of the same problem. SvelteKit&#39;s
+<code>adapter-static</code> accepts a <code>fallback</code> option for SPA-style hosting; if
+a path doesn&#39;t have a prerendered HTML file, the server can serve the
+fallback and let the client-side router resolve it.</p>
+<p>The config was:</p>
+<pre><code class="language-js">fallback: &#39;index.html&#39;
+</code></pre>
+<p>Which writes the fallback shell <em>to <code>index.html</code></em>. The home route at <code>/</code>
+<em>also</em> prerenders to <code>index.html</code>. So you have two operations writing to
+the same path. The fallback wins, because the adapter writes it after
+the prerender. The 40 KB prerendered home gets overwritten with the
+13 KB SPA shell.</p>
+<pre><code>$ wc -c www/build/index.html
+13096
+</code></pre>
+<p>That&#39;s the bare HTML that the bundler emits as the SPA&#39;s entry point —
+just the imports for the JS bundles, no body content. Anyone hitting <code>/</code>
+with a non-JS user agent was getting <em>that</em>.</p>
+<p>The fix is one character of intent:</p>
+<pre><code class="language-js">fallback: &#39;200.html&#39;
+</code></pre>
+<p><code>200.html</code> is a convention some static hosts (Surge, Netlify with
+configuration) use to mean &quot;the SPA fallback.&quot; The static adapter
+doesn&#39;t care about the name; it just writes the fallback to whatever
+path you give it. Renaming to <code>200.html</code> keeps the fallback for unknown
+paths without colliding with the prerendered home.</p>
+<pre><code>$ wc -c www/build/index.html
+40871
+</code></pre>
+<p>3.1× growth, all of it actual rendered home content.</p>
+<h2 id="the-three-problems-the-fix-uncovered">The three problems the fix uncovered</h2>
+<p>Each of these only became visible <em>because the previous one was fixed</em>.</p>
+<h3 id="1-prerender-worker-oom">1. Prerender worker OOM</h3>
+<p>Once the markdown was actually being parsed during prerender, the
+GitHub Actions build started failing with:</p>
+<pre><code>Error [ERR_WORKER_OUT_OF_MEMORY]: Worker terminated due to reaching
+memory limit: JS heap out of memory
+</code></pre>
+<p>The default Node heap on <code>ubuntu-latest</code> is about 1.4 GB. The
+prerender pass was now doing real work — <code>marked.parse</code> on every blog
+post markdown source, each producing 10–15 KB of HTML. Across 14 blog
+posts plus the markdown rendering inside other routes, that pushed the
+worker over the line.</p>
+<p>Two fixes:</p>
+<pre><code class="language-yaml">env:
+  NODE_OPTIONS: --max-old-space-size=4096
+</code></pre>
+<p>That alone unblocked it. Belt-and-suspenders, I also guarded the
+<code>marked.use(...)</code> calls so they only configure once per Node process,
+in case Vite&#39;s SSR ever re-imports the module across routes:</p>
+<pre><code class="language-ts">const __markedKey = &#39;__omni_marked_configured__&#39;;
+const __markedScope = globalThis as unknown as Record&lt;string, boolean&gt;;
+if (!__markedScope[__markedKey]) {
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+    __markedScope[__markedKey] = true;
+}
+</code></pre>
+<h3 id="2-the-prerender-crawler-followed-every-link-in-the-rendered-html">2. The prerender crawler followed every link in the rendered HTML</h3>
+<p>Several blog posts embed relative links to translations or <code>contributing.md</code>
+files that live in the source repos they reference — <code>[/i18n/README.tr.md]</code>,
+<code>[/contributing.md]</code>, that kind of thing. When markdown rendering was
+client-side, those got hydrated into <code>&lt;a&gt;</code> tags but the prerender crawler
+never saw them.</p>
+<p>Now the crawler sees them, follows them, and treats the 404s as build
+errors:</p>
+<pre><code>Error: 404 /contributing.md (linked from /skills/nextjs)
+</code></pre>
+<p>These are not site routes I own — they&#39;re content links inside post bodies.
+The fix is to demote prerender 404s from errors to warnings:</p>
+<pre><code class="language-js">prerender: {
+    handleHttpError: &#39;warn&#39;,
+    handleMissingId: &#39;warn&#39;
+}
+</code></pre>
+<h3 id="3-the-shared-host-wasnt-pulling-from-gh-pages">3. The shared host wasn&#39;t pulling from gh-pages</h3>
+<p>The repo&#39;s CI deploys to <code>gh-pages</code>. The <code>ferhatatagun.com</code> domain
+points at a Spaceship shared host that I FTP-upload to. The two were
+unrelated, which meant every CI deploy updated <code>gh-pages</code> and the live
+site stayed exactly as it had been.</p>
+<p>This wasn&#39;t a CI bug; it was a deployment-pipeline shape I&#39;d let drift.
+The fix isn&#39;t code — it&#39;s &quot;manually FTP the <code>gh-pages</code> contents to the
+shared host&#39;s <code>public_html</code>,&quot; or rebuild the deploy pipeline to push
+directly. For one-shot remediation, I went with the FTP path.</p>
+<h2 id="how-to-catch-the-next-one-before-it-ships">How to catch the next one before it ships</h2>
+<p>The reason this regression survived for months is that none of my
+verification ran with JS disabled. To prevent the next one:</p>
+<ol>
+<li><strong>Always view source on a critical route after a deploy.</strong> Not
+DevTools — that shows the hydrated DOM. The browser&#39;s &quot;View Source&quot;
+shows what arrived on the wire. The two should differ in trivial
+ways (hydration markers, attribute order); they should not differ
+in <em>content</em>.</li>
+<li><strong><code>curl | grep</code> your most important sentinel.</strong> For a blog: a phrase
+you know is in the body. For a product page: the price. For a
+marketing page: the value prop. Make it a 10-second post-deploy
+check.</li>
+<li><strong>Test once with JavaScript disabled.</strong> It&#39;s a one-time check per
+major template change. The first time a critical body of text is
+missing from the JS-disabled page, you have the answer.</li>
+<li><strong>For static sites, diff the page sizes you ship over time.</strong> A
+40 KB → 13 KB drop on a single route would have lit up. I had no
+alert because I&#39;d never measured a baseline.</li>
+</ol>
+<p>For SvelteKit specifically, the pattern is one rule: anything that
+materializes data into the rendered DOM should be reactive or
+top-level, not in <code>onMount</code>. <code>onMount</code> is for browser-only side
+effects — DOM measurement, third-party widget init, anything that
+needs <code>window</code>. As soon as you put content production in there, the
+prerender stops seeing it. The same shape exists in React (<code>useEffect</code>),
+Vue (<code>onMounted</code>), and every framework that distinguishes hydration
+from render.</p>
+<h2 id="what-this-cost">What this cost</h2>
+<p>Two evenings to find it. Forty-five minutes to fix it. Three
+follow-up commits to deal with the secondary failures the fix exposed.</p>
+<p>The harder cost is the months of indexing where every post&#39;s body was
+empty. Google&#39;s view of those pages now has the title and the OG image
+and an empty <code>&lt;div&gt;</code>. The dev.to mirrors of seven of the posts, which I
+published with <code>canonical_url</code> pointing back to my site, were <em>more</em>
+indexable than the originals.</p>
+<p>Search engines will recrawl. The mirrors will eventually catch up. But
+this is the kind of bug that doesn&#39;t reverse itself instantly — the
+right move after the fix is to submit a fresh sitemap, request reindex
+on the most important URLs, and wait.</p>
+<p>The win-condition I&#39;m watching for is the same <code>curl | grep</code> that
+revealed the bug, run against the production URL:</p>
+<pre><code>$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;TL;DR&quot;
+1
+</code></pre>
+<p>Zero is the bug. One is the fix.</p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=How%20I%20shipped%20a%20blog%20Google%20couldn't%20see%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fhow-i-shipped-a-blog-google-couldnt-see" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fhow-i-shipped-a-blog-google-couldnt-see" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section>  <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"> <a href="/blog/four-tools-in-two-weekends" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">What I learned shipping four open-source Claude dev-tools in two weekends →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/d48c400" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">d48c400</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-06-17">2026-06-17</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_wx50dw = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.960cb469.js"),
+						import("../_app/immutable/entry/app.d3441e5f.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>

@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 08 Jun 2026 13:29:57 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 10:38:38 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>How I shipped a blog Google couldn&apos;t see</title>
+    <link>https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see</link>
+    <description>Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had.</description>
+    <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see</guid>
+  </item>
   <item>
     <title>What I learned shipping four open-source Claude dev-tools in two weekends</title>
     <link>https://ferhatatagun.com/blog/four-tools-in-two-weekends</link>
