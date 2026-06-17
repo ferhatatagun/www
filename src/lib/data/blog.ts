@@ -20,6 +20,7 @@ import post13EnRaw from '$lib/md/blog/four-tools-in-two-weekends-en.md?raw';
 import postTr6Raw from '$lib/md/blog/iki-hafta-sonu-dort-tool.md?raw';
 import post14EnRaw from '$lib/md/blog/see-the-prompt-before-you-ship-it-en.md?raw';
 import postTr7Raw from '$lib/md/blog/prompt-shipping-once-onunu-gor.md?raw';
+import post15EnRaw from '$lib/md/blog/how-i-shipped-a-blog-google-couldnt-see-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -65,12 +66,21 @@ const contentMapEn: Record<string, string> = {
 	'build-the-sandbox-first': post11EnRaw,
 	'debug-claude-agents-by-replaying-traces': post12EnRaw,
 	'four-tools-in-two-weekends': post13EnRaw,
-	'see-the-prompt-before-you-ship-it': post14EnRaw
+	'see-the-prompt-before-you-ship-it': post14EnRaw,
+	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'how-i-shipped-a-blog-google-couldnt-see',
+		title: "How I shipped a blog Google couldn't see",
+		excerpt:
+			"Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had.",
+		date: '2026-06-14',
+		tags: ['SvelteKit', 'SEO', 'SSR', 'Markdown', 'Static Sites', 'Prerendering']
+	},
 	{
 		slug: 'yapay-zeka-ve-yazilim-gelistirme-2024',
 		title: 'Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor',
@@ -276,7 +286,9 @@ export const devToMirrors: Record<string, string> = {
 	'four-tools-in-two-weekends':
 		'https://dev.to/ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-1f4f',
 	'see-the-prompt-before-you-ship-it':
-		'https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao'
+		'https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao',
+	'how-i-shipped-a-blog-google-couldnt-see':
+		'https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc'
 };
 
 export function getDevToUrl(slug: string): string | undefined {
