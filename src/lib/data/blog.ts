@@ -21,6 +21,7 @@ import postTr6Raw from '$lib/md/blog/iki-hafta-sonu-dort-tool.md?raw';
 import post14EnRaw from '$lib/md/blog/see-the-prompt-before-you-ship-it-en.md?raw';
 import postTr7Raw from '$lib/md/blog/prompt-shipping-once-onunu-gor.md?raw';
 import post15EnRaw from '$lib/md/blog/how-i-shipped-a-blog-google-couldnt-see-en.md?raw';
+import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -54,7 +55,8 @@ const contentMap: Record<string, string> = {
 	'tek-bir-tool-yazmadan-once-sandbox': postTr4Raw,
 	'claude-agent-debug-trace-replay': postTr5Raw,
 	'iki-hafta-sonu-dort-tool': postTr6Raw,
-	'prompt-shipping-once-onunu-gor': postTr7Raw
+	'prompt-shipping-once-onunu-gor': postTr7Raw,
+	'google-un-goremedigi-blog': postTr8Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -73,6 +75,14 @@ const contentMapEn: Record<string, string> = {
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'google-un-goremedigi-blog',
+		title: "Google'un göremediği bir blog yayınladım",
+		excerpt:
+			"Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı.",
+		date: '2026-06-14',
+		tags: ['SvelteKit', 'SEO', 'SSR', 'Markdown', 'Statik Site', 'Prerender']
+	},
 	{
 		slug: 'how-i-shipped-a-blog-google-couldnt-see',
 		title: "How I shipped a blog Google couldn't see",
