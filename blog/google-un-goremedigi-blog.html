@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.cfa52ed7.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.f8e43797.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.42d08811.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.02487342.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.8839ea8f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dd91c6ac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.42830f4a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.1016c80d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.104f75bf.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.38417709.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.a467b788.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.6d691b80.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6c7762d1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.7fed87c3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.9f8c6263.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.feae133d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.a73e89f7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.764bbc9a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.49eca3f4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.2480ae42.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.3cd296a6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.fd6e4e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/app.9b48cdb2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/site.e6ac68e3.js"><title>Google'un göremediği bir blog yayınladım | Ferhat Atagün</title><!-- HEAD_svelte-633q7y_START --><link rel="canonical" href="https://ferhatatagun.com/blog/google-un-goremedigi-blog"><meta name="description" content="Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı."><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/google-un-goremedigi-blog"><meta property="og:title" content="Google'un göremediği bir blog yayınladım"><meta property="og:description" content="Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı."><meta property="og:image" content="https://ferhatatagun.com/og-cards/google-un-goremedigi-blog.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Ferhat Atagün"><meta property="article:published_time" content="2026-06-14"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Google'un göremediği bir blog yayınladım"><meta name="twitter:description" content="Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı."><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/google-un-goremedigi-blog.png"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Google'un göremediği bir blog yayınladım","description":"Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı.","datePublished":"2026-06-14","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/google-un-goremedigi-blog"}}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"Google'un göremediği bir blog yayınladım","item":"https://ferhatatagun.com/blog/google-un-goremedigi-blog"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-633q7y_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-q7czckx" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-q7czckx"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-q7czckx)" filter="url(#glow-ai-logo-q7czckx)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-q7czckx)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1rlt6qy"><span class="main-title__name svelte-1rlt6qy">Google'un göremediği bir blog yayınladım</span><span class="main-title__cursor svelte-1rlt6qy" aria-hidden="true" data-svelte-h="svelte-1mtawu5">_</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-06-14">14 Haziran 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>8 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SvelteKit </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SEO </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">SSR </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Markdown </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Statik Site </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Prerender </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><h1 id="googleun-göremediği-bir-blog-yayınladım">Google&#39;un göremediği bir blog yayınladım</h1>
+<p>Sitemdeki her blog yazısı tarayıcıda gayet iyi görünüyordu.
+<code>/blog/something</code> aç, yazı orada — başlık, paragraflar, kod blokları, her şey.</p>
+<p>Sonra bir tahminle <code>curl https://ferhatatagun.com/blog/four-tools-in-two-weekends</code>
+çalıştırdım, ve HTML&#39;de yazı gövdesinin <strong>sıfır</strong> karakteri vardı. <code>&lt;head&gt;</code> içinde başlık,
+layout chrome, mükemmel boş bir <code>&lt;div class=&quot;markdown-container&quot; /&gt;</code>, ve
+hepsi bu. Yazı sadece JavaScript yüklendikten sonra render oluyordu — yani
+Google&#39;ın indekslediği versiyonda hiç yazı yoktu.</p>
+<p>Bu durum <strong>sitedeki her blog yazısı için, aylardır</strong> geçerliydi.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Site <code>adapter-static</code> + <code>prerender = true</code> kullanıyordu, ki bu &quot;tüm route&#39;lar build zamanında HTML&#39;e render edilir&quot; anlamına gelir. Bu sayfa chrome&#39;u için doğru — ama gövde için değil.</li>
+<li>Markdown bileşeni <code>content</code>&#39;i <code>onMount</code> içinde parse ediyordu, dolayısıyla diskteki HTML iskelet ve başka bir şey değildi. Yazı sadece hydration sonrası belirdi.</li>
+<li>Bu iki şekilde gözden saklanıyor: test ettiğin her tarayıcı JS çalıştırıyor, sayfa iyi görünüyor; ve sayfa sağlıklı 200 dönüyor, monitör yeşil kalıyor.</li>
+<li>Düzeltme mekanik (markdown&#39;ı modül scope&#39;unda parse et, <code>{@html}</code> ile bas) ama yan etkileri kademeli oldu: prerender worker heap&#39;i taştı, prerender crawler gömülü <code>.md</code> linkleri takip edip 404 verdi, statik adapter&#39;ın fallback&#39;i prerendered home&#39;u eziyordu. Her sorun, öncekisi düzeltildikten sonra ortaya çıktı.</li>
+</ul>
+<p>Bu yazı regresyonun yazımı: neyi kaçırdım, nasıl saklı kaldı, kod seviyesinde gerçek düzeltme, ve düzeltmenin tetiklediği üç ikincil hata.</p>
+<h2 id="sayfa-aslında-neyi-serve-ediyordu">Sayfa aslında neyi serve ediyordu</h2>
+<p>Svelte bileşeni zararsız görünüyordu:</p>
+<pre><code class="language-svelte">&lt;script lang=&quot;ts&quot;&gt;
+    import { marked } from &#39;marked&#39;;
+    import { gfmHeadingId } from &#39;marked-gfm-heading-id&#39;;
+    import { mangle } from &#39;marked-mangle&#39;;
+    import createSanitizer from &#39;dompurify&#39;;
+    import Prism from &#39;prismjs&#39;;
+    import { onMount } from &#39;svelte&#39;;
+
+    let container: HTMLDivElement;
+    export let content: string;
+
+    onMount(() =&gt; {
+        marked.use(gfmHeadingId());
+        marked.use(mangle());
+        const sanitizer = createSanitizer(window);
+        const parsed = marked.parse(content);
+        container.innerHTML = sanitizer.sanitize(parsed);
+        Prism.highlightAllUnder(container);
+    });
+&lt;/script&gt;
+
+&lt;div bind:this={container} class=&quot;markdown-container&quot; /&gt;
+</code></pre>
+<p>Tüm bu işler — markdown parse, sanitize, highlight — <code>onMount</code> içinde.
+O callback sadece tarayıcıda, hydration&#39;dan sonra çalışıyor. SvelteKit&#39;in prerender
+adımı <code>onMount</code>&#39;u asla çalıştırmaz. Diskteki HTML tam olarak template&#39;te ne varsa
+onu içerir: boş bir <code>&lt;div class=&quot;markdown-container&quot; /&gt;</code>.</p>
+<p>Yazı gövdesi <em>runtime&#39;da DOM&#39;a imperatif olarak ekleniyordu</em>.
+Bu Google için görünmez. OG/Twitter card scraper&#39;ları için görünmez.
+URL&#39;i <code>curl</code> ile çekenler için görünmez.</p>
+<p>Bunu yakalayabilecek iki kontrol yapmamıştım:</p>
+<ol>
+<li><strong>Tarayıcı sekmelerim hep doğru şeyi render ediyordu</strong>, çünkü JS çalışıyordu.
+Canlı sayfayı <em>bakarak</em> test etmek hydrate edilmiş versiyonu test etmektir,
+indekslenen versiyonu değil.</li>
+<li><strong>Sayfa 200 dönüyordu.</strong> Uptime monitörleri yeşil. Status sayfası yeşil.
+Lighthouse da iyi puanlıyordu, çünkü Lighthouse JS çalıştırır.</li>
+</ol>
+<p>Regresyonu görmenin tek yolu JS&#39;i atlamak. <code>curl</code> atlar. Googlebot&#39;un render önizlemesi de.
+Tarayıcının üç menü derinde sakladığı View Source da. Aylardır post-hydration DOM&#39;u
+DevTools&#39;tan inceliyordum, raw response&#39;a hiç View Source yapmamıştım.</p>
+<p>Bakınca rakamlar:</p>
+<pre><code>$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | wc -c
+32280
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;claudoscope&quot;
+0
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;TL;DR&quot;
+0
+</code></pre>
+<p>Sayfa 32 KB ve yazı gövdesinin hiçbir parçasını içermiyor. &quot;claudoscope&quot; yazıda
+yarım düzine yerde geçer; HTML&#39;de sıfır. &quot;TL;DR&quot; için aynı. HTML %100 layout chrome&#39;du.</p>
+<h2 id="prerender--true-neden-yetmedi"><code>prerender = true</code> neden yetmedi</h2>
+<p>Statik adapter&#39;ın prerender adımı her route&#39;u dolaşır, sayfanın <code>load</code>&#39;ını çağırır,
+ve sonucundaki component ağacını HTML&#39;e render eder. Tüm top-level Svelte
+component kodunu çalıştırır. <em>Çalıştırmadığı</em> şey <code>onMount</code> gibi lifecycle hook&#39;lar,
+çünkü onlar açıkça browser-only sözleşmesindedir.</p>
+<p>Yani <code>prerender = true</code> tam olarak iddia ettiğini yapıyordu. Hata, veri bağımlılığının
+prerender&#39;ın atladığı bir lifecycle&#39;ın arkasında yaşıyor olmasıydı.</p>
+<p>Düzeltme: markdown parse&#39;ı lifecycle-level değil, module-level yapmak:</p>
+<pre><code class="language-svelte">&lt;script lang=&quot;ts&quot;&gt;
+    import { marked } from &#39;marked&#39;;
+    import { gfmHeadingId } from &#39;marked-gfm-heading-id&#39;;
+    import { mangle } from &#39;marked-mangle&#39;;
+    import { onMount } from &#39;svelte&#39;;
+    import &#39;prismjs/themes/prism-tomorrow.css&#39;;
+
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+
+    export let content: string;
+    $: parsed = marked.parse(content) as string;
+
+    let container: HTMLDivElement;
+
+    onMount(async () =&gt; {
+        const Prism = (await import(&#39;prismjs&#39;)).default;
+        await import(&#39;prismjs/components/prism-typescript&#39;);
+        if (container) Prism.highlightAllUnder(container);
+    });
+&lt;/script&gt;
+
+&lt;div bind:this={container} class=&quot;markdown-container&quot;&gt;{@html parsed}&lt;/div&gt;
+</code></pre>
+<p>Üç şey değişti:</p>
+<ol>
+<li><code>marked.use(...)</code> modül scope&#39;una taşındı. Hem prerender hem hydration sırasında
+çalışıyor, aynı extension&#39;lar her iki ortamda da aktif.</li>
+<li><code>parsed = marked.parse(content)</code> reactive bir top-level statement. Component&#39;ın
+render pass&#39;ında senkron olarak çalışıyor, çıktısı diske giden HTML&#39;de.</li>
+<li>Prism syntax highlighting <code>onMount</code> içinde kalıyor, dynamic-import edilmiş.
+Prism import zamanında <code>self</code>&#39;e dokunuyor, tarayıcıda sorun yok ama prerender
+worker&#39;da var. Highlighting kozmetik — prerender&#39;da kaybetmek JS yüklenene
+kadar görünmez, bu kabul edilebilir.</li>
+</ol>
+<p>DOMPurify&#39;ı da çıkardım. Orijinal kod marked&#39;ın çıktısını ona pipe edip sonra inject ediyordu.
+Bu sanitizer&#39;ın bundle maliyetini + render-time maliyetini ödüyordu, ama input bizim
+kendi <code>?raw</code>-import edilmiş markdown dosyalarımızdı, user content değil. Kendimize karşı
+defans defansif tiyatroydu. Eğer kötü niyetli biri markdown kaynağına yazabiliyorsa,
+output&#39;u sanitize etmek yanlış katmanda yapmaktır.</p>
+<p>Düzeltmenin sonucu:</p>
+<pre><code>$ wc -c www/build/blog/four-tools-in-two-weekends.html
+45292
+$ grep -c &quot;claudoscope&quot; www/build/blog/four-tools-in-two-weekends.html
+3
+$ grep -c &quot;TL;DR&quot; www/build/blog/four-tools-in-two-weekends.html
+1
+$ grep -c &quot;&lt;h1 id=&quot; www/build/blog/four-tools-in-two-weekends.html
+1
+</code></pre>
+<p>32 yerine 45 KB. 13 KB fark yazı gövdesi — Google&#39;ın boş olarak gördüğü kısım.</p>
+<h2 id="anasayfa-daha-da-kötüydü">Anasayfa daha da kötüydü</h2>
+<p>Anasayfanın aynı problemin farklı bir versiyonu vardı. SvelteKit&#39;in <code>adapter-static</code>&#39;i
+SPA-stil hosting için bir <code>fallback</code> seçeneği alır; bir path&#39;in prerendered HTML
+dosyası yoksa, sunucu fallback&#39;i serve edip client-side router&#39;ın çözmesine izin verir.</p>
+<p>Config şuydu:</p>
+<pre><code class="language-js">fallback: &#39;index.html&#39;
+</code></pre>
+<p>Bu fallback shell&#39;i <em><code>index.html</code>&#39;e</em> yazar. <code>/</code>&#39;deki home route&#39;u da <em>aynı
+index.html&#39;e</em> prerender eder. Yani aynı path&#39;e yazan iki operasyon var. Fallback kazanıyor,
+çünkü adapter onu prerender&#39;dan <em>sonra</em> yazıyor. 40 KB prerendered home, 13 KB
+SPA shell ile eziliyor.</p>
+<pre><code>$ wc -c www/build/index.html
+13096
+</code></pre>
+<p>Bu bundler&#39;ın SPA&#39;nın entry&#39;si olarak emit ettiği bare HTML — sadece JS bundle&#39;ları
+için import&#39;lar, gövde içeriği yok. <code>/</code>&#39;a JS olmayan bir user agent ile gelen herkes
+<em>bunu</em> alıyordu.</p>
+<p>Düzeltme bir karakter niyet:</p>
+<pre><code class="language-js">fallback: &#39;200.html&#39;
+</code></pre>
+<p><code>200.html</code> bazı statik host&#39;ların (Surge, konfigüre edilmiş Netlify) &quot;SPA fallback&quot;
+anlamında kullandığı bir konvansiyon. Statik adapter ismi umursamıyor; fallback&#39;i ne
+path verirsen oraya yazar. <code>200.html</code>&#39;e rename etmek bilinmeyen path&#39;ler için
+fallback&#39;i tutar, prerendered home ile çakışmaz.</p>
+<pre><code>$ wc -c www/build/index.html
+40871
+</code></pre>
+<p>3.1× büyüme, hepsi gerçek render edilmiş home içeriği.</p>
+<h2 id="düzeltmenin-ortaya-çıkardığı-üç-sorun">Düzeltmenin ortaya çıkardığı üç sorun</h2>
+<p>Her biri yalnızca <em>bir öncekisi düzeltildiği için</em> görünür hale geldi.</p>
+<h3 id="1-prerender-worker-oom">1. Prerender worker OOM</h3>
+<p>Markdown gerçekten prerender sırasında parse edilmeye başlayınca, GitHub Actions
+build&#39;i şu hatayla başarısız olmaya başladı:</p>
+<pre><code>Error [ERR_WORKER_OUT_OF_MEMORY]: Worker terminated due to reaching
+memory limit: JS heap out of memory
+</code></pre>
+<p><code>ubuntu-latest</code> üzerinde varsayılan Node heap&#39;i ~1.4 GB. Prerender adımı artık
+gerçek iş yapıyordu — her blog yazısının markdown kaynağında <code>marked.parse</code>,
+her biri 10–15 KB HTML üretiyor. 14 blog yazısı + diğer route&#39;lardaki markdown
+render&#39;larıyla, worker sınırı aştı.</p>
+<p>İki düzeltme:</p>
+<pre><code class="language-yaml">env:
+  NODE_OPTIONS: --max-old-space-size=4096
+</code></pre>
+<p>Bu tek başına unblock etti. Belt-and-suspenders olarak, <code>marked.use(...)</code> çağrılarını
+da guard&#39;ladım ki Vite SSR modülü route&#39;lar arası re-import etse de extension&#39;lar
+sadece bir kez kaydolsun:</p>
+<pre><code class="language-ts">const __markedKey = &#39;__omni_marked_configured__&#39;;
+const __markedScope = globalThis as unknown as Record&lt;string, boolean&gt;;
+if (!__markedScope[__markedKey]) {
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+    __markedScope[__markedKey] = true;
+}
+</code></pre>
+<h3 id="2-prerender-crawler-render-edilen-htmldeki-her-linki-takip-ediyor">2. Prerender crawler render edilen HTML&#39;deki her link&#39;i takip ediyor</h3>
+<p>Birkaç blog yazısı çeviri veya <code>contributing.md</code> dosyalarına relative link&#39;ler içeriyor —
+referans verdikleri kaynak repolarda yaşayan ama site route&#39;u olmayan <code>[/i18n/README.tr.md]</code>,
+<code>[/contributing.md]</code> tarzı. Markdown rendering client-side iken bunlar <code>&lt;a&gt;</code> tag&#39;lerine
+hydrate oluyordu ama prerender crawler hiç görmüyordu.</p>
+<p>Şimdi crawler görüyor, takip ediyor, ve 404&#39;leri build hatası olarak değerlendiriyor:</p>
+<pre><code>Error: 404 /contributing.md (linked from /skills/nextjs)
+</code></pre>
+<p>Bunlar benim sahip olduğum site route&#39;ları değil — yazı gövdeleri içindeki içerik
+link&#39;leri. Düzeltme prerender 404&#39;lerini error&#39;dan warning&#39;e indirgemek:</p>
+<pre><code class="language-js">prerender: {
+    handleHttpError: &#39;warn&#39;,
+    handleMissingId: &#39;warn&#39;
+}
+</code></pre>
+<h3 id="3-shared-host-gh-pagesi-çekmiyordu">3. Shared host gh-pages&#39;i çekmiyordu</h3>
+<p>Repo&#39;nun CI&#39;ı <code>gh-pages</code>&#39;e deploy ediyor. <code>ferhatatagun.com</code> domain&#39;i Spaceship shared
+host&#39;a point ediyor, ki ben oraya FTP ile yüklüyorum. İkisi alakasız, yani her CI deploy
+gh-pages&#39;i güncelliyor ve live site olduğu gibi kalıyordu.</p>
+<p>Bu bir CI bug&#39;ı değildi; deployment-pipeline&#39;ın drift etmesine izin verdiğim bir şekildi.
+Düzeltme kod değil — &quot;gh-pages içeriklerini manuel olarak shared host&#39;un <code>public_html</code>&#39;ine
+FTP&#39;le ya da deploy pipeline&#39;ını direkt push edecek şekilde yeniden kur&quot;. Bir seferlik
+çözüm için FTP yolunu seçtim.</p>
+<h2 id="bir-dahaki-regresyonu-shiplemeden-nasıl-yakalanır">Bir dahaki regresyonu shiplemeden nasıl yakalanır</h2>
+<p>Bu regresyonun aylarca hayatta kalmasının sebebi, doğrulamamın hiçbirinin JS kapalı
+çalışmıyor olmasıydı. Bir dahakini engellemek için:</p>
+<ol>
+<li><strong>Kritik bir route deploy sonrası her zaman view source yap.</strong> DevTools değil —
+o hydrate edilmiş DOM&#39;u gösterir. Tarayıcının &quot;View Source&quot;&#39;u wire&#39;a gelene bakar.
+İkisi trivial şekillerde farklı olmalı (hydration marker&#39;ları, attribute sırası);
+<em>içerik</em> olarak farklı olmamalı.</li>
+<li><strong>En önemli sentinel&#39;ini <code>curl | grep</code> ile kontrol et.</strong> Blog için: gövdede
+olduğunu bildiğin bir cümle. Ürün sayfası için: fiyat. Pazarlama sayfası için:
+value prop. 10 saniyelik deploy-sonrası kontrol yap.</li>
+<li><strong>JavaScript kapalı bir kez test et.</strong> Bu, major template değişikliği başına
+bir seferlik kontrol. Critical body text&#39;in JS-disabled sayfada eksik olduğu
+ilk sefer, cevap elinde olur.</li>
+<li><strong>Statik siteler için, zamanla sayfa boyutlarını diff&#39;le.</strong> Tek route&#39;ta
+40 KB → 13 KB düşüş alarma neden olurdu. Benim alarm yoktu çünkü baseline
+ölçmemiştim.</li>
+</ol>
+<p>SvelteKit özelinde, pattern tek kural: render edilen DOM&#39;a veri materialize eden
+her şey reactive veya top-level olmalı, <code>onMount</code> içinde değil. <code>onMount</code> sadece
+browser-only side effect&#39;ler için — DOM ölçümü, üçüncü-parti widget init, <code>window</code>
+gerektiren her şey. İçerik üretimini oraya koyduğun an, prerender görmüyor.
+Aynı şekil React&#39;te (<code>useEffect</code>), Vue&#39;da (<code>onMounted</code>), ve hydration&#39;ı render&#39;dan
+ayıran her framework&#39;te var.</p>
+<h2 id="bunun-maliyeti">Bunun maliyeti</h2>
+<p>Bulmak için iki akşam. Düzeltmek için kırk beş dakika. Düzeltmenin ortaya çıkardığı
+ikincil hatalarla başa çıkmak için üç follow-up commit.</p>
+<p>Daha zor maliyet, her yazının gövdesinin boş olduğu aylarca süren indeksleme.
+Google&#39;ın o sayfalar için görüşünde şimdi başlık + OG image + boş bir <code>&lt;div&gt;</code> var.
+Yazıların yedi tanesinin dev.to mirror&#39;ları, ki <code>canonical_url</code> siteme point eden
+şekilde yayımladım, orijinallerinden <em>daha</em> indekslenebilirdi.</p>
+<p>Arama motorları yeniden tarayacak. Mirror&#39;lar eventually yakalayacak. Ama bu
+anında geri sarmayan tipte bir bug — düzeltmeden sonra doğru hamle taze sitemap
+göndermek, en önemli URL&#39;lerin reindex&#39;ini talep etmek, ve beklemek.</p>
+<p>İzlediğim kazanma koşulu, hatayı ortaya çıkaran aynı <code>curl | grep</code>, prod URL&#39;sine
+karşı koşturulduğunda:</p>
+<pre><code>$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \
+    | grep -c &quot;TL;DR&quot;
+1
+</code></pre>
+<p>Sıfır hatadır. Bir düzeltmedir.</p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=Google'un%20g%C3%B6remedi%C4%9Fi%20bir%20blog%20yay%C4%B1nlad%C4%B1m%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fgoogle-un-goremedigi-blog" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fgoogle-un-goremedigi-blog" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/how-i-shipped-a-blog-google-couldnt-see" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">How I shipped a blog Google couldn't see</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"> <a href="/blog/how-i-shipped-a-blog-google-couldnt-see" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">How I shipped a blog Google couldn't see →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/324af2a" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">324af2a</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-06-17">2026-06-17</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1s0jrmk = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.42d08811.js"),
+						import("../_app/immutable/entry/app.1016c80d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>

@@ -150,7 +150,7 @@ Buna isim koymak zorunda değiliz. "Deep work" falan da demiyorum. Sadece şu: B
 Takımda "ne yaptın bugün?" diye sorulunca "ekrana baktım" demek garip geliyor. Ama yaptığım buydu. Sonuç: ertesi gün tasarımı değiştirdim, iki saatte toparladım. O bakma anı olmasa belki bir gün daha yanlış yolda gidecektim.
 
 Özet falan yok. Sadece diyorum ki: Bazen hiçbir şey yazmıyorsan da bir şey yapıyorsun. Yeter ki o "hiçbir şey" gerçekten düşünmek olsun, kaçış değil.
-`,b=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
+`,g=`# Bitmemiş Projeler Mezarlığım ve Neden Rahatım
 
 GitHub'da private repo sayımı söylemeyeceğim. Ama "yarım kaldı" diyebileceğim proje sayısı bir elin parmaklarını geçiyor. Bir süre bunu başarısızlık gibi hissettim. Sonra fikrim değişti.
 
@@ -173,7 +173,7 @@ Tabii bir de şu var: Bazen yarım bıraktığın şey yıllar sonra başka bir 
 Benim mezarlığımda yatan projelerin çoğu böyle. Hedef "ürün çıkarmak" değildi, "şunu anlamak"tı. Anladım, dosyalar duruyor. Sorun yok.
 
 Eğer senin de yarım projelerin varsa: Belki başarısızlık değildir. Belki sadece o fikrin ömrü o kadardı. Yeni fikre yer açıyorsun.
-`,g=`# "Best Practice" Dediklerimizin Yarısı Ezber
+`,b=`# "Best Practice" Dediklerimizin Yarısı Ezber
 
 "Best practice böyle yapılır." Kaç kere duydun? Ben çok duydum. Sonra baktım: Aynı "best practice" bir projede hayat kurtarıyor, başka projede sadece gürültü. Demek ki best practice değil, bağlama göre iyi gelen bir tercih.
 
@@ -608,7 +608,7 @@ The Anthropic API gives you everything you need to know whether your caching is 
 I shipped this visualization in [**claudoscope**](https://claudoscope-labs.vercel.app) — bring-your-own-key, no backend, runs in the browser. Source: [github.com/ferhatatagun/claudoscope](https://github.com/ferhatatagun/claudoscope).
 
 The same SSE client also powers three sibling tools — [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,T=`# Your prompt isn't better. You just remember it being better.
+`,z=`# Your prompt isn't better. You just remember it being better.
 
 Every developer who has shipped a Claude-powered feature has had this conversation with themselves:
 
@@ -742,7 +742,7 @@ You don't need to outsmart your future self. You just need to make it possible f
 I shipped this in [**prompt-lab**](https://prompt-lab-promptly.vercel.app) — two prompts side by side, BYOK, no backend, runs in the browser. Source: [github.com/ferhatatagun/prompt-lab](https://github.com/ferhatatagun/prompt-lab).
 
 The same SSE client also powers three sibling tools — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). All open-source, all BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,z=`# Build the sandbox before you write a single tool
+`,T=`# Build the sandbox before you write a single tool
 
 The first time you ship a Claude agent that uses tools you'll do it the obvious way: design the schema, write the actual tool function, hit the API, parse the \`tool_use\` block, run the function, feed the result back, loop. It works. It also has a fundamental ordering bug:
 
@@ -2139,7 +2139,7 @@ LLM uygulamalarının 2026 ekonomisi model seçimi hakkında değil, çoğunlukl
 Bu [**context-lens**](https://context-lens-sigma.vercel.app)'a shipledim — Claude prompt'u yapıştır, shiplemeden ne kadar tutacağını gör. BYOK, backend yok, tarayıcıda çalışıyor. Kaynak: [github.com/ferhatatagun/context-lens](https://github.com/ferhatatagun/context-lens).
 
 Aynı protokol-seviye yaklaşımı ayrıca dört kardeş tool'a güç veriyor — [claudoscope](https://claudoscope-labs.vercel.app), [agent-replay](https://agentreplay.vercel.app), [prompt-lab](https://prompt-lab-promptly.vercel.app), [tool-lab](https://tool-lab-bice.vercel.app). Hepsi açık kaynak, hepsi BYOK: [ferhatatagun.com/tools](https://ferhatatagun.com/tools).
-`,E=`# How I shipped a blog Google couldn't see
+`,M=`# How I shipped a blog Google couldn't see
 
 Every blog post on my site looked fine. Open \`/blog/something\`, the
 article was there — title, paragraphs, code blocks, the works.
@@ -2489,4 +2489,331 @@ $ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \\
 \`\`\`
 
 Zero is the bug. One is the fix.
-`,l={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":k,"bitmemis-projeler-mezarligim":b,"best-practice-dedigin-yarisi-ezber":g,"tarayicida-claude-streaming-sdk-siz":_,"prompt-caching-kimsenin-olcmedigi":x,"prompt-secimi-his-degil-olcum":I,"tek-bir-tool-yazmadan-once-sandbox":A,"claude-agent-debug-trace-replay":B,"iki-hafta-sonu-dort-tool":C,"prompt-shipping-once-onunu-gor":D},d={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":T,"build-the-sandbox-first":z,"debug-claude-agents-by-replaying-traces":S,"four-tools-in-two-weekends":P,"see-the-prompt-before-you-ship-it":O,"how-i-shipped-a-blog-google-couldnt-see":E},Y="Blog",u=[{slug:"how-i-shipped-a-blog-google-couldnt-see",title:"How I shipped a blog Google couldn't see",excerpt:"Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had.",date:"2026-06-14",tags:["SvelteKit","SEO","SSR","Markdown","Static Sites","Prerendering"]},{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"],sourceUrl:"https://medium.com/@ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-4ce8a9407d2c"},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-3e597c6804d8"},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"],sourceUrl:"https://medium.com/@ferhatatagun/33758334974c"},{slug:"build-the-sandbox-first",title:"Build the sandbox before you write a single tool",excerpt:"Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-7a508c4b6723"},{slug:"debug-claude-agents-by-replaying-traces",title:"How I debug Claude agents by replaying their trace",excerpt:"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Debugging","LLM","Observability"],sourceUrl:"https://medium.com/@ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-093e0c2cf1e0"},{slug:"four-tools-in-two-weekends",title:"What I learned shipping four open-source Claude dev-tools in two weekends",excerpt:'A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the "one tool per insight" decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.',date:"2026-06-05",tags:["Claude","Anthropic","Open Source","Developer Tools","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-e721d4c41b98"},{slug:"iki-hafta-sonu-dort-tool",title:"İki hafta sonunda dört açık kaynak Claude dev-tool shiplerken neler öğrendim",excerpt:`Dört tool'lu Claude dev-tool suite'i üzerine meta yazı: SDK'nın kırılması neden işi mümkün kılan kısıt oldu, "içgörü başına bir tool" ayrıştırması, BYOK + tarayıcı-only neden güvenilirlik çarpanı, ve yeniden başlasam önden yapacağım dört şey.`,date:"2026-06-05",tags:["Claude","Anthropic","Open Source","Developer Tools","LLM"]},{slug:"see-the-prompt-before-you-ship-it",title:"See the prompt before you ship it",excerpt:"Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don't need to send the request. A worked example where 'feels about the same' was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.",date:"2026-06-05",tags:["Claude","Anthropic","Tokens","Prompt Engineering","Cost","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/see-the-prompt-before-you-ship-it-91ee42f72483"},{slug:"prompt-shipping-once-onunu-gor",title:"Prompt'u shiplemeden önce gör",excerpt:`Token cost, context-window pozisyonu ve prompt-caching layout'u — hepsi prompt'tan tek başına bilinebilir. "Yaklaşık aynı" hissinin gizlediği 6.3× input-uzunluk farkını yakalayan pre-flight alışkanlığı.`,date:"2026-06-05",tags:["Claude","Anthropic","Tokens","Prompt Engineering","Cost","LLM"]},{slug:"tarayicida-claude-streaming-sdk-siz",title:"Tarayıcıda Claude'a streaming çağrı — SDK olmadan",excerpt:"Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar.",date:"2026-06-04",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Tarayıcı"]},{slug:"prompt-caching-kimsenin-olcmedigi",title:"Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor.",excerpt:"Her Claude response'u cache-hit verisi taşıyor. Çoğu uygulama bunu hiçbir yere loglamıyor — ve bunun bedelini ödüyor. Kimsenin grafiklemediği hit oranı metriği, ve kendini bir haftada amorti eden dört alanlı log satırı.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"prompt-secimi-his-degil-olcum",title:"Prompt'un daha iyi değil. Sadece daha iyi hatırlıyorsun.",excerpt:"Çoğu ekip prompt'u hisle iterate edip hafızayla shipliyor. Minimum işe yarayan karşılaştırma: aynı input üzerinde iki prompt'u paralel çalıştırıp output, latency ve cost'u yan yana görmek — side-by-side'ın sıralı versiyonun göremediği şey.",date:"2026-06-05",tags:["Claude","Anthropic","Prompt Engineering","LLM","A/B Testing"]},{slug:"tek-bir-tool-yazmadan-once-sandbox",title:"Tek bir tool yazmadan önce sandbox'ı kur",excerpt:"Çoğu agent ekibi önce tool'ları yazıyor, sonra tasarımın yanlış olduğunu keşfediyor. Tool yanıtlarını mock'la, loop'u el ile rol-yap, kötü tool tasarımlarını codebase'ine dokunmadan on beş dakikada öldür.",date:"2026-06-05",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"]},{slug:"claude-agent-debug-trace-replay",title:"Claude agent'larını trace replay ile debug ediyorum",excerpt:"Agent trace'leri garip bir çalışmayı debug etmek için gereken her şeyi içeriyor, ama wall of nested JSON olarak saklanıyor. Yeniden çerçeveleme: onları döküman olarak okumayı bırak, kararların timeline'ı olarak izle. Bir editörde 30 dakika alan bug'lar 30 saniyede bariz oluyor.",date:"2026-06-05",tags:["Claude","Anthropic","Agents","Debugging","LLM","Observability"]}],M=[...u].sort((e,n)=>n.date.localeCompare(e.date)),R={"browser-only-claude-streaming":"https://dev.to/ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-5f80","prompt-caching-nobody-measures":"https://dev.to/ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-1nga","stop-choosing-prompts-by-vibes":"https://dev.to/ferhatatagun/your-prompt-isnt-better-you-just-remember-it-being-better-3h52","build-the-sandbox-first":"https://dev.to/ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-2ja3","debug-claude-agents-by-replaying-traces":"https://dev.to/ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-484","four-tools-in-two-weekends":"https://dev.to/ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-1f4f","see-the-prompt-before-you-ship-it":"https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao","how-i-shipped-a-blog-google-couldnt-see":"https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc"};function L(e){return R[e]}function K(e){return u.find(n=>n.slug===e)}function N(e,n="tr"){return n==="en"?d[e]:l[e]}function j(e,n){const a=N(e,n);return typeof a=="string"&&a.trim().length>0}function H(e,n){return n==="en"&&e.titleEn?e.titleEn:e.title}function $(e,n){return n==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function J(e){const n=l[e]??d[e];if(!n)return 0;const a=n.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(a/200))}function q(e){const n=K(e);if(!n)return[];const a=t=>t.slug!==e&&t.tags.some(i=>n.tags.includes(i)),h=(t,i)=>{const r=t.tags.filter(o=>n.tags.includes(o)).length,s=i.tags.filter(o=>n.tags.includes(o)).length;return s!==r?s-r:i.date.localeCompare(t.date)};return M.filter(a).sort(h).slice(0,2)}export{K as a,q as b,N as c,L as d,H as e,$ as f,J as g,j as h,M as s,Y as t};
+`,E=`# Google'un göremediği bir blog yayınladım
+
+Sitemdeki her blog yazısı tarayıcıda gayet iyi görünüyordu.
+\`/blog/something\` aç, yazı orada — başlık, paragraflar, kod blokları, her şey.
+
+Sonra bir tahminle \`curl https://ferhatatagun.com/blog/four-tools-in-two-weekends\`
+çalıştırdım, ve HTML'de yazı gövdesinin **sıfır** karakteri vardı. \`<head>\` içinde başlık,
+layout chrome, mükemmel boş bir \`<div class="markdown-container" />\`, ve
+hepsi bu. Yazı sadece JavaScript yüklendikten sonra render oluyordu — yani
+Google'ın indekslediği versiyonda hiç yazı yoktu.
+
+Bu durum **sitedeki her blog yazısı için, aylardır** geçerliydi.
+
+**TL;DR**
+
+- Site \`adapter-static\` + \`prerender = true\` kullanıyordu, ki bu "tüm route'lar build zamanında HTML'e render edilir" anlamına gelir. Bu sayfa chrome'u için doğru — ama gövde için değil.
+- Markdown bileşeni \`content\`'i \`onMount\` içinde parse ediyordu, dolayısıyla diskteki HTML iskelet ve başka bir şey değildi. Yazı sadece hydration sonrası belirdi.
+- Bu iki şekilde gözden saklanıyor: test ettiğin her tarayıcı JS çalıştırıyor, sayfa iyi görünüyor; ve sayfa sağlıklı 200 dönüyor, monitör yeşil kalıyor.
+- Düzeltme mekanik (markdown'ı modül scope'unda parse et, \`{@html}\` ile bas) ama yan etkileri kademeli oldu: prerender worker heap'i taştı, prerender crawler gömülü \`.md\` linkleri takip edip 404 verdi, statik adapter'ın fallback'i prerendered home'u eziyordu. Her sorun, öncekisi düzeltildikten sonra ortaya çıktı.
+
+Bu yazı regresyonun yazımı: neyi kaçırdım, nasıl saklı kaldı, kod seviyesinde gerçek düzeltme, ve düzeltmenin tetiklediği üç ikincil hata.
+
+## Sayfa aslında neyi serve ediyordu
+
+Svelte bileşeni zararsız görünüyordu:
+
+\`\`\`svelte
+<script lang="ts">
+    import { marked } from 'marked';
+    import { gfmHeadingId } from 'marked-gfm-heading-id';
+    import { mangle } from 'marked-mangle';
+    import createSanitizer from 'dompurify';
+    import Prism from 'prismjs';
+    import { onMount } from 'svelte';
+
+    let container: HTMLDivElement;
+    export let content: string;
+
+    onMount(() => {
+        marked.use(gfmHeadingId());
+        marked.use(mangle());
+        const sanitizer = createSanitizer(window);
+        const parsed = marked.parse(content);
+        container.innerHTML = sanitizer.sanitize(parsed);
+        Prism.highlightAllUnder(container);
+    });
+<\/script>
+
+<div bind:this={container} class="markdown-container" />
+\`\`\`
+
+Tüm bu işler — markdown parse, sanitize, highlight — \`onMount\` içinde.
+O callback sadece tarayıcıda, hydration'dan sonra çalışıyor. SvelteKit'in prerender
+adımı \`onMount\`'u asla çalıştırmaz. Diskteki HTML tam olarak template'te ne varsa
+onu içerir: boş bir \`<div class="markdown-container" />\`.
+
+Yazı gövdesi *runtime'da DOM'a imperatif olarak ekleniyordu*.
+Bu Google için görünmez. OG/Twitter card scraper'ları için görünmez.
+URL'i \`curl\` ile çekenler için görünmez.
+
+Bunu yakalayabilecek iki kontrol yapmamıştım:
+
+1. **Tarayıcı sekmelerim hep doğru şeyi render ediyordu**, çünkü JS çalışıyordu.
+   Canlı sayfayı *bakarak* test etmek hydrate edilmiş versiyonu test etmektir,
+   indekslenen versiyonu değil.
+2. **Sayfa 200 dönüyordu.** Uptime monitörleri yeşil. Status sayfası yeşil.
+   Lighthouse da iyi puanlıyordu, çünkü Lighthouse JS çalıştırır.
+
+Regresyonu görmenin tek yolu JS'i atlamak. \`curl\` atlar. Googlebot'un render önizlemesi de.
+Tarayıcının üç menü derinde sakladığı View Source da. Aylardır post-hydration DOM'u
+DevTools'tan inceliyordum, raw response'a hiç View Source yapmamıştım.
+
+Bakınca rakamlar:
+
+\`\`\`
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \\
+    | wc -c
+32280
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \\
+    | grep -c "claudoscope"
+0
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \\
+    | grep -c "TL;DR"
+0
+\`\`\`
+
+Sayfa 32 KB ve yazı gövdesinin hiçbir parçasını içermiyor. "claudoscope" yazıda
+yarım düzine yerde geçer; HTML'de sıfır. "TL;DR" için aynı. HTML %100 layout chrome'du.
+
+## \`prerender = true\` neden yetmedi
+
+Statik adapter'ın prerender adımı her route'u dolaşır, sayfanın \`load\`'ını çağırır,
+ve sonucundaki component ağacını HTML'e render eder. Tüm top-level Svelte
+component kodunu çalıştırır. *Çalıştırmadığı* şey \`onMount\` gibi lifecycle hook'lar,
+çünkü onlar açıkça browser-only sözleşmesindedir.
+
+Yani \`prerender = true\` tam olarak iddia ettiğini yapıyordu. Hata, veri bağımlılığının
+prerender'ın atladığı bir lifecycle'ın arkasında yaşıyor olmasıydı.
+
+Düzeltme: markdown parse'ı lifecycle-level değil, module-level yapmak:
+
+\`\`\`svelte
+<script lang="ts">
+    import { marked } from 'marked';
+    import { gfmHeadingId } from 'marked-gfm-heading-id';
+    import { mangle } from 'marked-mangle';
+    import { onMount } from 'svelte';
+    import 'prismjs/themes/prism-tomorrow.css';
+
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+
+    export let content: string;
+    $: parsed = marked.parse(content) as string;
+
+    let container: HTMLDivElement;
+
+    onMount(async () => {
+        const Prism = (await import('prismjs')).default;
+        await import('prismjs/components/prism-typescript');
+        if (container) Prism.highlightAllUnder(container);
+    });
+<\/script>
+
+<div bind:this={container} class="markdown-container">{@html parsed}</div>
+\`\`\`
+
+Üç şey değişti:
+
+1. \`marked.use(...)\` modül scope'una taşındı. Hem prerender hem hydration sırasında
+   çalışıyor, aynı extension'lar her iki ortamda da aktif.
+2. \`parsed = marked.parse(content)\` reactive bir top-level statement. Component'ın
+   render pass'ında senkron olarak çalışıyor, çıktısı diske giden HTML'de.
+3. Prism syntax highlighting \`onMount\` içinde kalıyor, dynamic-import edilmiş.
+   Prism import zamanında \`self\`'e dokunuyor, tarayıcıda sorun yok ama prerender
+   worker'da var. Highlighting kozmetik — prerender'da kaybetmek JS yüklenene
+   kadar görünmez, bu kabul edilebilir.
+
+DOMPurify'ı da çıkardım. Orijinal kod marked'ın çıktısını ona pipe edip sonra inject ediyordu.
+Bu sanitizer'ın bundle maliyetini + render-time maliyetini ödüyordu, ama input bizim
+kendi \`?raw\`-import edilmiş markdown dosyalarımızdı, user content değil. Kendimize karşı
+defans defansif tiyatroydu. Eğer kötü niyetli biri markdown kaynağına yazabiliyorsa,
+output'u sanitize etmek yanlış katmanda yapmaktır.
+
+Düzeltmenin sonucu:
+
+\`\`\`
+$ wc -c www/build/blog/four-tools-in-two-weekends.html
+45292
+$ grep -c "claudoscope" www/build/blog/four-tools-in-two-weekends.html
+3
+$ grep -c "TL;DR" www/build/blog/four-tools-in-two-weekends.html
+1
+$ grep -c "<h1 id=" www/build/blog/four-tools-in-two-weekends.html
+1
+\`\`\`
+
+32 yerine 45 KB. 13 KB fark yazı gövdesi — Google'ın boş olarak gördüğü kısım.
+
+## Anasayfa daha da kötüydü
+
+Anasayfanın aynı problemin farklı bir versiyonu vardı. SvelteKit'in \`adapter-static\`'i
+SPA-stil hosting için bir \`fallback\` seçeneği alır; bir path'in prerendered HTML
+dosyası yoksa, sunucu fallback'i serve edip client-side router'ın çözmesine izin verir.
+
+Config şuydu:
+
+\`\`\`js
+fallback: 'index.html'
+\`\`\`
+
+Bu fallback shell'i *\`index.html\`'e* yazar. \`/\`'deki home route'u da *aynı
+index.html'e* prerender eder. Yani aynı path'e yazan iki operasyon var. Fallback kazanıyor,
+çünkü adapter onu prerender'dan *sonra* yazıyor. 40 KB prerendered home, 13 KB
+SPA shell ile eziliyor.
+
+\`\`\`
+$ wc -c www/build/index.html
+13096
+\`\`\`
+
+Bu bundler'ın SPA'nın entry'si olarak emit ettiği bare HTML — sadece JS bundle'ları
+için import'lar, gövde içeriği yok. \`/\`'a JS olmayan bir user agent ile gelen herkes
+*bunu* alıyordu.
+
+Düzeltme bir karakter niyet:
+
+\`\`\`js
+fallback: '200.html'
+\`\`\`
+
+\`200.html\` bazı statik host'ların (Surge, konfigüre edilmiş Netlify) "SPA fallback"
+anlamında kullandığı bir konvansiyon. Statik adapter ismi umursamıyor; fallback'i ne
+path verirsen oraya yazar. \`200.html\`'e rename etmek bilinmeyen path'ler için
+fallback'i tutar, prerendered home ile çakışmaz.
+
+\`\`\`
+$ wc -c www/build/index.html
+40871
+\`\`\`
+
+3.1× büyüme, hepsi gerçek render edilmiş home içeriği.
+
+## Düzeltmenin ortaya çıkardığı üç sorun
+
+Her biri yalnızca *bir öncekisi düzeltildiği için* görünür hale geldi.
+
+### 1. Prerender worker OOM
+
+Markdown gerçekten prerender sırasında parse edilmeye başlayınca, GitHub Actions
+build'i şu hatayla başarısız olmaya başladı:
+
+\`\`\`
+Error [ERR_WORKER_OUT_OF_MEMORY]: Worker terminated due to reaching
+memory limit: JS heap out of memory
+\`\`\`
+
+\`ubuntu-latest\` üzerinde varsayılan Node heap'i ~1.4 GB. Prerender adımı artık
+gerçek iş yapıyordu — her blog yazısının markdown kaynağında \`marked.parse\`,
+her biri 10–15 KB HTML üretiyor. 14 blog yazısı + diğer route'lardaki markdown
+render'larıyla, worker sınırı aştı.
+
+İki düzeltme:
+
+\`\`\`yaml
+env:
+  NODE_OPTIONS: --max-old-space-size=4096
+\`\`\`
+
+Bu tek başına unblock etti. Belt-and-suspenders olarak, \`marked.use(...)\` çağrılarını
+da guard'ladım ki Vite SSR modülü route'lar arası re-import etse de extension'lar
+sadece bir kez kaydolsun:
+
+\`\`\`ts
+const __markedKey = '__omni_marked_configured__';
+const __markedScope = globalThis as unknown as Record<string, boolean>;
+if (!__markedScope[__markedKey]) {
+    marked.use(gfmHeadingId());
+    marked.use(mangle());
+    __markedScope[__markedKey] = true;
+}
+\`\`\`
+
+### 2. Prerender crawler render edilen HTML'deki her link'i takip ediyor
+
+Birkaç blog yazısı çeviri veya \`contributing.md\` dosyalarına relative link'ler içeriyor —
+referans verdikleri kaynak repolarda yaşayan ama site route'u olmayan \`[/i18n/README.tr.md]\`,
+\`[/contributing.md]\` tarzı. Markdown rendering client-side iken bunlar \`<a>\` tag'lerine
+hydrate oluyordu ama prerender crawler hiç görmüyordu.
+
+Şimdi crawler görüyor, takip ediyor, ve 404'leri build hatası olarak değerlendiriyor:
+
+\`\`\`
+Error: 404 /contributing.md (linked from /skills/nextjs)
+\`\`\`
+
+Bunlar benim sahip olduğum site route'ları değil — yazı gövdeleri içindeki içerik
+link'leri. Düzeltme prerender 404'lerini error'dan warning'e indirgemek:
+
+\`\`\`js
+prerender: {
+    handleHttpError: 'warn',
+    handleMissingId: 'warn'
+}
+\`\`\`
+
+### 3. Shared host gh-pages'i çekmiyordu
+
+Repo'nun CI'ı \`gh-pages\`'e deploy ediyor. \`ferhatatagun.com\` domain'i Spaceship shared
+host'a point ediyor, ki ben oraya FTP ile yüklüyorum. İkisi alakasız, yani her CI deploy
+gh-pages'i güncelliyor ve live site olduğu gibi kalıyordu.
+
+Bu bir CI bug'ı değildi; deployment-pipeline'ın drift etmesine izin verdiğim bir şekildi.
+Düzeltme kod değil — "gh-pages içeriklerini manuel olarak shared host'un \`public_html\`'ine
+FTP'le ya da deploy pipeline'ını direkt push edecek şekilde yeniden kur". Bir seferlik
+çözüm için FTP yolunu seçtim.
+
+## Bir dahaki regresyonu shiplemeden nasıl yakalanır
+
+Bu regresyonun aylarca hayatta kalmasının sebebi, doğrulamamın hiçbirinin JS kapalı
+çalışmıyor olmasıydı. Bir dahakini engellemek için:
+
+1. **Kritik bir route deploy sonrası her zaman view source yap.** DevTools değil —
+   o hydrate edilmiş DOM'u gösterir. Tarayıcının "View Source"'u wire'a gelene bakar.
+   İkisi trivial şekillerde farklı olmalı (hydration marker'ları, attribute sırası);
+   *içerik* olarak farklı olmamalı.
+2. **En önemli sentinel'ini \`curl | grep\` ile kontrol et.** Blog için: gövdede
+   olduğunu bildiğin bir cümle. Ürün sayfası için: fiyat. Pazarlama sayfası için:
+   value prop. 10 saniyelik deploy-sonrası kontrol yap.
+3. **JavaScript kapalı bir kez test et.** Bu, major template değişikliği başına
+   bir seferlik kontrol. Critical body text'in JS-disabled sayfada eksik olduğu
+   ilk sefer, cevap elinde olur.
+4. **Statik siteler için, zamanla sayfa boyutlarını diff'le.** Tek route'ta
+   40 KB → 13 KB düşüş alarma neden olurdu. Benim alarm yoktu çünkü baseline
+   ölçmemiştim.
+
+SvelteKit özelinde, pattern tek kural: render edilen DOM'a veri materialize eden
+her şey reactive veya top-level olmalı, \`onMount\` içinde değil. \`onMount\` sadece
+browser-only side effect'ler için — DOM ölçümü, üçüncü-parti widget init, \`window\`
+gerektiren her şey. İçerik üretimini oraya koyduğun an, prerender görmüyor.
+Aynı şekil React'te (\`useEffect\`), Vue'da (\`onMounted\`), ve hydration'ı render'dan
+ayıran her framework'te var.
+
+## Bunun maliyeti
+
+Bulmak için iki akşam. Düzeltmek için kırk beş dakika. Düzeltmenin ortaya çıkardığı
+ikincil hatalarla başa çıkmak için üç follow-up commit.
+
+Daha zor maliyet, her yazının gövdesinin boş olduğu aylarca süren indeksleme.
+Google'ın o sayfalar için görüşünde şimdi başlık + OG image + boş bir \`<div>\` var.
+Yazıların yedi tanesinin dev.to mirror'ları, ki \`canonical_url\` siteme point eden
+şekilde yayımladım, orijinallerinden *daha* indekslenebilirdi.
+
+Arama motorları yeniden tarayacak. Mirror'lar eventually yakalayacak. Ama bu
+anında geri sarmayan tipte bir bug — düzeltmeden sonra doğru hamle taze sitemap
+göndermek, en önemli URL'lerin reindex'ini talep etmek, ve beklemek.
+
+İzlediğim kazanma koşulu, hatayı ortaya çıkaran aynı \`curl | grep\`, prod URL'sine
+karşı koşturulduğunda:
+
+\`\`\`
+$ curl -s https://ferhatatagun.com/blog/four-tools-in-two-weekends \\
+    | grep -c "TL;DR"
+1
+\`\`\`
+
+Sıfır hatadır. Bir düzeltmedir.
+`,l={"yapay-zeka-ve-yazilim-gelistirme-2024":c,"mcp-model-context-protocol-nedir":m,"cursor-ide-ve-prompt-muhendisligi":p,"neden-bazen-sadece-bos-ekrana-bakiyorum":k,"bitmemis-projeler-mezarligim":g,"best-practice-dedigin-yarisi-ezber":b,"tarayicida-claude-streaming-sdk-siz":_,"prompt-caching-kimsenin-olcmedigi":x,"prompt-secimi-his-degil-olcum":I,"tek-bir-tool-yazmadan-once-sandbox":A,"claude-agent-debug-trace-replay":B,"iki-hafta-sonu-dort-tool":C,"prompt-shipping-once-onunu-gor":D,"google-un-goremedigi-blog":E},d={"cursor-ide-ve-prompt-muhendisligi":y,"rules-and-commands-that-stick":f,"browser-only-claude-streaming":w,"prompt-caching-nobody-measures":v,"stop-choosing-prompts-by-vibes":z,"build-the-sandbox-first":T,"debug-claude-agents-by-replaying-traces":S,"four-tools-in-two-weekends":P,"see-the-prompt-before-you-ship-it":O,"how-i-shipped-a-blog-google-couldnt-see":M},H="Blog",u=[{slug:"google-un-goremedigi-blog",title:"Google'un göremediği bir blog yayınladım",excerpt:"Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı.",date:"2026-06-14",tags:["SvelteKit","SEO","SSR","Markdown","Statik Site","Prerender"]},{slug:"how-i-shipped-a-blog-google-couldnt-see",title:"How I shipped a blog Google couldn't see",excerpt:"Every post on my site rendered fine in a browser — but `curl` showed the article body was empty. Marked was being parsed inside onMount, so prerender saw a skeleton and search engines indexed nothing. The fix, the three secondary failures it uncovered, and the verification habit I should have had.",date:"2026-06-14",tags:["SvelteKit","SEO","SSR","Markdown","Static Sites","Prerendering"]},{slug:"yapay-zeka-ve-yazilim-gelistirme-2024",title:"Yapay Zeka ile Yazılım Geliştirme: MCP, GPT ve Cursor",excerpt:"LLM araçları, Model Context Protocol (MCP) ve Cursor ile günlük geliştirme pratiğinde nasıl daha verimli olunur.",date:"2024-12-01",tags:["AI","MCP","Cursor","LLM","Productivity"]},{slug:"mcp-model-context-protocol-nedir",title:"Model Context Protocol (MCP) Nedir?",excerpt:"MCP, AI asistanlarının dosya sistemine, API'lere ve araçlara güvenli erişimini standartlaştıran açık protokol.",date:"2024-11-15",tags:["MCP","AI","Protocol","Developer Tools"]},{slug:"cursor-ide-ve-prompt-muhendisligi",title:"Cursor IDE ve Prompt Mühendisliği",excerpt:"Cursor’da @dosya, @web kullanımı, net talimatlar ve .cursorrules ile daha tutarlı ve verimli AI kullanımı.",date:"2024-11-01",tags:["Cursor","AI","Prompt Engineering","IDE"],titleEn:"Cursor IDE and Prompt Engineering",excerptEn:"Using @file, @web, clear instructions and .cursorrules for more consistent and efficient AI use in Cursor."},{slug:"neden-bazen-sadece-bos-ekrana-bakiyorum",title:"Neden Bazen Sadece Boş Ekrana Bakıyorum",excerpt:"Hiçbir tuşa basmadan ekrana bakmak da işin parçası. Verimlilik kültürüne ters bir itiraf.",date:"2025-01-12",tags:["Mindset","Productivity","Reflection"]},{slug:"bitmemis-projeler-mezarligim",title:"Bitmemiş Projeler Mezarlığım ve Neden Rahatım",excerpt:"Yarım kalan side project'ler başarısızlık mı? Bence bazen sadece keşfin kendisi.",date:"2025-01-05",tags:["Side Projects","Mindset","Learning"]},{slug:"best-practice-dedigin-yarisi-ezber",title:'"Best Practice" Dediklerimizin Yarısı Ezber',excerpt:"DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.",date:"2024-12-20",tags:["Code Quality","Opinion","Software Design"]},{slug:"rules-and-commands-that-stick",title:"Rules and Commands That Actually Stick",excerpt:"How to make .cursorrules and slash commands useful instead of forgotten: start from pain, keep the list short, iterate from real usage.",date:"2025-01-18",tags:["Cursor","Rules","Commands","Workflow","AI"]},{slug:"browser-only-claude-streaming",title:"Building a streaming Claude client in the browser — without the SDK",excerpt:"Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.",date:"2026-06-03",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Browser"],sourceUrl:"https://medium.com/@ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-4ce8a9407d2c"},{slug:"prompt-caching-nobody-measures",title:"Prompt caching is the cheapest Claude optimization. Nobody measures it.",excerpt:"Every Claude response carries cache-hit data. Most apps log it nowhere — and pay for it. Why hit ratio is the metric nobody graphs, and the four-field log line that pays for itself in a week.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-3e597c6804d8"},{slug:"stop-choosing-prompts-by-vibes",title:"Your prompt isn't better. You just remember it being better.",excerpt:"Most teams iterate on prompts by feel and ship by memory. The minimum useful comparison is two prompts in parallel, surfacing output, latency and cost on the same input — what side-by-side reveals that sequential never does.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Engineering","A/B Testing","LLM","Evals"],sourceUrl:"https://medium.com/@ferhatatagun/33758334974c"},{slug:"build-the-sandbox-first",title:"Build the sandbox before you write a single tool",excerpt:"Most agent teams write the tools first, then discover the design was wrong. Mock the tool responses, role-play the loop by hand, and kill the bad tool designs in fifteen minutes — before they touch your codebase.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-7a508c4b6723"},{slug:"debug-claude-agents-by-replaying-traces",title:"How I debug Claude agents by replaying their trace",excerpt:"Agent traces contain everything you need to debug a weird run, but they're stored as walls of nested JSON. The reframe: stop reading them as documents, start watching them as timelines of decisions. Bugs that take 30 minutes in an editor become obvious in 30 seconds.",date:"2026-06-04",tags:["Claude","Anthropic","Agents","Debugging","LLM","Observability"],sourceUrl:"https://medium.com/@ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-093e0c2cf1e0"},{slug:"four-tools-in-two-weekends",title:"What I learned shipping four open-source Claude dev-tools in two weekends",excerpt:'A meta post on the four-tool Claude dev-tool suite: why the SDK breaking was the constraint that made the work possible, the "one tool per insight" decomposition, why BYOK + browser-only is a credibility multiplier, and the four things I would front-load if starting over.',date:"2026-06-05",tags:["Claude","Anthropic","Open Source","Developer Tools","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-e721d4c41b98"},{slug:"iki-hafta-sonu-dort-tool",title:"İki hafta sonunda dört açık kaynak Claude dev-tool shiplerken neler öğrendim",excerpt:`Dört tool'lu Claude dev-tool suite'i üzerine meta yazı: SDK'nın kırılması neden işi mümkün kılan kısıt oldu, "içgörü başına bir tool" ayrıştırması, BYOK + tarayıcı-only neden güvenilirlik çarpanı, ve yeniden başlasam önden yapacağım dört şey.`,date:"2026-06-05",tags:["Claude","Anthropic","Open Source","Developer Tools","LLM"]},{slug:"see-the-prompt-before-you-ship-it",title:"See the prompt before you ship it",excerpt:"Token cost, context-window position, and prompt-caching layout are all knowable from the prompt alone — you don't need to send the request. A worked example where 'feels about the same' was hiding a 6.3× input-length difference, and the pre-flight habit that catches it.",date:"2026-06-05",tags:["Claude","Anthropic","Tokens","Prompt Engineering","Cost","LLM"],sourceUrl:"https://medium.com/@ferhatatagun/see-the-prompt-before-you-ship-it-91ee42f72483"},{slug:"prompt-shipping-once-onunu-gor",title:"Prompt'u shiplemeden önce gör",excerpt:`Token cost, context-window pozisyonu ve prompt-caching layout'u — hepsi prompt'tan tek başına bilinebilir. "Yaklaşık aynı" hissinin gizlediği 6.3× input-uzunluk farkını yakalayan pre-flight alışkanlığı.`,date:"2026-06-05",tags:["Claude","Anthropic","Tokens","Prompt Engineering","Cost","LLM"]},{slug:"tarayicida-claude-streaming-sdk-siz",title:"Tarayıcıda Claude'a streaming çağrı — SDK olmadan",excerpt:"Resmi Anthropic SDK'sını tarayıcı tarafına almak için neden uğraşmadığım ve onu replace eden ~150 satır TypeScript: tool-use destekli SSE parser'ı, temiz iptal, anlamlı hatalar.",date:"2026-06-04",tags:["Claude","Anthropic","SSE","Streaming","TypeScript","Tarayıcı"]},{slug:"prompt-caching-kimsenin-olcmedigi",title:"Prompt caching, Claude'un en ucuz optimizasyonu. Kimse ölçmüyor.",excerpt:"Her Claude response'u cache-hit verisi taşıyor. Çoğu uygulama bunu hiçbir yere loglamıyor — ve bunun bedelini ödüyor. Kimsenin grafiklemediği hit oranı metriği, ve kendini bir haftada amorti eden dört alanlı log satırı.",date:"2026-06-04",tags:["Claude","Anthropic","Prompt Caching","Observability","Cost","LLM"]},{slug:"prompt-secimi-his-degil-olcum",title:"Prompt'un daha iyi değil. Sadece daha iyi hatırlıyorsun.",excerpt:"Çoğu ekip prompt'u hisle iterate edip hafızayla shipliyor. Minimum işe yarayan karşılaştırma: aynı input üzerinde iki prompt'u paralel çalıştırıp output, latency ve cost'u yan yana görmek — side-by-side'ın sıralı versiyonun göremediği şey.",date:"2026-06-05",tags:["Claude","Anthropic","Prompt Engineering","LLM","A/B Testing"]},{slug:"tek-bir-tool-yazmadan-once-sandbox",title:"Tek bir tool yazmadan önce sandbox'ı kur",excerpt:"Çoğu agent ekibi önce tool'ları yazıyor, sonra tasarımın yanlış olduğunu keşfediyor. Tool yanıtlarını mock'la, loop'u el ile rol-yap, kötü tool tasarımlarını codebase'ine dokunmadan on beş dakikada öldür.",date:"2026-06-05",tags:["Claude","Anthropic","Agents","Tool Use","Prompt Engineering","LLM"]},{slug:"claude-agent-debug-trace-replay",title:"Claude agent'larını trace replay ile debug ediyorum",excerpt:"Agent trace'leri garip bir çalışmayı debug etmek için gereken her şeyi içeriyor, ama wall of nested JSON olarak saklanıyor. Yeniden çerçeveleme: onları döküman olarak okumayı bırak, kararların timeline'ı olarak izle. Bir editörde 30 dakika alan bug'lar 30 saniyede bariz oluyor.",date:"2026-06-05",tags:["Claude","Anthropic","Agents","Debugging","LLM","Observability"]}],R=[...u].sort((e,n)=>n.date.localeCompare(e.date)),K={"browser-only-claude-streaming":"https://dev.to/ferhatatagun/building-a-streaming-claude-client-in-the-browser-without-the-sdk-5f80","prompt-caching-nobody-measures":"https://dev.to/ferhatatagun/prompt-caching-is-the-cheapest-claude-optimization-nobody-measures-it-1nga","stop-choosing-prompts-by-vibes":"https://dev.to/ferhatatagun/your-prompt-isnt-better-you-just-remember-it-being-better-3h52","build-the-sandbox-first":"https://dev.to/ferhatatagun/build-the-sandbox-before-you-write-a-single-tool-2ja3","debug-claude-agents-by-replaying-traces":"https://dev.to/ferhatatagun/how-i-debug-claude-agents-by-replaying-their-trace-484","four-tools-in-two-weekends":"https://dev.to/ferhatatagun/what-i-learned-shipping-four-open-source-claude-dev-tools-in-two-weekends-1f4f","see-the-prompt-before-you-ship-it":"https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao","how-i-shipped-a-blog-google-couldnt-see":"https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc"};function N(e){return K[e]}function L(e){return u.find(n=>n.slug===e)}function Y(e,n="tr"){return n==="en"?d[e]:l[e]}function j(e,n){const a=Y(e,n);return typeof a=="string"&&a.trim().length>0}function $(e,n){return n==="en"&&e.titleEn?e.titleEn:e.title}function J(e,n){return n==="en"&&e.excerptEn?e.excerptEn:e.excerpt}function q(e){const n=l[e]??d[e];if(!n)return 0;const a=n.trim().split(/\s+/).filter(Boolean).length;return Math.max(1,Math.ceil(a/200))}function U(e){const n=L(e);if(!n)return[];const a=t=>t.slug!==e&&t.tags.some(i=>n.tags.includes(i)),h=(t,i)=>{const o=t.tags.filter(r=>n.tags.includes(r)).length,s=i.tags.filter(r=>n.tags.includes(r)).length;return s!==o?s-o:i.date.localeCompare(t.date)};return R.filter(a).sort(h).slice(0,2)}export{L as a,U as b,Y as c,N as d,$ as e,J as f,q as g,j as h,R as s,H as t};

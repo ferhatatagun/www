@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 17 Jun 2026 10:38:38 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jun 2026 10:42:47 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Google&apos;un göremediği bir blog yayınladım</title>
+    <link>https://ferhatatagun.com/blog/google-un-goremedigi-blog</link>
+    <description>Sitemdeki her yazı tarayıcıda iyi görünüyordu — ama `curl` çekince yazı gövdesi boştu. Marked `onMount` içinde parse oluyor, prerender iskelet görüyor, arama motorları hiçbir şey indekslemiyordu. Düzeltme, ortaya çıkardığı üç ikincil hata, ve hiç kazanmadığım doğrulama alışkanlığı.</description>
+    <pubDate>Sun, 14 Jun 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/google-un-goremedigi-blog</guid>
+  </item>
   <item>
     <title>How I shipped a blog Google couldn&apos;t see</title>
     <link>https://ferhatatagun.com/blog/how-i-shipped-a-blog-google-couldnt-see</link>
