@@ -167,7 +167,7 @@
 			</a>
 		</div>
 		{#if blogPosts.length > 0}
-			<div class="text-center md:text-left">
+			<div class="text-center md:text-left home-chip-row">
 				<a
 					href={`${base}/blog`}
 					class="home-blog-chip decoration-none"
@@ -175,6 +175,15 @@
 				>
 					<span class="home-blog-chip__prompt">$</span>
 					<span>cat /blog</span>
+					<span class="home-blog-chip__arrow">→</span>
+				</a>
+				<a
+					href={`${base}/play/shell-quiz`}
+					class="home-blog-chip decoration-none"
+					title="Shell-quiz — 20 commands, 5 minutes"
+				>
+					<span class="home-blog-chip__prompt">$</span>
+					<span>./shell-quiz</span>
 					<span class="home-blog-chip__arrow">→</span>
 				</a>
 			</div>
@@ -259,12 +268,21 @@
 		color: #a78bfa;
 		background: rgba(139, 92, 246, 0.06);
 	}
+	.home-chip-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		justify-content: center;
+		margin-top: 0.5rem;
+	}
+	@media (min-width: 768px) {
+		.home-chip-row { justify-content: flex-start; }
+	}
 	.home-blog-chip {
 		display: inline-flex;
 		align-items: center;
 		gap: 0.45rem;
 		padding: 0.3rem 0.7rem;
-		margin-top: 0.5rem;
 		font-family: ui-monospace, 'JetBrains Mono', 'SF Mono', Monaco, monospace;
 		font-size: 0.78rem;
 		font-weight: 500;
