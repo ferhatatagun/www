@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./favicon.ico" />
+
+  <link rel="icon" type="image/png" href="./imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="./imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="./imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="./imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="./_app/immutable/assets/0.8e23f8cc.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/8.b0083773.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.30ca4786.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.02487342.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.f7029736.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.dd91c6ac.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.82bbd55b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.63729547.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.104f75bf.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.dc514cd4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/each.a467b788.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores.e499aa55.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.262e9fcd.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/home.e3bb115e.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/skills.089400e8.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/UIcon.feae133d.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/8.4b07dd82.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/site.e6ac68e3.js"><title>/play · ferhat@atagun</title><!-- HEAD_svelte-3pwgmm_START --><link rel="canonical" href="https://ferhatatagun.com/play"><meta name="description" content="Small browser-only dev toys — quizzes and puzzles in terminal style. No backend, no signup, just open and play."><meta name="robots" content="index, follow"><meta property="og:type" content="website"><meta property="og:title" content="/play — small dev toys by ferhatatagun"><meta property="og:description" content="Browser-only quizzes and puzzles for developers. Terminal-styled, no signup."><meta property="og:url" content="https://ferhatatagun.com/play"><!-- HEAD_svelte-3pwgmm_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-23ot8on" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-23ot8on"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-23ot8on)" filter="url(#glow-ai-logo-23ot8on)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-23ot8on)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1"> <section class="page svelte-m0syyr"><div class="term svelte-m0syyr"><header class="bar svelte-m0syyr" data-svelte-h="svelte-elbbsz"><span class="dot dot--r svelte-m0syyr" aria-hidden="true"></span> <span class="dot dot--y svelte-m0syyr" aria-hidden="true"></span> <span class="dot dot--g svelte-m0syyr" aria-hidden="true"></span> <span class="title svelte-m0syyr">ferhat@atagun: ~/play — zsh</span></header> <div class="body svelte-m0syyr"><p class="line svelte-m0syyr" data-svelte-h="svelte-yoyt4u"><span class="prompt svelte-m0syyr">ferhat@atagun</span><span class="sep svelte-m0syyr">:</span><span class="cwd svelte-m0syyr">~/play</span><span class="sep svelte-m0syyr">$ </span><span class="cmd svelte-m0syyr">ls</span></p> <ul class="games svelte-m0syyr"><li><a href="/play/shell-quiz" class="game svelte-m0syyr"><span class="game__perm svelte-m0syyr" data-svelte-h="svelte-1kqy4s1">-rwxr-xr-x</span> <span class="game__name svelte-m0syyr">shell-quiz</span> <span class="game__tag svelte-m0syyr">quiz · 5 min</span> <span class="game__tag game__tag--sub svelte-m0syyr">Twenty real commands. Pick what each one does.</span></a> </li></ul> <p class="line line--spaced meta svelte-m0syyr" data-svelte-h="svelte-19qa94g">More toys later. The constraint is the same as the dev tools:
+				browser-only, no backend, no signup.</p> <p class="line line--spaced svelte-m0syyr" data-svelte-h="svelte-19baun8"><a href="/" class="back svelte-m0syyr">cd /</a> <span class="hint svelte-m0syyr">— back home</span></p></div></div> </section></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/0c9f375" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">0c9f375</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-06-18">2026-06-18</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_5ep5sr = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.30ca4786.js"),
+						import("./_app/immutable/entry/app.63729547.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 8],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>
