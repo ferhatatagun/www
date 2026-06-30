@@ -17,8 +17,11 @@ export const GET: RequestHandler = async ({ url }) => {
 
 	const staticPages = [
 		'/',
+		'/tools',
 		'/blog',
 		'/blog/feed.xml',
+		'/play',
+		'/play/shell-quiz',
 		'/projects',
 		'/education',
 		'/experience',
@@ -26,6 +29,9 @@ export const GET: RequestHandler = async ({ url }) => {
 		'/resume',
 		'/search'
 	];
+
+	// Pages that deserve a higher crawl priority than the default 0.6.
+	const highPriority = new Set(['/', '/tools', '/blog', '/resume']);
 
 	const projectPages = projectItems.map((p) => `/projects/${p.slug}`);
 	const skillPages = skillItems.map((s) => `/skills/${s.slug}`);
@@ -44,7 +50,7 @@ export const GET: RequestHandler = async ({ url }) => {
 				return `\n  <url>\n    <loc>${origin}${normalizePath(
 					p
 				)}</loc>\n    <lastmod>${lastMod}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>${
-					p === '/' ? '1.0' : '0.6'
+					p === '/' ? '1.0' : highPriority.has(p) ? '0.8' : '0.6'
 				}</priority>\n  </url>`;
 			})
 			.join('') +

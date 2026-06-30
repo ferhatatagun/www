@@ -34,7 +34,10 @@
 
 		return !isBlank(email) && reg.test(email);
 	};
-	const pageTitle = useTitle(title, titleSuffix);
+	// The home page is the most important URL on the site, so its <title>
+	// carries the name + role + the keywords people actually search, instead
+	// of the generic "Home | Ferhat Atagün" that useTitle() would produce.
+	const pageTitle = 'Ferhat Atagün — Frontend Team Lead & AI-Native Frontend Engineer';
 	const canonical = `${siteOrigin}/`;
 	const summary = description;
 	const image = `${siteOrigin}/icons/fa-fav-icon.png`;
