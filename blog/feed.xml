@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 30 Jun 2026 22:50:03 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 08 Aug 2026 22:44:12 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Nobody&apos;s model failed. The interface did.</title>
+    <link>https://ferhatatagun.com/blog/nobodys-model-failed</link>
+    <description>Enterprise AI pilots fail at 70–90% while forward-deployed engineer postings jump 800%. The canonical success story is 6–8 weeks of integration followed by four months of adoption work, and the reported win condition is 98% adoption — not accuracy. An adoption number is an interface number, and the role isn&apos;t staffed against that.</description>
+    <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/nobodys-model-failed</guid>
+  </item>
   <item>
     <title>Google&apos;un göremediği bir blog yayınladım</title>
     <link>https://ferhatatagun.com/blog/google-un-goremedigi-blog</link>
