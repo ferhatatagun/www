@@ -160,12 +160,20 @@
 		<p
 			class="text-[var(--tertiary-text)] text-[1.15em] font-300 max-w-720px mt-3 mx-auto md:mx-0 leading-relaxed"
 		>
-			Four small tools for making the Claude API legible —
+			Five small tools for making the Claude API legible —
 			<span class="text-[var(--accent-text)]">observe</span> a single call,
 			<span class="text-[var(--accent-text)]">replay</span> an agent trace,
 			<span class="text-[var(--accent-text)]">compare</span> prompts side by side,
-			<span class="text-[var(--accent-text)]">build</span> a tool-use loop interactively. Same design
-			language, distinct angle each.
+			<span class="text-[var(--accent-text)]">build</span> a tool-use loop interactively,
+			<span class="text-[var(--accent-text)]">pre-flight</span> a prompt before you send it. Same
+			design language, distinct angle each.
+		</p>
+		<p
+			class="tools-constraint text-[var(--secondary-text)] text-[0.95em] font-300 max-w-720px mt-4 mx-auto md:mx-0 leading-relaxed"
+		>
+			One constraint runs through all five: they have to work in a room where you can't install
+			anything and the data can't leave. Browser-only, BYOK, no backend — not a stylistic choice,
+			just what's left when the environment isn't yours.
 		</p>
 	</header>
 

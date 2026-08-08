@@ -22,6 +22,7 @@ import post14EnRaw from '$lib/md/blog/see-the-prompt-before-you-ship-it-en.md?ra
 import postTr7Raw from '$lib/md/blog/prompt-shipping-once-onunu-gor.md?raw';
 import post15EnRaw from '$lib/md/blog/how-i-shipped-a-blog-google-couldnt-see-en.md?raw';
 import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
+import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -69,12 +70,21 @@ const contentMapEn: Record<string, string> = {
 	'debug-claude-agents-by-replaying-traces': post12EnRaw,
 	'four-tools-in-two-weekends': post13EnRaw,
 	'see-the-prompt-before-you-ship-it': post14EnRaw,
-	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw
+	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw,
+	'nobodys-model-failed': post16EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'nobodys-model-failed',
+		title: "Nobody's model failed. The interface did.",
+		excerpt:
+			"Enterprise AI pilots fail at 70–90% while forward-deployed engineer postings jump 800%. The canonical success story is 6–8 weeks of integration followed by four months of adoption work, and the reported win condition is 98% adoption — not accuracy. An adoption number is an interface number, and the role isn't staffed against that.",
+		date: '2026-08-09',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Adoption', 'Frontend', 'LLM', 'Deployment']
+	},
 	{
 		slug: 'google-un-goremedigi-blog',
 		title: "Google'un göremediği bir blog yayınladım",
