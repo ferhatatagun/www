@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2026 07:44:06 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 10 Aug 2026 07:50:31 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>I accidentally built a forward-deployed engineer&apos;s field kit</title>
+    <link>https://ferhatatagun.com/blog/accidental-fde-field-kit</link>
+    <description>I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn&apos;t. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else&apos;s regulated environment. What five tools look like when you finally name the rule you were following.</description>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/accidental-fde-field-kit</guid>
+  </item>
   <item>
     <title>Nobody&apos;s model failed. The interface did.</title>
     <link>https://ferhatatagun.com/blog/nobodys-model-failed</link>

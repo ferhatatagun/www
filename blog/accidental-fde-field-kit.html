@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.257168da.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.f8e43797.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.f2098978.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.02487342.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.b1621c80.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.dd91c6ac.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.03a4af4f.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.7910adc4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.104f75bf.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.8c44d4b5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.a467b788.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.f938a1a5.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.e047ac8b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.b89b9d94.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.4e8ce688.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.feae133d.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.229590ca.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.ca05bf28.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.49eca3f4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.371e1320.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.3cd296a6.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.2c2c90f8.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/helpers.a6227e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/site.e6ac68e3.js"><title>I accidentally built a forward-deployed engineer's field kit | Ferhat Atagün</title><!-- HEAD_svelte-633q7y_START --><link rel="canonical" href="https://ferhatatagun.com/blog/accidental-fde-field-kit"><meta name="description" content="I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn't. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else's regulated environment. What five tools look like when you finally name the rule you were following."><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/accidental-fde-field-kit"><meta property="og:title" content="I accidentally built a forward-deployed engineer's field kit"><meta property="og:description" content="I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn't. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else's regulated environment. What five tools look like when you finally name the rule you were following."><meta property="og:image" content="https://ferhatatagun.com/og-cards/accidental-fde-field-kit.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:site_name" content="Ferhat Atagün"><meta property="article:published_time" content="2026-08-10"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="I accidentally built a forward-deployed engineer's field kit"><meta name="twitter:description" content="I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn't. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else's regulated environment. What five tools look like when you finally name the rule you were following."><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/accidental-fde-field-kit.png"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"I accidentally built a forward-deployed engineer's field kit","description":"I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn't. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else's regulated environment. What five tools look like when you finally name the rule you were following.","datePublished":"2026-08-10","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/accidental-fde-field-kit"}}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"I accidentally built a forward-deployed engineer's field kit","item":"https://ferhatatagun.com/blog/accidental-fde-field-kit"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-633q7y_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-ji99bq9" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-ji99bq9"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-ji99bq9)" filter="url(#glow-ai-logo-ji99bq9)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-ji99bq9)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1rlt6qy"><span class="main-title__name svelte-1rlt6qy">I accidentally built a forward-deployed engineer's field kit</span><span class="main-title__cursor svelte-1rlt6qy" aria-hidden="true" data-svelte-h="svelte-1mtawu5">_</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   <a href="https://dev.to/ferhatatagun/i-accidentally-built-a-forward-deployed-engineers-field-kit-khi" target="_blank" rel="noopener noreferrer" class="blog-mirror-link text-[0.85em] decoration-none svelte-c9jxdx" title="Also published on dev.to — comment/react there">dev.to ↗</a></div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-08-10">August 10, 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>10 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Forward Deployed Engineering </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Developer Tools </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Claude </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Anthropic </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">BYOK </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Architecture </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><h1 id="i-accidentally-built-a-forward-deployed-engineers-field-kit">I accidentally built a forward-deployed engineer&#39;s field kit</h1>
+<p>A year ago I deleted <code>@anthropic-ai/sdk</code> from a project and wrote about 150
+lines of TypeScript to replace it.</p>
+<p>The reason I gave myself was honest and boring. The SDK pulled <code>node:fs/promises</code>
+in through an agent-toolset module, which broke the browser bundle. I could have
+waited for a browser-clean entry point. Instead I hand-rolled an SSE parser and
+<a href="https://ferhatatagun.com/blog/browser-only-claude-streaming">wrote a post about why</a>.</p>
+<p>I filed that away as a bundler story.</p>
+<p>Then I read a line in a piece about tooling for forward-deployed engineers — the
+people who get sent into a customer&#39;s building to make an AI deployment actually
+work. Roughly: every framework dependency is something the customer&#39;s security
+team will ask about, and bare-metal code is easier to debug in an environment
+that isn&#39;t yours.</p>
+<p>Same decision. Same reasoning. Different discipline, different job title,
+different problem entirely — except it wasn&#39;t a different problem.</p>
+<p>I hadn&#39;t been solving a bundler issue. I&#39;d been solving a <em>deployment</em> problem
+without ever naming it, which is why I mistook it for taste.</p>
+<p>This post is what happened when I went back through every architectural decision
+in the five tools I&#39;ve shipped and asked a question I&#39;d never asked: what
+constraint was actually operating here?</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Five tools, all browser-only, all BYOK, none with a backend. I picked those for what felt like preference and mild laziness.</li>
+<li>They are, almost exactly, the constraints of working inside someone else&#39;s regulated environment: nothing to install, no data leaving the boundary, nothing for a security team to threat-model, minimal dependency surface to defend.</li>
+<li>Constraints converge. Two disciplines solving the same <em>shape</em> of problem land on the same engineering decisions without talking to each other.</li>
+<li>Mapped against the four categories FDE tooling usually gets split into — observability, evaluation, orchestration, guardrails — I have three. The fourth is missing, and pretending otherwise would be the least interesting thing I could do.</li>
+<li>The transferable part isn&#39;t my repos. It&#39;s that an articulated constraint is what separates a tool from a toy, and most side projects never articulate one.</li>
+</ul>
+<h2 id="the-decision-and-the-reason-underneath-it">The decision, and the reason underneath it</h2>
+<p>Here&#39;s the thing about the SDK call that I got wrong at the time.</p>
+<p>I framed it as: <em>the SDK doesn&#39;t work in my environment, so I&#39;ll write the
+minimum that does.</em> Reasonable. What I actually did was reduce the tool&#39;s
+dependency surface to <code>fetch</code> and a <code>TextDecoder</code> — and the consequence of that,
+which I did not think about even once, is that the entire runtime is
+inspectable. There&#39;s no framework doing something clever between my code and the
+wire. When a stream terminates weirdly, I read my own parser.</p>
+<p>That property is worthless when you&#39;re debugging on your own laptop with a
+debugger attached and all the time in the world.</p>
+<p>It is the whole game when you&#39;re on a call with someone else&#39;s engineer, in
+someone else&#39;s network, and they ask why the response cut off, and the honest
+answer needs to arrive in the next ninety seconds.</p>
+<p>I didn&#39;t build it for that. But that&#39;s what it is.</p>
+<h2 id="four-more-decisions-same-shape">Four more decisions, same shape</h2>
+<p>Once I started looking, the pattern didn&#39;t stop.</p>
+<p><strong>BYOK — bring your own key.</strong> What I told myself: I don&#39;t want to run a proxy,
+I don&#39;t want to hold anyone&#39;s credentials, and I <em>really</em> don&#39;t want to pay for
+strangers&#39; tokens. All true. What it actually is: the customer&#39;s key never
+leaves their browser and their prompt never touches infrastructure I control.
+There&#39;s no data-processing agreement to negotiate because there&#39;s no data
+processing. The &quot;I&#39;m too lazy to run a backend&quot; version and the &quot;this passes a
+compliance review&quot; version are the same architecture.</p>
+<p><strong>No backend at all.</strong> What I told myself: static hosting is free and I don&#39;t
+want to maintain servers for a side project. What it actually is: there is no
+server to threat-model, no attack surface to document, no uptime story to tell,
+and no vendor security questionnaire that takes six weeks to clear. The thing a
+security team can approve fastest is the thing that doesn&#39;t exist.</p>
+<p><strong>Every tool is a URL.</strong> What I told myself: it&#39;s easier to share a link than to
+tell someone to clone a repo and run <code>npm install</code>. What it actually is: zero
+install. Nothing enters the customer&#39;s machine. The people who most need a
+diagnostic tool are exactly the people who are least permitted to install one.</p>
+<p><strong>Cost rendered live, not logged.</strong> What I told myself: the number is
+interesting and I wanted to see it move. What it actually is: the person who
+approves the renewal can read it without asking anyone. I made <a href="https://ferhatatagun.com/blog/prompt-caching-nobody-measures">an entire
+argument</a> about
+prompt caching being the cheapest optimization nobody measures, and I still
+framed it as an engineering-hygiene issue. It isn&#39;t. It&#39;s a
+<a href="https://ferhatatagun.com/blog/nobodys-model-failed">trust issue</a>, and trust is
+what decides whether a deployment survives.</p>
+<p>Four decisions. Four reasons I gave at the time that were true but shallow. One
+constraint underneath all of them that I never said out loud.</p>
+<h2 id="what-browser-only-actually-costs">What browser-only actually costs</h2>
+<p>I don&#39;t want to make this sound cleaner than it is, so let me argue against
+myself for a second.</p>
+<p>Browser-only is a genuinely bad choice for a lot of software. You get no
+server-side secret handling. You fight CORS constantly — and for some providers
+you simply lose, because they don&#39;t send the headers and there&#39;s nothing you can
+do about it from a tab. You have no durable storage worth the name, no scheduled
+jobs, no background processing, no way to do anything computationally serious.
+You can&#39;t build a product this way. I&#39;m not going to pretend you can.</p>
+<p>But none of those limitations bind on a <em>diagnostic instrument</em>.</p>
+<p>A multimeter doesn&#39;t need a database. The tool that tells you why the system is
+behaving strangely is not the system. It has to be trustworthy, portable, and
+readable — and it has to work at the exact moment when everything heavier is
+unavailable to you. Every constraint I listed as a cost is irrelevant to that
+job, and two of them (no storage, no server) are the reason it can be used at
+all in a place that would reject a real deployment.</p>
+<p>The limitation and the qualification are the same fact viewed from two sides.</p>
+<h2 id="the-map">The map</h2>
+<p>FDE tooling gets described, fairly consistently, in four categories: agent
+orchestration, evaluation, guardrails, and observability. I went and put my
+things in the boxes.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Tool</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Observability</td>
+<td><a href="https://claudoscope-labs.vercel.app">claudoscope</a></td>
+<td>X-rays a live call — token composition, cache reads and writes, cost, as the response streams</td>
+</tr>
+<tr>
+<td>Observability / debugging</td>
+<td><a href="https://agentreplay.vercel.app">agent-replay</a></td>
+<td>Replays a finished agent trace as a timeline instead of a wall of nested JSON</td>
+</tr>
+<tr>
+<td>Pre-flight</td>
+<td><a href="https://context-lens-sigma.vercel.app">context-lens</a></td>
+<td>Counts the prompt before you send it — window position, cost, caching boundaries</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td><a href="https://prompt-lab-promptly.vercel.app">prompt-lab</a></td>
+<td>Two prompts, one input, side by side on output, latency and cost</td>
+</tr>
+<tr>
+<td>Orchestration</td>
+<td><a href="https://tool-lab-bice.vercel.app">tool-lab</a></td>
+<td>Sandboxes the tool-use loop — define tools, mock responses, drive it by hand</td>
+</tr>
+<tr>
+<td><strong>Guardrails</strong></td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody></table>
+<p>Three categories covered, one pre-flight bonus, one hole.</p>
+<p>I want to be careful here, because there&#39;s a version of this post that&#39;s a
+portfolio tour with an FDE hat on, and that version is worthless. So: I didn&#39;t
+plan this map. It&#39;s a retrofit. The tools were built one at a time over a couple
+of weekends each, and the only through-line I could have articulated at the time
+was <a href="https://ferhatatagun.com/blog/four-tools-in-two-weekends">&quot;make the Claude API
+legible&quot;</a>. The
+categories came from somebody else&#39;s discipline. The fit is real, and it&#39;s also
+an accident, and both of those things can be true.</p>
+<h2 id="the-gap-i-cant-paper-over">The gap I can&#39;t paper over</h2>
+<p>Guardrails is missing, and it&#39;s the one that would hurt most in the field.</p>
+<p>Guardrails is the layer that keeps model output inside a shape your code can
+safely consume. You ask for <code>{&quot;risk&quot;: &quot;high&quot;|&quot;medium&quot;|&quot;low&quot;, &quot;score&quot;: 0-100}</code>.
+What actually comes back, across enough calls:</p>
+<ul>
+<li>the JSON wrapped in a markdown fence</li>
+<li><code>&quot;HIGH&quot;</code> instead of <code>&quot;high&quot;</code> — enum drift</li>
+<li><code>&quot;very high&quot;</code> — an enum value that doesn&#39;t exist, invented on the spot</li>
+<li><code>&quot;score&quot;: &quot;85&quot;</code> as a string, silently breaking arithmetic downstream</li>
+<li><code>score</code> missing entirely</li>
+<li>a sentence of prose before the JSON starts</li>
+</ul>
+<p>Every one of those either crashes your parser or, worse, doesn&#39;t — and quietly
+puts a wrong category on someone&#39;s dashboard.</p>
+<p>The reason this needs an instrument rather than a unit test is that the failures
+are <strong>distributional</strong>. You run it once, it works, you ship. Then one call in
+forty returns a hallucinated enum, and you never see it, because you looked at
+one sample. What you need is the failure <em>rate</em>, broken down by failure type,
+across fifty runs. That&#39;s a different question than &quot;does it work.&quot;</p>
+<p>So that&#39;s the sixth tool, and it&#39;s the honest one to build next: define a
+schema, run a prompt against it N times, show the distribution of ways it
+breaks. Same constraints as the rest — browser-only, BYOK, no backend, because
+by now those aren&#39;t a preference, they&#39;re the spec.</p>
+<h2 id="why-any-of-this-generalizes">Why any of this generalizes</h2>
+<p>Strip out my repos and there&#39;s one idea left worth keeping.</p>
+<p>Most side projects have no constraint. That&#39;s why they read as toys — not
+because they&#39;re small or unfinished, but because nothing about them was <em>forced</em>.
+Any decision could have gone the other way and nothing would have broken. A
+reader can feel that.</p>
+<p>A tool with an articulated constraint reads completely differently, even when
+it&#39;s fifty lines. &quot;This runs in a tab because it has to work where nothing can
+be installed&quot; is a design brief. &quot;This is a React app&quot; is not. The first one
+tells you what the author was up against; the second tells you what they typed.</p>
+<p>The uncomfortable part, for me, is that I had the constraint the whole time and
+couldn&#39;t name it. I shipped five things under a rule I was following
+unconsciously, and because I never said it out loud, I also couldn&#39;t tell you
+what the work was evidence <em>of</em>. It looked like five small tools. It was a
+position.</p>
+<p>If you&#39;re a frontend engineer looking at the current AI hiring market and
+wondering how to become legible to it: you very likely already have
+constraint-shaped work sitting in your repos. The move isn&#39;t to build something
+new. It&#39;s to go back and figure out what you were actually solving for, and then
+say it in the README.</p>
+<p>Mine took a year and a stranger&#39;s sentence about security teams.</p>
+<hr>
+<p><em>Part two of a series on the last mile of enterprise AI. Part one is
+<a href="https://ferhatatagun.com/blog/nobodys-model-failed">Nobody&#39;s model failed. The interface did.</a>
+Part three is about the thing I keep saying and haven&#39;t yet defended properly —
+that on this kind of work, the deliverable isn&#39;t the prompt, it&#39;s the eval.</em></p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=I%20accidentally%20built%20a%20forward-deployed%20engineer's%20field%20kit%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Faccidental-fde-field-kit" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Faccidental-fde-field-kit" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/four-tools-in-two-weekends" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">What I learned shipping four open-source Claude dev-tools in two weekends</a> </li><li><a href="/blog/iki-hafta-sonu-dort-tool" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">İki hafta sonunda dört açık kaynak Claude dev-tool shiplerken neler öğrendim</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"> <a href="/blog/nobodys-model-failed" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">Nobody's model failed. The interface did. →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/e9febf9" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">e9febf9</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-08-10">2026-08-10</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_18npc3b = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.f2098978.js"),
+						import("../_app/immutable/entry/app.7910adc4.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>
