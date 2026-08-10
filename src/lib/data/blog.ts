@@ -23,6 +23,7 @@ import postTr7Raw from '$lib/md/blog/prompt-shipping-once-onunu-gor.md?raw';
 import post15EnRaw from '$lib/md/blog/how-i-shipped-a-blog-google-couldnt-see-en.md?raw';
 import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
 import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
+import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -71,12 +72,21 @@ const contentMapEn: Record<string, string> = {
 	'four-tools-in-two-weekends': post13EnRaw,
 	'see-the-prompt-before-you-ship-it': post14EnRaw,
 	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw,
-	'nobodys-model-failed': post16EnRaw
+	'nobodys-model-failed': post16EnRaw,
+	'accidental-fde-field-kit': post17EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'accidental-fde-field-kit',
+		title: "I accidentally built a forward-deployed engineer's field kit",
+		excerpt:
+			"I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn't. Browser-only, BYOK, no backend, minimal dependencies \u2014 the constraints I picked out of preference turn out to be the exact constraints of working inside someone else's regulated environment. What five tools look like when you finally name the rule you were following.",
+		date: '2026-08-10',
+		tags: ['Forward Deployed Engineering', 'Developer Tools', 'Claude', 'Anthropic', 'BYOK', 'Architecture']
+	},
 	{
 		slug: 'nobodys-model-failed',
 		title: "Nobody's model failed. The interface did.",
@@ -310,7 +320,9 @@ export const devToMirrors: Record<string, string> = {
 	'how-i-shipped-a-blog-google-couldnt-see':
 		'https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc',
 	'nobodys-model-failed':
-		'https://dev.to/ferhatatagun/nobodys-model-failed-the-interface-did-5dh3'
+		'https://dev.to/ferhatatagun/nobodys-model-failed-the-interface-did-5dh3',
+	'accidental-fde-field-kit':
+		'https://dev.to/ferhatatagun/i-accidentally-built-a-forward-deployed-engineers-field-kit-khi'
 };
 
 export function getDevToUrl(slug: string): string | undefined {

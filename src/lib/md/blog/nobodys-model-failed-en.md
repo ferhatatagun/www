@@ -197,6 +197,6 @@ That's the next post.
 
 ---
 
-*This is part one of a series on the last mile of enterprise AI. Part two —
-"I accidentally built a forward-deployed engineer's field kit" — is about the
-tools, and the constraint that turns out to define them.*
+*This is part one of a series on the last mile of enterprise AI. Part two is
+[I accidentally built a forward-deployed engineer's field kit](https://ferhatatagun.com/blog/accidental-fde-field-kit)
+— the tools, and the constraint that turns out to define them.*
