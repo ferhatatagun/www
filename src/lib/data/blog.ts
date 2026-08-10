@@ -308,7 +308,9 @@ export const devToMirrors: Record<string, string> = {
 	'see-the-prompt-before-you-ship-it':
 		'https://dev.to/ferhatatagun/see-the-prompt-before-you-ship-it-51ao',
 	'how-i-shipped-a-blog-google-couldnt-see':
-		'https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc'
+		'https://dev.to/ferhatatagun/how-i-shipped-a-blog-google-couldnt-see-2nlc',
+	'nobodys-model-failed':
+		'https://dev.to/ferhatatagun/nobodys-model-failed-the-interface-did-5dh3'
 };
 
 export function getDevToUrl(slug: string): string | undefined {
