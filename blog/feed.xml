@@ -5,8 +5,15 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 10 Aug 2026 07:50:31 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2026 17:37:03 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>The deliverable isn&apos;t the prompt. It&apos;s the eval.</title>
+    <link>https://ferhatatagun.com/blog/the-eval-is-the-deliverable</link>
+    <description>Every field guide says define your evals before you build — and on day three at a customer site you have no labelled data, no domain expertise, and five examples off someone&apos;s screen. The advice is right; the framing is wrong. &quot;Is this good?&quot; needs ground truth. &quot;Did this change?&quot; needs only a frozen snapshot, and that one you can have this afternoon.</description>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/the-eval-is-the-deliverable</guid>
+  </item>
   <item>
     <title>I accidentally built a forward-deployed engineer&apos;s field kit</title>
     <link>https://ferhatatagun.com/blog/accidental-fde-field-kit</link>
