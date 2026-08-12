@@ -24,6 +24,7 @@ import post15EnRaw from '$lib/md/blog/how-i-shipped-a-blog-google-couldnt-see-en
 import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
 import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
 import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
+import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -73,12 +74,21 @@ const contentMapEn: Record<string, string> = {
 	'see-the-prompt-before-you-ship-it': post14EnRaw,
 	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw,
 	'nobodys-model-failed': post16EnRaw,
-	'accidental-fde-field-kit': post17EnRaw
+	'accidental-fde-field-kit': post17EnRaw,
+	'the-eval-is-the-deliverable': post18EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'the-eval-is-the-deliverable',
+		title: "The deliverable isn't the prompt. It's the eval.",
+		excerpt:
+			"Every field guide says define your evals before you build \u2014 and on day three at a customer site you have no labelled data, no domain expertise, and five examples off someone's screen. The advice is right; the framing is wrong. \"Is this good?\" needs ground truth. \"Did this change?\" needs only a frozen snapshot, and that one you can have this afternoon.",
+		date: '2026-08-11',
+		tags: ['Forward Deployed Engineering', 'Evals', 'LLM', 'Prompt Engineering', 'Testing', 'Deployment']
+	},
 	{
 		slug: 'accidental-fde-field-kit',
 		title: "I accidentally built a forward-deployed engineer's field kit",
@@ -322,7 +332,9 @@ export const devToMirrors: Record<string, string> = {
 	'nobodys-model-failed':
 		'https://dev.to/ferhatatagun/nobodys-model-failed-the-interface-did-5dh3',
 	'accidental-fde-field-kit':
-		'https://dev.to/ferhatatagun/i-accidentally-built-a-forward-deployed-engineers-field-kit-khi'
+		'https://dev.to/ferhatatagun/i-accidentally-built-a-forward-deployed-engineers-field-kit-khi',
+	'the-eval-is-the-deliverable':
+		'https://dev.to/ferhatatagun/the-deliverable-isnt-the-prompt-its-the-eval-35cp'
 };
 
 export function getDevToUrl(slug: string): string | undefined {
