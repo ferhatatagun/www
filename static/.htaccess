@@ -1,50 +1,64 @@
 # ferhatatagun.com — static site serving rules
 #
 # The site is fully prerendered: every real page exists on disk as
-# `<path>.html`. Before this file existed, the host's default behaviour
-# returned 200 or 500 for paths that don't exist:
+# `<path>.html`. Two things this file has to get right.
 #
-#   /skills/PoolsApi.md   → 200 + the Skills page   (Google indexed it)
-#   /blog/olmayan-yazi    → 500
-#   /skills/uydurma-xyz   → 500
+# 1. Missing URLs must 404.
+#    Before this file existed the host answered 200 or 500 for paths that
+#    don't exist — /skills/PoolsApi.md returned 200 with the Skills page,
+#    /blog/anything-invalid returned 500. Search Console reported ten of
+#    those as "server error (5xx)". A 200 on a URL that isn't real is
+#    duplicate content Google will index; a 500 signals an unhealthy site
+#    and suppresses crawl rate.
 #
-# Search Console reported 10 "server error (5xx)" pages, all of them
-# non-existent .md paths the prerender crawler had once emitted. A page that
-# answers 200 for a URL that isn't real is a duplicate-content and
-# crawl-budget problem; a 500 tells Google the site is unhealthy.
+# 2. Canonical URLs must resolve in one hop.
+#    The adapter emits BOTH `tools.html` and a `tools/` directory (the
+#    latter holds child pages). If the directory is matched first, mod_dir
+#    issues a 301 to `/tools/` — so every canonical URL on the site cost a
+#    redirect. The .html twin is therefore checked BEFORE the directory,
+#    and DirectorySlash is off so mod_dir never adds a slash on its own.
 
-# MultiViews guesses filenames (asking for /skills/Pool returns Pools.html).
-# We do the extension mapping ourselves, explicitly.
 Options -MultiViews
 DirectoryIndex index.html
+
+<IfModule mod_dir.c>
+  # Without this, a request for /tools (a real directory) is 301'd to
+  # /tools/ before our rewrite gets a chance to serve tools.html.
+  DirectorySlash Off
+</IfModule>
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
-  # 1. Anything that exists on disk is served as-is.
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  # 1. Exact file on disk — serve it.
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # 2. Prerendered twin. Checked before the directory test so /tools maps
+  #    to tools.html rather than redirecting into the tools/ directory.
+  #    No leading slash in the substitution: that would turn an internal
+  #    rewrite into an external 301.
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ $1.html [L]
+
+  # 3. Directory with its own index.
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+?)/?$ $1/index.html [L]
+
+  # 4. Any other real directory (assets, og-cards, …).
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # 2. Extensionless URLs map to their prerendered .html twin.
-  #    /blog/nobodys-model-failed → /blog/nobodys-model-failed.html
-  RewriteCond %{REQUEST_FILENAME}.html -f
-  RewriteRule ^(.+?)/?$ /$1.html [L]
-
-  # 3. Trailing-slash variant of the same thing.
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.+?)/?$ /$1/index.html [L]
-
-  # 4. Nothing matched — the URL is genuinely missing. Return a real 404
-  #    rather than falling through to a 200 shell or erroring with a 500.
+  # 5. Nothing matched — the URL is genuinely missing.
   RewriteRule ^ - [R=404,L]
 </IfModule>
 
 ErrorDocument 404 /404.html
 
-# Long-cache immutable build assets, revalidate HTML every time.
+# Hashed build assets never change under the same name; HTML must always be
+# revalidated so a deploy is visible immediately.
 <IfModule mod_headers.c>
-  <FilesMatch "\.(html)$">
+  <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(js|css|woff2|png|jpg|jpeg|svg|webp|ico)$">
