@@ -1,0 +1,60 @@
+# ferhatatagun.com — static site serving rules
+#
+# The site is fully prerendered: every real page exists on disk as
+# `<path>.html`. Before this file existed, the host's default behaviour
+# returned 200 or 500 for paths that don't exist:
+#
+#   /skills/PoolsApi.md   → 200 + the Skills page   (Google indexed it)
+#   /blog/olmayan-yazi    → 500
+#   /skills/uydurma-xyz   → 500
+#
+# Search Console reported 10 "server error (5xx)" pages, all of them
+# non-existent .md paths the prerender crawler had once emitted. A page that
+# answers 200 for a URL that isn't real is a duplicate-content and
+# crawl-budget problem; a 500 tells Google the site is unhealthy.
+
+# MultiViews guesses filenames (asking for /skills/Pool returns Pools.html).
+# We do the extension mapping ourselves, explicitly.
+Options -MultiViews
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # 1. Anything that exists on disk is served as-is.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # 2. Extensionless URLs map to their prerendered .html twin.
+  #    /blog/nobodys-model-failed → /blog/nobodys-model-failed.html
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule ^(.+?)/?$ /$1.html [L]
+
+  # 3. Trailing-slash variant of the same thing.
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule ^(.+?)/?$ /$1/index.html [L]
+
+  # 4. Nothing matched — the URL is genuinely missing. Return a real 404
+  #    rather than falling through to a 200 shell or erroring with a 500.
+  RewriteRule ^ - [R=404,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# Long-cache immutable build assets, revalidate HTML every time.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(js|css|woff2|png|jpg|jpeg|svg|webp|ico)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(xml|txt)$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml application/javascript application/json image/svg+xml
+</IfModule>
