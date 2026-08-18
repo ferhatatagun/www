@@ -22,6 +22,10 @@
 	{:else}
 		<img
 			class={`w-15px h-15px ${inverted ? 'invert-100' : ''}`}
+			width="15"
+			height="15"
+			loading="lazy"
+			decoding="async"
 			class:chip-icon-logo-inverted={$theme && inverted}
 			src={logo}
 			alt={name}

@@ -91,12 +91,20 @@
 	</button>
 
 	<div bind:this={element} class="row overflow-hidden box-content w-180px">
-		{#each items as item}
+		{#each items as item, i}
 			<div class="carrousel-item box-content w-150px p-15px col-center">
+				<!-- Intrinsic width/height let the browser reserve the box before
+				     CSS or the image itself arrives, which is what keeps this strip
+				     from shoving the hero around during load (CLS). The first few
+				     are above the fold, so they load eagerly; the rest are lazy. -->
 				<img
 					class="carrousel-item__img w-120px h-120px aspect-square"
 					src={getAssetURL(item.logo)}
-					alt={item.name}
+					alt={`${item.name} logo`}
+					width="120"
+					height="120"
+					loading={i < 4 ? 'eager' : 'lazy'}
+					decoding="async"
 				/>
 				<span class="text-center m-t-20px">{item.name}</span>
 			</div>

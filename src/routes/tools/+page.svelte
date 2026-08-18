@@ -196,11 +196,16 @@
 								rel="noreferrer"
 								class="tool-shot decoration-none"
 							>
+								<!-- Intrinsic size lets the browser reserve the slot before the
+								     screenshot downloads; without it each card jumps as images land. -->
 								<img
 									src={t.screenshots[0].src}
-									alt={t.name}
+									alt={`${t.name} screenshot`}
 									class="w-full rounded-lg border border-[var(--border)] block"
+									width="1512"
+									height="930"
 									loading="lazy"
+									decoding="async"
 								/>
 							</a>
 						{/if}

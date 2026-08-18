@@ -18,6 +18,29 @@
   <meta name="pwa-starter" content="pwa-starter" />
 
   <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <!-- Resource hints. The font request is discovered inside CSS otherwise,
+       which serialises DNS → TLS → CSS → font. Warming the connection in the
+       document head overlaps that work with HTML parsing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Inter was declared in the CSS variables but never actually loaded, so
+       every page rendered in the system fallback. Loaded here with
+       display=swap: text paints immediately in the fallback and upgrades
+       when Inter arrives, so there is no invisible-text pause. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+
+  <!-- Feed autodiscovery — the feed existed but nothing advertised it. -->
+  <link rel="alternate" type="application/rss+xml" title="Ferhat Atagün — Blog"
+    href="%sveltekit.assets%/blog/feed.xml" />
+
   <link rel="manifest" href="%sveltekit.assets%/manifest.json" />
   <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
 
