@@ -15,6 +15,7 @@
 	import { name as homeName, lastName as homeLastName, description as homeDescription, links as homeLinks } from '@data/home';
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import AICardIcon from '$lib/components/AICard/AICardIcon.svelte';
+	import { clampDescription } from '$lib/seo/schema';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 
@@ -39,7 +40,9 @@
 	// of the generic "Home | Ferhat Atagün" that useTitle() would produce.
 	const pageTitle = 'Ferhat Atagün — Frontend Team Lead & AI-Native Frontend Engineer';
 	const canonical = `${siteOrigin}/`;
-	const summary = description;
+	// The on-page intro is long by design; the meta description has to fit the
+	// ~155 chars Google actually renders.
+	const summary = clampDescription(description);
 	const image = `${siteOrigin}/icons/fa-fav-icon.png`;
 	const siteName = 'Ferhat Atagün';
 	const fullName = `${homeName} ${homeLastName}`;

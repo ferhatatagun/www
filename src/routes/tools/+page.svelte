@@ -4,6 +4,7 @@
 	import { base } from '$app/paths';
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
+	import { breadcrumbSchema, clampDescription } from '$lib/seo/schema';
 
 	const tools = projects.filter((p) => p.type === 'AI Developer Tool');
 	const pageTitle = 'Open-source AI dev-tools — Ferhat Atagün';
@@ -16,6 +17,11 @@
 	    authored by the canonical Person entity at /#person. Each tool's
 	    layout JSON-LD references this CollectionPage by @id, closing the
 	    graph: tool ↔ suite ↔ person. */
+	const breadcrumb = breadcrumbSchema([
+		{ name: 'Home', url: siteOrigin },
+		{ name: 'Tools', url: `${siteOrigin}/tools` }
+	]);
+
 	const suiteJsonLd = {
 		'@context': 'https://schema.org',
 		'@graph': [
@@ -139,19 +145,20 @@
 <svelte:head>
 	<title>{pageTitle}</title>
 	<link rel="canonical" href={canonical} />
-	<meta name="description" content={description} />
+	<meta name="description" content={clampDescription(description)} />
 	<meta name="robots" content="index, follow" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={canonical} />
 	<meta property="og:title" content={pageTitle} />
-	<meta property="og:description" content={description} />
+	<meta property="og:description" content={clampDescription(description)} />
 	<meta property="og:image" content={image} />
 	<meta property="og:site_name" content="Ferhat Atagün" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={pageTitle} />
-	<meta name="twitter:description" content={description} />
+	<meta name="twitter:description" content={clampDescription(description)} />
 	<meta name="twitter:image" content={image} />
 	{@html `<script type="application/ld+json">${JSON.stringify(suiteJsonLd)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumb)}</script>`}
 </svelte:head>
 
 <div class="tools-page p-x-6 md:p-x-10 p-y-8 max-w-1200px mx-auto w-full">
@@ -198,9 +205,9 @@
 							</a>
 						{/if}
 						<div>
-							<h3 class="m-0 font-700 text-[1.45em] tool-name" style:color={t.color}>
+							<h2 class="m-0 font-700 text-[1.45em] tool-name" style:color={t.color}>
 								{t.name}
-							</h3>
+							</h2>
 							<p
 								class="text-[var(--secondary-text)] m-t-2 text-[0.95em] font-300 leading-relaxed"
 							>

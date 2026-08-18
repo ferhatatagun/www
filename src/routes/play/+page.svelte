@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { siteOrigin } from '$lib/data/site';
+	import { collectionPageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	// Mini directory for browser-based, no-backend toys that fit the
 	// dev-tool aesthetic. New entries get added here; each game is a
@@ -24,6 +25,27 @@
 	<meta property="og:title" content="/play — small dev toys by ferhatatagun" />
 	<meta property="og:description" content="Browser-only quizzes and puzzles for developers. Terminal-styled, no signup." />
 	<meta property="og:url" content={`${siteOrigin}/play`} />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="/play — small dev toys by ferhatatagun" />
+	<meta name="twitter:description" content="Browser-only quizzes and puzzles for developers. Terminal-styled, no signup." />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		collectionPageSchema({
+			name: 'Browser-only dev toys',
+			description:
+				'Small browser-only developer toys — quizzes and puzzles in terminal style. No backend, no signup.',
+			url: `${SITE.origin}/play`,
+			items: games.map((g) => ({ name: g.name, url: `${SITE.origin}/play/${g.slug}` }))
+		})
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([
+			{ name: 'Home', url: SITE.origin },
+			{ name: 'Play', url: `${SITE.origin}/play` }
+		])
+	)}</script>`}
 </svelte:head>
 
 <section class="page">
@@ -35,9 +57,10 @@
 			<span class="title">ferhat@atagun: ~/play — zsh</span>
 		</header>
 		<div class="body">
-			<p class="line">
+			<h1 class="line sr-title">
 				<span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~/play</span><span class="sep">$ </span><span class="cmd">ls</span>
-			</p>
+				<span class="sr-only">Browser-only dev toys by Ferhat Atagün</span>
+			</h1>
 
 			<ul class="games">
 				{#each games as g}
@@ -111,6 +134,25 @@
 		line-height: 1.7;
 	}
 	.line { margin: 0; }
+	/* The h1 has to carry a real sentence for search engines and screen
+	   readers, but the design is a terminal prompt. Keep the prompt visible
+	   and the sentence available to anything that reads text. */
+	.sr-title {
+		font-size: 0.92rem;
+		font-weight: inherit;
+		letter-spacing: inherit;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
 	.line--spaced { margin-top: 1.2rem; }
 	.prompt { color: #a78bfa; font-weight: 600; }
 	.sep { color: #71717a; }

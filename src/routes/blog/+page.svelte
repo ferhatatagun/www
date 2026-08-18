@@ -15,6 +15,7 @@
 	import { useTitle } from '$lib/utils/helpers';
 	import { siteOrigin } from '$lib/data/site';
 	import Fuse from 'fuse.js';
+	import { breadcrumbSchema, SITE } from '$lib/seo/schema';
 	import { onMount } from 'svelte';
 
 	const pageTitle = useTitle(title, titleSuffix);
@@ -138,6 +139,12 @@
 	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content={`${siteOrigin}/og-cards/_blog-index.png`} />
 	<link rel="alternate" type="application/rss+xml" title={pageTitle} href={`${siteOrigin}${base}/blog/feed.xml`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([
+			{ name: 'Home', url: SITE.origin },
+			{ name: 'Blog', url: `${SITE.origin}/blog` }
+		])
+	)}</script>`}
 	{@html `<script type="application/ld+json">${JSON.stringify({
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
@@ -202,7 +209,7 @@
 									<span>{minutes} min</span>
 								{/if}
 							</div>
-							<h3 class="featured-card__title">{post.title}</h3>
+							<h2 class="featured-card__title">{post.title}</h2>
 							<p class="featured-card__excerpt">{post.excerpt}</p>
 							<div class="featured-card__arrow">Read →</div>
 						</a>
@@ -348,7 +355,7 @@
 								<span>{minutes} min</span>
 							{/if}
 						</div>
-						<h3 class="post-card__title">{post.title}</h3>
+						<h2 class="post-card__title">{post.title}</h2>
 						<p class="post-card__excerpt">{post.excerpt}</p>
 						<div class="post-card__tags">
 							{#each post.tags.slice(0, 4) as tag}

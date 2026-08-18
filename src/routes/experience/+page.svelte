@@ -7,6 +7,8 @@
 	import { base } from '$app/paths';
 	import type { Experience } from '$lib/types';
 	import { isBlank } from '@riadh-adrani/utils';
+	import { siteOrigin } from '$lib/data/site';
+	import { profilePageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	let result: Array<Experience> = [...items];
 
@@ -45,6 +47,24 @@
     <meta property="og:title" content={title} />
     <meta property="og:description" content="Work experience and roles: past positions and responsibilities." />
     <meta property="og:site_name" content="Ferhat Atagün" />
+    <meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content="Work experience and roles: past positions and responsibilities." />
+    <meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+    {@html `<script type="application/ld+json">${JSON.stringify(
+        profilePageSchema({
+            description:
+                'Frontend engineering roles held by Ferhat Atagün — team lead at HangiKredi, earlier positions at Netmera, RND and others.',
+            url: `${siteOrigin}/experience`
+        })
+    )}</script>`}
+    {@html `<script type="application/ld+json">${JSON.stringify(
+        breadcrumbSchema([
+            { name: 'Home', url: SITE.origin },
+            { name: 'Experience', url: `${SITE.origin}/experience` }
+        ])
+    )}</script>`}
 </svelte:head>
 <SearchPage {title} on:search={onSearch}>
 	<div class="xp-cta-bar">

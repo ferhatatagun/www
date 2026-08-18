@@ -41,11 +41,11 @@
 		<CardLogo src={getAssetURL(experience.logo)} alt={experience.company} size={55} />
 		<div class="col ml-0 md:ml-[20px] gap-3 w-full">
 			<div class="col ">
-				<h3
+				<h2
 					class="flex text-[0.9em] flex-col items-start sm:flex-row sm:items-center justify-between sm:gap-5 md:flex-col md:items-start md:gap-0 lg:flex-row lg:items-center"
 				>
 					<CardTitle title={`${experience.name}`} />
-				</h3>
+				</h2>
 				<div class="row flex-wrap items-start m-b-2 gap-1 text-0.9em font-300">
 					{#each info as item}
 						<Chip>

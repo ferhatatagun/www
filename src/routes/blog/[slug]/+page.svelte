@@ -7,6 +7,9 @@
 	import { base } from '$app/paths';
 	import { getPostTitle, getPostExcerpt, getDevToUrl } from '@data/blog';
 	import type { ContentLang } from '@data/blog';
+	import Seo from '$lib/components/Seo.svelte';
+	import { blogPostingSchema, breadcrumbSchema } from '$lib/seo/schema';
+	import { getLangAlternates } from '@data/blog';
 
 	export let data: {
 		post: import('@data/blog').BlogPost | null;
@@ -33,11 +36,21 @@
 
 	$: displayTitle = getPostTitle(post, lang);
 	$: displayExcerpt = getPostExcerpt(post, lang);
-	$: currentContent = (lang === 'en' && contentEn) ? contentEn : (contentTr ?? contentEn);
+	$: rawContent = (lang === 'en' && contentEn) ? contentEn : (contentTr ?? contentEn);
+
+	/**
+	 * The page shell already renders the post title as the document's single
+	 * <h1>. The markdown source also opens with `# Title` (kept there so the
+	 * files stay portable — dev.to and Medium both want it), which produced two
+	 * h1 elements on every post page. Strip the leading heading at render time
+	 * and let the shell own the h1.
+	 */
+	$: currentContent = rawContent ? rawContent.replace(/^\s*#\s+.*(\r?\n)+/, '') : rawContent;
 
 	$: pageTitle = useTitle(displayTitle, titleSuffix);
 	const canonical = `${siteOrigin}/blog/${post.slug}`;
 	const ogImage = `${siteOrigin}/og-cards/${post.slug}.png`;
+	const langAlternates = getLangAlternates(post.slug, siteOrigin);
 
 	$: shareText = encodeURIComponent(`${displayTitle} — Ferhat Atagün`);
 	const shareUrl = encodeURIComponent(canonical);
@@ -46,44 +59,32 @@
 	const devToUrl = getDevToUrl(post.slug);
 </script>
 
-<svelte:head>
-	<title>{pageTitle}</title>
-	<link rel="canonical" href={canonical} />
-	<meta name="description" content={displayExcerpt} />
-	<meta name="robots" content="index, follow" />
-	<meta property="og:type" content="article" />
-	<meta property="og:url" content={canonical} />
-	<meta property="og:title" content={displayTitle} />
-	<meta property="og:description" content={displayExcerpt} />
-	<meta property="og:image" content={ogImage} />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="630" />
-	<meta property="og:site_name" content="Ferhat Atagün" />
-	<meta property="article:published_time" content={post.date} />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={displayTitle} />
-	<meta name="twitter:description" content={displayExcerpt} />
-	<meta name="twitter:image" content={ogImage} />
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'BlogPosting',
-		headline: displayTitle,
-		description: displayExcerpt,
-		datePublished: post.date,
-		author: { '@type': 'Person', '@id': `${siteOrigin}/#person`, name: 'Ferhat Atagün', url: siteOrigin },
-		publisher: { '@type': 'Person', '@id': `${siteOrigin}/#person`, name: 'Ferhat Atagün', url: siteOrigin },
-		mainEntityOfPage: { '@type': 'WebPage', '@id': canonical }
-	})}</script>`}
-	{@html `<script type="application/ld+json">${JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'BreadcrumbList',
-		itemListElement: [
-			{ '@type': 'ListItem', position: 1, name: 'Home', item: siteOrigin },
-			{ '@type': 'ListItem', position: 2, name: 'Blog', item: `${siteOrigin}/blog` },
-			{ '@type': 'ListItem', position: 3, name: displayTitle, item: canonical }
-		]
-	})}</script>`}
-</svelte:head>
+<Seo
+	title={pageTitle}
+	description={displayExcerpt}
+	{canonical}
+	image={ogImage}
+	type="article"
+	publishedTime={post.date}
+	modifiedTime={post.date}
+	alternates={langAlternates}
+	schemas={[
+		blogPostingSchema({
+			title: displayTitle,
+			description: displayExcerpt,
+			slug: post.slug,
+			datePublished: post.date,
+			tags: post.tags,
+			body: currentContent ?? undefined,
+			lang
+		}),
+		breadcrumbSchema([
+			{ name: 'Home', url: siteOrigin },
+			{ name: 'Blog', url: `${siteOrigin}/blog` },
+			{ name: displayTitle, url: canonical }
+		])
+	]}
+/>
 
 <CommonPage title={displayTitle}>
 	<article class="blog-article blog-article--ai col gap-6">

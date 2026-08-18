@@ -8,6 +8,8 @@
 	import { title, items } from '@data/education';
 	import type { Education } from '$lib/types';
 	import { getTimeDiff } from '$lib/utils';
+	import { siteOrigin } from '$lib/data/site';
+	import { webPageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	let search = '';
 
@@ -36,6 +38,18 @@
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/education`} />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content="Education: schools, departments and courses." />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		webPageSchema({ name: 'Education', description: 'Schools, departments and courses completed by Ferhat Atagün.', url: `${SITE.origin}/education` })
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([{ name: 'Home', url: SITE.origin }, { name: 'Education', url: `${SITE.origin}/education` }])
+	)}</script>`}
     <meta property="og:title" content={title} />
     <meta property="og:description" content="Education: schools, departments and courses." />
     <meta property="og:site_name" content="Ferhat Atagün" />

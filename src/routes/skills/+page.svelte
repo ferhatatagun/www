@@ -7,6 +7,7 @@
 	import Card from '$lib/components/Card/Card.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import { base } from '$app/paths';
+	import { collectionPageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	let result = groupByCategory('');
 	const isAICategory = (slug: string) => slug === 'ai-llm';
@@ -25,6 +26,18 @@
 	<meta name="robots" content="index, follow" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={`${siteOrigin}/skills`} />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content="Technologies, languages and tools: skills and details." />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		collectionPageSchema({ name: 'Skills', description: 'Technologies, languages and tools Ferhat Atagün works with.', url: `${SITE.origin}/skills` })
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([{ name: 'Home', url: SITE.origin }, { name: 'Skills', url: `${SITE.origin}/skills` }])
+	)}</script>`}
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content="Technologies, languages and tools: skills and details." />
 	<meta property="og:site_name" content="Ferhat Atagün" />

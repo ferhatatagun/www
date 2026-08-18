@@ -10,6 +10,7 @@
 	import ProjectCard from '$lib/components/ProjectCard/ProjectCard.svelte';
 	import SearchPage from '$lib/components/SearchPage.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { collectionPageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	interface SkillFilter extends Skill {
 		isSelected?: boolean;
@@ -78,6 +79,18 @@
     <meta name="robots" content="index, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`${siteOrigin}/projects`} />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content="Open-source AI developer tools and professional frontend work." />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		collectionPageSchema({ name: 'Projects', description: 'Open-source AI developer tools and professional frontend work by Ferhat Atagün.', url: `${SITE.origin}/projects` })
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([{ name: 'Home', url: SITE.origin }, { name: 'Projects', url: `${SITE.origin}/projects` }])
+	)}</script>`}
     <meta property="og:title" content={title} />
     <meta property="og:description" content="Open-source AI developer tools and professional frontend work." />
     <meta property="og:site_name" content="Ferhat Atagün" />

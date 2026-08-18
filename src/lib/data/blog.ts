@@ -341,6 +341,46 @@ export function getDevToUrl(slug: string): string | undefined {
 	return devToMirrors[slug];
 }
 
+/**
+ * TR ↔ EN sibling posts. These are separate URLs telling the same story in two
+ * languages; without hreflang Google treats them as competing duplicates and
+ * picks one, usually the wrong one for the reader's locale.
+ */
+export const translationPairs: Array<[en: string, tr: string]> = [
+	['browser-only-claude-streaming', 'tarayicida-claude-streaming-sdk-siz'],
+	['prompt-caching-nobody-measures', 'prompt-caching-kimsenin-olcmedigi'],
+	['stop-choosing-prompts-by-vibes', 'prompt-secimi-his-degil-olcum'],
+	['build-the-sandbox-first', 'tek-bir-tool-yazmadan-once-sandbox'],
+	['debug-claude-agents-by-replaying-traces', 'claude-agent-debug-trace-replay'],
+	['four-tools-in-two-weekends', 'iki-hafta-sonu-dort-tool'],
+	['see-the-prompt-before-you-ship-it', 'prompt-shipping-once-onunu-gor'],
+	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog']
+];
+
+/**
+ * hreflang alternates for a post. Returns [] when the post has no sibling —
+ * emitting a lone self-referential hreflang is noise.
+ */
+export function getLangAlternates(
+	slug: string,
+	origin: string
+): Array<{ lang: string; href: string }> {
+	for (const [en, tr] of translationPairs) {
+		if (slug === en || slug === tr) {
+			return [
+				{ lang: 'en', href: `${origin}/blog/${en}` },
+				{ lang: 'tr', href: `${origin}/blog/${tr}` }
+			];
+		}
+	}
+	return [];
+}
+
+/** Most recent post date — used as the sitemap lastmod for blog listing pages. */
+export function latestPostDate(): string {
+	return sortedItems.length ? sortedItems[0].date : new Date().toISOString().slice(0, 10);
+}
+
 export function getPostBySlug(slug: string): BlogPost | undefined {
 	return items.find((p) => p.slug === slug);
 }

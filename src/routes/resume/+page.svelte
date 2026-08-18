@@ -4,6 +4,7 @@
 	import { siteOrigin } from '$lib/data/site';
 	import { Platform } from '$lib/types';
 	import CommonPage from '$lib/components/CommonPage.svelte';
+	import { profilePageSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 
 	const fullName = `${name} ${lastName}`;
 	const linkedin = links.find((l) => l.platform === Platform.Linkedin)?.link;
@@ -22,6 +23,20 @@
 	<meta property="og:title" content={`${title} · ${fullName}`} />
 	<meta property="og:description" content={description} />
 	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={`${title} · ${fullName}`} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		profilePageSchema({ description, url: `${siteOrigin}/resume` })
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([
+			{ name: 'Home', url: SITE.origin },
+			{ name: 'Resume', url: `${SITE.origin}/resume` }
+		])
+	)}</script>`}
 </svelte:head>
 
 <CommonPage {title}>

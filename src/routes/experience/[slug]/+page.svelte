@@ -13,6 +13,7 @@
 	import Banner from '$lib/components/Banner/Banner.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+	import { webPageSchema, breadcrumbSchema, SITE, clampDescription } from '$lib/seo/schema';
     import { siteOrigin } from '$lib/data/site';
 
 	export let data: { experience?: Experience };
@@ -25,12 +26,31 @@
 <svelte:head>
     {#if data.experience}
         <link rel="canonical" href={`${siteOrigin}/experience/${data.experience.slug}`} />
-        <meta name="description" content={data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`} />
+        <meta name="description" content={clampDescription(data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`)} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${siteOrigin}/experience/${data.experience.slug}`} />
         <meta property="og:title" content={computedTitle} />
-        <meta property="og:description" content={data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`} />
+        <meta property="og:description" content={clampDescription(data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`)} />
         <meta property="og:image" content={getAssetURL(data.experience.logo)} />
+        <meta property="og:site_name" content="Ferhat Atagün" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={computedTitle} />
+        <meta name="twitter:description" content={clampDescription(data.experience.description ?? `${data.experience.name} @ ${data.experience.company}`)} />
+        <meta name="twitter:image" content={getAssetURL(data.experience.logo)} />
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            webPageSchema({
+                name: `${data.experience.name} · ${data.experience.company}`,
+                description: data.experience.description ?? `${data.experience.name} at ${data.experience.company}`,
+                url: `${SITE.origin}/experience/${data.experience.slug}`
+            })
+        )}</script>`}
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            breadcrumbSchema([
+                { name: 'Home', url: SITE.origin },
+                { name: 'Experience', url: `${SITE.origin}/experience` },
+                { name: data.experience.name, url: `${SITE.origin}/experience/${data.experience.slug}` }
+            ])
+        )}</script>`}
     {/if}
 </svelte:head>
 
@@ -94,6 +114,7 @@
 					{#if data.experience.description}
 						<Markdown
 							content={data.experience.description ?? 'This place is yet to be filled...'}
+						headingBase={2}
 						/>
 					{:else}
 						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">

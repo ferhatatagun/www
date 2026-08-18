@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 	import { base } from '$app/paths';
 	import { siteOrigin } from '$lib/data/site';
+	import { webApplicationSchema, breadcrumbSchema, SITE } from '$lib/seo/schema';
 	import { questions } from '@data/shell-quiz';
 
 	type Phase = 'intro' | 'playing' | 'done';
@@ -95,6 +96,27 @@
 	<meta property="og:title" content="shell-quiz · ferhatatagun" />
 	<meta property="og:description" content="20 real shell commands. Pick what each one does. See if you're a n00b or a wizard." />
 	<meta property="og:url" content={`${siteOrigin}/play/shell-quiz`} />
+	<meta property="og:site_name" content="Ferhat Atagün" />
+	<meta property="og:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="shell-quiz · ferhatatagun" />
+	<meta name="twitter:description" content="20 real shell commands. Pick what each one does. See if you're a n00b or a wizard." />
+	<meta name="twitter:image" content={`${siteOrigin}/icons/fa-fav-icon.png`} />
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		webApplicationSchema({
+			name: 'shell-quiz',
+			description:
+				'A 20-question terminal-styled quiz on real shell commands — find, grep, sed, awk, ssh tunnels, signal numbers and the ones you wish you had known sooner.',
+			url: `${SITE.origin}/play/shell-quiz`
+		})
+	)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(
+		breadcrumbSchema([
+			{ name: 'Home', url: SITE.origin },
+			{ name: 'Play', url: `${SITE.origin}/play` },
+			{ name: 'shell-quiz', url: `${SITE.origin}/play/shell-quiz` }
+		])
+	)}</script>`}
 </svelte:head>
 
 <section class="page">
@@ -110,7 +132,7 @@
 				<p class="line">
 					<span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~/play</span><span class="sep">$ </span><span class="cmd">cat README.md</span>
 				</p>
-				<h1 class="intro__h1"># shell-quiz</h1>
+				<h1 class="intro__h1">shell-quiz</h1>
 				<p class="intro__p">
 					Twenty real shell commands. Pick what each one actually does.
 					No tricks — wrong answers are plausible commands, not typos.
@@ -265,6 +287,10 @@
 		.cursor { animation: none; opacity: 0.6; }
 	}
 
+	.intro__h1::before {
+		content: '# ';
+		color: #71717a;
+	}
 	.intro__h1 {
 		font-size: 1.4rem;
 		margin: 0.8rem 0 0.6rem;

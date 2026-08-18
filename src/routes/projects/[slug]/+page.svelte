@@ -12,6 +12,7 @@
 	import Banner from '$lib/components/Banner/Banner.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
 	import CardDivider from '$lib/components/Card/CardDivider.svelte';
+	import { softwareApplicationSchema, breadcrumbSchema, SITE, clampDescription } from '$lib/seo/schema';
 	import { siteOrigin } from '$lib/data/site';
 	import Screenshot from '$lib/components/Screenshot/Screenshot.svelte';
 
@@ -34,12 +35,34 @@
 <svelte:head>
     {#if data.project}
         <link rel="canonical" href={`${siteOrigin}/projects/${data.project.slug}`} />
-        <meta name="description" content={data.project.summary ?? data.project.type} />
+        <meta name="description" content={data.project.shortDescription ?? data.project.type} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${siteOrigin}/projects/${data.project.slug}`} />
         <meta property="og:title" content={computedTitle} />
-        <meta property="og:description" content={data.project.summary ?? data.project.type} />
+        <meta property="og:description" content={clampDescription(data.project.shortDescription ?? data.project.type)} />
         <meta property="og:image" content={getAssetURL(data.project.logo)} />
+        <meta property="og:site_name" content="Ferhat Atagün" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={computedTitle} />
+        <meta name="twitter:description" content={clampDescription(data.project.shortDescription ?? data.project.type)} />
+        <meta name="twitter:image" content={getAssetURL(data.project.logo)} />
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            softwareApplicationSchema({
+                name: data.project.name,
+                description: data.project.shortDescription ?? data.project.type,
+                slug: data.project.slug,
+                liveUrl: data.project.links?.find((l) => /live|demo|website/i.test(l.label))?.to,
+                repoUrl: data.project.links?.find((l) => /git|source|repo/i.test(l.label))?.to,
+                image: getAssetURL(data.project.logo)
+            })
+        )}</script>`}
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            breadcrumbSchema([
+                { name: 'Home', url: SITE.origin },
+                { name: 'Projects', url: `${SITE.origin}/projects` },
+                { name: data.project.name, url: `${SITE.origin}/projects/${data.project.slug}` }
+            ])
+        )}</script>`}
     {/if}
 </svelte:head>
 
@@ -96,7 +119,7 @@
 			<div class="pt-3 pb-1 overflow-x-hidden w-full">
 				<div class="px-10px m-y-5">
 					{#if data.project.description}
-						<Markdown content={data.project.description} />
+						<Markdown content={data.project.description} headingBase={2} />
 					{:else}
 						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
 							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />

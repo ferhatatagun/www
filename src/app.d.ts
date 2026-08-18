@@ -22,3 +22,7 @@ declare module '*.md?raw' {
 // the footer as a deploy fingerprint.
 declare const __BUILD_SHA__: string;
 declare const __BUILD_DATE__: string;
+
+// Prism language packs ship no type declarations. They're imported purely for
+// their side effect (registering a grammar), so an empty module is accurate.
+declare module 'prismjs/components/*';

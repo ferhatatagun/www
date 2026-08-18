@@ -1,7 +1,8 @@
 <script lang="ts">
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import type { Icon } from '$lib/types';
 	/** Optional icon for AICard, with gradient-style treatment */
-	export let icon = 'i-carbon-machine-learning-model';
+	export let icon: Icon = 'i-carbon-machine-learning-model';
 </script>
 
 <span class="ai-card-icon">

@@ -12,6 +12,7 @@
 	import CardLogo from '$lib/components/Card/CardLogo.svelte';
 	import Markdown from '$lib/components/Markdown.svelte';
 	import TabTitle from '$lib/components/TabTitle.svelte';
+	import { webPageSchema, breadcrumbSchema, SITE, clampDescription } from '$lib/seo/schema';
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import Banner from '$lib/components/Banner/Banner.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
@@ -75,12 +76,31 @@
 <svelte:head>
     {#if data.skill}
         <link rel="canonical" href={`${siteOrigin}/skills/${data.skill.slug}`} />
-        <meta name="description" content={data.skill.description ?? `Notes on ${data.skill.name}`} />
+        <meta name="description" content={clampDescription(data.skill.description ?? `Notes on ${data.skill.name}`)} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={`${siteOrigin}/skills/${data.skill.slug}`} />
         <meta property="og:title" content={computedTitle} />
-        <meta property="og:description" content={data.skill.description ?? `Notes on ${data.skill.name}`} />
+        <meta property="og:description" content={clampDescription(data.skill.description ?? `Notes on ${data.skill.name}`)} />
         <meta property="og:image" content={getAssetURL(data.skill.logo)} />
+        <meta property="og:site_name" content="Ferhat Atagün" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={computedTitle} />
+        <meta name="twitter:description" content={clampDescription(data.skill.description ?? `Notes on ${data.skill.name}`)} />
+        <meta name="twitter:image" content={getAssetURL(data.skill.logo)} />
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            webPageSchema({
+                name: data.skill.name,
+                description: data.skill.description ?? `Notes on ${data.skill.name}`,
+                url: `${SITE.origin}/skills/${data.skill.slug}`
+            })
+        )}</script>`}
+        {@html `<script type="application/ld+json">${JSON.stringify(
+            breadcrumbSchema([
+                { name: 'Home', url: SITE.origin },
+                { name: 'Skills', url: `${SITE.origin}/skills` },
+                { name: data.skill.name, url: `${SITE.origin}/skills/${data.skill.slug}` }
+            ])
+        )}</script>`}
     {/if}
 </svelte:head>
 
@@ -98,7 +118,7 @@
 			<div class="pt-3 pb-1 overflow-x-hidden w-full">
 				<div class="px-10px m-y-5">
 					{#if data.skill.description}
-						<Markdown content={data.skill.description ?? 'This place is yet to be filled...'} />
+						<Markdown content={data.skill.description ?? 'This place is yet to be filled...'} headingBase={2} />
 					{:else}
 						<div class="p-5 col-center gap-3 m-y-auto text-[var(--border)]">
 							<UIcon icon="i-carbon-text-font" classes="text-3.5em" />

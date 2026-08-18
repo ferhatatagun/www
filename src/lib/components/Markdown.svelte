@@ -20,6 +20,31 @@
 	export let content: string;
 
 	/**
+	 * Re-base the content's heading hierarchy so its shallowest heading lands
+	 * at this level. Set to 0 to leave headings untouched.
+	 *
+	 * Each page already renders its own <h1> (the page title), so embedded
+	 * content must start at h2. A fixed offset isn't enough: project READMEs
+	 * open with `#`, some skill docs open with `##`, and a couple start at
+	 * `###`. Shifting everything by +1 fixed the first group and left the
+	 * others skipping straight from the page h1 to an h3. Normalising against
+	 * the *actual* minimum handles all three, and preserves relative depth.
+	 */
+	export let headingBase = 0;
+
+	function rebaseHeadings(html: string, base: number): string {
+		if (base <= 0) return html;
+		const levels = [...html.matchAll(/<h([1-6])[^>]*>/gi)].map((m) => Number(m[1]));
+		if (!levels.length) return html;
+		const shift = base - Math.min(...levels);
+		if (shift === 0) return html;
+		return html.replace(/<(\/?)h([1-6])([^>]*)>/gi, (_m, slash, level, rest) => {
+			const next = Math.min(6, Math.max(1, Number(level) + shift));
+			return `<${slash}h${next}${rest}>`;
+		});
+	}
+
+	/**
 	 * Parsed eagerly so the article body is present in the prerendered HTML
 	 * (critical for SEO — Google indexes the SSR'd markup, and OG/Twitter
 	 * scrapers don't run JS). marked.parse is sync and pure — no DOM access,
@@ -28,7 +53,7 @@
 	 * during prerender. Browser-side sanitisation also unnecessary for the
 	 * same reason; the previous DOMPurify call was defensive overhead.
 	 */
-	$: parsed = marked.parse(content) as string;
+	$: parsed = rebaseHeadings(marked.parse(content) as string, headingBase);
 
 	let container: HTMLDivElement;
 

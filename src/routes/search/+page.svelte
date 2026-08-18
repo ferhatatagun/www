@@ -11,6 +11,7 @@
 	import SearchPage from '$lib/components/SearchPage.svelte';
 	import Chip from '$lib/components/Chip/Chip.svelte';
 	import UIcon from '$lib/components/Icon/UIcon.svelte';
+	import { webPageSchema, SITE } from '$lib/seo/schema';
 
 	type SearchResultItem = {
 		icon: Icon;
@@ -70,9 +71,17 @@
     <title>{title}</title>
     <link rel="canonical" href={`https://ferhatatagun.com/search`} />
     <meta name="description" content="Search projects, skills and experience on this site." />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={`https://ferhatatagun.com/search`} />
+    <meta property="og:site_name" content="Ferhat Atagün" />
+    <meta property="og:image" content="https://ferhatatagun.com/icons/fa-fav-icon.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:image" content="https://ferhatatagun.com/icons/fa-fav-icon.png" />
+    {@html `<script type="application/ld+json">${JSON.stringify(
+        webPageSchema({ name: 'Search', description: 'Search projects, skills and experience on this site.', url: `${SITE.origin}/search` })
+    )}</script>`}
     <meta property="og:title" content={title} />
     <meta property="og:description" content="Search projects, skills and experience on this site." />
     <meta property="og:site_name" content="Ferhat Atagün" />
