@@ -19,6 +19,13 @@
 	export let modifiedTime: string | undefined = undefined;
 
 	$: desc = clampDescription(description);
+
+	/* x-default has to be the same URL on every page in a translation cluster.
+	   Pointing it at each page's own canonical makes the two versions disagree
+	   about which one is the fallback, which is the one thing the annotation
+	   exists to settle. English is the sensible default for a reader whose
+	   language we don't publish in. */
+	$: xDefault = alternates.find((a) => a.lang === 'en')?.href ?? canonical;
 </script>
 
 <svelte:head>
@@ -53,7 +60,7 @@
 		<link rel="alternate" hreflang={alt.lang} href={alt.href} />
 	{/each}
 	{#if alternates.length}
-		<link rel="alternate" hreflang="x-default" href={canonical} />
+		<link rel="alternate" hreflang="x-default" href={xDefault} />
 	{/if}
 
 	{#each schemas as schema}

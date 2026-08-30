@@ -65,6 +65,11 @@
 				title: '“That library will hurt performance” is not a number',
 				slug: 'that-library-will-hurt-performance',
 				lang: 'EN'
+			},
+			{
+				title: '“Performansı bozar” dediğin şey bir sayı değil',
+				slug: 'performansi-bozar-dedigin-sayi-degil',
+				lang: 'TR'
 			}
 		],
 		claudoscope: [

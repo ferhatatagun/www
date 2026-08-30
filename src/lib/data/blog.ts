@@ -26,6 +26,7 @@ import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
 import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
 import post19EnRaw from '$lib/md/blog/that-library-will-hurt-performance-en.md?raw';
+import postTr9Raw from '$lib/md/blog/performansi-bozar-dedigin-sayi-degil.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -60,7 +61,8 @@ const contentMap: Record<string, string> = {
 	'claude-agent-debug-trace-replay': postTr5Raw,
 	'iki-hafta-sonu-dort-tool': postTr6Raw,
 	'prompt-shipping-once-onunu-gor': postTr7Raw,
-	'google-un-goremedigi-blog': postTr8Raw
+	'google-un-goremedigi-blog': postTr8Raw,
+	'performansi-bozar-dedigin-sayi-degil': postTr9Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -88,6 +90,14 @@ export const items: BlogPost[] = [
 		title: '“That library will hurt performance” is not a number',
 		excerpt:
 			"Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost without the thing you're arguing over — so the argument gets settled by whoever sounds most confident. A 410 KB image that loads after LCP is worth zero points; a 124 KB render-blocking script is worth eleven. Sorting by file size sends teams to fix the wrong thing.",
+		date: '2026-08-30',
+		tags: ['Web Performance', 'Core Web Vitals', 'Lighthouse', 'LCP', 'Frontend', 'Developer Tools']
+	},
+	{
+		slug: 'performansi-bozar-dedigin-sayi-degil',
+		title: '“Performansı bozar” dediğin şey bir sayı değil',
+		excerpt:
+			'Bütün performans araçları sayfanın şu anki maliyetini raporluyor. Hiçbiri toplantının asıl konusu olan “o şey olmasa ne olurdu” sorusuna cevap vermiyor — ve karar, elinde sayı olmadığı için daha kendinden emin konuşana kalıyor. LCP’den sonra yüklenen 410 KB’lık bir görsel sıfır puan; 124 KB’lık render-blocking bir script on bir puan. Dosya boyutuna göre sıralamak ekipleri yanlış şeyi düzeltmeye gönderiyor.',
 		date: '2026-08-30',
 		tags: ['Web Performance', 'Core Web Vitals', 'Lighthouse', 'LCP', 'Frontend', 'Developer Tools']
 	},
@@ -364,7 +374,8 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['debug-claude-agents-by-replaying-traces', 'claude-agent-debug-trace-replay'],
 	['four-tools-in-two-weekends', 'iki-hafta-sonu-dort-tool'],
 	['see-the-prompt-before-you-ship-it', 'prompt-shipping-once-onunu-gor'],
-	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog']
+	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog'],
+	['that-library-will-hurt-performance', 'performansi-bozar-dedigin-sayi-degil']
 ];
 
 /**
