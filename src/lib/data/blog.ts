@@ -25,6 +25,7 @@ import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
 import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
 import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
+import post19EnRaw from '$lib/md/blog/that-library-will-hurt-performance-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -75,12 +76,21 @@ const contentMapEn: Record<string, string> = {
 	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw,
 	'nobodys-model-failed': post16EnRaw,
 	'accidental-fde-field-kit': post17EnRaw,
-	'the-eval-is-the-deliverable': post18EnRaw
+	'the-eval-is-the-deliverable': post18EnRaw,
+	'that-library-will-hurt-performance': post19EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'that-library-will-hurt-performance',
+		title: '“That library will hurt performance” is not a number',
+		excerpt:
+			"Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost without the thing you're arguing over — so the argument gets settled by whoever sounds most confident. A 410 KB image that loads after LCP is worth zero points; a 124 KB render-blocking script is worth eleven. Sorting by file size sends teams to fix the wrong thing.",
+		date: '2026-08-30',
+		tags: ['Web Performance', 'Core Web Vitals', 'Lighthouse', 'LCP', 'Frontend', 'Developer Tools']
+	},
 	{
 		slug: 'the-eval-is-the-deliverable',
 		title: "The deliverable isn't the prompt. It's the eval.",

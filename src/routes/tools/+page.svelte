@@ -60,6 +60,13 @@
 		string,
 		Array<{ title: string; slug: string; lang: 'EN' | 'TR' }>
 	> = {
+		'perf-lab': [
+			{
+				title: '“That library will hurt performance” is not a number',
+				slug: 'that-library-will-hurt-performance',
+				lang: 'EN'
+			}
+		],
 		claudoscope: [
 			{
 				title: 'Building a streaming Claude client in the browser — without the SDK',

@@ -198,7 +198,7 @@ function buildSvg(post) {
     Ferhat Atagün
   </text>
   <text x="80" y="610" fill="#475569" font-family="Inter,sans-serif" font-size="18" font-weight="300">
-    Frontend Team Lead · Building open-source Claude dev-tools
+    Frontend Team Lead · Building open-source developer tools
   </text>
   <text x="${CARD_W - 80}" y="585" fill="#64748b" font-family="ui-monospace,SF Mono,monospace" font-size="18" text-anchor="end" letter-spacing="2">
     /tools
