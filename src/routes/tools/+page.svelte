@@ -10,6 +10,10 @@
 	const description =
 		'Six open-source tools built for rooms where you can’t install anything and the data can’t leave — pre-flight a prompt, x-ray an API call, replay an agent trace, A/B test prompts, sandbox a tool-use loop, and simulate a performance budget. Browser-only, no backend.';
 	const canonical = `${siteOrigin}/tools`;
+	/* The cards are served as WebP, but this stays PNG on purpose: it is the
+	   og:image, and some social scrapers still won't render WebP. It is the
+	   only reason claudoscope.png is kept in static/ — don't tidy it away as
+	   an orphan. */
 	const image = `${siteOrigin}/imgs/projects/claudoscope.png`;
 
 	/** ItemList schema that links the tools as a connected suite, all
