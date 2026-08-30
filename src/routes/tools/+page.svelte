@@ -174,7 +174,7 @@
 	</header>
 
 	<div class="tools-grid mt-8">
-		{#each tools as t}
+		{#each tools as t, i}
 			<article class="tool-card">
 				<AICard>
 					<div class="col gap-4">
@@ -189,15 +189,21 @@
 								     screenshot downloads; without it each card jumps as images land.
 								     It has to be each image's *own* size — a single hardcoded pair
 								     reserves the wrong shape for anything with a different aspect
-								     ratio, which reintroduces the shift it was meant to prevent. -->
+								     ratio, which reintroduces the shift it was meant to prevent.
+
+								     The first card is the LCP element on mobile, confirmed by a
+								     Lighthouse run against the live page. Lazy-loading it defers
+								     the one image the score is measured on, so it loads eagerly
+								     and at high priority; the rest stay lazy. -->
 								<img
 									src={t.screenshots[0].src}
 									alt={`${t.name} screenshot`}
 									class="w-full rounded-lg border border-[var(--border)] block"
 									width={t.screenshots[0].width ?? 1512}
 									height={t.screenshots[0].height ?? 930}
-									loading="lazy"
+									loading={i === 0 ? 'eager' : 'lazy'}
 									decoding="async"
+									{...(i === 0 ? { fetchpriority: 'high' } : {})}
 								/>
 							</a>
 						{/if}
