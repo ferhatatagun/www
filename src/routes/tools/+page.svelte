@@ -1,19 +1,18 @@
 <script lang="ts">
-	import { items as projects } from '@data/projects';
+	import { tools, suiteId, suiteName, suiteDescription, toolSchemaNodes } from '@data/tools';
 	import { siteOrigin } from '$lib/data/site';
 	import { base } from '$app/paths';
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import MainTitle from '$lib/components/MainTitle/MainTitle.svelte';
 	import { breadcrumbSchema, clampDescription } from '$lib/seo/schema';
 
-	const tools = projects.filter((p) => p.type === 'AI Developer Tool');
-	const pageTitle = 'Open-source AI dev-tools — Ferhat Atagün';
+	const pageTitle = 'Open-source browser-only dev-tools — Ferhat Atagün';
 	const description =
-		'Five open-source tools that make the Claude API legible — pre-flight a prompt, observe API calls, replay agent traces, A/B test prompts, and sandbox tool-use loops. Same design language, distinct angle each.';
+		'Six open-source tools built for rooms where you can’t install anything and the data can’t leave — pre-flight a prompt, x-ray an API call, replay an agent trace, A/B test prompts, sandbox a tool-use loop, and simulate a performance budget. Browser-only, no backend.';
 	const canonical = `${siteOrigin}/tools`;
 	const image = `${siteOrigin}/imgs/projects/claudoscope.png`;
 
-	/** ItemList schema that links the 5 tools as a connected suite, all
+	/** ItemList schema that links the tools as a connected suite, all
 	    authored by the canonical Person entity at /#person. Each tool's
 	    layout JSON-LD references this CollectionPage by @id, closing the
 	    graph: tool ↔ suite ↔ person. */
@@ -27,34 +26,22 @@
 		'@graph': [
 			{
 				'@type': 'CollectionPage',
-				'@id': `${siteOrigin}/tools#suite`,
-				name: 'Open-source Claude dev-tools',
+				'@id': suiteId,
+				name: suiteName,
 				url: canonical,
-				description,
+				description: suiteDescription,
 				author: { '@id': `${siteOrigin}/#person` },
 				creator: { '@id': `${siteOrigin}/#person` }
 			},
 			{
 				'@type': 'ItemList',
-				name: 'Five Claude dev-tools',
+				name: `${tools.length} browser-only dev-tools`,
 				numberOfItems: tools.length,
-				itemListElement: tools.map((t, i) => {
-					const live = t.links.find((l) => l.label === 'Live')?.to;
-					return {
-						'@type': 'ListItem',
-						position: i + 1,
-						item: {
-							'@type': 'SoftwareApplication',
-							name: t.name,
-							description: t.shortDescription,
-							url: live ?? canonical,
-							applicationCategory: 'DeveloperApplication',
-							operatingSystem: 'Any (web browser)',
-							offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-							author: { '@id': `${siteOrigin}/#person` }
-						}
-					};
-				})
+				itemListElement: toolSchemaNodes().map((item, i) => ({
+					'@type': 'ListItem',
+					position: i + 1,
+					item
+				}))
 			}
 		]
 	};
@@ -163,24 +150,26 @@
 
 <div class="tools-page p-x-6 md:p-x-10 p-y-8 max-w-1200px mx-auto w-full">
 	<header class="text-center md:text-left">
-		<MainTitle classes="md:text-left">Open-source AI dev-tools</MainTitle>
+		<MainTitle classes="md:text-left">Open-source dev-tools</MainTitle>
 		<p
 			class="text-[var(--tertiary-text)] text-[1.15em] font-300 max-w-720px mt-3 mx-auto md:mx-0 leading-relaxed"
 		>
-			Five small tools for making the Claude API legible —
-			<span class="text-[var(--accent-text)]">observe</span> a single call,
-			<span class="text-[var(--accent-text)]">replay</span> an agent trace,
-			<span class="text-[var(--accent-text)]">compare</span> prompts side by side,
-			<span class="text-[var(--accent-text)]">build</span> a tool-use loop interactively,
-			<span class="text-[var(--accent-text)]">pre-flight</span> a prompt before you send it. Same
-			design language, distinct angle each.
+			{tools.length} small tools, one constraint: they have to work in a room where you can't
+			install anything and the data can't leave. Browser-only, BYOK, no backend — not a stylistic
+			choice, just what's left when the environment isn't yours.
 		</p>
 		<p
 			class="tools-constraint text-[var(--secondary-text)] text-[0.95em] font-300 max-w-720px mt-4 mx-auto md:mx-0 leading-relaxed"
 		>
-			One constraint runs through all five: they have to work in a room where you can't install
-			anything and the data can't leave. Browser-only, BYOK, no backend — not a stylistic choice,
-			just what's left when the environment isn't yours.
+			Five of them make the Claude API legible —
+			<span class="text-[var(--accent-text)]">observe</span> a single call,
+			<span class="text-[var(--accent-text)]">replay</span> an agent trace,
+			<span class="text-[var(--accent-text)]">compare</span> prompts side by side,
+			<span class="text-[var(--accent-text)]">build</span> a tool-use loop interactively,
+			<span class="text-[var(--accent-text)]">pre-flight</span> a prompt before you send it. The
+			sixth does the same for a page's performance budget:
+			<span class="text-[var(--accent-text)]">simulate</span> what removing a script would actually
+			cost, before you spend a sprint finding out.
 		</p>
 	</header>
 
@@ -197,13 +186,16 @@
 								class="tool-shot decoration-none"
 							>
 								<!-- Intrinsic size lets the browser reserve the slot before the
-								     screenshot downloads; without it each card jumps as images land. -->
+								     screenshot downloads; without it each card jumps as images land.
+								     It has to be each image's *own* size — a single hardcoded pair
+								     reserves the wrong shape for anything with a different aspect
+								     ratio, which reintroduces the shift it was meant to prevent. -->
 								<img
 									src={t.screenshots[0].src}
 									alt={`${t.name} screenshot`}
 									class="w-full rounded-lg border border-[var(--border)] block"
-									width="1512"
-									height="930"
+									width={t.screenshots[0].width ?? 1512}
+									height={t.screenshots[0].height ?? 930}
 									loading="lazy"
 									decoding="async"
 								/>
@@ -268,7 +260,7 @@
 	</section>
 
 	<footer class="text-center md:text-left mt-12 text-[var(--tertiary-text)] text-[0.95em]">
-		All four are open source, MIT licensed, and BYOK where a key is needed. Source on
+		All {tools.length} are open source, MIT licensed, and BYOK where a key is needed. Source on
 		<a
 			href="https://github.com/ferhatatagun"
 			target="_blank"

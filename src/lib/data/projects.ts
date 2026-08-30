@@ -4,6 +4,26 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'perf-lab',
+		color: '#7cd3a3',
+		description:
+			"Every performance tool reports what a page costs right now; none answer the question teams actually argue about, which is what it would cost without a given resource. Drop in a Lighthouse report, switch things off, and watch the score move. It reimplements Lighthouse's real scoring — the log-normal curves, the p10/median control points, the published category weights — so a projection lands on the scale stakeholders already screenshot. And it ranks by score recovered rather than bytes, which is how a 30 KB render-blocking script ends up above a 400 KB image that loads after LCP.",
+		shortDescription:
+			'Turn “that library will hurt performance” into “that library costs 0.4s of LCP and 7 points”.',
+		links: [
+			{ to: 'https://perf-lab-topaz.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/perf-lab', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'perf-lab',
+		period: {
+			from: new Date(2026, 7, 30)
+		},
+		skills: getSkills('frontend-architecture', 'nextjs', 'reactjs', 'ts'),
+		type: 'Developer Tool',
+		screenshots: [{ label: 'Simulation', src: '/imgs/projects/perf-lab.png', width: 1512, height: 930 }]
+	},
+	{
 		slug: 'context-lens',
 		color: '#c084fc',
 		description:
@@ -21,7 +41,9 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'Preview', src: '/imgs/projects/context-lens.png' }]
+		screenshots: [
+			{ label: 'Preview', src: '/imgs/projects/context-lens.png', width: 1200, height: 630 }
+		]
 	},
 	{
 		slug: 'claudoscope',
@@ -41,7 +63,9 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'X-Ray', src: '/imgs/projects/claudoscope.png' }]
+		screenshots: [
+			{ label: 'X-Ray', src: '/imgs/projects/claudoscope.png', width: 1512, height: 930 }
+		]
 	},
 	{
 		slug: 'agent-replay',
@@ -61,7 +85,9 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'Timeline', src: '/imgs/projects/agent-replay.png' }]
+		screenshots: [
+			{ label: 'Timeline', src: '/imgs/projects/agent-replay.png', width: 1512, height: 930 }
+		]
 	},
 	{
 		slug: 'prompt-lab',
@@ -81,7 +107,9 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'Arena', src: '/imgs/projects/prompt-lab.png' }]
+		screenshots: [
+			{ label: 'Arena', src: '/imgs/projects/prompt-lab.png', width: 1340, height: 1270 }
+		]
 	},
 	{
 		slug: 'tool-lab',
@@ -101,7 +129,9 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'Sandbox', src: '/imgs/projects/tool-lab.png' }]
+		screenshots: [
+			{ label: 'Sandbox', src: '/imgs/projects/tool-lab.png', width: 1440, height: 1180 }
+		]
 	},
 	{
 		slug: 'portfolio',

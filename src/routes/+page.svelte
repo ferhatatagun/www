@@ -16,6 +16,7 @@
 	import AICard from '$lib/components/AICard/AICard.svelte';
 	import AICardIcon from '$lib/components/AICard/AICardIcon.svelte';
 	import { clampDescription } from '$lib/seo/schema';
+	import { tools as suiteTools, suiteId, suiteName, suiteDescription, toolSchemaNodes, liveUrl } from '@data/tools';
 	import { browser } from '$app/environment';
 	import { onMount } from 'svelte';
 
@@ -85,29 +86,16 @@
 	const suiteSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'CollectionPage',
-		'@id': `${siteOrigin}/tools#suite`,
-		name: 'Open-source Claude dev-tools',
+		'@id': suiteId,
+		name: suiteName,
 		url: `${siteOrigin}/tools`,
-		description:
-			'Five browser-only developer tools for the Anthropic Claude API: claudoscope, agent-replay, prompt-lab, tool-lab, context-lens. All BYOK, no backend.',
+		description: suiteDescription,
 		author: { '@id': `${siteOrigin}/#person` },
 		creator: { '@id': `${siteOrigin}/#person` },
-		hasPart: [
-			{ '@type': 'SoftwareApplication', name: 'claudoscope', url: 'https://claudoscope-labs.vercel.app' },
-			{ '@type': 'SoftwareApplication', name: 'agent-replay', url: 'https://agentreplay.vercel.app' },
-			{ '@type': 'SoftwareApplication', name: 'prompt-lab', url: 'https://prompt-lab-promptly.vercel.app' },
-			{ '@type': 'SoftwareApplication', name: 'tool-lab', url: 'https://tool-lab-bice.vercel.app' },
-			{ '@type': 'SoftwareApplication', name: 'context-lens', url: 'https://context-lens-sigma.vercel.app' }
-		]
+		hasPart: toolSchemaNodes()
 	};
 
-	const featuredTools = [
-		{ name: 'claudoscope', href: 'https://claudoscope-labs.vercel.app' },
-		{ name: 'agent-replay', href: 'https://agentreplay.vercel.app' },
-		{ name: 'prompt-lab', href: 'https://prompt-lab-promptly.vercel.app' },
-		{ name: 'tool-lab', href: 'https://tool-lab-bice.vercel.app' },
-		{ name: 'context-lens', href: 'https://context-lens-sigma.vercel.app' }
-	];
+	const featuredTools = suiteTools.map((t) => ({ name: t.name, href: liveUrl(t) ?? `${base}/tools` }));
 </script>
 
 <svelte:head>
