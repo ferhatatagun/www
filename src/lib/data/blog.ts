@@ -32,6 +32,7 @@ import postTr11Raw from '$lib/md/blog/kazara-fde-saha-cantasi.md?raw';
 import postTr12Raw from '$lib/md/blog/teslim-edilen-prompt-degil-eval.md?raw';
 import postTr13Raw from '$lib/md/blog/degistirebildiklerinde-bitti.md?raw';
 import postTr14Raw from '$lib/md/blog/ikinci-musteri-ne-yaptigini-soyler.md?raw';
+import postTr15Raw from '$lib/md/blog/ise-yarayan-kurallar-ve-komutlar.md?raw';
 import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
 import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
 
@@ -74,7 +75,8 @@ const contentMap: Record<string, string> = {
 	'kazara-fde-saha-cantasi': postTr11Raw,
 	'teslim-edilen-prompt-degil-eval': postTr12Raw,
 	'degistirebildiklerinde-bitti': postTr13Raw,
-	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw
+	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw,
+	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -261,6 +263,14 @@ export const items: BlogPost[] = [
 			'DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.',
 		date: '2024-12-20',
 		tags: ['Code Quality', 'Opinion', 'Software Design']
+	},
+	{
+		slug: 'ise-yarayan-kurallar-ve-komutlar',
+		title: 'Gerçekten işe yarayan kurallar ve komutlar',
+		excerpt:
+			'.cursorrules ve slash komutlarını unutulmuş değil faydalı hale getirmek: teoriden değil acıdan başla, listeyi kısa tut, gerçek kullanımdan iterasyon yap.',
+		date: '2025-01-18',
+		tags: ['Cursor', 'Rules', 'Commands', 'Workflow', 'AI']
 	},
 	{
 		slug: 'rules-and-commands-that-stick',
@@ -450,7 +460,8 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['accidental-fde-field-kit', 'kazara-fde-saha-cantasi'],
 	['the-eval-is-the-deliverable', 'teslim-edilen-prompt-degil-eval'],
 	['done-when-they-can-change-it', 'degistirebildiklerinde-bitti'],
-	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler']
+	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler'],
+	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar']
 ];
 
 /**
