@@ -27,6 +27,11 @@ import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
 import post19EnRaw from '$lib/md/blog/that-library-will-hurt-performance-en.md?raw';
 import postTr9Raw from '$lib/md/blog/performansi-bozar-dedigin-sayi-degil.md?raw';
+import postTr10Raw from '$lib/md/blog/kimsenin-modeli-patlamadi.md?raw';
+import postTr11Raw from '$lib/md/blog/kazara-fde-saha-cantasi.md?raw';
+import postTr12Raw from '$lib/md/blog/teslim-edilen-prompt-degil-eval.md?raw';
+import postTr13Raw from '$lib/md/blog/degistirebildiklerinde-bitti.md?raw';
+import postTr14Raw from '$lib/md/blog/ikinci-musteri-ne-yaptigini-soyler.md?raw';
 import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
 import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
 
@@ -64,7 +69,12 @@ const contentMap: Record<string, string> = {
 	'iki-hafta-sonu-dort-tool': postTr6Raw,
 	'prompt-shipping-once-onunu-gor': postTr7Raw,
 	'google-un-goremedigi-blog': postTr8Raw,
-	'performansi-bozar-dedigin-sayi-degil': postTr9Raw
+	'performansi-bozar-dedigin-sayi-degil': postTr9Raw,
+	'kimsenin-modeli-patlamadi': postTr10Raw,
+	'kazara-fde-saha-cantasi': postTr11Raw,
+	'teslim-edilen-prompt-degil-eval': postTr12Raw,
+	'degistirebildiklerinde-bitti': postTr13Raw,
+	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -89,6 +99,46 @@ const contentMapEn: Record<string, string> = {
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'kimsenin-modeli-patlamadi',
+		title: 'Kimsenin modeli patlamadı. Arayüz patladı.',
+		excerpt:
+			"Kurumsal AI pilotları %70–90 oranında başarısız olurken forward-deployed engineer ilanları %800 arttı. Kanonik başarı hikâyesi 6–8 haftalık entegrasyonun ardından dört aylık adoption çalışması, ve raporlanan kazanma koşulu %98 adoption — doğruluk değil. Adoption sayısı bir arayüz sayısıdır, ve rol ona göre kadrolanmıyor.",
+		date: '2026-08-09',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Adoption', 'Frontend', 'LLM', 'Deployment']
+	},
+	{
+		slug: 'kazara-fde-saha-cantasi',
+		title: 'Kazara bir forward-deployed engineer saha çantası kurmuşum',
+		excerpt:
+			"Bir yıl önce bir SDK'yı silip yerine 150 satır yazdım ve bunu bir bundler hikâyesi sandım. Meğer adını hiç koymadan bir deployment problemi çözüyormuşum. Beş aracın her mimari kararına geri dönüp baktığımda hepsinin altında aynı dile getirilmemiş kısıt vardı: kurulacak bir şey yok, sınırdan çıkan veri yok, savunulacak bağımlılık yok.",
+		date: '2026-08-10',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Developer Tools', 'Frontend', 'LLM', 'Architecture']
+	},
+	{
+		slug: 'teslim-edilen-prompt-degil-eval',
+		title: 'Teslim ettiğin şey prompt değil. Eval.',
+		excerpt:
+			"Her saha rehberi inşa etmeden önce eval'lerini tanımla diyor — ve müşteri sahasındaki üçüncü günde etiketli verin, alan uzmanlığın ve birinin ekranından aldığın beş örnekten başka bir şeyin yok. Tavsiye doğru, çerçeve yanlış. \u201cBu iyi mi?\u201d ground truth ister. \u201cBu değişti mi?\u201d sadece dondurulmuş bir snapshot ister, ve ona bu öğleden sonra sahip olabilirsin.",
+		date: '2026-08-11',
+		tags: ['Forward Deployed Engineering', 'Evals', 'LLM', 'Prompt Engineering', 'Testing', 'Deployment']
+	},
+	{
+		slug: 'degistirebildiklerinde-bitti',
+		title: 'Çalıştığında değil, onlar değiştirebildiğinde bitti',
+		excerpt:
+			"En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı bıraktığında ölmez; değiştirilmeyi bıraktığında ölür, ve isteklere cevap verirken aylarca ölü kalabilir. Devir teslim dokümantasyon değildir: bir ekibin bir değişiklik yapıp güvenli olduğunu bilip bilemediğidir.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Handover', 'Deployment', 'Testing', 'LLM']
+	},
+	{
+		slug: 'ikinci-musteri-ne-yaptigini-soyler',
+		title: 'İkinci müşteri ne yaptığını söyler',
+		excerpt:
+			"Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip hangilerinin genelleşeceğini anlamanın yolunu vermiyor. İki müşterinin aynı özelliği istemesi sinyal değil. Ona aynı alttaki kısıtla varması sinyal, ve en güçlü kanıt istek bile değil: zaten elleriyle kurdukları geçici çözüm.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Product', 'Deployment', 'LLM']
+	},
 	{
 		slug: 'the-second-customer',
 		title: 'The second customer tells you what you actually built',
@@ -395,7 +445,12 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['four-tools-in-two-weekends', 'iki-hafta-sonu-dort-tool'],
 	['see-the-prompt-before-you-ship-it', 'prompt-shipping-once-onunu-gor'],
 	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog'],
-	['that-library-will-hurt-performance', 'performansi-bozar-dedigin-sayi-degil']
+	['that-library-will-hurt-performance', 'performansi-bozar-dedigin-sayi-degil'],
+	['nobodys-model-failed', 'kimsenin-modeli-patlamadi'],
+	['accidental-fde-field-kit', 'kazara-fde-saha-cantasi'],
+	['the-eval-is-the-deliverable', 'teslim-edilen-prompt-degil-eval'],
+	['done-when-they-can-change-it', 'degistirebildiklerinde-bitti'],
+	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler']
 ];
 
 /**
