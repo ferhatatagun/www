@@ -207,4 +207,6 @@ leave behind.
 
 *Part three of a series on the last mile of enterprise AI.
 Part one: [Nobody's model failed. The interface did.](https://ferhatatagun.com/blog/nobodys-model-failed) ·
-Part two: [I accidentally built a forward-deployed engineer's field kit](https://ferhatatagun.com/blog/accidental-fde-field-kit)*
+Part two: [I accidentally built a forward-deployed engineer's field kit](https://ferhatatagun.com/blog/accidental-fde-field-kit) ·
+Part four: [You're not done when it works. You're done when they can change it.](https://ferhatatagun.com/blog/done-when-they-can-change-it) ·
+Part five: [The second customer tells you what you actually built](https://ferhatatagun.com/blog/the-second-customer)*

@@ -27,6 +27,8 @@ import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
 import post19EnRaw from '$lib/md/blog/that-library-will-hurt-performance-en.md?raw';
 import postTr9Raw from '$lib/md/blog/performansi-bozar-dedigin-sayi-degil.md?raw';
+import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
+import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -79,12 +81,30 @@ const contentMapEn: Record<string, string> = {
 	'nobodys-model-failed': post16EnRaw,
 	'accidental-fde-field-kit': post17EnRaw,
 	'the-eval-is-the-deliverable': post18EnRaw,
-	'that-library-will-hurt-performance': post19EnRaw
+	'that-library-will-hurt-performance': post19EnRaw,
+	'done-when-they-can-change-it': post20EnRaw,
+	'the-second-customer': post21EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'the-second-customer',
+		title: 'The second customer tells you what you actually built',
+		excerpt:
+			"Forward-deployed work inverts the SaaS shape — depth with one customer instead of breadth across many — which produces capabilities faster than product discovery does and no way to tell which ones generalise. Two customers asking for the same feature isn't the signal. Two customers arriving at it through the same underlying constraint is, and the strongest evidence isn't the request at all: it's the workaround they already built by hand.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Product', 'Deployment', 'LLM']
+	},
+	{
+		slug: 'done-when-they-can-change-it',
+		title: "You're not done when it works. You're done when they can change it.",
+		excerpt:
+			"The deployment I think about most didn't fail — it passed UAT, went live, and six months later nobody had touched it once. A system doesn't die when it stops working; it dies when it stops being changed, and it can be dead for months while still answering requests. Handover isn't documentation: it's whether a team can make a change and know it was safe.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Handover', 'Deployment', 'Testing', 'LLM']
+	},
 	{
 		slug: 'that-library-will-hurt-performance',
 		title: '“That library will hurt performance” is not a number',

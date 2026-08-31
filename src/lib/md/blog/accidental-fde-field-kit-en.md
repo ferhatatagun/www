@@ -197,7 +197,8 @@ Mine took a year and a stranger's sentence about security teams.
 
 ---
 
-*Part two of a series on the last mile of enterprise AI. Part one is
-[Nobody's model failed. The interface did.](https://ferhatatagun.com/blog/nobodys-model-failed)
-Part three is about the thing I keep saying and haven't yet defended properly —
-that on this kind of work, the deliverable isn't the prompt, it's the eval.*
+*Part two of a series on the last mile of enterprise AI.
+Part one: [Nobody's model failed. The interface did.](https://ferhatatagun.com/blog/nobodys-model-failed) ·
+Part three: [The deliverable isn't the prompt. It's the eval.](https://ferhatatagun.com/blog/the-eval-is-the-deliverable) ·
+Part four: [You're not done when it works. You're done when they can change it.](https://ferhatatagun.com/blog/done-when-they-can-change-it) ·
+Part five: [The second customer tells you what you actually built](https://ferhatatagun.com/blog/the-second-customer)*
