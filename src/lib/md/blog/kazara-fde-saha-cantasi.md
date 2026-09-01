@@ -112,6 +112,25 @@ Benimki bir yıl ve bir yabancının güvenlik ekipleri hakkındaki bir cümlesi
 
 ---
 
+**Güncelleme, 1 Eylül 2026.** Boşluk kapandı. Altıncı aracı yazdım —
+[guard-lab](https://guard-lab.vercel.app) — aşağı yukarı yukarıdaki bölümdeki
+şartnameye göre: bir şema tanımla, bir prompt'u ona karşı N kez çalıştır,
+bozulma biçimlerinin dağılımını göster.
+
+Yazarken yanlış anladığım iki şey var. İşi bir hata *oranı* raporlamak diye
+tarif etmişim, oysa tek başına oran yanıltıcı olanı: asıl önemli olan, çöken
+hatalarla, temizleyip geçebileceğin hatalarla, ve temiz parse olup yanlış
+olanlar arasındaki ayrım. Sadece üçüncüsü görünmez, ve bu şeyi yapmanın tüm
+sebebi de o. Bir de temiz çalıştırmayı hiç düşünmemişim — elli geçiş, sıfır
+hata kanıt gibi okunuyor ama değil, o yüzden araç rahatlatıcı bir sıfır yerine
+bir aralık raporluyor.
+
+Artık bir yedinci de var, [perf-lab](https://perf-lab-topaz.vercel.app); Claude
+API'yle değil performans bütçesiyle ilgili. Bu yazıdaki sayı beş olarak
+bırakıldı, çünkü yazıldığında doğru olan buydu.
+
+---
+
 *Bu, kurumsal AI'ın son kilometresi üzerine bir serinin ikinci yazısı.
 Birinci: [Kimsenin modeli patlamadı. Arayüz patladı.](https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi) ·
 Üçüncü: [Teslim ettiğin şey prompt değil. Eval.](https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval) ·

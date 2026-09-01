@@ -197,6 +197,25 @@ Mine took a year and a stranger's sentence about security teams.
 
 ---
 
+**Update, 1 September 2026.** The gap is closed. I built the sixth tool —
+[guard-lab](https://guard-lab.vercel.app) — more or less to the spec in the
+section above: define a schema, run a prompt against it N times, show the
+distribution of ways it breaks.
+
+Two things I got wrong while writing this. I described the job as reporting a
+failure *rate*, and a rate on its own turns out to be the misleading version:
+what matters is the split between failures that throw, failures you can strip,
+and the ones that parse cleanly and are wrong. Only the third kind is
+invisible, and it's the entire reason to build the thing. I also hadn't
+thought about the clean run — fifty passes with no failures reads as proof and
+isn't one, so the tool reports an interval rather than a reassuring zero.
+
+There is also now a seventh, [perf-lab](https://perf-lab-topaz.vercel.app),
+which is about performance budgets rather than the Claude API. The count in
+this post is left at five because that's what was true when it was written.
+
+---
+
 *Part two of a series on the last mile of enterprise AI.
 Part one: [Nobody's model failed. The interface did.](https://ferhatatagun.com/blog/nobodys-model-failed) ·
 Part three: [The deliverable isn't the prompt. It's the eval.](https://ferhatatagun.com/blog/the-eval-is-the-deliverable) ·

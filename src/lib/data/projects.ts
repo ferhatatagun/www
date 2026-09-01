@@ -4,6 +4,26 @@ import type { Project } from '../types';
 
 export const items: Array<Project> = [
 	{
+		slug: 'guard-lab',
+		color: '#b08bf0',
+		description:
+			"You ask a model for a JSON contract, run it once, get exactly that, and ship. Then one call in forty comes back with an enum that doesn't exist, or a number sent as a string — and none of those throw. guard-lab runs a prompt against a schema N times and shows the distribution of ways it breaks, sorted by what your code actually does about each one: crashes you already see, wrappers you can strip, and the ones that parse cleanly and are wrong. It also refuses to let a clean sweep read as proof — fifty runs with zero failures is still consistent with a 7% failure rate, and the tool says so.",
+		shortDescription:
+			'Run a prompt N times against a schema and see how it breaks — especially the failures that parse cleanly and are wrong.',
+		links: [
+			{ to: 'https://guard-lab.vercel.app', label: 'Live', newTab: true },
+			{ to: 'https://github.com/ferhatatagun/guard-lab', label: 'GitHub', newTab: true }
+		],
+		logo: Assets.AI,
+		name: 'guard-lab',
+		period: {
+			from: new Date(2026, 8, 1)
+		},
+		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
+		type: 'AI Developer Tool',
+		screenshots: [{ label: 'Distribution', src: '/imgs/projects/guard-lab.webp', width: 1512, height: 930 }]
+	},
+	{
 		slug: 'perf-lab',
 		color: '#7cd3a3',
 		description:

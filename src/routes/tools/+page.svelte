@@ -8,7 +8,7 @@
 
 	const pageTitle = 'Open-source browser-only dev-tools — Ferhat Atagün';
 	const description =
-		'Six open-source tools built for rooms where you can’t install anything and the data can’t leave — pre-flight a prompt, x-ray an API call, replay an agent trace, A/B test prompts, sandbox a tool-use loop, and simulate a performance budget. Browser-only, no backend.';
+		'Seven open-source tools built for rooms where you can’t install anything and the data can’t leave — pre-flight a prompt, x-ray an API call, replay an agent trace, A/B test prompts, sandbox a tool-use loop, stress a JSON contract, and simulate a performance budget. Browser-only, no backend.';
 	const canonical = `${siteOrigin}/tools`;
 	/* The cards are served as WebP, but this stays PNG on purpose: it is the
 	   og:image, and some social scrapers still won't render WebP. It is the
@@ -177,13 +177,14 @@
 		<p
 			class="tools-constraint text-[var(--secondary-text)] text-[0.95em] font-300 max-w-720px mt-4 mx-auto md:mx-0 leading-relaxed"
 		>
-			Five of them make the Claude API legible —
+			Six of them make the Claude API legible —
 			<span class="text-[var(--accent-text)]">observe</span> a single call,
 			<span class="text-[var(--accent-text)]">replay</span> an agent trace,
 			<span class="text-[var(--accent-text)]">compare</span> prompts side by side,
 			<span class="text-[var(--accent-text)]">build</span> a tool-use loop interactively,
-			<span class="text-[var(--accent-text)]">pre-flight</span> a prompt before you send it. The
-			sixth does the same for a page's performance budget:
+			<span class="text-[var(--accent-text)]">pre-flight</span> a prompt before you send it,
+			<span class="text-[var(--accent-text)]">stress</span> a structured-output contract until it
+			breaks. The seventh does the same for a page's performance budget:
 			<span class="text-[var(--accent-text)]">simulate</span> what removing a script would actually
 			cost, before you spend a sprint finding out.
 		</p>
