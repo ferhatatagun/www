@@ -60,6 +60,18 @@
 		string,
 		Array<{ title: string; slug: string; lang: 'EN' | 'TR' }>
 	> = {
+		'guard-lab': [
+			{
+				title: "The failures that don't throw",
+				slug: 'the-failures-that-dont-throw',
+				lang: 'EN'
+			},
+			{
+				title: 'Patlamayan hatalar',
+				slug: 'patlamayan-hatalar',
+				lang: 'TR'
+			}
+		],
 		'perf-lab': [
 			{
 				title: '“That library will hurt performance” is not a number',

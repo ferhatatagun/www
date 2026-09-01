@@ -33,6 +33,8 @@ import postTr12Raw from '$lib/md/blog/teslim-edilen-prompt-degil-eval.md?raw';
 import postTr13Raw from '$lib/md/blog/degistirebildiklerinde-bitti.md?raw';
 import postTr14Raw from '$lib/md/blog/ikinci-musteri-ne-yaptigini-soyler.md?raw';
 import postTr15Raw from '$lib/md/blog/ise-yarayan-kurallar-ve-komutlar.md?raw';
+import post22EnRaw from '$lib/md/blog/the-failures-that-dont-throw-en.md?raw';
+import postTr16Raw from '$lib/md/blog/patlamayan-hatalar.md?raw';
 import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
 import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
 
@@ -76,7 +78,8 @@ const contentMap: Record<string, string> = {
 	'teslim-edilen-prompt-degil-eval': postTr12Raw,
 	'degistirebildiklerinde-bitti': postTr13Raw,
 	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw,
-	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw
+	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw,
+	'patlamayan-hatalar': postTr16Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -95,12 +98,29 @@ const contentMapEn: Record<string, string> = {
 	'the-eval-is-the-deliverable': post18EnRaw,
 	'that-library-will-hurt-performance': post19EnRaw,
 	'done-when-they-can-change-it': post20EnRaw,
-	'the-second-customer': post21EnRaw
+	'the-second-customer': post21EnRaw,
+	'the-failures-that-dont-throw': post22EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'the-failures-that-dont-throw',
+		title: "The failures that don't throw",
+		excerpt:
+			"One call in forty comes back with \u201cHIGH\u201d instead of \u201chigh\u201d, your switch falls through to the default branch, and the permissive branch auto-approves what the model flagged as maximum risk. Nothing errors. Schema failures are distributional, a single compliance percentage averages over the only distinction that matters, and zero failures in fifty runs is not a zero failure rate.",
+		date: '2026-09-01',
+		tags: ['LLM', 'Guardrails', 'Structured Output', 'Testing', 'Developer Tools', 'Claude']
+	},
+	{
+		slug: 'patlamayan-hatalar',
+		title: 'Patlamayan hatalar',
+		excerpt:
+			"Kırk çağrının biri \u201chigh\u201d yerine \u201cHIGH\u201d dönüyor, switch default dalına düşüyor, ve izin veren dal modelin maksimum risk dediği şeyi otomatik onaylıyor. Hiçbir şey hata vermiyor. Şema hataları dağılımsaldır, tek bir uyum yüzdesi önemli olan tek ayrımın üstünden ortalama alır, ve elli çalıştırmada sıfır hata sıfır hata oranı demek değildir.",
+		date: '2026-09-01',
+		tags: ['LLM', 'Guardrails', 'Structured Output', 'Testing', 'Developer Tools', 'Claude']
+	},
 	{
 		slug: 'kimsenin-modeli-patlamadi',
 		title: 'Kimsenin modeli patlamadı. Arayüz patladı.',
@@ -461,7 +481,8 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['the-eval-is-the-deliverable', 'teslim-edilen-prompt-degil-eval'],
 	['done-when-they-can-change-it', 'degistirebildiklerinde-bitti'],
 	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler'],
-	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar']
+	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar'],
+	['the-failures-that-dont-throw', 'patlamayan-hatalar']
 ];
 
 /**
