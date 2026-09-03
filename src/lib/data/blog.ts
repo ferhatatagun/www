@@ -25,6 +25,20 @@ import postTr8Raw from '$lib/md/blog/google-un-goremedigi-blog.md?raw';
 import post16EnRaw from '$lib/md/blog/nobodys-model-failed-en.md?raw';
 import post17EnRaw from '$lib/md/blog/accidental-fde-field-kit-en.md?raw';
 import post18EnRaw from '$lib/md/blog/the-eval-is-the-deliverable-en.md?raw';
+import post19EnRaw from '$lib/md/blog/that-library-will-hurt-performance-en.md?raw';
+import postTr9Raw from '$lib/md/blog/performansi-bozar-dedigin-sayi-degil.md?raw';
+import postTr10Raw from '$lib/md/blog/kimsenin-modeli-patlamadi.md?raw';
+import postTr11Raw from '$lib/md/blog/kazara-fde-saha-cantasi.md?raw';
+import postTr12Raw from '$lib/md/blog/teslim-edilen-prompt-degil-eval.md?raw';
+import postTr13Raw from '$lib/md/blog/degistirebildiklerinde-bitti.md?raw';
+import postTr14Raw from '$lib/md/blog/ikinci-musteri-ne-yaptigini-soyler.md?raw';
+import postTr15Raw from '$lib/md/blog/ise-yarayan-kurallar-ve-komutlar.md?raw';
+import post22EnRaw from '$lib/md/blog/the-failures-that-dont-throw-en.md?raw';
+import postTr16Raw from '$lib/md/blog/patlamayan-hatalar.md?raw';
+import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
+import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
+import post23EnRaw from '$lib/md/blog/your-context-window-bills-you-every-turn-en.md?raw';
+import postTr17Raw from '$lib/md/blog/baglam-her-turda-yeniden-faturalanir.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -59,7 +73,16 @@ const contentMap: Record<string, string> = {
 	'claude-agent-debug-trace-replay': postTr5Raw,
 	'iki-hafta-sonu-dort-tool': postTr6Raw,
 	'prompt-shipping-once-onunu-gor': postTr7Raw,
-	'google-un-goremedigi-blog': postTr8Raw
+	'google-un-goremedigi-blog': postTr8Raw,
+	'performansi-bozar-dedigin-sayi-degil': postTr9Raw,
+	'kimsenin-modeli-patlamadi': postTr10Raw,
+	'kazara-fde-saha-cantasi': postTr11Raw,
+	'teslim-edilen-prompt-degil-eval': postTr12Raw,
+	'degistirebildiklerinde-bitti': postTr13Raw,
+	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw,
+	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw,
+	'patlamayan-hatalar': postTr16Raw,
+	'baglam-her-turda-yeniden-faturalanir': postTr17Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -75,12 +98,121 @@ const contentMapEn: Record<string, string> = {
 	'how-i-shipped-a-blog-google-couldnt-see': post15EnRaw,
 	'nobodys-model-failed': post16EnRaw,
 	'accidental-fde-field-kit': post17EnRaw,
-	'the-eval-is-the-deliverable': post18EnRaw
+	'the-eval-is-the-deliverable': post18EnRaw,
+	'that-library-will-hurt-performance': post19EnRaw,
+	'done-when-they-can-change-it': post20EnRaw,
+	'the-second-customer': post21EnRaw,
+	'the-failures-that-dont-throw': post22EnRaw,
+	'your-context-window-bills-you-every-turn': post23EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'your-context-window-bills-you-every-turn',
+		title: 'Your context window bills you every turn',
+		excerpt:
+			"Auto-compaction feels like losing your context, but the raw usage numbers from three real Claude Code sessions say the opposite: 1.99 billion tokens read from cache against 62 million written, a 32:1 ratio, and four compactions that each reset a bill that had been climbing since turn one. Compaction isn't the tax. It's the tax getting paid off.",
+		date: '2026-09-02',
+		tags: ['LLM', 'Claude', 'Developer Tools', 'Performance', 'Context', 'Observability']
+	},
+	{
+		slug: 'baglam-her-turda-yeniden-faturalanir',
+		title: 'Bağlam biriktirilmez, her turda yeniden faturalanır',
+		excerpt:
+			"Otomatik compaction bağlamı kaybetmek gibi hissettiriyor, ama üç gerçek Claude Code oturumundan çıkan ham usage verisi tam tersini söylüyor: cache'ten okunan 1,99 milyar token, cache'e yazılan 62 milyona karşı, 32:1 oran, ve her biri birinci turdan beri tırmanan faturayı sıfırlayan dört compaction. Compaction vergi değil. Verginin ödenme anı.",
+		date: '2026-09-02',
+		tags: ['LLM', 'Claude', 'Developer Tools', 'Performance', 'Context', 'Observability']
+	},
+	{
+		slug: 'the-failures-that-dont-throw',
+		title: "The failures that don't throw",
+		excerpt:
+			"One call in forty comes back with \u201cHIGH\u201d instead of \u201chigh\u201d, your switch falls through to the default branch, and the permissive branch auto-approves what the model flagged as maximum risk. Nothing errors. Schema failures are distributional, a single compliance percentage averages over the only distinction that matters, and zero failures in fifty runs is not a zero failure rate.",
+		date: '2026-09-01',
+		tags: ['LLM', 'Guardrails', 'Structured Output', 'Testing', 'Developer Tools', 'Claude']
+	},
+	{
+		slug: 'patlamayan-hatalar',
+		title: 'Patlamayan hatalar',
+		excerpt:
+			"Kırk çağrının biri \u201chigh\u201d yerine \u201cHIGH\u201d dönüyor, switch default dalına düşüyor, ve izin veren dal modelin maksimum risk dediği şeyi otomatik onaylıyor. Hiçbir şey hata vermiyor. Şema hataları dağılımsaldır, tek bir uyum yüzdesi önemli olan tek ayrımın üstünden ortalama alır, ve elli çalıştırmada sıfır hata sıfır hata oranı demek değildir.",
+		date: '2026-09-01',
+		tags: ['LLM', 'Guardrails', 'Structured Output', 'Testing', 'Developer Tools', 'Claude']
+	},
+	{
+		slug: 'kimsenin-modeli-patlamadi',
+		title: 'Kimsenin modeli patlamadı. Arayüz patladı.',
+		excerpt:
+			"Kurumsal AI pilotları %70–90 oranında başarısız olurken forward-deployed engineer ilanları %800 arttı. Kanonik başarı hikâyesi 6–8 haftalık entegrasyonun ardından dört aylık adoption çalışması, ve raporlanan kazanma koşulu %98 adoption — doğruluk değil. Adoption sayısı bir arayüz sayısıdır, ve rol ona göre kadrolanmıyor.",
+		date: '2026-08-09',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Adoption', 'Frontend', 'LLM', 'Deployment']
+	},
+	{
+		slug: 'kazara-fde-saha-cantasi',
+		title: 'Kazara bir forward-deployed engineer saha çantası kurmuşum',
+		excerpt:
+			"Bir yıl önce bir SDK'yı silip yerine 150 satır yazdım ve bunu bir bundler hikâyesi sandım. Meğer adını hiç koymadan bir deployment problemi çözüyormuşum. Beş aracın her mimari kararına geri dönüp baktığımda hepsinin altında aynı dile getirilmemiş kısıt vardı: kurulacak bir şey yok, sınırdan çıkan veri yok, savunulacak bağımlılık yok.",
+		date: '2026-08-10',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Developer Tools', 'Frontend', 'LLM', 'Architecture']
+	},
+	{
+		slug: 'teslim-edilen-prompt-degil-eval',
+		title: 'Teslim ettiğin şey prompt değil. Eval.',
+		excerpt:
+			"Her saha rehberi inşa etmeden önce eval'lerini tanımla diyor — ve müşteri sahasındaki üçüncü günde etiketli verin, alan uzmanlığın ve birinin ekranından aldığın beş örnekten başka bir şeyin yok. Tavsiye doğru, çerçeve yanlış. \u201cBu iyi mi?\u201d ground truth ister. \u201cBu değişti mi?\u201d sadece dondurulmuş bir snapshot ister, ve ona bu öğleden sonra sahip olabilirsin.",
+		date: '2026-08-11',
+		tags: ['Forward Deployed Engineering', 'Evals', 'LLM', 'Prompt Engineering', 'Testing', 'Deployment']
+	},
+	{
+		slug: 'degistirebildiklerinde-bitti',
+		title: 'Çalıştığında değil, onlar değiştirebildiğinde bitti',
+		excerpt:
+			"En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı bıraktığında ölmez; değiştirilmeyi bıraktığında ölür, ve isteklere cevap verirken aylarca ölü kalabilir. Devir teslim dokümantasyon değildir: bir ekibin bir değişiklik yapıp güvenli olduğunu bilip bilemediğidir.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Handover', 'Deployment', 'Testing', 'LLM']
+	},
+	{
+		slug: 'ikinci-musteri-ne-yaptigini-soyler',
+		title: 'İkinci müşteri ne yaptığını söyler',
+		excerpt:
+			"Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip hangilerinin genelleşeceğini anlamanın yolunu vermiyor. İki müşterinin aynı özelliği istemesi sinyal değil. Ona aynı alttaki kısıtla varması sinyal, ve en güçlü kanıt istek bile değil: zaten elleriyle kurdukları geçici çözüm.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Product', 'Deployment', 'LLM']
+	},
+	{
+		slug: 'the-second-customer',
+		title: 'The second customer tells you what you actually built',
+		excerpt:
+			"Forward-deployed work inverts the SaaS shape — depth with one customer instead of breadth across many — which produces capabilities faster than product discovery does and no way to tell which ones generalise. Two customers asking for the same feature isn't the signal. Two customers arriving at it through the same underlying constraint is, and the strongest evidence isn't the request at all: it's the workaround they already built by hand.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Product', 'Deployment', 'LLM']
+	},
+	{
+		slug: 'done-when-they-can-change-it',
+		title: "You're not done when it works. You're done when they can change it.",
+		excerpt:
+			"The deployment I think about most didn't fail — it passed UAT, went live, and six months later nobody had touched it once. A system doesn't die when it stops working; it dies when it stops being changed, and it can be dead for months while still answering requests. Handover isn't documentation: it's whether a team can make a change and know it was safe.",
+		date: '2026-08-31',
+		tags: ['Forward Deployed Engineering', 'Enterprise AI', 'Handover', 'Deployment', 'Testing', 'LLM']
+	},
+	{
+		slug: 'that-library-will-hurt-performance',
+		title: '“That library will hurt performance” is not a number',
+		excerpt:
+			"Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost without the thing you're arguing over — so the argument gets settled by whoever sounds most confident. A 410 KB image that loads after LCP is worth zero points; a 124 KB render-blocking script is worth eleven. Sorting by file size sends teams to fix the wrong thing.",
+		date: '2026-08-30',
+		tags: ['Web Performance', 'Core Web Vitals', 'Lighthouse', 'LCP', 'Frontend', 'Developer Tools']
+	},
+	{
+		slug: 'performansi-bozar-dedigin-sayi-degil',
+		title: '“Performansı bozar” dediğin şey bir sayı değil',
+		excerpt:
+			'Bütün performans araçları sayfanın şu anki maliyetini raporluyor. Hiçbiri toplantının asıl konusu olan “o şey olmasa ne olurdu” sorusuna cevap vermiyor — ve karar, elinde sayı olmadığı için daha kendinden emin konuşana kalıyor. LCP’den sonra yüklenen 410 KB’lık bir görsel sıfır puan; 124 KB’lık render-blocking bir script on bir puan. Dosya boyutuna göre sıralamak ekipleri yanlış şeyi düzeltmeye gönderiyor.',
+		date: '2026-08-30',
+		tags: ['Web Performance', 'Core Web Vitals', 'Lighthouse', 'LCP', 'Frontend', 'Developer Tools']
+	},
 	{
 		slug: 'the-eval-is-the-deliverable',
 		title: "The deliverable isn't the prompt. It's the eval.",
@@ -171,6 +303,14 @@ export const items: BlogPost[] = [
 			'DRY, test coverage, yorum yazmak… Kurallar bağlam olmadan anlamsız. Cesur bir tez.',
 		date: '2024-12-20',
 		tags: ['Code Quality', 'Opinion', 'Software Design']
+	},
+	{
+		slug: 'ise-yarayan-kurallar-ve-komutlar',
+		title: 'Gerçekten işe yarayan kurallar ve komutlar',
+		excerpt:
+			'.cursorrules ve slash komutlarını unutulmuş değil faydalı hale getirmek: teoriden değil acıdan başla, listeyi kısa tut, gerçek kullanımdan iterasyon yap.',
+		date: '2025-01-18',
+		tags: ['Cursor', 'Rules', 'Commands', 'Workflow', 'AI']
 	},
 	{
 		slug: 'rules-and-commands-that-stick',
@@ -354,7 +494,16 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['debug-claude-agents-by-replaying-traces', 'claude-agent-debug-trace-replay'],
 	['four-tools-in-two-weekends', 'iki-hafta-sonu-dort-tool'],
 	['see-the-prompt-before-you-ship-it', 'prompt-shipping-once-onunu-gor'],
-	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog']
+	['how-i-shipped-a-blog-google-couldnt-see', 'google-un-goremedigi-blog'],
+	['that-library-will-hurt-performance', 'performansi-bozar-dedigin-sayi-degil'],
+	['nobodys-model-failed', 'kimsenin-modeli-patlamadi'],
+	['accidental-fde-field-kit', 'kazara-fde-saha-cantasi'],
+	['the-eval-is-the-deliverable', 'teslim-edilen-prompt-degil-eval'],
+	['done-when-they-can-change-it', 'degistirebildiklerinde-bitti'],
+	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler'],
+	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar'],
+	['the-failures-that-dont-throw', 'patlamayan-hatalar'],
+	['your-context-window-bills-you-every-turn', 'baglam-her-turda-yeniden-faturalanir']
 ];
 
 /**

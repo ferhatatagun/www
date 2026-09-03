@@ -197,6 +197,8 @@ That's the next post.
 
 ---
 
-*This is part one of a series on the last mile of enterprise AI. Part two is
-[I accidentally built a forward-deployed engineer's field kit](https://ferhatatagun.com/blog/accidental-fde-field-kit)
-— the tools, and the constraint that turns out to define them.*
+*Part one of a series on the last mile of enterprise AI.
+Part two: [I accidentally built a forward-deployed engineer's field kit](https://ferhatatagun.com/blog/accidental-fde-field-kit) ·
+Part three: [The deliverable isn't the prompt. It's the eval.](https://ferhatatagun.com/blog/the-eval-is-the-deliverable) ·
+Part four: [You're not done when it works. You're done when they can change it.](https://ferhatatagun.com/blog/done-when-they-can-change-it) ·
+Part five: [The second customer tells you what you actually built](https://ferhatatagun.com/blog/the-second-customer)*
