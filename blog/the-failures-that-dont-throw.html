@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <!-- Resource hints. The font request is discovered inside CSS otherwise,
+       which serialises DNS → TLS → CSS → font. Warming the connection in the
+       document head overlaps that work with HTML parsing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Inter was declared in the CSS variables but never actually loaded, so
+       every page rendered in the system fallback. Loaded here with
+       display=swap: text paints immediately in the fallback and upgrades
+       when Inter arrives, so there is no invisible-text pause. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+
+  <!-- Feed autodiscovery — the feed existed but nothing advertised it. -->
+  <link rel="alternate" type="application/rss+xml" title="Ferhat Atagün — Blog"
+    href="../blog/feed.xml" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.80d188fc.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.b551cfee.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.03ee050e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.5aee7e86.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4416d77a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c46315f7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.19746734.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.daf93cab.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6acf3779.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1bcf9862.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.014410ad.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.48da32dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.2e0469d4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.ea5fbcfd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.13fca4f9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.22427390.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.39d4c71b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.1c9f212b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.9b5d05ca.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.8d6bc293.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.af3f1e68.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.766cdc70.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/helpers.a6227e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/schema.85c25587.js"><title>The failures that don't throw | Ferhat Atagün</title><!-- HEAD_svelte-rz38uo_START --><link rel="canonical" href="https://ferhatatagun.com/blog/the-failures-that-dont-throw"><meta name="description" content="One call in forty comes back with “HIGH” instead of “high”, your switch falls through to the default branch, and the permissive branch auto-approves what…"><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/the-failures-that-dont-throw"><meta property="og:title" content="The failures that don't throw | Ferhat Atagün"><meta property="og:description" content="One call in forty comes back with “HIGH” instead of “high”, your switch falls through to the default branch, and the permissive branch auto-approves what…"><meta property="og:site_name" content="Ferhat Atagün"><meta property="og:image" content="https://ferhatatagun.com/og-cards/the-failures-that-dont-throw.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="The failures that don't throw | Ferhat Atagün"><meta name="twitter:description" content="One call in forty comes back with “HIGH” instead of “high”, your switch falls through to the default branch, and the permissive branch auto-approves what…"><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/the-failures-that-dont-throw.png"><meta name="twitter:creator" content="@ferhatatagun"><meta property="article:published_time" content="2026-09-01"><meta property="article:modified_time" content="2026-09-01"><link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-failures-that-dont-throw"><link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/patlamayan-hatalar"><link rel="alternate" hreflang="x-default" href="https://ferhatatagun.com/blog/the-failures-that-dont-throw"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://ferhatatagun.com/blog/the-failures-that-dont-throw#article","headline":"The failures that don't throw","description":"One call in forty comes back with “HIGH” instead of “high”, your switch falls through to the default branch, and the permissive branch auto-approves what the model flagged as maximum risk. Nothing errors. Schema failures are distributional, a single compliance percentage averages over the only…","url":"https://ferhatatagun.com/blog/the-failures-that-dont-throw","image":{"@type":"ImageObject","url":"https://ferhatatagun.com/og-cards/the-failures-that-dont-throw.png","width":1200,"height":630},"datePublished":"2026-09-01","dateModified":"2026-09-01","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/the-failures-that-dont-throw"},"inLanguage":"en","isPartOf":{"@id":"https://ferhatatagun.com/#website"},"keywords":"LLM, Guardrails, Structured Output, Testing, Developer Tools, Claude","articleSection":"LLM","wordCount":1827}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"The failures that don't throw","item":"https://ferhatatagun.com/blog/the-failures-that-dont-throw"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-rz38uo_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-exa8zqs" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-exa8zqs"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-exa8zqs)" filter="url(#glow-ai-logo-exa8zqs)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-exa8zqs)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1gnz0b5"><span class="main-title__name svelte-1gnz0b5">The failures that don't throw</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-09-01">September 1, 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>10 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">LLM </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Guardrails </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Structured Output </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Testing </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Developer Tools </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Claude </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><p>You ask a model for <code>{&quot;risk&quot;: &quot;high&quot; | &quot;medium&quot; | &quot;low&quot;, &quot;score&quot;: 0-100}</code>. You run it, you get exactly that, you wire it up and ship.</p>
+<p>Six weeks later somebody notices that a handful of claims were auto-approved that obviously shouldn&#39;t have been. Nothing errored. There&#39;s no exception in the logs, no failed request, no alert. The rows just have the wrong value in them, and they&#39;ve had it for six weeks.</p>
+<p>What happened is that one call in forty came back with <code>&quot;HIGH&quot;</code> instead of <code>&quot;high&quot;</code>, and your code did this:</p>
+<pre><code class="language-ts">switch (result.risk) {
+  case &quot;high&quot;:   return escalate(claim);
+  case &quot;medium&quot;: return queue(claim);
+  case &quot;low&quot;:    return autoApprove(claim);
+  default:       return autoApprove(claim);
+}
+</code></pre>
+<p>The default branch is almost always the permissive one, because that&#39;s what keeps the queue moving. So the model said <em>maximum risk</em> and your system read it as <em>approve automatically</em>. The failure didn&#39;t degrade the decision. It inverted it.</p>
+<p>That&#39;s the class of bug <a href="https://guard-lab.vercel.app"><strong>guard-lab</strong></a> exists to find: define a schema, run a prompt against it N times, and look at the distribution of ways it breaks.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Schema failures are distributional. One clean run tells you nothing, and five tell you almost nothing.</li>
+<li>A single &quot;94% compliant&quot; number is worse than no number, because the interesting question isn&#39;t how many failed — it&#39;s what your code does about each one.</li>
+<li>Three buckets: <strong>crash</strong> (throws, already in your error rate), <strong>recoverable</strong> (right payload, wrapped), and <strong>silent</strong> (parses, is accepted, is wrong). Only the third is invisible, and it&#39;s the only one that needs a tool.</li>
+<li>Zero failures in fifty runs is not a zero failure rate. At n = 50 the data is still consistent with about 7%. Ruling out 1% takes 381 clean runs.</li>
+<li>Constrained decoding removes most of this and is the right first move. It does not tell you your rate, and it constrains shape rather than sense.</li>
+</ul>
+<h2 id="counting-failures-is-the-wrong-instrument">Counting failures is the wrong instrument</h2>
+<p>The obvious way to build this is a compliance percentage. Run it fifty times, count how many matched, print 94%.</p>
+<p>I built that first and it was useless within an hour, for a reason that took me longer to articulate than it should have: <strong>the failures are not equally dangerous, and a single number averages over the only distinction that matters.</strong></p>
+<p>Consider two runs that both report 94%.</p>
+<p>In the first, the 6% is markdown fences — the model wrapped the object in <code>```json</code>. Your parser either strips fences or it doesn&#39;t. If it does, that 6% costs you nothing at all. If it doesn&#39;t, it costs you 6% of requests, loudly, on day one, and you fix it before lunch.</p>
+<p>In the second, the 6% is enum drift and numbers arriving as strings. Nothing throws. Every one of those responses is accepted by your code, written to your database, and rendered on someone&#39;s screen. You will find out when a customer does.</p>
+<p>Same number. Completely different situation. One is a morning; the other is the six weeks at the top of this post.</p>
+<h2 id="the-three-buckets">The three buckets</h2>
+<p>So guard-lab sorts failures by what your code does about them rather than by what went wrong:</p>
+<p><strong>Crash</strong> — the output doesn&#39;t parse. <code>JSON.parse</code> throws, the request fails, and it appears in an error rate you&#39;re already watching. Genuinely fine. Loud failures get fixed.</p>
+<p><strong>Recoverable</strong> — the payload is correct but wrapped. A markdown fence, a sentence of preamble, a helpful trailing note. Free if you strip it, fatal if you assume the body is only JSON. Either way you find out immediately.</p>
+<p><strong>Silent</strong> — the output parses, your code accepts it, and the value is wrong.</p>
+<p>The third bucket is the whole point, and it&#39;s bigger than it looks. It isn&#39;t only enum drift:</p>
+<ul>
+<li><strong>A missing field</strong> reads as <code>undefined</code>. Templates render blank, comparisons quietly go false, nothing throws.</li>
+<li><strong><code>&quot;score&quot;: &quot;85&quot;</code></strong> as a string gives you <code>NaN</code> on arithmetic, or <code>&quot;8510&quot;</code> on <code>+ 10</code>. No error either way.</li>
+<li><strong>An invented enum</strong> — <code>&quot;very high&quot;</code> — passes every check you wrote for the values you expected and hits the default branch as if it were routine.</li>
+<li><strong><code>&quot;score&quot;: 150</code></strong> on a 0–100 field is a valid number in an invalid position. It renders, it charts, it misleads.</li>
+<li><strong><code>null</code> where a value was required</strong> passes an existence check and fails a type check somewhere far away, at a distance from the cause.</li>
+</ul>
+<p>Every one of these is accepted by JavaScript without complaint. None of them will ever appear in your error rate. That&#39;s not a gap in your monitoring — it&#39;s a category your monitoring cannot see, because from the outside nothing went wrong.</p>
+<h2 id="zero-failures-is-not-a-zero-failure-rate">Zero failures is not a zero failure rate</h2>
+<p>Here&#39;s the part I didn&#39;t expect to end up caring most about.</p>
+<p>You run the tool, fifty times, and everything passes. Green across the board. That reads as proof, and it isn&#39;t one.</p>
+<p>Fifty clean runs is a sample. The true failure rate is whatever it is, and your sample is consistent with a range of values — at n = 50 with zero observed failures, the 95% Wilson upper bound is <strong>7.1%</strong>. At a thousand calls a day, that&#39;s up to seventy-one bad records daily that your test run had no power to detect.</p>
+<p>So guard-lab never shows a bare zero. A clean sweep gets an interval and a sentence saying what it does and doesn&#39;t rule out, because the reassuring version of that screen is the single most misleading thing the tool could do. The whole reason someone runs it is to stop trusting a sample of one; handing them a sample of fifty dressed up as certainty would just move the same mistake somewhere more expensive.</p>
+<p>The deflating corollary: ruling out a 1% failure rate takes <strong>381 clean runs</strong>. Which is a real number that real teams will not run, and knowing that is still better than believing five runs settled it.</p>
+<h2 id="the-strongest-version-of-the-counter-argument">The strongest version of the counter-argument</h2>
+<p>Let me argue the other side properly, because there&#39;s a good objection here and the weak version isn&#39;t worth knocking down.</p>
+<p><em>This is a solved problem. Use structured outputs.</em> Tool use with a JSON schema, or a constrained-decoding mode, forces the model&#39;s output to conform at the token level. Fences, prose, unparseable output, missing fields, wrong types — most of the taxonomy above simply cannot happen.</p>
+<p>That&#39;s correct, and it should be your first move. If you can use constrained decoding, use it; a validator downstream of an unconstrained prompt is a worse design than not needing one.</p>
+<p>Two things survive it.</p>
+<p><strong>It constrains shape, not sense.</strong> A schema that says <code>&quot;risk&quot;</code> is one of three strings will get you one of three strings. It will not tell you whether the model picked the right one, and it won&#39;t catch a range violation you didn&#39;t encode — most people write <code>&quot;type&quot;: &quot;number&quot;</code> and not the 0–100 bound, so <code>150</code> passes. Constrained decoding turns a syntax problem into a semantics problem. That&#39;s a large improvement and not a solution.</p>
+<p><strong>Plenty of production code isn&#39;t in a position to use it.</strong> A prompt template inside a vendor product. An internal gateway that normalises requests and drops the tool-use block. An older endpoint someone integrated in 2024 and nobody has budget to revisit. A model behind a proxy that only forwards <code>messages</code>. These are not exotic; they&#39;re most of what an engineer walking into someone else&#39;s environment actually finds.</p>
+<p>And underneath both: <strong>constrained decoding doesn&#39;t give you a rate.</strong> It reduces the failure probability, plausibly by a lot, to some number you still don&#39;t know. If the answer to &quot;how often does this break&quot; is &quot;less than before&quot;, you haven&#39;t measured anything — you&#39;ve just moved the number somewhere you can&#39;t see it.</p>
+<h2 id="two-bugs-i-shipped-into-it">Two bugs I shipped into it</h2>
+<p>The useful part of building this was that I committed, twice, exactly the kind of error the tool is for.</p>
+<p><strong>The first was a silent failure inside the silent-failure detector.</strong> To be generous about what counts as recoverable, the parser salvages JSON out of surrounding prose by taking the widest span between the first <code>{</code> and the last <code>}</code> — which is roughly what defensive production code does. Then a test case handed it <code>[{...}, {...}]</code>: a model returning an array of results instead of one object.</p>
+<p>The salvage worked. It pulled the first object out, reported a clean recovery, and silently discarded every element after it.</p>
+<p>That is precisely the failure mode in the post you&#39;re reading — parses, is accepted, is wrong — committed inside the thing built to catch it. The fix is to parse the response as-is first, exactly as real code would, and only fall back to salvage when that fails. Valid JSON of the wrong shape now reaches the caller intact and gets judged as a crash, because that&#39;s what it is.</p>
+<p><strong>The second was a statistical self-contradiction.</strong> For &quot;how many clean runs would it take to rule out a 1% failure rate&quot; I used the rule of three: zero events in n trials bounds the rate near 3/n, so 300 runs. Textbook, correct, widely used.</p>
+<p>Except everywhere else the tool reports a Wilson interval, and Wilson is slightly more conservative at zero. Run 300 clean and it would have told you <strong>1.26%</strong> — after promising 300 would get you to 1%. Two individually defensible methods, disagreeing, in a tool whose entire pitch is that you should trust its numbers.</p>
+<p>It now inverts the same interval it displays. The answer is 381 rather than 300: less satisfying, and consistent with what the tool will say to you afterwards.</p>
+<p>Neither bug was caught by using the app. Both were caught by tests written against reference values — seventeen classifier cases, and Wilson checked against published intervals. Which is its own small argument for <a href="https://ferhatatagun.com/blog/the-eval-is-the-deliverable">the thing I wrote about evals two posts ago</a>: looking at the screen and seeing plausible numbers is not verification.</p>
+<h2 id="what-it-doesnt-tell-you">What it doesn&#39;t tell you</h2>
+<p>Anything about whether the answers are <em>good</em>.</p>
+<p>A response can satisfy every field in the schema — correct enum, in-range score, all fields present — and be completely wrong about the claim. guard-lab measures whether the contract holds. Whether the judgement inside the contract is any good is the other kind of eval, the one that needs ground truth, and this doesn&#39;t touch it.</p>
+<p>Contract compliance is the floor. It&#39;s just that most teams have never measured the floor, and it turns out not to be where they assumed it was.</p>
+<hr>
+<p><strong><a href="https://guard-lab.vercel.app">guard-lab</a></strong> is free, open source, and browser-only — BYOK, and the key never leaves your tab because there&#39;s no backend to send it to. Source on <a href="https://github.com/ferhatatagun/guard-lab">GitHub</a>.</p>
+<p>It&#39;s the sixth in a set of tools built under one constraint: they have to work in a room where you can&#39;t install anything and the data can&#39;t leave. <a href="https://ferhatatagun.com/tools">The rest are here.</a></p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=The%20failures%20that%20don't%20throw%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fthe-failures-that-dont-throw" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fthe-failures-that-dont-throw" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/patlamayan-hatalar" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Patlamayan hatalar</a> </li><li><a href="/blog/your-context-window-bills-you-every-turn" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Your context window bills you every turn</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/baglam-her-turda-yeniden-faturalanir" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← Bağlam biriktirilmez, her turda yeniden faturalanır</a> <a href="/blog/patlamayan-hatalar" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">Patlamayan hatalar →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/951ab22" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">951ab22</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-09-03">2026-09-03</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1e91idb = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.03ee050e.js"),
+						import("../_app/immutable/entry/app.daf93cab.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>

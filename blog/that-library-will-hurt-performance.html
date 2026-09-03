@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <!-- Resource hints. The font request is discovered inside CSS otherwise,
+       which serialises DNS → TLS → CSS → font. Warming the connection in the
+       document head overlaps that work with HTML parsing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Inter was declared in the CSS variables but never actually loaded, so
+       every page rendered in the system fallback. Loaded here with
+       display=swap: text paints immediately in the fallback and upgrades
+       when Inter arrives, so there is no invisible-text pause. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+
+  <!-- Feed autodiscovery — the feed existed but nothing advertised it. -->
+  <link rel="alternate" type="application/rss+xml" title="Ferhat Atagün — Blog"
+    href="../blog/feed.xml" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.80d188fc.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.b551cfee.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.03ee050e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.5aee7e86.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4416d77a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c46315f7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.19746734.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.daf93cab.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6acf3779.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1bcf9862.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.014410ad.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.48da32dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.2e0469d4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.ea5fbcfd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.13fca4f9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.22427390.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.39d4c71b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.1c9f212b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.9b5d05ca.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.8d6bc293.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.af3f1e68.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.766cdc70.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/helpers.a6227e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/schema.85c25587.js"><title>“That library will hurt performance” is not a number | Ferhat Atagün</title><!-- HEAD_svelte-rz38uo_START --><link rel="canonical" href="https://ferhatatagun.com/blog/that-library-will-hurt-performance"><meta name="description" content="Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost…"><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/that-library-will-hurt-performance"><meta property="og:title" content="“That library will hurt performance” is not a number | Ferhat Atagün"><meta property="og:description" content="Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost…"><meta property="og:site_name" content="Ferhat Atagün"><meta property="og:image" content="https://ferhatatagun.com/og-cards/that-library-will-hurt-performance.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="“That library will hurt performance” is not a number | Ferhat Atagün"><meta name="twitter:description" content="Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost…"><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/that-library-will-hurt-performance.png"><meta name="twitter:creator" content="@ferhatatagun"><meta property="article:published_time" content="2026-08-30"><meta property="article:modified_time" content="2026-08-30"><link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/that-library-will-hurt-performance"><link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil"><link rel="alternate" hreflang="x-default" href="https://ferhatatagun.com/blog/that-library-will-hurt-performance"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://ferhatatagun.com/blog/that-library-will-hurt-performance#article","headline":"“That library will hurt performance” is not a number","description":"Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost without the thing you're arguing over — so the argument gets settled by whoever sounds most confident. A 410 KB image that loads after LCP is…","url":"https://ferhatatagun.com/blog/that-library-will-hurt-performance","image":{"@type":"ImageObject","url":"https://ferhatatagun.com/og-cards/that-library-will-hurt-performance.png","width":1200,"height":630},"datePublished":"2026-08-30","dateModified":"2026-08-30","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/that-library-will-hurt-performance"},"inLanguage":"en","isPartOf":{"@id":"https://ferhatatagun.com/#website"},"keywords":"Web Performance, Core Web Vitals, Lighthouse, LCP, Frontend, Developer Tools","articleSection":"Web Performance","wordCount":1818}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"“That library will hurt performance” is not a number","item":"https://ferhatatagun.com/blog/that-library-will-hurt-performance"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-rz38uo_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-t921kuh" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-t921kuh"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-t921kuh)" filter="url(#glow-ai-logo-t921kuh)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-t921kuh)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1gnz0b5"><span class="main-title__name svelte-1gnz0b5">“That library will hurt performance” is not a number</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-08-30">August 30, 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>10 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Web Performance </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Core Web Vitals </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Lighthouse </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">LCP </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Frontend </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Developer Tools </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><p>Somebody in the room says the marketing team&#39;s chat widget is making the site slow. Somebody else says it drives a third of the qualified leads. Both are probably right, neither has a number, and the decision gets made by whoever sounds more confident. Two sprints later the widget is still there and the page is still slow.</p>
+<p>I&#39;ve been on both sides of that conversation and I&#39;ve never once seen it settled with evidence. Not because the evidence is hard to get — because the tool that would produce it doesn&#39;t exist. Every performance tool we have reports in the present tense. Lighthouse tells you what the page costs. WebPageTest tells you what the page costs, in more detail. CrUX and RUM tell you what the page costs, for real users. All of them answer &quot;what is this page doing right now&quot;, and none of them answers the question the meeting is actually about, which is <strong>&quot;what would it cost without that&quot;</strong>.</p>
+<p>So I built <a href="https://perf-lab-topaz.vercel.app"><strong>perf-lab</strong></a>. Drop in a Lighthouse JSON report, switch resources off, and watch the score move. It turns <em>&quot;that library will hurt performance&quot;</em> into <em>&quot;that library costs 0.4 s of LCP and 7 points&quot;</em> — which is a sentence you can put in a ticket.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Every performance tool is a measurement tool. The decisions teams argue about are counterfactual, and nothing measures counterfactuals.</li>
+<li>A projection is only worth arguing with if it lands on the scale the stakeholders already screenshot, so perf-lab reimplements Lighthouse&#39;s actual scoring — the log-normal curves, the published control points, the category weights. On a real report it recomputes 57 against Lighthouse&#39;s reported 57.</li>
+<li>Ranking by bytes is actively misleading. A 410 KB image that finishes loading after LCP is worth <strong>zero points</strong>; a 124 KB render-blocking script is worth <strong>eleven</strong>.</li>
+<li>Savings overlap. Four independent &quot;+7 point&quot; fixes do not add up to 28, and a tool that implies they do is setting up a disappointing retro.</li>
+<li>Everything is a delta against measured values, never an invented absolute — and where a number is modelled rather than measured, the UI says so.</li>
+</ul>
+<h2 id="why-the-score-has-to-be-lighthouses-score">Why the score has to be Lighthouse&#39;s score</h2>
+<p>The first version of this idea I sketched had its own 0–100 index. It was useless within a day.</p>
+<p>The whole point is to end an argument, and the argument is being had by people who look at Lighthouse. If my tool says &quot;this saves you 12 points&quot; on a scale I invented, the reply is &quot;twelve of <em>what</em>&quot;, and now we&#39;re arguing about my scale instead of about the chat widget. The projection has to arrive in the same units as the screenshot in the ticket.</p>
+<p>So <code>scoring.ts</code> is a reimplementation of the real thing. Lighthouse doesn&#39;t score metrics linearly — it maps each one through a log-normal curve calibrated to two control points, the 10th percentile of real sites and the median:</p>
+<pre><code class="language-ts">export const METRIC_WEIGHTS = {
+  fcp: 0.1, si: 0.1, lcp: 0.25, tbt: 0.3, cls: 0.25
+} as const;
+
+export const CONTROL_POINTS = {
+  fcp: { p10: 1800, median: 3000 },
+  si:  { p10: 3387, median: 5800 },
+  lcp: { p10: 2500, median: 4000 },
+  tbt: { p10: 200,  median: 600  },
+  cls: { p10: 0.1,  median: 0.25 }
+};
+</code></pre>
+<p>Two things fall out of those numbers that are worth internalising even if you never open the tool.</p>
+<p><strong>TBT is 30% of your score and CLS is 25%.</strong> Together, two metrics that have nothing to do with how fast the page <em>looks</em> are 55% of the number. LCP — the one everybody talks about — is 25%.</p>
+<p><strong>The curve is brutal near the top and forgiving in the middle.</strong> Going from 4.0 s to 3.5 s of LCP buys you very little. Going from 2.8 s to 2.4 s buys you a lot. Which means &quot;we improved LCP by half a second&quot; is not a fact you can price without knowing where you started.</p>
+<p>I did eventually verify the reimplementation rather than trusting it, which I should have done far earlier than I did. I ran real Lighthouse against my own site and fed the JSON straight into the parser:</p>
+<pre><code>reported: 57   recomputed: 57
+</code></pre>
+<p>That agreement is the entire credibility of the tool. There&#39;s a <code>scripts/probe.ts</code> in the repo whose first line of output is exactly that comparison, so if the implementation ever drifts from Lighthouse&#39;s, it fails loudly instead of quietly producing plausible numbers on the wrong scale.</p>
+<h2 id="the-inversion-that-makes-byte-sorted-reports-lie">The inversion that makes byte-sorted reports lie</h2>
+<p>Here&#39;s the demo page perf-lab ships with — a fairly ordinary marketing page, 1.1 MB, scoring 57. Sorted by what removing each resource is actually worth:</p>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Size</th>
+<th>Worth</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>consent-banner.js</code></td>
+<td>124 KB</td>
+<td><strong>+11</strong></td>
+</tr>
+<tr>
+<td><code>intercom.js</code></td>
+<td>168 KB</td>
+<td><strong>+11</strong></td>
+</tr>
+<tr>
+<td><code>framework.bundle.js</code></td>
+<td>178 KB</td>
+<td><strong>+10</strong></td>
+</tr>
+<tr>
+<td><code>gtm.js</code></td>
+<td>92 KB</td>
+<td><strong>+7</strong></td>
+</tr>
+<tr>
+<td><code>below-fold-gallery.webp</code></td>
+<td><strong>410 KB</strong></td>
+<td><strong>0</strong></td>
+</tr>
+</tbody></table>
+<p>The biggest file on the page is worth nothing. It&#39;s a gallery image below the fold that finishes loading after LCP has already fired, so it was never on the critical path — removing it makes the page lighter and doesn&#39;t make it faster. Meanwhile the third-smallest file in that list is worth eleven points, because it blocks rendering.</p>
+<p>This is not an exotic edge case. It&#39;s the normal shape of a web page, and it&#39;s why the &quot;largest assets&quot; table in every performance report sends teams to optimise the wrong thing. The question was never <em>what is heavy</em>. It&#39;s <em>what is heavy <strong>and</strong> on the critical path</em>.</p>
+<h2 id="the-bug-that-proves-the-point">The bug that proves the point</h2>
+<p>I want to be straight about this one, because it&#39;s the most useful thing in the post.</p>
+<p>I shipped the tool, opened it, and the demo showed <code>below-fold-gallery.webp</code> at <strong>+12 points</strong> — the exact inversion the tool exists to correct, in the tool, on the first screen. Removing any resource shrank the total transfer, and I was applying the transfer saving to FCP and LCP without first checking whether the resource had anything to do with them.</p>
+<p>I fixed that, and then found a second version of the same mistake hiding one layer down, in the parser:</p>
+<pre><code class="language-ts">beforeLcp: endTime &lt;= metrics.lcp || startTime &lt;= metrics.lcp
+</code></pre>
+<p>Almost every request on a page <em>starts</em> before LCP fires. That second clause marked nearly everything as critical-path, which quietly dismantles the tool&#39;s central claim on every real report.</p>
+<p>It survived because the sample data sets <code>beforeLcp</code> by hand, so the demo — the thing I kept looking at — never went through that code path. The only way to catch it was to run a real Lighthouse report through the parser, which I hadn&#39;t done until the tool was already live. <strong>The demo data that makes a tool easy to show off is the same data that stops you testing the part that matters.</strong></p>
+<h2 id="savings-dont-add-up-and-pretending-they-do-is-worse-than-useless">Savings don&#39;t add up, and pretending they do is worse than useless</h2>
+<p>First version ranked every resource against the untouched report. Which reads fine, until you notice it&#39;s promising each removal the full win independently — four &quot;+7 point&quot; fixes that sum to 28 on the slide and 11 in production, because they overlap. Once you&#39;ve dropped two analytics tags, TBT has already come down, and the third tag has less left to give back.</p>
+<p>So the ranking is now marginal: it re-simulates against whatever you&#39;ve already switched off. In the demo, removing Intercom drops the hero image from <strong>+11 to +6</strong> — same file, same bytes, worth half as much once LCP has already moved.</p>
+<p>That behaviour turned out to be the most persuasive thing in the tool. Watching the list re-sort as you strip things out teaches the overlap in about fifteen seconds, and it&#39;s the sort of thing teams normally learn in a retro.</p>
+<h2 id="whats-measured-and-whats-modelled">What&#39;s measured and what&#39;s modelled</h2>
+<p>A tool that projects the future can very easily become a tool that makes things up confidently. The rule I held to: <strong>never invent an absolute number when a measured one exists.</strong> Everything works on deltas applied to the metrics Lighthouse actually recorded, so the baseline is always ground truth and only the difference is modelled.</p>
+<p>Taken straight from the report: transfer size and timing per request (<code>network-requests</code>), parse and execute time per script (<code>bootup-time</code>), render-blocking status <em>and its measured saving</em> (<code>render-blocking-resources</code>), third-party attribution (<code>third-party-summary</code>).</p>
+<p>Modelled, and therefore approximate: transfer time recovered on a throttled connection, how much of a script&#39;s execution lands inside the TBT window, and whether removing something moves LCP. Even the TBT fraction is anchored to the report rather than to an industry average — it uses the ratio <em>this page</em> exhibited, measured TBT over total measured CPU.</p>
+<p>Every projection carries a confidence label — <code>measured</code>, <code>modelled</code>, or <code>speculative</code> — that degrades as you move away from the conditions the report was captured under. Change the throttling preset and remove something Lighthouse never measured, and the tool tells you it&#39;s directional only, rather than handing you a number with false authority.</p>
+<h2 id="it-found-a-bug-on-the-site-its-published-from">It found a bug on the site it&#39;s published from</h2>
+<p>The real Lighthouse run I&#39;d done to verify the scoring was against my own <code>/tools</code> page. Having gone to the trouble, I read the rest of it.</p>
+<p>Mobile score 57. LCP 7.2 s, which the curves price at roughly 23 of the 43 points I was losing. And the LCP element — named right there in the report — was the first tool card&#39;s screenshot.</p>
+<p>Every card image on that page was marked <code>loading=&quot;lazy&quot;</code>.</p>
+<p>The one image the score is measured on was the one I was deliberately deferring. Lazy-loading is good practice, I&#39;d applied it uniformly, and applying it uniformly is exactly the mistake: the LCP element must never be lazy. First card is now <code>eager</code> with <code>fetchpriority=&quot;high&quot;</code>, the rest stay lazy.</p>
+<p>The tool also flagged 238 KiB sitting in PNGs that should have been WebP. Converting them saved 620 KB.</p>
+<p>I&#39;d been working on that page for weeks, with SEO and performance explicitly in mind, and I&#39;d have kept not seeing it. That&#39;s the argument for the whole category, really. Measurement tells you the page is slow. You already suspected that. What changes a decision is knowing what it would cost to be otherwise — and until you can put a number on the counterfactual, the loudest person in the room is going to keep being right.</p>
+<hr>
+<p><strong><a href="https://perf-lab-topaz.vercel.app">perf-lab</a></strong> is free, open source, and browser-only — the report is parsed in your tab and nothing is uploaded, which matters when the report came from a client&#39;s staging environment. Source on <a href="https://github.com/ferhatatagun/perf-lab">GitHub</a>.</p>
+<p>Generate a report with:</p>
+<pre><code>npx lighthouse https://example.com --only-categories=performance \
+  --output=json --output-path=./report.json
+</code></pre>
+<p>Or DevTools → Lighthouse → run → ⋮ → <em>Save as JSON</em>. No report handy? There&#39;s sample data one click in.</p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=%E2%80%9CThat%20library%20will%20hurt%20performance%E2%80%9D%20is%20not%20a%20number%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fthat-library-will-hurt-performance" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fthat-library-will-hurt-performance" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/performansi-bozar-dedigin-sayi-degil" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">“Performansı bozar” dediğin şey bir sayı değil</a> </li><li><a href="/blog/kazara-fde-saha-cantasi" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Kazara bir forward-deployed engineer saha çantası kurmuşum</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/done-when-they-can-change-it" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← You're not done when it works. You're done when they can change it.</a> <a href="/blog/performansi-bozar-dedigin-sayi-degil" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">“Performansı bozar” dediğin şey bir sayı değil →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/951ab22" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">951ab22</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-09-03">2026-09-03</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1e91idb = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.03ee050e.js"),
+						import("../_app/immutable/entry/app.daf93cab.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>

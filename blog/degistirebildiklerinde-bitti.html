@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <!-- Resource hints. The font request is discovered inside CSS otherwise,
+       which serialises DNS → TLS → CSS → font. Warming the connection in the
+       document head overlaps that work with HTML parsing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Inter was declared in the CSS variables but never actually loaded, so
+       every page rendered in the system fallback. Loaded here with
+       display=swap: text paints immediately in the fallback and upgrades
+       when Inter arrives, so there is no invisible-text pause. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+
+  <!-- Feed autodiscovery — the feed existed but nothing advertised it. -->
+  <link rel="alternate" type="application/rss+xml" title="Ferhat Atagün — Blog"
+    href="../blog/feed.xml" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.80d188fc.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.b551cfee.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.03ee050e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.5aee7e86.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4416d77a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c46315f7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.19746734.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.daf93cab.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6acf3779.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1bcf9862.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.014410ad.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.48da32dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.2e0469d4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.ea5fbcfd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.13fca4f9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.22427390.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.39d4c71b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.1c9f212b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.9b5d05ca.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.8d6bc293.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.af3f1e68.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.766cdc70.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/helpers.a6227e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/schema.85c25587.js"><title>Çalıştığında değil, onlar değiştirebildiğinde bitti | Ferhat Atagün</title><!-- HEAD_svelte-rz38uo_START --><link rel="canonical" href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti"><meta name="description" content="En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı…"><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti"><meta property="og:title" content="Çalıştığında değil, onlar değiştirebildiğinde bitti | Ferhat Atagün"><meta property="og:description" content="En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı…"><meta property="og:site_name" content="Ferhat Atagün"><meta property="og:image" content="https://ferhatatagun.com/og-cards/degistirebildiklerinde-bitti.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Çalıştığında değil, onlar değiştirebildiğinde bitti | Ferhat Atagün"><meta name="twitter:description" content="En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı…"><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/degistirebildiklerinde-bitti.png"><meta name="twitter:creator" content="@ferhatatagun"><meta property="article:published_time" content="2026-08-31"><meta property="article:modified_time" content="2026-08-31"><link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/done-when-they-can-change-it"><link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti"><link rel="alternate" hreflang="x-default" href="https://ferhatatagun.com/blog/done-when-they-can-change-it"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://ferhatatagun.com/blog/degistirebildiklerinde-bitti#article","headline":"Çalıştığında değil, onlar değiştirebildiğinde bitti","description":"En çok düşündüğüm deployment başarısız olmadı — UAT'yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı bıraktığında ölmez; değiştirilmeyi bıraktığında ölür, ve isteklere cevap verirken aylarca ölü kalabilir. Devir teslim dokümantasyon değildir: bir…","url":"https://ferhatatagun.com/blog/degistirebildiklerinde-bitti","image":{"@type":"ImageObject","url":"https://ferhatatagun.com/og-cards/degistirebildiklerinde-bitti.png","width":1200,"height":630},"datePublished":"2026-08-31","dateModified":"2026-08-31","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/degistirebildiklerinde-bitti"},"inLanguage":"tr-TR","isPartOf":{"@id":"https://ferhatatagun.com/#website"},"keywords":"Forward Deployed Engineering, Enterprise AI, Handover, Deployment, Testing, LLM","articleSection":"Forward Deployed Engineering","wordCount":1277}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"Çalıştığında değil, onlar değiştirebildiğinde bitti","item":"https://ferhatatagun.com/blog/degistirebildiklerinde-bitti"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-rz38uo_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-f16rrpl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-f16rrpl"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-f16rrpl)" filter="url(#glow-ai-logo-f16rrpl)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-f16rrpl)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1gnz0b5"><span class="main-title__name svelte-1gnz0b5">Çalıştığında değil, onlar değiştirebildiğinde bitti</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-08-31">31 Ağustos 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>7 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Forward Deployed Engineering </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Enterprise AI </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Handover </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Deployment </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Testing </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">LLM </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><p>En çok düşündüğüm deployment başarısız olmadı. UAT&#39;yi geçti, canlıya çıktı, müşteri memnundu, ve sonunda gerçekten güzel bir e-posta vardı.</p>
+<p>Altı ay sonra hâlâ çalışıyordu ve kimse ona dokunmamıştı. Bir kez bile. Prompt, bıraktığımla byte-byte aynıydı. Altında bir model sürümü kullanımdan kaldırılmıştı ve ekip yenisini test etmek yerine eskisini pinlemişti. Biri çıktı formatında küçük bir değişiklik istemiş ve riske değmeyeceği söylenmişti.</p>
+<p>Hiçbir şey bozulmadı. Anlamam biraz zaman alan kısım bu. <strong>Sistem çalışmayı bıraktığında ölmedi. Değiştirilmeyi bıraktığında öldü</strong> — ve o altı ayın yaklaşık beşi boyunca, response dönmeye devam ederken ölüydü.</p>
+<p>Kimsenin post-mortem yazmadığı hata modu bu, çünkü ortada olay yok. Sadece köşede duran, herkesin etrafından dolandığı bir şey var — ta ki bir reorg ya da sözleşme yenilemesi onu sessizce kaldırana kadar.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>Bir deployment&#39;ın gerçek bitiş tarihi, bir isteğe son cevap verdiği an değil, birinin ona güvenle son kez dokunduğu andır.</li>
+<li>Dokümantasyon bir <em>durumu</em> tarif eder. Sahiplenme, bir <em>değişiklik</em> yapıp güvenli olduğunu bilmeyi gerektirir. Bunlar farklı teslimatlar ve ilk düzenlemeyle temasta sadece biri hayatta kalıyor.</li>
+<li>İşin senden sonra yaşayıp yaşamayacağını üç soru belirliyor: değiştirebiliyorlar mı, değişikliğin işe yaradığını anlayabiliyorlar mı, ve neden öyle olduğunu biliyorlar mı. Çoğu devir teslim sadece birincisini cevaplıyor.</li>
+<li><em>Neden</em> en hızlı çürüyen ve en az yazılan. Kod <em>ne</em>yi kaydeder, git <em>ne zaman</em>ı kaydeder, ve tuhaf bir maddenin var olma sebebi tek bir kişinin hafızasında yaşar — ta ki gürültü gibi görünüp silinene kadar.</li>
+<li>Forward-deployed engineer olarak sen, tasarım gereği bus factor&#39;sün. İş, bir takvime bağlı olarak kendini gereksiz kılmak, ve vazgeçilmez hissetmek bunun ters gittiğinin sinyali.</li>
+</ul>
+<h2 id="dokümantasyon-tuzağı">Dokümantasyon tuzağı</h2>
+<p>Bir engagement&#39;ın sonundaki içgüdü her şeyi yazmak. Mimari diyagram, çağrı sırası, deployment runbook, bileşen başına bir wiki sayfası. Özen gibi hissettiriyor ve son toplantıda işaret edebileceğin bir çıktı üretiyor.</p>
+<p>Aynı zamanda biri ilk değişikliği yaptığı anda bayatlıyor — ve kimse değişiklik yapmıyorsa, yazmış olman zaten fark etmedi.</p>
+<p>Rahatsız edici versiyonu: kapsamlı bir doküman işleri <em>kötüleştirebilir</em>, çünkü asıl işe yarayacak şeyin yerine geçiyor. Ekip okuyor, sistemin şeklini anlıyor, ve yine dokunmuyor — çünkü onları durduran şey hiçbir zaman mimariyi anlamamak değildi. Onları durduran şey, bir değişiklik yapıp bir şeyi bozup bozmadıklarını öğrenmenin bir yolu olmamasıydı.</p>
+<p>Dokümantasyon &quot;bu nedir&quot;i cevaplıyor. Sahiplenmenin ihtiyacı &quot;bunu değiştirirsem ne olur&quot;a bir cevap. Birincisinin hiçbir miktarı ikincisini üretmiyor.</p>
+<h2 id="üç-soru">Üç soru</h2>
+<p>Bir deployment&#39;ın devir teslimden sağ çıkıp çıkmayacağı üç şeye bakıyor, ve sırayla ele alınma ihtimalleri düşüyor.</p>
+<p><strong>1. Değiştirebiliyorlar mı?</strong></p>
+<p>Mekanik olan. Kimlik bilgileri, repo erişimi, deploy yolu, geri alma imkânı var mı. Bu, her devir teslim kontrol listesinin kapsadığı soru, ve gerçekten gerekli.</p>
+<p>Aynı zamanda en kolayı, ve onu geçmek biraz yanıltıcı biçimde ilerleme gibi hissettiriyor — çünkü tam production erişimi olan ve özgüveni olmayan bir ekip hiçbir şeyi değiştirmiyor, ki bu gözlemsel olarak hiç erişimi olmayan bir ekiple aynı şey.</p>
+<p><strong>2. Değişikliğin işe yaradığını anlayabiliyorlar mı?</strong></p>
+<p>Bu, <a href="https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval">bir önceki yazının tüm argümanı</a>, ve menteşe burası.</p>
+<p>Dondurulmuş snapshot — gerçek input&#39;lar ve mevcut sistemin onlarda verdiği kararlar — öncelikle bir kalite aracı değil. Asıl işlevi <em>izin</em>. &quot;Bu prompt düzenlemesi sanırım sorunsuz&quot;u &quot;on dört vakanın on ikisi değişmedi, kayan iki tanesi de şunlar&quot;a çeviren şey. Birinci cümle review&#39;da geri çevriliyor. İkincisi merge ediliyor.</p>
+<p>Bu olmadan bir ekip prompt&#39;u düzenlemeyecek. Düzenlememekte de haklılar. Patlama yarıçapını kontrol etmenin yolu olmadan prompt düzenlemek tedbir değil, başkasının workflow&#39;uyla kumar oynamaktır, ve aklı başında insanlar bunu reddeder.</p>
+<p><strong>3. Neden öyle olduğunu biliyorlar mı?</strong></p>
+<p>Neredeyse hiç ele alınmayan, ve sessizce her şeyi belirleyen.</p>
+<p>Gerçeklikle karşılaşmış her sistemin içinde yanlış görünen maddeler vardır. Prompt&#39;ta gereksiz görünen bir formatta ısrar eden bir cümle. Tuhaf biçimde spesifik bir backoff&#39;lu bir retry. Gösterilmeden önce temizlenen bir alan. Her biri var çünkü bir şey oldu — belirli bir gün, belirli bir varsayımı kıran belirli bir müşteri kaydıyla, belirli bir hata.</p>
+<p>Altı ay sonra devralan kişi açıklaması olmayan çirkin bir madde görüyor ve makul olanı yapıyor: temizliyor. Ve orijinal hata geri geliyor, ancak artık odada ilkini hatırlayan kimse olmadığı için yeni bir bug gibi görünüyor.</p>
+<p>Kod <em>ne</em>yi kaydeder. Git <em>ne zaman</em>ı, ve şanslıysan bir commit mesajı <em>neden</em>in sıkıştırılmış bir versiyonunu kaydeder. Hiçbir şey gerekçeyi, birinin o kararla karşılaşacağı yerde kaydetmiyor.</p>
+<h2 id="nedeni-şeyin-yanına-değil-içine-iliştir">Nedeni şeyin yanına değil, içine iliştir</h2>
+<p>Bende gerçekten işe yaramış pratik gösterişsiz: <strong>gerekçeyi karar hakkındaki bir dokümana değil, kararın olduğu yere koy.</strong></p>
+<p>Prompt&#39;lar için bu, prompt dosyasının kendi içinde, her bariz olmayan talimatı üreten hatayı adlandıran bir yorum bloğu demek. &quot;Kısa ol&quot; değil — <em>&quot;kısa ol: ikinci haftadaki 2.400 kelimelik cevaplar aşağı akışta 500 karakter sınırı olan bir alana yapıştırılıyor, cümle ortasında kesiliyor ve model hatası gibi görünüyordu.&quot;</em></p>
+<p>Davranış için bu, fonksiyonun değil olayın adını taşıyan bir test demek. <code>keeps_the_account_number_when_the_name_is_missing</code> adlı bir vaka, işle ilgili bir cümle. <code>test_parse_edge_case_3</code> adlı bir vaka hiçbir şeyle ilgili bir cümle, ve kırmızıya döndüğünde silinen o oluyor.</p>
+<p>Bu, dondurulmuş eval setiyle aynı hamlenin davranış yerine gerekçeye uygulanmış hali. İkisi de işe yarıyor çünkü çalışan bir şeye iliştirilmişler. Bir wiki sayfası sessizce bayatlayabilir; adlandırılmış bir test gürültüyle kırmızıya döner, ve adı ona bakan kişiye neyi kırmak üzere olduğunu söyler.</p>
+<p>Test şu: orada olmayan biri maddeyi okuyup, kendi başına, gerekçenin hâlâ geçerli olup olmadığına karar verebiliyor mu. Bütün çıta bu. &quot;Sistemi anlıyorlar&quot; değil — <em>benimle güvenle aynı fikirde olmayabiliyorlar.</em></p>
+<h2 id="bus-factor-sensin-bilerek">Bus factor sensin, bilerek</h2>
+<p>Bu rolle ilgili açıkça söylenmeye değer garip bir şey var.</p>
+<p>Forward-deployed engineer, yapısal olarak, kasten devreye sokulmuş tek nokta arızasıdır. Oradasın çünkü müşterinin ekibi o şeyi henüz yapamıyor. Orada geçirdiğin her hafta, başka hiçbir yerde olmayan bağlam biriktiriyorsun — hangi workflow dokümantasyonundan sapıyor, hangi paydaşın itirazı gerçek hangisi pozisyon alma, ikinci veri kaynağına pazartesileri neden güvenilmez.</p>
+<p>Seni etkili kılan şey o bağlam. Aynı zamanda, aktif olarak dışarı akıtmazsan, sen gittiğinde deployment&#39;ın ölme sebebi.</p>
+<p>Ve teşvikler ters yönde işliyor. Sistemi anlayan kişi olmak iyi iş çıkarmak gibi hissettiriyor. Başka kimse debug edemediği için aranmak değer gibi hissettiriyor. Vazgeçilmez diye okunuyor, ve vazgeçilmez, postmortem olana kadar başarı gibi hissettiriyor.</p>
+<p>Asıl önemli metrik optimize etmesi rahatsız edici olan: <strong>ne kadar hızlı gereksizleştiğin.</strong> Ne kadar shiplediğin değil. Kalanların seni odada istemeyi ne kadar çabuk bıraktığı.</p>
+<p>Ki bu ölçülmesi garip bir şey, ve çoğu engagement&#39;ın bunu hiç ölçtüğünü sanmıyorum — teslimatı ölçüyorlar, teslimat da sen hâlâ oradayken olan kısım.</p>
+<h2 id="gerçekte-ne-bırakırdım">Gerçekte ne bırakırdım</h2>
+<p>Somut olarak, kulağa hoş gelip hayatta kalmayan kısımlardan arındırılmış hali:</p>
+<ul>
+<li><strong>Dondurulmuş set</strong>, repo&#39;nun içinde, tek komutla çalıştırma yoluyla. Notebook değil, birinin hatırlaması gereken bir süreç değil. <code>npm run eval</code> ya da eşdeğeri, yazarı olmayan birinin okuyabileceği çıktı.</li>
+<li><strong>Bir kararlar dosyası</strong>, ama sıkı kapsamlı: sadece bariz seçeneğin reddedildiği kararlar, her biri onu bariz-ama-yanlış yapan şeyi adlandırarak. Varsayılanları belgeleyen altmış madde değil, önemli olan on madde.</li>
+<li><strong>Gerekçeler satır içinde</strong> — prompt&#39;ta, test adlarında, retry sabitinin yanında. Birinin onu değiştirmeyi düşünürken duracağı her yerde.</li>
+<li><strong>Bir değişikliği onlar yapsın, ben değil.</strong> Başka birinin prompt&#39;u düzenlediği, eval&#39;i çalıştırdığı, diff&#39;i okuduğu ve shiplediği anda orada oturmak. Bir ekibin bunu bir kez yaptığını izlemek, yerine başka bir şey konabildiğini hiç görmediğim tek devir teslim adımı. Diğer her şey iyi bir dokümanla taklit edilebilir; bu edilemez.</li>
+</ul>
+<p>Sonuncusu aslında bütün mesele. Ondan öncekilerin hepsi, senden başka birinin sistemi değiştirdiği ve kötü bir şey olmadığı ana hazırlık. O an sen gitmeden önce gerçekleşmiyorsa, gerçekleşebileceğine dair hiçbir kanıtın yok.</p>
+<p>Ve &quot;gerçekleşebileceğine dair kanıt yok&quot;, pratikte &quot;gerçekleşmeyecek&quot; ile aynı şey — ki bu da altı aylık saati geri getiriyor, ve hâlâ cevap verirken çoktan ölmüş olan sistemi.</p>
+<hr>
+<p>Bütün bunların rahatsız edici iması şu: iş aslında modelle, prompt&#39;la, hatta arayüzle ilgili değil — bir ekibin bir yeteneği başka bir ekibe devredip devredemeyeceğiyle ilgili. Ki bu, bu alandaki her şeyden çok daha eski bir problem, ve serinin son yazısının konusu.</p>
+<hr>
+<p><em>Bu, kurumsal AI&#39;ın son kilometresi üzerine bir serinin dördüncü yazısı.
+Birinci: <a href="https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi">Kimsenin modeli patlamadı. Arayüz patladı.</a> ·
+İkinci: <a href="https://ferhatatagun.com/blog/kazara-fde-saha-cantasi">Kazara bir forward-deployed engineer saha çantası kurmuşum</a> ·
+Üçüncü: <a href="https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval">Teslim ettiğin şey prompt değil. Eval.</a> ·
+Beşinci: <a href="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler">İkinci müşteri ne yaptığını söyler</a></em></p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=%C3%87al%C4%B1%C5%9Ft%C4%B1%C4%9F%C4%B1nda%20de%C4%9Fil%2C%20onlar%20de%C4%9Fi%C5%9Ftirebildi%C4%9Finde%20bitti%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fdegistirebildiklerinde-bitti" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fdegistirebildiklerinde-bitti" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/done-when-they-can-change-it" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">You're not done when it works. You're done when they can change it.</a> </li><li><a href="/blog/ikinci-musteri-ne-yaptigini-soyler" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">İkinci müşteri ne yaptığını söyler</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/patlamayan-hatalar" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← Patlamayan hatalar</a> <a href="/blog/ikinci-musteri-ne-yaptigini-soyler" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">İkinci müşteri ne yaptığını söyler →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/951ab22" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">951ab22</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-09-03">2026-09-03</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1e91idb = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.03ee050e.js"),
+						import("../_app/immutable/entry/app.daf93cab.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>

@@ -5,8 +5,85 @@
     <link>https://ferhatatagun.com/blog</link>
     <description>Software, AI tools (MCP, GPT, Cursor) and frontend notes.</description>
     <language>en</language>
-    <lastBuildDate>Tue, 18 Aug 2026 20:40:53 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2026 13:06:02 GMT</lastBuildDate>
     <atom:link href="https://ferhatatagun.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+  <item>
+    <title>Your context window bills you every turn</title>
+    <link>https://ferhatatagun.com/blog/your-context-window-bills-you-every-turn</link>
+    <description>Auto-compaction feels like losing your context, but the raw usage numbers from three real Claude Code sessions say the opposite: 1.99 billion tokens read from cache against 62 million written, a 32:1 ratio, and four compactions that each reset a bill that had been climbing since turn one. Compaction isn&apos;t the tax. It&apos;s the tax getting paid off.</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/your-context-window-bills-you-every-turn</guid>
+  </item>
+  <item>
+    <title>Bağlam biriktirilmez, her turda yeniden faturalanır</title>
+    <link>https://ferhatatagun.com/blog/baglam-her-turda-yeniden-faturalanir</link>
+    <description>Otomatik compaction bağlamı kaybetmek gibi hissettiriyor, ama üç gerçek Claude Code oturumundan çıkan ham usage verisi tam tersini söylüyor: cache&apos;ten okunan 1,99 milyar token, cache&apos;e yazılan 62 milyona karşı, 32:1 oran, ve her biri birinci turdan beri tırmanan faturayı sıfırlayan dört compaction. Compaction vergi değil. Verginin ödenme anı.</description>
+    <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/baglam-her-turda-yeniden-faturalanir</guid>
+  </item>
+  <item>
+    <title>The failures that don&apos;t throw</title>
+    <link>https://ferhatatagun.com/blog/the-failures-that-dont-throw</link>
+    <description>One call in forty comes back with “HIGH” instead of “high”, your switch falls through to the default branch, and the permissive branch auto-approves what the model flagged as maximum risk. Nothing errors. Schema failures are distributional, a single compliance percentage averages over the only distinction that matters, and zero failures in fifty runs is not a zero failure rate.</description>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/the-failures-that-dont-throw</guid>
+  </item>
+  <item>
+    <title>Patlamayan hatalar</title>
+    <link>https://ferhatatagun.com/blog/patlamayan-hatalar</link>
+    <description>Kırk çağrının biri “high” yerine “HIGH” dönüyor, switch default dalına düşüyor, ve izin veren dal modelin maksimum risk dediği şeyi otomatik onaylıyor. Hiçbir şey hata vermiyor. Şema hataları dağılımsaldır, tek bir uyum yüzdesi önemli olan tek ayrımın üstünden ortalama alır, ve elli çalıştırmada sıfır hata sıfır hata oranı demek değildir.</description>
+    <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/patlamayan-hatalar</guid>
+  </item>
+  <item>
+    <title>Çalıştığında değil, onlar değiştirebildiğinde bitti</title>
+    <link>https://ferhatatagun.com/blog/degistirebildiklerinde-bitti</link>
+    <description>En çok düşündüğüm deployment başarısız olmadı — UAT&apos;yi geçti, canlıya çıktı, ve altı ay sonra kimse ona bir kez bile dokunmamıştı. Bir sistem çalışmayı bıraktığında ölmez; değiştirilmeyi bıraktığında ölür, ve isteklere cevap verirken aylarca ölü kalabilir. Devir teslim dokümantasyon değildir: bir ekibin bir değişiklik yapıp güvenli olduğunu bilip bilemediğidir.</description>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/degistirebildiklerinde-bitti</guid>
+  </item>
+  <item>
+    <title>İkinci müşteri ne yaptığını söyler</title>
+    <link>https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler</link>
+    <description>Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip hangilerinin genelleşeceğini anlamanın yolunu vermiyor. İki müşterinin aynı özelliği istemesi sinyal değil. Ona aynı alttaki kısıtla varması sinyal, ve en güçlü kanıt istek bile değil: zaten elleriyle kurdukları geçici çözüm.</description>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler</guid>
+  </item>
+  <item>
+    <title>The second customer tells you what you actually built</title>
+    <link>https://ferhatatagun.com/blog/the-second-customer</link>
+    <description>Forward-deployed work inverts the SaaS shape — depth with one customer instead of breadth across many — which produces capabilities faster than product discovery does and no way to tell which ones generalise. Two customers asking for the same feature isn&apos;t the signal. Two customers arriving at it through the same underlying constraint is, and the strongest evidence isn&apos;t the request at all: it&apos;s the workaround they already built by hand.</description>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/the-second-customer</guid>
+  </item>
+  <item>
+    <title>You&apos;re not done when it works. You&apos;re done when they can change it.</title>
+    <link>https://ferhatatagun.com/blog/done-when-they-can-change-it</link>
+    <description>The deployment I think about most didn&apos;t fail — it passed UAT, went live, and six months later nobody had touched it once. A system doesn&apos;t die when it stops working; it dies when it stops being changed, and it can be dead for months while still answering requests. Handover isn&apos;t documentation: it&apos;s whether a team can make a change and know it was safe.</description>
+    <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/done-when-they-can-change-it</guid>
+  </item>
+  <item>
+    <title>“That library will hurt performance” is not a number</title>
+    <link>https://ferhatatagun.com/blog/that-library-will-hurt-performance</link>
+    <description>Every performance tool reports what a page costs right now. None of them answer the question the meeting is actually about, which is what it would cost without the thing you&apos;re arguing over — so the argument gets settled by whoever sounds most confident. A 410 KB image that loads after LCP is worth zero points; a 124 KB render-blocking script is worth eleven. Sorting by file size sends teams to fix the wrong thing.</description>
+    <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/that-library-will-hurt-performance</guid>
+  </item>
+  <item>
+    <title>“Performansı bozar” dediğin şey bir sayı değil</title>
+    <link>https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil</link>
+    <description>Bütün performans araçları sayfanın şu anki maliyetini raporluyor. Hiçbiri toplantının asıl konusu olan “o şey olmasa ne olurdu” sorusuna cevap vermiyor — ve karar, elinde sayı olmadığı için daha kendinden emin konuşana kalıyor. LCP’den sonra yüklenen 410 KB’lık bir görsel sıfır puan; 124 KB’lık render-blocking bir script on bir puan. Dosya boyutuna göre sıralamak ekipleri yanlış şeyi düzeltmeye gönderiyor.</description>
+    <pubDate>Sun, 30 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil</guid>
+  </item>
+  <item>
+    <title>Teslim ettiğin şey prompt değil. Eval.</title>
+    <link>https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval</link>
+    <description>Her saha rehberi inşa etmeden önce eval&apos;lerini tanımla diyor — ve müşteri sahasındaki üçüncü günde etiketli verin, alan uzmanlığın ve birinin ekranından aldığın beş örnekten başka bir şeyin yok. Tavsiye doğru, çerçeve yanlış. “Bu iyi mi?” ground truth ister. “Bu değişti mi?” sadece dondurulmuş bir snapshot ister, ve ona bu öğleden sonra sahip olabilirsin.</description>
+    <pubDate>Tue, 11 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval</guid>
+  </item>
   <item>
     <title>The deliverable isn&apos;t the prompt. It&apos;s the eval.</title>
     <link>https://ferhatatagun.com/blog/the-eval-is-the-deliverable</link>
@@ -15,11 +92,25 @@
     <guid isPermaLink="true">https://ferhatatagun.com/blog/the-eval-is-the-deliverable</guid>
   </item>
   <item>
+    <title>Kazara bir forward-deployed engineer saha çantası kurmuşum</title>
+    <link>https://ferhatatagun.com/blog/kazara-fde-saha-cantasi</link>
+    <description>Bir yıl önce bir SDK&apos;yı silip yerine 150 satır yazdım ve bunu bir bundler hikâyesi sandım. Meğer adını hiç koymadan bir deployment problemi çözüyormuşum. Beş aracın her mimari kararına geri dönüp baktığımda hepsinin altında aynı dile getirilmemiş kısıt vardı: kurulacak bir şey yok, sınırdan çıkan veri yok, savunulacak bağımlılık yok.</description>
+    <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/kazara-fde-saha-cantasi</guid>
+  </item>
+  <item>
     <title>I accidentally built a forward-deployed engineer&apos;s field kit</title>
     <link>https://ferhatatagun.com/blog/accidental-fde-field-kit</link>
     <description>I dropped the Anthropic SDK for 150 lines of TypeScript and called it a bundler problem. It wasn&apos;t. Browser-only, BYOK, no backend, minimal dependencies — the constraints I picked out of preference turn out to be the exact constraints of working inside someone else&apos;s regulated environment. What five tools look like when you finally name the rule you were following.</description>
     <pubDate>Mon, 10 Aug 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/accidental-fde-field-kit</guid>
+  </item>
+  <item>
+    <title>Kimsenin modeli patlamadı. Arayüz patladı.</title>
+    <link>https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi</link>
+    <description>Kurumsal AI pilotları %70–90 oranında başarısız olurken forward-deployed engineer ilanları %800 arttı. Kanonik başarı hikâyesi 6–8 haftalık entegrasyonun ardından dört aylık adoption çalışması, ve raporlanan kazanma koşulu %98 adoption — doğruluk değil. Adoption sayısı bir arayüz sayısıdır, ve rol ona göre kadrolanmıyor.</description>
+    <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi</guid>
   </item>
   <item>
     <title>Nobody&apos;s model failed. The interface did.</title>
@@ -139,6 +230,13 @@
     <description>Why I skipped the official Anthropic SDK for browser work, and the ~150 lines of TypeScript that replaced it: a hand-rolled SSE parser with tool-use support, clean aborts, and meaningful errors.</description>
     <pubDate>Wed, 03 Jun 2026 00:00:00 GMT</pubDate>
     <guid isPermaLink="true">https://ferhatatagun.com/blog/browser-only-claude-streaming</guid>
+  </item>
+  <item>
+    <title>Gerçekten işe yarayan kurallar ve komutlar</title>
+    <link>https://ferhatatagun.com/blog/ise-yarayan-kurallar-ve-komutlar</link>
+    <description>.cursorrules ve slash komutlarını unutulmuş değil faydalı hale getirmek: teoriden değil acıdan başla, listeyi kısa tut, gerçek kullanımdan iterasyon yap.</description>
+    <pubDate>Sat, 18 Jan 2025 00:00:00 GMT</pubDate>
+    <guid isPermaLink="true">https://ferhatatagun.com/blog/ise-yarayan-kurallar-ve-komutlar</guid>
   </item>
   <item>
     <title>Rules and Commands That Actually Stick</title>

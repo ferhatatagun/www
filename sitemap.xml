@@ -2,93 +2,203 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://ferhatatagun.com/</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/tools</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/resume</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/education</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/play</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/play/shell-quiz</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/feed.xml</loc>
-    <lastmod>2026-08-11</lastmod>
+    <lastmod>2026-09-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.4</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/search</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/your-context-window-bills-you-every-turn</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/your-context-window-bills-you-every-turn" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/baglam-her-turda-yeniden-faturalanir" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/baglam-her-turda-yeniden-faturalanir</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/your-context-window-bills-you-every-turn" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/baglam-her-turda-yeniden-faturalanir" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/the-failures-that-dont-throw</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-failures-that-dont-throw" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/patlamayan-hatalar" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/patlamayan-hatalar</loc>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-failures-that-dont-throw" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/patlamayan-hatalar" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi</loc>
+    <lastmod>2026-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/nobodys-model-failed" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/kazara-fde-saha-cantasi</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/accidental-fde-field-kit" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/kazara-fde-saha-cantasi" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval</loc>
+    <lastmod>2026-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-eval-is-the-deliverable" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/degistirebildiklerinde-bitti</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/done-when-they-can-change-it" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-second-customer" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/the-second-customer</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-second-customer" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/done-when-they-can-change-it</loc>
+    <lastmod>2026-08-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/done-when-they-can-change-it" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/that-library-will-hurt-performance</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/that-library-will-hurt-performance" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil" />
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/that-library-will-hurt-performance" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/performansi-bozar-dedigin-sayi-degil" />
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/the-eval-is-the-deliverable</loc>
     <lastmod>2026-08-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-eval-is-the-deliverable" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval" />
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/accidental-fde-field-kit</loc>
     <lastmod>2026-08-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/accidental-fde-field-kit" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/kazara-fde-saha-cantasi" />
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/nobodys-model-failed</loc>
     <lastmod>2026-08-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/nobodys-model-failed" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi" />
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/google-un-goremedigi-blog</loc>
@@ -143,10 +253,20 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ferhatatagun.com/blog/ise-yarayan-kurallar-ve-komutlar</loc>
+    <lastmod>2025-01-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/rules-and-commands-that-stick" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/ise-yarayan-kurallar-ve-komutlar" />
+  </url>
+  <url>
     <loc>https://ferhatatagun.com/blog/rules-and-commands-that-stick</loc>
     <lastmod>2025-01-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/rules-and-commands-that-stick" />
+    <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/ise-yarayan-kurallar-ve-komutlar" />
   </url>
   <url>
     <loc>https://ferhatatagun.com/blog/browser-only-claude-streaming</loc>
@@ -261,422 +381,434 @@
     <xhtml:link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/claude-agent-debug-trace-replay" />
   </url>
   <url>
+    <loc>https://ferhatatagun.com/projects/guard-lab</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://ferhatatagun.com/projects/perf-lab</loc>
+    <lastmod>2026-09-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://ferhatatagun.com/projects/context-lens</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/claudoscope</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/agent-replay</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/prompt-lab</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/tool-lab</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/portfolio</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/gatsby-to-nextjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/begin-react-native-github-api</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/remotion-demo</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/biome-portable</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/million-genApp</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/emmedable-widget-for-feedback</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/nextjs-pollsapi-apiary-app</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/expressjs-omdbapi</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/projects/WPFLogin</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/ai-llm-tools</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/utility</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/js</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/ts</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/mjml</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/reactjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/nextjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/gatsby</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/vuejs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/nuxtjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/vitejs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/react-native</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/millionjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/biome</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/expressjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/remotion</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/.Net</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/Xamarin</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/node</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/angular</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/html</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/css</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/sass</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/frontend-architecture</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/teamwork</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/team-leadership</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/team-management</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/spring</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/reactive-programming</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/service-worker</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/github-api</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/jenkins</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/fastapi</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/pools-api</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/omdb-api</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/graphql</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/supabase</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/svelte</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/pwa</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/remixjs</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/monorepo-microfrontend</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/figma</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/skills/hasura</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/open-source-ai-devtools</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-team-lead</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-developer</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-developer-netmera</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-team-lead-rnd</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-developer-rnd</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-developer-beavers-workshop</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/frontend-developer-netuce</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/jr-frontend-developer-literal-web-dizayn</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/it-responsible-sonmez-home-modern-mobilya</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/it-staff-saloon-mobilya</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ferhatatagun.com/experience/intern-platin-group</loc>
-    <lastmod>2026-08-18</lastmod>
+    <lastmod>2026-09-03</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>

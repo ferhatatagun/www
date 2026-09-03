@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="viewport"
+    content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#181818" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3f3f3" />
+
+  <!-- These meta tags are Apple-specific, and set the web application to run in full-screen mode with a black status bar. Learn more at https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Ferhat Atagün" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+  <!-- This tag is used by the ferhatataguncom CLI to identify template projects. Don't remove if you are using the CLI. -->
+  <meta name="pwa-starter" content="pwa-starter" />
+
+  <!-- Imports the manifest to represent the web application. A web app must have a manifest to be a PWA. -->
+  <!-- Resource hints. The font request is discovered inside CSS otherwise,
+       which serialises DNS → TLS → CSS → font. Warming the connection in the
+       document head overlaps that work with HTML parsing. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Inter was declared in the CSS variables but never actually loaded, so
+       every page rendered in the system fallback. Loaded here with
+       display=swap: text paints immediately in the fallback and upgrades
+       when Inter arrives, so there is no invisible-text pause. -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" />
+  </noscript>
+
+  <!-- Feed autodiscovery — the feed existed but nothing advertised it. -->
+  <link rel="alternate" type="application/rss+xml" title="Ferhat Atagün — Blog"
+    href="../blog/feed.xml" />
+
+  <link rel="manifest" href="../manifest.json" />
+  <link rel="icon" href="../favicon.ico" />
+
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="../imgs/favicons/favicon-16x16.png" sizes="16x16" />
+
+
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_landscape.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro_Max__iPhone_15_Plus__iPhone_14_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_15_Pro__iPhone_15__iPhone_14_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 428px) and (device-height: 926px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14_Plus__iPhone_13_Pro_Max__iPhone_12_Pro_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_14__iPhone_13_Pro__iPhone_13__iPhone_12_Pro__iPhone_12_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_13_mini__iPhone_12_mini__iPhone_11_Pro__iPhone_XS__iPhone_X_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11_Pro_Max__iPhone_XS_Max_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_11__iPhone_XR_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8_Plus__iPhone_7_Plus__iPhone_6s_Plus__iPhone_6_Plus_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/iPhone_8__iPhone_7__iPhone_6s__iPhone_6__4.7__iPhone_SE_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/4__iPhone_SE__iPod_touch_5th_generation_and_later_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1032px) and (device-height: 1376px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/13__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/12.9__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1210px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro_M4_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/11__iPad_Pro__10.5__iPad_Pro_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 820px) and (device-height: 1180px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.9__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.5__iPad_Air_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 810px) and (device-height: 1080px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/10.2__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/9.7__iPad_Pro__7.9__iPad_mini__9.7__iPad_Air__9.7__iPad_portrait.png">
+  <link rel="apple-touch-startup-image"
+    media="screen and (device-width: 744px) and (device-height: 1133px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+    href="../imgs/pwa/splash_screens/8.3__iPad_Mini_portrait.png">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-97071048-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-97071048-1');
+  </script>
+
+  
+		<link href="../_app/immutable/assets/0.80d188fc.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/4.69f00eb4.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Markdown.3910d759.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/MainTitle.b551cfee.css" rel="stylesheet">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.03ee050e.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.5aee7e86.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/singletons.4416d77a.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.c46315f7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.19746734.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/control.f5b05b5f.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.daf93cab.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.41c905a7.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.6acf3779.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.1bcf9862.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/each.014410ad.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/stores.48da32dd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index.2e0469d4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/home.ea5fbcfd.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/types.28c99ee3.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/skills.13fca4f9.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/UIcon.22427390.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/4.39d4c71b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/Markdown.1c9f212b.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/blog.9b5d05ca.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/CommonPage.8d6bc293.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/MainTitle.af3f1e68.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/TabTitle.766cdc70.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/helpers.a6227e46.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/schema.85c25587.js"><title>İkinci müşteri ne yaptığını söyler | Ferhat Atagün</title><!-- HEAD_svelte-rz38uo_START --><link rel="canonical" href="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler"><meta name="description" content="Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip…"><meta name="robots" content="index, follow"><meta property="og:type" content="article"><meta property="og:url" content="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler"><meta property="og:title" content="İkinci müşteri ne yaptığını söyler | Ferhat Atagün"><meta property="og:description" content="Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip…"><meta property="og:site_name" content="Ferhat Atagün"><meta property="og:image" content="https://ferhatatagun.com/og-cards/ikinci-musteri-ne-yaptigini-soyler.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="İkinci müşteri ne yaptığını söyler | Ferhat Atagün"><meta name="twitter:description" content="Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip…"><meta name="twitter:image" content="https://ferhatatagun.com/og-cards/ikinci-musteri-ne-yaptigini-soyler.png"><meta name="twitter:creator" content="@ferhatatagun"><meta property="article:published_time" content="2026-08-31"><meta property="article:modified_time" content="2026-08-31"><link rel="alternate" hreflang="en" href="https://ferhatatagun.com/blog/the-second-customer"><link rel="alternate" hreflang="tr" href="https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler"><link rel="alternate" hreflang="x-default" href="https://ferhatatagun.com/blog/the-second-customer"><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","@id":"https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler#article","headline":"İkinci müşteri ne yaptığını söyler","description":"Forward-deployed iş SaaS şeklini tersine çeviriyor — çok müşteriye genişlik yerine tek müşteriyle derinlik — ve bu, ürün keşfinden hızlı yetenek üretip hangilerinin genelleşeceğini anlamanın yolunu vermiyor. İki müşterinin aynı özelliği istemesi sinyal değil. Ona aynı alttaki kısıtla varması…","url":"https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler","image":{"@type":"ImageObject","url":"https://ferhatatagun.com/og-cards/ikinci-musteri-ne-yaptigini-soyler.png","width":1200,"height":630},"datePublished":"2026-08-31","dateModified":"2026-08-31","author":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"publisher":{"@type":"Person","@id":"https://ferhatatagun.com/#person","name":"Ferhat Atagün","url":"https://ferhatatagun.com"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler"},"inLanguage":"tr-TR","isPartOf":{"@id":"https://ferhatatagun.com/#website"},"keywords":"Forward Deployed Engineering, Enterprise AI, Product, Deployment, LLM","articleSection":"Forward Deployed Engineering","wordCount":1249}</script><!-- HTML_TAG_END --><!-- HTML_TAG_START --><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://ferhatatagun.com"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://ferhatatagun.com/blog"},{"@type":"ListItem","position":3,"name":"İkinci müşteri ne yaptığını söyler","item":"https://ferhatatagun.com/blog/ikinci-musteri-ne-yaptigini-soyler"}]}</script><!-- HTML_TAG_END --><!-- HEAD_svelte-rz38uo_END --><!-- HEAD_svelte-1tippc1_START --><!-- HEAD_svelte-1tippc1_END -->
+  <link rel="stylesheet" href="/uno.css">
+</head>
+
+<body data-sveltekit-preload-data="hover">
+  <div style="display: contents">  <div class="body contents theme-light svelte-i5ge0l"><a href="#main-content" class="skip-link svelte-i5ge0l" data-svelte-h="svelte-1wz5wva">Skip to content</a> <div class="nav-menu svelte-jdc7ud"><nav class="container flex flex-row items-center text-sm"><a href="/" class="nav-menu-left decoration-none w-auto md:w-150px lg:w-auto row flex flex-row items-center cursor-pointer px-4 text-[var(--secondary-text)] self-stretch hover:bg-[color:var(--main-hover)]"><div class="ai-logo-enhance ml-0 svelte-8e9xln" style="--logo-size: 20px; --box: 36px;"><div class="ai-logo-enhance__bg svelte-8e9xln"></div> <svg class="ai-logo-enhance__neural svelte-8e9xln" width="36" height="36" viewBox="0 0 36 36" aria-hidden="true"><defs><linearGradient id="grad-ai-logo-4vbbshb" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6366f1"></stop><stop offset="50%" stop-color="#8b5cf6"></stop><stop offset="100%" stop-color="#06b6d4"></stop></linearGradient><filter id="glow-ai-logo-4vbbshb"><feGaussianBlur stdDeviation="0.8" result="blur"></feGaussianBlur><feMerge><feMergeNode in="blur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><line x1="4" y1="18" x2="6" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="6" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="32" y1="18" x2="30" y2="18" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="30" cy="18" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="18" y1="4" x2="18" y2="6" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="6" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="18" y1="32" x2="18" y2="30" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="18" cy="30" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="6" y1="8" x2="11" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="30" y1="8" x2="25" y2="11" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="11" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="30" y1="28" x2="25" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="25" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle><line x1="6" y1="28" x2="11" y2="25" class="ai-logo-enhance__line svelte-8e9xln" stroke="url(#grad-ai-logo-4vbbshb)" filter="url(#glow-ai-logo-4vbbshb)" vector-effect="non-scaling-stroke"></line> <circle cx="11" cy="25" r="1.2" class="ai-logo-enhance__node svelte-8e9xln" filter="url(#glow-ai-logo-4vbbshb)"></circle></svg> <div class="ai-logo-enhance__hologram svelte-8e9xln" aria-hidden="true"></div> <div class="ai-logo-enhance__logo-wrap svelte-8e9xln"><img class="ai-logo-enhance__img svelte-8e9xln" src="/icons/fa-fav-icon.png" alt="Ferhat Atagün" width="20" height="20"></div> </div> <span class="ml-2 text-md font-bold hidden md:inline overflow-hidden whitespace-nowrap text-ellipsis">Ferhat Atagün</span></a> <div class="flex-1 block overflow-hidden md:hidden whitespace-nowrap text-ellipsis text-center">Ferhat Atagün</div> <div class="flex-row flex-1 self-center h-full justify-center hidden md:flex"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="nav-menu-item-label svelte-jdc7ud">Resume</span> </a></div> <div class="row h-full justify-center items-stretch m-l-auto md:m-l-0 w-auto md:w-150px gap-1 text-1.15em"><div class="row hidden md:flex"><a href="/search" class="text-inherit col-center self-stretch px-2 hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i></a> <button class="bg-transparent text-1em border-none cursor-pointer hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i></button></div> <div class="col-center md:hidden h-full hover:bg-[var(--main-hover)] cursor-pointer"> <div class="nav-bar-mobile-btn col-center  svelte-jdc7ud"></div></div></div></nav> <div class="nav-menu-mobile  md:hidden svelte-jdc7ud"><div class="flex-col flex-1 self-center h-full justify-center m-t-7"><a href="/blog" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-document text-1.3em"></i> <span class="">Blog</span> </a><a href="/skills" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-software-resource-cluster text-1.3em"></i> <span class="">Skills</span> </a><a href="/projects" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-cube text-1.3em"></i> <span class="">Projects</span> </a><a href="/experience" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-development text-1.3em"></i> <span class="">Experience</span> </a><a href="/education" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-education text-1.3em"></i> <span class="">Education</span> </a><a href="/resume" class="nav-menu-item !text-[var(--secondary-text)] gap-5 svelte-jdc7ud"><i class="i-carbon-result text-1.3em"></i> <span class="">Resume</span> </a></div> <div class="col gap-2 m-t-7"><a href="/search" class="text-inherit decoration-none px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)]"><i class="i-carbon-search "></i> <span data-svelte-h="svelte-iecwuy">Search</span></a> <button class="bg-transparent text-1em border-none cursor-pointer px-6 py-3 gap-2 row hover:bg-[color:var(--main-hover)] text-[var(--secondary-text)] px-2"><i class="i-carbon-sun "></i> <span data-svelte-h="svelte-17bcq4p">Light Theme</span></button></div></div> </div> <main id="main-content" class="content container svelte-i5ge0l" tabindex="-1">  <div class="flex-1 col gap-5 px-2 sm:px-4 md:px-6 py-4 sm:py-8 md:py-12"><h1 class="main-title font-[var(--title-f)] font-black tracking-[4px] text-center text-[2em] sm:text-[3em] md:text-[3.5em] lg:text-[4em]  svelte-1gnz0b5"><span class="main-title__name svelte-1gnz0b5">İkinci müşteri ne yaptığını söyler</span> </h1> <div class="col gap-5 flex-1"><article class="blog-article blog-article--ai col gap-6 svelte-c9jxdx"><header class="col gap-2"><div class="row flex-wrap items-center gap-3"><a href="/blog" class="blog-article__back text-[0.9em] decoration-none hover:underline svelte-c9jxdx" data-svelte-h="svelte-jqjagm">← Blog</a>   </div> <div class="row flex-wrap items-center gap-2 text-[var(--tertiary-text)] text-[0.9em] font-300"><time datetime="2026-08-31">31 Ağustos 2026</time> <span class="blog-meta-sep" aria-hidden="true" data-svelte-h="svelte-gjnx54">·</span> <span>7 min read</span></div> <div class="row flex-wrap gap-2"><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Forward Deployed Engineering </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Enterprise AI </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Product </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">Deployment </span><span class="text-[0.8em] px-2 py-0.5 rounded bg-[var(--main-hover)] text-[var(--secondary-text)]">LLM </span></div></header> <div class="blog-article-body svelte-c9jxdx"><div class="markdown-container"><!-- HTML_TAG_START --><p>Forward-deployed iş hakkında tekrarlanan, genelde Palantir&#39;in modeline atfedilen bir cümle var, ve yanlış tarafında kalana kadar slogan gibi duruyor: <strong>tek müşteri, çok yetenek</strong> — SaaS şekli olan çok müşteri, tek yeteneğin karşıtı olarak.</p>
+<p>SaaS şekli iyi anlaşılmış. Çok insanın ihtiyaç duyduğu tek bir şey bul, bir kez inşa et, tekrar tekrar sat, ve her ek müşteri sana neredeyse hiçbir şeye mal olmasın. Ürün yönetimi disiplininin tamamı o tek şeyi tespit etmek üzerine kurulu.</p>
+<p>Forward-deployed iş ters yönde çalışıyor. Tek bir organizasyona yerleşiyorsun ve o organizasyonun gerçekten ihtiyaç duyduğu her şeyi inşa ediyorsun — ki bu on bir şey çıkıyor, çoğunu bina dışından kimse ürün olarak tanımaz. Ve sonra biri, yazılım şirketi mi yoksa şirket kılığında bir danışmanlık mı olduğuna karar veren soruyu soruyor: <strong>bu on birden hangisi bir yetenek, hangisi bir daha asla satamayacağın ısmarlama iş?</strong></p>
+<p>Bunu iki yönden birinde yanlış yapmak öldürücü, ve iki hata birbirine hiç benzemiyor.</p>
+<p><strong>TL;DR</strong></p>
+<ul>
+<li>FDE işi SaaS şeklini tersine çeviriyor: çok müşteriye genişlik yerine tek müşteriyle derinlik. Bu, ürün keşfinden daha hızlı yetenek üretiyor ve hangilerinin genelleşeceğini anlamanın hiçbir yolunu vermiyor.</li>
+<li>Çok erken genelle, örneklem büyüklüğü bir olan bir duruma uydurulmuş konfigüre edilebilir bir soyutlama shiplersin. Değişen eksende ayarları vardır, değişmeyen ekseni hardcode eder.</li>
+<li>Hiç genelleme, her deployment ısmarlama olur. Marj gider, ikinci engagement birincisi kadar pahalıya patlar, ve gelirini &quot;platform&quot; altında dosyalayan bir danışmanlık olursun.</li>
+<li>İki müşterinin aynı özelliği istemesi sinyal değil. İki müşterinin ona <strong>aynı alttaki sebeple</strong> varması sinyal. Aynı istek, farklı sebepler; inşa ettiğin an ayrışacak bir tesadüf.</li>
+<li>En güvenilir kanıt istek değil. Geçici çözüm: kimse sormadan önce iki ekibin de elle kurmuş olduğu şey.</li>
+</ul>
+<h2 id="i̇ki-hata">İki hata</h2>
+<p><strong>Çok erken genellemek</strong>, mühendislerin yaptığı; çünkü soyutlama zanaatkârlık gibi hissettiriyor. Bir müşteri için bir problemi çözdün, şeklini görebiliyorsun, ve şekil yeniden kullanılabilir görünüyor. Böylece spesifikleri konfigürasyona çıkarıp genel versiyonu shipliyorsun.</p>
+<p>Tek bir deployment&#39;ın içinden göremediğin şey, hangi eksenin gerçekten değiştiği. Tek veri kaynağın vardı, o yüzden veri kaynağını takılabilir yaptın. Tek onay akışın vardı, o yüzden onay akışını hardcode bıraktın. İkinci müşteri aynı veri kaynağı ve tamamen farklı bir onay akışıyla geliyor, ve şimdi elinde hiçbir şeyin kımıldamadığı yönde esnek, her şeyin kımıldadığı yönde katı bir soyutlama var. İki müşteri de ısmarlama bir yapımdan daha kötü bir sistem alıyor, ve soyutlama artık taşıyıcı olduğu için kaldırmak bir proje.</p>
+<p><strong>Hiç genellememek</strong> daha sessiz ve canını yakması daha uzun sürüyor. Her engagement sıfırdan yapım. Her biri iyi gidiyor. Mühendisler çok iyileşiyor ve teslimat çok güvenilir oluyor, ve onuncu deployment&#39;ın maliyeti kabaca birincinin maliyeti kadar. Bu geçerli bir iş — sadece danışmanlık, ve genellikle ürünmüş gibi değerleniyor ve kadrolanıyor; dağıldığı yer de burası. Açık önce marj olarak, sonra işe alım olarak, sonra da şirketin ne sattığını kimseye açıklayamamak olarak görünüyor.</p>
+<p>İki hata da aynı eksik şeyden geliyor: bir yeteneğin ne zaman gerçek olduğuna dair bir test.</p>
+<h2 id="i̇stek-sinyal-değil">İstek sinyal değil</h2>
+<p>Sezgisel test tekrar. İki müşteri aynı özelliği istiyor, o zaman düzgün inşa et.</p>
+<p>Bunun tuttuğunu sanmıyorum, ve sebebi bu işin daha ilginç yarısı.</p>
+<p>İki organizasyon aynı şeyi tamamen ilgisiz sebeplerle isteyebilir. İkisi de CSV export istiyor: biri analistleri Excel&#39;de yaşadığı için, diğeri compliance ekibinin denetim izi için değiştirilemez bir çıktıya ihtiyacı olduğu için. Aynı istek, ticket&#39;ta aynı üç kelime. Genel versiyonu inşa et, birincinin canlı veri ve sütun sıralaması istediğini, ikincisinin ise checksum&#39;lı ve saklama politikalı dondurulmuş bir dosyaya ihtiyacı olduğunu keşfedeceksin. İkisini birden karşılayan özellik, adı ortak olan iki özellik.</p>
+<p>Genelleşmeyi asıl öngören şey isteğin yakınsaması değil. <em>Kısıtın</em> yakınsaması.</p>
+<p>Bu, <a href="https://ferhatatagun.com/blog/kazara-fde-saha-cantasi">iki yazı önce kendi araçlarım hakkında</a> yaptığım argümanın öbür ucundan hali. Beş şeyi kişisel tercih gibi hissettiren sebeplerle yalnızca-tarayıcı ve BYOK yaptım, ve sonradan fark ettim ki bunlar tam olarak başkasının regüle ortamında çalışmanın kısıtları — kurulacak bir şey yok, sınırı geçen veri yok, güvenlik ekibinin threat-model&#39;leyeceği bir şey yok. Bunu hiçbir yerden kopyalamamıştım. Aynı <em>şekle</em> sahip iki problem, ilgili insanlar hiç konuşmadan aynı mühendislik kararlarını üretiyor.</p>
+<p>Bu bağımsızlık bütün sinyal. İki müşteri aynı tasarıma, durumları yapısal bir kısıtı paylaştığı için varıyorsa — verinin geçemediği bir sınır, gerekçenin saklanmasını isteyen bir düzenleyici, sahibi izne çıkınca da ayakta kalması gereken bir workflow — ikisi için inşa ettiğin şey gerçekten tek bir şey. Aynı isteğe farklı kısıtlardan varıyorlarsa, bir isim çakışmasına bakıyorsun.</p>
+<p>Yani tekrar eden bir istek hakkında sorulacak soru <em>bunu kaç müşteri istiyor</em> değil. <strong>Onları isteten şey ne, ve aynı şey mi.</strong></p>
+<h2 id="i̇steğe-değil-geçici-çözüme-bak">İsteğe değil, geçici çözüme bak</h2>
+<p>Bulduğum en faydalı kanıt müşterilerin istediklerinde değil. Zaten elleriyle kurmuş olduklarında.</p>
+<p>Gerçek bir workflow yürüten her organizasyonda birikmiş bir manuel telafi katmanı var: birinin güncellediği bir spreadsheet, kuyruk işlevi gören bir Slack kanalı, her sabah dokuzda bir şeyi kontrol eden bir kişi. Bunlar var çünkü sistemde bir şey yapılması gereken bir işi yapmıyor, ve biri boşluğu kendi zamanıyla dolduracak kadar önemsedi.</p>
+<p>Aynı geçici çözümü bağımsız olarak kurmuş iki müşteri, sana aynı özelliği isteyen iki müşteriden çok daha güçlü bir şey söylüyor. Bir istek özlem olabilir, bir konferans konuşmasından sana geri okunuyor olabilir, ya da bir paydaşın tercihi olabilir. Geçici çözüm ise <em>bedeli ödenmiş</em>. Biri günde bir saatini harcıyor. Kimse &quot;olsa iyi olur&quot; için bunu sürdürmez.</p>
+<p>Ve geçici çözümler, alttaki kısıt hakkında isteklerin olmadığı şekilde okunabilir. Sabah kontrolü var çünkü süreç asenkron ve kimse gürültüyle patlayacağına güvenmiyor. Spreadsheet var çünkü sistemin iş modeli gerçeklikten bir alan eksik. Kısıt bu, ve müşteriler arasında karşılaştırabileceğin bir formda ifade edilmiş — kısıtları karşılaştırmak da özellik istek listesinin senin yerine yapamayacağı şey.</p>
+<h2 id="fde-sensördür-ve-sorun-raporlama-hattı">FDE sensördür, ve sorun raporlama hattı</h2>
+<p>Bu doğruysa, deployment&#39;a yerleşmiş kişi şirketin sahip olduğu en yüksek bant genişlikli ürün keşif aleti. Anket okumuyor. Geçici çözümün, sabah dokuzda, onu kuran kişi tarafından kullanılışını izliyor.</p>
+<p>Ki bu, hafife alındığını düşündüğüm yapısal bir soruyu doğuruyor: <strong>o kişinin öğrendiğini kim okuyor?</strong></p>
+<p>Çoğu düzende forward-deployed engineer teslimat üzerinden raporluyor. Teslimat ise bu deployment&#39;ı zamanında shiplemekle ölçülüyor. Üçüncü müşterinin, birinci müşteriyle aynı spreadsheet&#39;i bağımsız olarak yeniden kurduğu gözlemi bir teslimat çıktısı değil. Genelde onun için bir alan, indiği bir mecra, ve meşgul bir mühendisin yazması için bir teşvik yok.</p>
+<p>Böylece tek bir kişinin kafasında kalıyor — ki <a href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti">bir önceki yazının müşteri devir teslimi hakkında savunduğu gibi</a>, bu var olmamakla aynı şey. Hata modu birebir aynı, sadece içeriye dönük: bağlam bir bireyde birikiyor, organizasyona akıtılmıyor, ve o kişi gidince gidiyor. Bir şirket ürün yol haritasını, sahip olduğunu hiç fark etmeden bu şekilde kaybedebilir.</p>
+<p>Çözüm karmaşık değil, sadece kimsenin işi değil: yerleşik mühendislerin <em>istek</em> değil <em>kısıt</em> raporlaması için sürekli, düşük törenli bir yol. &quot;Müşteri export istiyor&quot; değil, &quot;bu yıl verisi sınırdan çıkamayan üçüncü müşteri, üçü de manuel bir extract kurmuş&quot;. Arka arkaya üç tane böylesi, kendi kendini vermiş bir ürün kararıdır.</p>
+<h2 id="serinin-aslında-konusu-neydi">Serinin aslında konusu neydi</h2>
+<p>Beş yazı, ve altındaki desen başlarken beklediğimden daha tutarlı.</p>
+<p>Pilotlar modelde değil arayüzde patlıyor. Hayatta kalan araçlar, dile getirilmiş kısıtı olanlar. Teslimat eval&#39;dir, çünkü eval başkasının o şeyi değiştirmesini sağlayan şey. Devir teslim, bir ekip bir değişiklik yapıp güvenli olduğunu bilebildiğinde işliyor. Ve yetenek, iki müşteri ona aynı kelimelerle değil aynı kısıtla vardığında genelleşiyor.</p>
+<p>Bunların her biri aynı iddianın farklı bir yerdeki hali: <strong>zor kısım devir, inşa değil.</strong> Modelden insana, prototipten workflow&#39;a, senden kalan ekibe, bir müşteriden diğerine. Model hiçbir zaman darboğaz değildi, ve her çeyrek daha az darboğaz oluyor.</p>
+<p>Ki bence rolün var olma sebebi bu, ve eskisinin sekiz katı sıklıkta işe alınmasının da — teknoloji zorlaştığı için değil, devir hiç kolaylaşmadığı için; ve pahalı kısmın hep o olduğu ortaya çıktığı için.</p>
+<hr>
+<p><em>Bu, kurumsal AI&#39;ın son kilometresi üzerine bir serinin beşinci ve son yazısı.
+Birinci: <a href="https://ferhatatagun.com/blog/kimsenin-modeli-patlamadi">Kimsenin modeli patlamadı. Arayüz patladı.</a> ·
+İkinci: <a href="https://ferhatatagun.com/blog/kazara-fde-saha-cantasi">Kazara bir forward-deployed engineer saha çantası kurmuşum</a> ·
+Üçüncü: <a href="https://ferhatatagun.com/blog/teslim-edilen-prompt-degil-eval">Teslim ettiğin şey prompt değil. Eval.</a> ·
+Dördüncü: <a href="https://ferhatatagun.com/blog/degistirebildiklerinde-bitti">Çalıştığında değil, onlar değiştirebildiğinde bitti.</a></em></p>
+<!-- HTML_TAG_END --></div></div> <section class="blog-share row flex-wrap gap-3 items-center pt-4" aria-label="Share"><span class="text-[var(--tertiary-text)] text-[0.9em]" data-svelte-h="svelte-alm80h">Share:</span> <a href="https://twitter.com/intent/tweet?text=%C4%B0kinci%20m%C3%BC%C5%9Fteri%20ne%20yapt%C4%B1%C4%9F%C4%B1n%C4%B1%20s%C3%B6yler%20%E2%80%94%20Ferhat%20Atag%C3%BCn&amp;url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fikinci-musteri-ne-yaptigini-soyler" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">Twitter</a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fferhatatagun.com%2Fblog%2Fikinci-musteri-ne-yaptigini-soyler" target="_blank" rel="noopener noreferrer" class="blog-share__link text-[0.9em] decoration-none svelte-c9jxdx">LinkedIn</a></section> <section class="blog-related pt-6 mt-6 svelte-c9jxdx" aria-label="Related posts"><h2 class="text-[0.95em] font-600 m-0 mb-3 text-[var(--tertiary-text)]" data-svelte-h="svelte-1khtvis">Related posts</h2> <ul class="list-none p-0 m-0 col gap-2"><li><a href="/blog/the-second-customer" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">The second customer tells you what you actually built</a> </li><li><a href="/blog/degistirebildiklerinde-bitti" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">Çalıştığında değil, onlar değiştirebildiğinde bitti</a> </li></ul></section> <nav class="blog-nav row flex-wrap gap-4 pt-6 mt-6 svelte-c9jxdx" aria-label="Post navigation"><a href="/blog/degistirebildiklerinde-bitti" class="blog-nav__link text-[0.9em] decoration-none hover:underline svelte-c9jxdx">← Çalıştığında değil, onlar değiştirebildiğinde bitti</a> <a href="/blog/the-second-customer" class="blog-nav__link text-[0.9em] decoration-none hover:underline ml-auto svelte-c9jxdx">The second customer tells you what you actually built →</a></nav></article></div></div></main>  <div class="lab-egg-wrap svelte-14icz1p"><span class="lab-egg-tooltip svelte-14icz1p" aria-hidden="true" data-svelte-h="svelte-1klkcyk">AI tools</span> <button type="button" class="lab-egg svelte-14icz1p" title="Open-source AI tools" aria-label="Open-source AI tools"><span class="lab-egg__icon-wrap svelte-14icz1p"><i class="i-carbon-machine-learning-model text-1.4em"></i></span></button></div>  <footer class="site-footer svelte-i5ge0l"><span>© 2026 Ferhat Atagün</span> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/resume" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-4wbowr">Resume</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/tools" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ddm7xp">Tools</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="/blog" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-1qy7yxj">Blog</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://dev.to/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10aaa95">dev.to</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://github.com/ferhatatagun" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-10m8qju">GitHub</a> <span class="site-footer__sep svelte-i5ge0l" data-svelte-h="svelte-in8ffz">·</span> <a href="https://svelte.dev" target="_blank" rel="noopener noreferrer" class="site-footer__link svelte-i5ge0l" data-svelte-h="svelte-ydleyt">Built with SvelteKit</a> <div class="site-footer__build svelte-i5ge0l"><span class="site-footer__build-prompt svelte-i5ge0l" data-svelte-h="svelte-1385f97">$</span> <a href="https://github.com/ferhatatagun/www/commit/951ab22" target="_blank" rel="noopener noreferrer" class="site-footer__build-sha svelte-i5ge0l" title="View this build on GitHub">build <span class="site-footer__build-hash svelte-i5ge0l">951ab22</span></a> <span class="site-footer__build-sep svelte-i5ge0l" data-svelte-h="svelte-1s5g6m8">·</span> <time datetime="2026-09-03">2026-09-03</time></div></footer> </div> 
+			
+			<script>
+				{
+					__sveltekit_1e91idb = {
+						base: new URL("..", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [{"type":"data","data":null,"uses":{}},null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.03ee050e.js"),
+						import("../_app/immutable/entry/app.daf93cab.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.onload = () => {
+        navigator.serviceWorker.register('/sw.js');
+      };
+    }
+  </script>
+</body>
+
+</html>
