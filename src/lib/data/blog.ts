@@ -37,6 +37,8 @@ import post22EnRaw from '$lib/md/blog/the-failures-that-dont-throw-en.md?raw';
 import postTr16Raw from '$lib/md/blog/patlamayan-hatalar.md?raw';
 import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
 import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
+import post23EnRaw from '$lib/md/blog/your-context-window-bills-you-every-turn-en.md?raw';
+import postTr17Raw from '$lib/md/blog/baglam-her-turda-yeniden-faturalanir.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -79,7 +81,8 @@ const contentMap: Record<string, string> = {
 	'degistirebildiklerinde-bitti': postTr13Raw,
 	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw,
 	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw,
-	'patlamayan-hatalar': postTr16Raw
+	'patlamayan-hatalar': postTr16Raw,
+	'baglam-her-turda-yeniden-faturalanir': postTr17Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -99,12 +102,29 @@ const contentMapEn: Record<string, string> = {
 	'that-library-will-hurt-performance': post19EnRaw,
 	'done-when-they-can-change-it': post20EnRaw,
 	'the-second-customer': post21EnRaw,
-	'the-failures-that-dont-throw': post22EnRaw
+	'the-failures-that-dont-throw': post22EnRaw,
+	'your-context-window-bills-you-every-turn': post23EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'your-context-window-bills-you-every-turn',
+		title: 'Your context window bills you every turn',
+		excerpt:
+			"Auto-compaction feels like losing your context, but the raw usage numbers from three real Claude Code sessions say the opposite: 1.99 billion tokens read from cache against 62 million written, a 32:1 ratio, and four compactions that each reset a bill that had been climbing since turn one. Compaction isn't the tax. It's the tax getting paid off.",
+		date: '2026-09-02',
+		tags: ['LLM', 'Claude', 'Developer Tools', 'Performance', 'Context', 'Observability']
+	},
+	{
+		slug: 'baglam-her-turda-yeniden-faturalanir',
+		title: 'Bağlam biriktirilmez, her turda yeniden faturalanır',
+		excerpt:
+			"Otomatik compaction bağlamı kaybetmek gibi hissettiriyor, ama üç gerçek Claude Code oturumundan çıkan ham usage verisi tam tersini söylüyor: cache'ten okunan 1,99 milyar token, cache'e yazılan 62 milyona karşı, 32:1 oran, ve her biri birinci turdan beri tırmanan faturayı sıfırlayan dört compaction. Compaction vergi değil. Verginin ödenme anı.",
+		date: '2026-09-02',
+		tags: ['LLM', 'Claude', 'Developer Tools', 'Performance', 'Context', 'Observability']
+	},
 	{
 		slug: 'the-failures-that-dont-throw',
 		title: "The failures that don't throw",
@@ -482,7 +502,8 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['done-when-they-can-change-it', 'degistirebildiklerinde-bitti'],
 	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler'],
 	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar'],
-	['the-failures-that-dont-throw', 'patlamayan-hatalar']
+	['the-failures-that-dont-throw', 'patlamayan-hatalar'],
+	['your-context-window-bills-you-every-turn', 'baglam-her-turda-yeniden-faturalanir']
 ];
 
 /**

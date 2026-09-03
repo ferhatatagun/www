@@ -60,7 +60,8 @@ function unquote(s) {
 		.replace(/^['"`]/, '')
 		.replace(/['"`]$/, '')
 		.replace(/\\'/g, "'")
-		.replace(/\\"/g, '"');
+		.replace(/\\"/g, '"')
+		.replace(/\\u([0-9a-fA-F]{4})/g, (_, hex) => String.fromCharCode(parseInt(hex, 16)));
 }
 function field(block, name) {
 	const re = new RegExp(`${name}:\\s*((['\"\`])(?:\\\\.|.)*?\\2)`, 's');
@@ -81,9 +82,28 @@ console.log(`Found ${posts.length} posts.`);
 
 /* --- Language detection (mirrors blog.ts logic) ----------------------- */
 
-const TR_SLUGS_RE = /^(yapay-zeka|mcp-model|cursor-ide|neden-bazen|bitmemis|best-practice|tarayicida|prompt-caching-kim|prompt-secimi|tek-bir-tool|claude-agent-debug|iki-hafta|prompt-shipping)/;
+// Ground truth: the TR side of every [en, tr] pair in translationPairs, plus
+// the handful of legacy TR-only posts that predate the EN/TR split.
+const TR_SLUGS = new Set([
+	'yapay-zeka-ve-yazilim-gelistirme-2024',
+	'mcp-model-context-protocol-nedir',
+	'cursor-ide-ve-prompt-muhendisligi',
+	'neden-bazen-sadece-bos-ekrana-bakiyorum',
+	'bitmemis-projeler-mezarligim',
+	'best-practice-dedigin-yarisi-ezber'
+]);
+{
+	const pairsMatch = src.match(/translationPairs[\s\S]*?=\s*\[([\s\S]*?)\];/);
+	if (pairsMatch) {
+		const pairRe = /\[\s*['"]([^'"]+)['"]\s*,\s*['"]([^'"]+)['"]\s*\]/g;
+		let m;
+		while ((m = pairRe.exec(pairsMatch[1]))) TR_SLUGS.add(m[2]);
+	}
+}
+// Fallback for anything not covered above (shouldn't normally trigger, but
+// a bare Turkish-char check is safer than defaulting silently to English).
 function langOf(slug, title) {
-	if (TR_SLUGS_RE.test(slug)) return 'tr';
+	if (TR_SLUGS.has(slug)) return 'tr';
 	if (/[şçğıöüŞÇĞİÖÜ]/.test(title)) return 'tr';
 	return 'en';
 }
