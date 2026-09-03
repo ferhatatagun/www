@@ -142,6 +142,7 @@
 				</p>
 				<p class="line line--spaced">
 					<span class="prompt">ferhat@atagun</span><span class="sep">:</span><span class="cwd">~/play</span><span class="sep">$ </span><button class="run-btn" on:click={start}>./shell-quiz start<span class="cursor">_</span></button>
+					<span class="hint">← click to begin</span>
 				</p>
 			{:else if phase === 'playing' && q}
 				<p class="line">
@@ -314,19 +315,28 @@
 	}
 
 	.run-btn {
-		background: none;
-		border: none;
+		display: inline-flex;
+		align-items: center;
 		font: inherit;
 		color: #a78bfa;
 		cursor: pointer;
-		padding: 0;
+		padding: 0.4rem 0.8rem;
+		border: 1px solid rgba(167, 139, 250, 0.35);
+		border-radius: 6px;
+		background: rgba(167, 139, 250, 0.08);
+		text-decoration: none;
+		transition: border-color 0.12s, background 0.12s, color 0.12s;
+	}
+	.run-btn:hover {
+		color: #c4b5fd;
+		border-color: #a78bfa;
+		background: rgba(167, 139, 250, 0.14);
 		text-decoration: none;
 	}
-	.run-btn:hover { color: #c4b5fd; text-decoration: underline; }
-	.run-btn--link { color: #38bdf8; }
-	.run-btn--link:hover { color: #7dd3fc; }
-	.run-btn--ghost { color: #71717a; margin-left: 1rem; }
-	.run-btn--ghost:hover { color: #d4d4d8; }
+	.run-btn--link { color: #38bdf8; border-color: rgba(56, 189, 248, 0.35); background: rgba(56, 189, 248, 0.08); }
+	.run-btn--link:hover { color: #7dd3fc; border-color: #38bdf8; background: rgba(56, 189, 248, 0.14); }
+	.run-btn--ghost { color: #71717a; margin-left: 1rem; border-color: #2a2a2e; background: transparent; }
+	.run-btn--ghost:hover { color: #d4d4d8; border-color: #52525b; background: rgba(255, 255, 255, 0.03); }
 	.hint { color: #71717a; font-size: 0.82rem; margin-left: 0.55rem; }
 
 	.progress {
