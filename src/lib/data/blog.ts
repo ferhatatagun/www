@@ -39,6 +39,8 @@ import post20EnRaw from '$lib/md/blog/done-when-they-can-change-it-en.md?raw';
 import post21EnRaw from '$lib/md/blog/the-second-customer-en.md?raw';
 import post23EnRaw from '$lib/md/blog/your-context-window-bills-you-every-turn-en.md?raw';
 import postTr17Raw from '$lib/md/blog/baglam-her-turda-yeniden-faturalanir.md?raw';
+import post24EnRaw from '$lib/md/blog/two-ai-vulnerabilities-that-never-throw-en.md?raw';
+import postTr18Raw from '$lib/md/blog/hic-exception-firlatmayan-iki-yapay-zeka-acigi.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -82,7 +84,8 @@ const contentMap: Record<string, string> = {
 	'ikinci-musteri-ne-yaptigini-soyler': postTr14Raw,
 	'ise-yarayan-kurallar-ve-komutlar': postTr15Raw,
 	'patlamayan-hatalar': postTr16Raw,
-	'baglam-her-turda-yeniden-faturalanir': postTr17Raw
+	'baglam-her-turda-yeniden-faturalanir': postTr17Raw,
+	'hic-exception-firlatmayan-iki-yapay-zeka-acigi': postTr18Raw
 };
 
 const contentMapEn: Record<string, string> = {
@@ -103,12 +106,29 @@ const contentMapEn: Record<string, string> = {
 	'done-when-they-can-change-it': post20EnRaw,
 	'the-second-customer': post21EnRaw,
 	'the-failures-that-dont-throw': post22EnRaw,
-	'your-context-window-bills-you-every-turn': post23EnRaw
+	'your-context-window-bills-you-every-turn': post23EnRaw,
+	'two-ai-vulnerabilities-that-never-throw': post24EnRaw
 };
 
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'two-ai-vulnerabilities-that-never-throw',
+		title: 'Two AI vulnerabilities that never throw an exception',
+		excerpt:
+			"An insurance claim auto-approves when it should escalate. An agent emails a customer's itinerary to an address nobody typed. Neither system logs an error. Schema drift (LLM05) and indirect prompt injection via tool results (LLM01) are different OWASP categories wearing the same shape: a syntactically valid response that is semantically wrong, invisible to every monitoring tool built around exceptions.",
+		date: '2026-09-08',
+		tags: ['LLM', 'Security', 'Prompt Injection', 'Guardrails', 'Agents', 'Claude']
+	},
+	{
+		slug: 'hic-exception-firlatmayan-iki-yapay-zeka-acigi',
+		title: 'Hiç exception fırlatmayan iki yapay zeka açığı',
+		excerpt:
+			"Bir sigorta talebi eskale edilmesi gerekirken otomatik onaylanıyor. Bir agent, kimsenin yazmadığı bir adrese müşterinin seyahat planını yolluyor. İki sistem de hata loglamıyor. Şema kayması (LLM05) ve tool sonuçları üzerinden dolaylı prompt injection (LLM01), aynı şeklin iki farklı OWASP kategorisi giymiş hali: sözdizimsel olarak geçerli ama anlamsal olarak yanlış bir yanıt, exception etrafında kurulu her monitoring'e görünmez.",
+		date: '2026-09-08',
+		tags: ['LLM', 'Security', 'Prompt Injection', 'Guardrails', 'Agents', 'Claude']
+	},
 	{
 		slug: 'your-context-window-bills-you-every-turn',
 		title: 'Your context window bills you every turn',
@@ -503,7 +523,8 @@ export const translationPairs: Array<[en: string, tr: string]> = [
 	['the-second-customer', 'ikinci-musteri-ne-yaptigini-soyler'],
 	['rules-and-commands-that-stick', 'ise-yarayan-kurallar-ve-komutlar'],
 	['the-failures-that-dont-throw', 'patlamayan-hatalar'],
-	['your-context-window-bills-you-every-turn', 'baglam-her-turda-yeniden-faturalanir']
+	['your-context-window-bills-you-every-turn', 'baglam-her-turda-yeniden-faturalanir'],
+	['two-ai-vulnerabilities-that-never-throw', 'hic-exception-firlatmayan-iki-yapay-zeka-acigi']
 ];
 
 /**

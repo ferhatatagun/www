@@ -70,6 +70,16 @@
 				title: 'Patlamayan hatalar',
 				slug: 'patlamayan-hatalar',
 				lang: 'TR'
+			},
+			{
+				title: 'Two AI vulnerabilities that never throw an exception',
+				slug: 'two-ai-vulnerabilities-that-never-throw',
+				lang: 'EN'
+			},
+			{
+				title: 'Hiç exception fırlatmayan iki yapay zeka açığı',
+				slug: 'hic-exception-firlatmayan-iki-yapay-zeka-acigi',
+				lang: 'TR'
 			}
 		],
 		'perf-lab': [
@@ -127,6 +137,16 @@
 			{
 				title: "Tek bir tool yazmadan önce sandbox'ı kur",
 				slug: 'tek-bir-tool-yazmadan-once-sandbox',
+				lang: 'TR'
+			},
+			{
+				title: 'Two AI vulnerabilities that never throw an exception',
+				slug: 'two-ai-vulnerabilities-that-never-throw',
+				lang: 'EN'
+			},
+			{
+				title: 'Hiç exception fırlatmayan iki yapay zeka açığı',
+				slug: 'hic-exception-firlatmayan-iki-yapay-zeka-acigi',
 				lang: 'TR'
 			}
 		],
