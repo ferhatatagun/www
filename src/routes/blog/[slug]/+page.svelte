@@ -308,4 +308,44 @@
 		margin-bottom: 1em;
 		padding-left: 1.5em;
 	}
+	.blog-article-body :global(.markdown-container table) {
+		display: block;
+		width: 100%;
+		margin: 1.75em 0;
+		border-collapse: collapse;
+		font-size: 0.92em;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+	.blog-article-body :global(.markdown-container thead) {
+		border-bottom: 2px solid var(--border-hover);
+	}
+	.blog-article-body :global(.markdown-container th) {
+		padding: 0.6em 1.25em 0.6em 0;
+		text-align: left;
+		font-weight: 600;
+		color: var(--main-text);
+		white-space: nowrap;
+	}
+	.blog-article-body :global(.markdown-container td) {
+		padding: 0.55em 1.25em 0.55em 0;
+		border-bottom: 1px solid var(--border);
+		color: var(--main-text);
+		white-space: nowrap;
+	}
+	.blog-article-body :global(.markdown-container td:first-child) {
+		font-weight: 500;
+	}
+	.blog-article-body :global(.markdown-container tbody tr:last-child td) {
+		border-bottom: none;
+	}
+	.blog-article-body :global(.markdown-container tbody tr:hover) {
+		background: var(--main-hover);
+	}
+	.blog-article-body :global(.markdown-container th[align='right']),
+	.blog-article-body :global(.markdown-container td[align='right']) {
+		text-align: right;
+		font-family: var(--mono-f);
+		font-variant-numeric: tabular-nums;
+	}
 </style>
