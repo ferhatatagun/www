@@ -41,6 +41,7 @@ import post23EnRaw from '$lib/md/blog/your-context-window-bills-you-every-turn-e
 import postTr17Raw from '$lib/md/blog/baglam-her-turda-yeniden-faturalanir.md?raw';
 import post24EnRaw from '$lib/md/blog/two-ai-vulnerabilities-that-never-throw-en.md?raw';
 import postTr18Raw from '$lib/md/blog/hic-exception-firlatmayan-iki-yapay-zeka-acigi.md?raw';
+import postTr19Raw from '$lib/md/blog/nominal-getiri-bir-yalandir.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -62,6 +63,7 @@ export interface BlogPost {
 }
 
 const contentMap: Record<string, string> = {
+	'nominal-getiri-bir-yalandir': postTr19Raw,
 	'yapay-zeka-ve-yazilim-gelistirme-2024': post1Raw,
 	'mcp-model-context-protocol-nedir': post2Raw,
 	'cursor-ide-ve-prompt-muhendisligi': post3Raw,
@@ -113,6 +115,14 @@ const contentMapEn: Record<string, string> = {
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'nominal-getiri-bir-yalandir',
+		title: 'Nominal getiri bir yalandır',
+		excerpt:
+			"2005'te mevduata koyduğunuz 100.000 TL bugün 3,8 milyon TL. Aynı dönemde TÜFE 35,8 katına çıktı, yani elinizdeki para 106.642 TL ediyor: yirmi bir yılda %6,6. TCMB'nin EVDS verisiyle altı yatırım aracının TÜFE'den arındırılmış reel getirisini hesapladım; korelasyon matrisinin özdeğerleri, üç araç tuttuğunuzda aslında 1,91 bahis oynadığınızı söylüyor. Bir de yarım günümü yiyen kendi hatam var.",
+		date: '2026-09-21',
+		tags: ['Finans', 'Veri', 'EVDS', 'TCMB', 'Python', 'Enflasyon']
+	},
 	{
 		slug: 'two-ai-vulnerabilities-that-never-throw',
 		title: 'Two AI vulnerabilities that never throw an exception',
