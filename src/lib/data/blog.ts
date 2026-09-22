@@ -42,6 +42,7 @@ import postTr17Raw from '$lib/md/blog/baglam-her-turda-yeniden-faturalanir.md?ra
 import post24EnRaw from '$lib/md/blog/two-ai-vulnerabilities-that-never-throw-en.md?raw';
 import postTr18Raw from '$lib/md/blog/hic-exception-firlatmayan-iki-yapay-zeka-acigi.md?raw';
 import postTr19Raw from '$lib/md/blog/nominal-getiri-bir-yalandir.md?raw';
+import postTr20Raw from '$lib/md/blog/bir-odeme-karari-skoru-122-puan-oynatti.md?raw';
 
 /**
  * Blog post metadata and optional raw markdown content.
@@ -63,6 +64,7 @@ export interface BlogPost {
 }
 
 const contentMap: Record<string, string> = {
+	'bir-odeme-karari-skoru-122-puan-oynatti': postTr20Raw,
 	'nominal-getiri-bir-yalandir': postTr19Raw,
 	'yapay-zeka-ve-yazilim-gelistirme-2024': post1Raw,
 	'mcp-model-context-protocol-nedir': post2Raw,
@@ -115,6 +117,14 @@ const contentMapEn: Record<string, string> = {
 export const title = 'Blog';
 
 export const items: BlogPost[] = [
+	{
+		slug: 'bir-odeme-karari-skoru-122-puan-oynatti',
+		title: 'Bir ödeme kararı skoru 122 puan oynattı',
+		excerpt:
+			"24 aylık bir kredi skoru simülasyonunda ilk oynanışta \"ekstrenin tamamını öde\" seçeneği skoru 1197'den 1319'a çıkardı: tek karardan +122 puan. FICO'nun kamuya açık ağırlıklarını Findeks'in 0-1900 ölçeğine taşıyan matematik doğruydu ama gerçekçi değildi. Deltaları yeniden kalibre ettim, aynı karar +44'e düştü, ve oyunun asıl öğretmesi gereken şey ortaya çıktı: tek seçim değil, süreklilik.",
+		date: '2026-09-22',
+		tags: ['Finans', 'Kredi Skoru', 'Findeks', 'FICO', 'Oyun Tasarımı', 'JavaScript']
+	},
 	{
 		slug: 'nominal-getiri-bir-yalandir',
 		title: 'Nominal getiri bir yalandır',
