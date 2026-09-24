@@ -123,7 +123,8 @@ export const items: BlogPost[] = [
 		excerpt:
 			"24 aylık bir kredi skoru simülasyonunda ilk oynanışta \"ekstrenin tamamını öde\" seçeneği skoru 1197'den 1319'a çıkardı: tek karardan +122 puan. FICO'nun kamuya açık ağırlıklarını Findeks'in 0-1900 ölçeğine taşıyan matematik doğruydu ama gerçekçi değildi. Deltaları yeniden kalibre ettim, aynı karar +44'e düştü, ve oyunun asıl öğretmesi gereken şey ortaya çıktı: tek seçim değil, süreklilik.",
 		date: '2026-09-22',
-		tags: ['Finans', 'Kredi Skoru', 'Findeks', 'FICO', 'Oyun Tasarımı', 'JavaScript']
+		tags: ['Finans', 'Kredi Skoru', 'Findeks', 'FICO', 'Oyun Tasarımı', 'JavaScript'],
+		sourceUrl: 'https://medium.com/@ferhatatagun/kredi-skorunu-tek-bir-karar-mı-belirliyor-33eb5c9f9d19'
 	},
 	{
 		slug: 'nominal-getiri-bir-yalandir',
@@ -514,7 +515,9 @@ export const devToMirrors: Record<string, string> = {
 	'accidental-fde-field-kit':
 		'https://dev.to/ferhatatagun/i-accidentally-built-a-forward-deployed-engineers-field-kit-khi',
 	'the-eval-is-the-deliverable':
-		'https://dev.to/ferhatatagun/the-deliverable-isnt-the-prompt-its-the-eval-35cp'
+		'https://dev.to/ferhatatagun/the-deliverable-isnt-the-prompt-its-the-eval-35cp',
+	'bir-odeme-karari-skoru-122-puan-oynatti':
+		'https://dev.to/ferhatatagun/skor24u-yazarken-skoru-bozan-bugi-otomatik-oynanisla-buldum-faa'
 };
 
 export function getDevToUrl(slug: string): string | undefined {
