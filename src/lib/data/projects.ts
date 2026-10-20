@@ -21,7 +21,7 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
-		screenshots: [{ label: 'Distribution', src: '/imgs/projects/guard-lab.webp', width: 1512, height: 930 }]
+		screenshots: [{ label: 'Distribution', src: '/imgs/projects/guard-lab.webp', width: 1600, height: 1000 }]
 	},
 	{
 		slug: 'perf-lab',
@@ -41,7 +41,7 @@ export const items: Array<Project> = [
 		},
 		skills: getSkills('frontend-architecture', 'nextjs', 'reactjs', 'ts'),
 		type: 'Developer Tool',
-		screenshots: [{ label: 'Simulation', src: '/imgs/projects/perf-lab.webp', width: 1512, height: 930 }]
+		screenshots: [{ label: 'Simulation', src: '/imgs/projects/perf-lab.webp', width: 1600, height: 1000 }]
 	},
 	{
 		slug: 'context-lens',
@@ -62,7 +62,7 @@ export const items: Array<Project> = [
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
 		screenshots: [
-			{ label: 'Preview', src: '/imgs/projects/context-lens.webp', width: 1200, height: 630 }
+			{ label: 'Preview', src: '/imgs/projects/context-lens.webp', width: 1600, height: 1000 }
 		]
 	},
 	{
@@ -84,7 +84,7 @@ export const items: Array<Project> = [
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
 		screenshots: [
-			{ label: 'X-Ray', src: '/imgs/projects/claudoscope.webp', width: 1512, height: 930 }
+			{ label: 'X-Ray', src: '/imgs/projects/claudoscope.webp', width: 1600, height: 1000 }
 		]
 	},
 	{
@@ -106,7 +106,7 @@ export const items: Array<Project> = [
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
 		screenshots: [
-			{ label: 'Timeline', src: '/imgs/projects/agent-replay.webp', width: 1512, height: 930 }
+			{ label: 'Timeline', src: '/imgs/projects/agent-replay.webp', width: 1600, height: 1000 }
 		]
 	},
 	{
@@ -128,7 +128,7 @@ export const items: Array<Project> = [
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
 		screenshots: [
-			{ label: 'Arena', src: '/imgs/projects/prompt-lab.webp', width: 1340, height: 1270 }
+			{ label: 'Arena', src: '/imgs/projects/prompt-lab.webp', width: 1600, height: 1000 }
 		]
 	},
 	{
@@ -150,7 +150,7 @@ export const items: Array<Project> = [
 		skills: getSkills('ai-llm-tools', 'nextjs', 'reactjs', 'ts'),
 		type: 'AI Developer Tool',
 		screenshots: [
-			{ label: 'Sandbox', src: '/imgs/projects/tool-lab.webp', width: 1440, height: 1180 }
+			{ label: 'Sandbox', src: '/imgs/projects/tool-lab.webp', width: 1600, height: 1000 }
 		]
 	},
 	{

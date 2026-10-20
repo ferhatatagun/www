@@ -10,11 +10,9 @@
 	const description =
 		'Seven open-source tools built for rooms where you can’t install anything and the data can’t leave — pre-flight a prompt, x-ray an API call, replay an agent trace, A/B test prompts, sandbox a tool-use loop, stress a JSON contract, and simulate a performance budget. Browser-only, no backend.';
 	const canonical = `${siteOrigin}/tools`;
-	/* The cards are served as WebP, but this stays PNG on purpose: it is the
-	   og:image, and some social scrapers still won't render WebP. It is the
-	   only reason claudoscope.png is kept in static/ — don't tidy it away as
-	   an orphan. */
-	const image = `${siteOrigin}/imgs/projects/claudoscope.png`;
+	/* PNG on purpose: it is the og:image, and some social scrapers still won't
+	   render WebP. It is a composed 1200x630 card, not a screenshot. */
+	const image = `${siteOrigin}/imgs/projects/tools-og.png`;
 
 	/** ItemList schema that links the tools as a connected suite, all
 	    authored by the canonical Person entity at /#person. Each tool's
@@ -49,6 +47,19 @@
 			}
 		]
 	};
+
+	/** `guard-lab.vercel.app` for the faux address bar; the tool name if there is no live URL. */
+	function hostOf(url: string | undefined, fallback: string): string {
+		try {
+			return url ? new URL(url).host : fallback;
+		} catch {
+			return fallback;
+		}
+	}
+
+	function kindOf(t: (typeof tools)[number]): string {
+		return t.type === 'AI Developer Tool' ? 'Claude API' : 'Web performance';
+	}
 
 	function linkTo(t: (typeof tools)[number], label: 'Live' | 'GitHub'): string | undefined {
 		return t.links.find((l) => l.label === label)?.to;
@@ -224,55 +235,58 @@
 
 	<div class="tools-grid mt-8">
 		{#each tools as t, i}
-			<article class="tool-card">
+			{@const live = linkTo(t, 'Live')}
+			{@const shot = t.screenshots?.[0]}
+			<article class="tool-card" style:--tool-color={t.color}>
 				<AICard>
-					<div class="col gap-4">
-						{#if t.screenshots && t.screenshots.length > 0}
+					<div class="tool-card__body">
+						{#if shot}
+							<!-- One shared 16:10 slot for every tool: the frame reserves the box before
+							     the image downloads (no layout shift) and keeps the grid aligned no
+							     matter what shape the source screenshot was.
+
+							     The first card is the LCP element on mobile (confirmed by a Lighthouse
+							     run against the live page), so it loads eagerly at high priority; the
+							     rest stay lazy. -->
 							<a
-								href={linkTo(t, 'Live') ?? '#'}
+								href={live ?? '#'}
 								target="_blank"
 								rel="noreferrer"
-								class="tool-shot decoration-none"
+								class="tool-frame"
+								aria-label={`Open ${t.name} live`}
 							>
-								<!-- Intrinsic size lets the browser reserve the slot before the
-								     screenshot downloads; without it each card jumps as images land.
-								     It has to be each image's *own* size — a single hardcoded pair
-								     reserves the wrong shape for anything with a different aspect
-								     ratio, which reintroduces the shift it was meant to prevent.
-
-								     The first card is the LCP element on mobile, confirmed by a
-								     Lighthouse run against the live page. Lazy-loading it defers
-								     the one image the score is measured on, so it loads eagerly
-								     and at high priority; the rest stay lazy. -->
-								<img
-									src={t.screenshots[0].src}
-									alt={`${t.name} screenshot`}
-									class="w-full rounded-lg border border-[var(--border)] block"
-									width={t.screenshots[0].width ?? 1512}
-									height={t.screenshots[0].height ?? 930}
-									loading={i === 0 ? 'eager' : 'lazy'}
-									decoding="async"
-									{...(i === 0 ? { fetchpriority: 'high' } : {})}
-								/>
+								<span class="tool-frame__bar" aria-hidden="true">
+									<span class="tool-frame__dots"><i></i><i></i><i></i></span>
+									<span class="tool-frame__url">{hostOf(live, t.name)}</span>
+								</span>
+								<span class="tool-frame__view">
+									<img
+										src={shot.src}
+										alt={`${t.name} screenshot`}
+										class="tool-frame__img"
+										width={shot.width ?? 1600}
+										height={shot.height ?? 1000}
+										loading={i === 0 ? 'eager' : 'lazy'}
+										decoding="async"
+										fetchpriority={i === 0 ? 'high' : 'auto'}
+									/>
+									<span class="tool-frame__cta" aria-hidden="true">Open live →</span>
+								</span>
 							</a>
 						{/if}
-						<div>
-							<h2 class="m-0 font-700 text-[1.45em] tool-name" style:color={t.color}>
-								{t.name}
-							</h2>
-							<p
-								class="text-[var(--secondary-text)] m-t-2 text-[0.95em] font-300 leading-relaxed"
-							>
-								{t.shortDescription}
-							</p>
+						<div class="tool-card__meta">
+							<h2 class="tool-name" style:color={t.color}>{t.name}</h2>
+							<span class="tool-kind">{kindOf(t)}</span>
 						</div>
-						<div class="row gap-2 flex-wrap">
+						<p class="tool-desc">{t.shortDescription}</p>
+						<div class="tool-actions">
 							{#each t.links as link}
 								<a
 									href={link.to}
 									target="_blank"
 									rel="noreferrer"
-									class="tool-link row-center gap-1 decoration-none px-3 py-1.5 rounded-lg border border-[var(--border)] text-[0.85em] text-[var(--secondary-text)] hover:border-[var(--accent-text)] hover:text-[var(--main-text)] transition-colors"
+									class="tool-link"
+									class:tool-link--primary={link.label === 'Live'}
 								>
 									{link.label} →
 								</a>
@@ -338,20 +352,195 @@
 		}
 	}
 
-	.tool-shot {
+	/* Cards stretch to the row's height so Live/GitHub always sit on one line. */
+	.tool-card {
+		display: flex;
+	}
+	.tool-card :global(.ai-card) {
+		flex: 1;
+		display: flex;
+		min-width: 0;
+	}
+	.tool-card :global(.ai-card__border) {
+		flex: 1;
+		display: flex;
+		min-width: 0;
+	}
+	.tool-card :global(.ai-card__inner) {
+		flex: 1;
+		min-width: 0;
+		padding: 1rem;
+	}
+	.tool-card__body {
+		display: flex;
+		flex-direction: column;
+		gap: 14px;
+		height: 100%;
+	}
+
+	/* Faux browser window. Screenshots are dark UI, so the frame stays dark in
+	   both themes and the page doesn't need two sets of images. */
+	.tool-frame {
 		display: block;
 		overflow: hidden;
-		border-radius: 8px;
-		transition: transform 0.3s ease;
+		border: 1px solid var(--border);
+		border-radius: 10px;
+		background: #0b0b10;
+		text-decoration: none;
+		box-shadow: 0 14px 32px -22px rgba(0, 0, 0, 0.7);
+		transition:
+			transform 0.3s ease,
+			border-color 0.3s ease,
+			box-shadow 0.3s ease;
 	}
-	.tool-shot:hover {
+	.tool-frame:hover,
+	.tool-frame:focus-visible {
 		transform: translateY(-2px);
+		border-color: color-mix(in srgb, var(--tool-color) 65%, var(--border));
+		box-shadow: 0 18px 38px -20px color-mix(in srgb, var(--tool-color) 55%, transparent);
 	}
-	.tool-shot img {
-		transition: filter 0.3s ease;
+	.tool-frame__bar {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+		padding: 8px 12px;
+		background: #14141b;
+		border-bottom: 1px solid rgba(255, 255, 255, 0.07);
 	}
-	.tool-shot:hover img {
-		filter: brightness(1.05);
+	.tool-frame__dots {
+		display: inline-flex;
+		gap: 6px;
+		flex-shrink: 0;
+	}
+	.tool-frame__dots i {
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background: #3a3a46;
+	}
+	.tool-frame:hover .tool-frame__dots i:nth-child(1) {
+		background: #ff5f57;
+	}
+	.tool-frame:hover .tool-frame__dots i:nth-child(2) {
+		background: #febc2e;
+	}
+	.tool-frame:hover .tool-frame__dots i:nth-child(3) {
+		background: #28c840;
+	}
+	.tool-frame__url {
+		flex: 1;
+		min-width: 0;
+		padding: 2px 10px;
+		border-radius: 6px;
+		background: rgba(255, 255, 255, 0.06);
+		color: #9a9aa8;
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.72em;
+		text-align: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	.tool-frame__view {
+		position: relative;
+		display: block;
+		aspect-ratio: 16 / 10;
+		overflow: hidden;
+	}
+	.tool-frame__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: top left;
+		transition: transform 0.5s ease;
+	}
+	.tool-frame:hover .tool-frame__img {
+		transform: scale(1.03);
+	}
+	.tool-frame__cta {
+		position: absolute;
+		right: 12px;
+		bottom: 12px;
+		padding: 5px 12px;
+		border-radius: 999px;
+		background: var(--tool-color);
+		color: #0b0b10;
+		font-size: 0.8em;
+		font-weight: 600;
+		opacity: 0;
+		transform: translateY(6px);
+		transition:
+			opacity 0.25s ease,
+			transform 0.25s ease;
+	}
+	.tool-frame:hover .tool-frame__cta,
+	.tool-frame:focus-visible .tool-frame__cta {
+		opacity: 1;
+		transform: none;
+	}
+
+	.tool-card__meta {
+		display: flex;
+		align-items: baseline;
+		justify-content: space-between;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	.tool-name {
+		margin: 0;
+		font-size: 1.45em;
+		font-weight: 700;
+	}
+	.tool-kind {
+		padding: 2px 9px;
+		border: 1px solid var(--border);
+		border-radius: 999px;
+		color: var(--tertiary-text);
+		font-family: ui-monospace, 'SF Mono', Monaco, monospace;
+		font-size: 0.72em;
+		letter-spacing: 0.02em;
+	}
+	.tool-desc {
+		flex: 1;
+		margin: 0;
+		color: var(--secondary-text);
+		font-size: 0.95em;
+		font-weight: 300;
+		line-height: 1.6;
+	}
+	.tool-actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+	.tool-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 4px;
+		padding: 6px 14px;
+		border: 1px solid var(--border);
+		border-radius: 8px;
+		color: var(--secondary-text);
+		font-size: 0.85em;
+		text-decoration: none;
+		transition:
+			border-color 0.2s ease,
+			color 0.2s ease,
+			background 0.2s ease;
+	}
+	.tool-link:hover {
+		border-color: var(--accent-text);
+		color: var(--main-text);
+	}
+	.tool-link--primary {
+		border-color: color-mix(in srgb, var(--tool-color) 55%, var(--border));
+		background: color-mix(in srgb, var(--tool-color) 14%, transparent);
+		color: var(--main-text);
+	}
+	.tool-link--primary:hover {
+		border-color: var(--tool-color);
+		background: color-mix(in srgb, var(--tool-color) 24%, transparent);
 	}
 
 	.writing-grid {
