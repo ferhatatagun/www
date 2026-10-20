@@ -26,3 +26,11 @@ declare const __BUILD_DATE__: string;
 // Prism language packs ship no type declarations. They're imported purely for
 // their side effect (registering a grammar), so an empty module is accurate.
 declare module 'prismjs/components/*';
+
+// Svelte 4's element typings predate `fetchpriority`; widen them so the LCP image
+// on /tools can carry it as a plain attribute.
+declare namespace svelteHTML {
+	interface HTMLAttributes<T> {
+		fetchpriority?: 'high' | 'low' | 'auto';
+	}
+}

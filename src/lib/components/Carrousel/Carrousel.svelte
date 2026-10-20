@@ -53,6 +53,9 @@
 
 <style lang="scss">
 	.carrousel-item {
+		/* Without this the flex row squeezes every item below its 180px slot, so
+		   the viewport (exactly one slot wide) shows a sliver of the next logo. */
+		flex: 0 0 auto;
 		transition: transform 0.25s ease, filter 0.25s ease;
 		cursor: default;
 
