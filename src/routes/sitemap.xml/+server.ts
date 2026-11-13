@@ -6,6 +6,8 @@ import { items as blogItems, latestPostDate, translationPairs } from '@data/blog
 
 const normalizePath = (path: string): string => {
 	const normalized = path.startsWith('/') ? path : `/${path}`;
+	// Static pages under /games/ are served as directories; keep the canonical trailing slash.
+	if (normalized.startsWith('/games/')) return normalized;
 	return normalized.replace(/\/+$/, '') || '/';
 };
 
@@ -39,6 +41,8 @@ export const GET: RequestHandler = async ({ url }) => {
 		{ path: '/projects', lastmod: buildDate, priority: '0.7', changefreq: 'monthly' },
 		{ path: '/skills', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/education', lastmod: buildDate, priority: '0.5', changefreq: 'yearly' },
+		{ path: '/games/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
+		{ path: '/games/studio/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/play', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/play/shell-quiz', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/blog/feed.xml', lastmod: newestPost, priority: '0.4', changefreq: 'daily' },
