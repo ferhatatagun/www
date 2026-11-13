@@ -1,0 +1,194 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Block Jam: Slide Puzzle for iPhone</title><meta name="description" content="Block Jam: Slide Puzzle is a free iPhone puzzle game. Slide colored blocks to the matching gate and clear the board before time runs out. Try a mini puzzle right here."><link rel="canonical" href="https://ferhatatagun.com/games/block-jam/"><meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:title" content="Block Jam: Slide Puzzle"><meta property="og:description" content="Slide colored blocks to the matching gate before time runs out. Free iPhone puzzle game."><meta property="og:url" content="https://ferhatatagun.com/games/block-jam/"><meta property="og:image" content="https://ferhatatagun.com/games/block-jam/img/icon.png"><style>
+:root{color-scheme:light dark;--bg:#fff;--fg:#1d1d1f;--mut:#5c5c63;--card:#f5f5f7;--bd:#e0e0e6;--ac:#0a58ca;--ac2:#e8f0fe}
+@media(prefers-color-scheme:dark){:root{--bg:#181818;--fg:#eee;--mut:#a0a0aa;--card:#222226;--bd:#33333a;--ac:#6cf;--ac2:#1d2a3a}}
+*{box-sizing:border-box}
+body{font:16px/1.6 -apple-system,system-ui,"Segoe UI",sans-serif;max-width:720px;margin:0 auto;padding:24px 16px;color:var(--fg);background:var(--bg)}
+a{color:var(--ac)}a:focus-visible,button:focus-visible{outline:2px solid var(--ac);outline-offset:2px;border-radius:2px}
+h1{font-size:1.9rem;line-height:1.2;margin:.1em 0 .2em}h2{font-size:1.2rem;margin:2em 0 .6em}
+.back{font-size:.95rem;text-decoration:none}.back:hover{text-decoration:underline}
+.lead{color:var(--mut);font-size:1.1rem;margin:0 0 .8em}
+.hero{display:flex;gap:16px;align-items:center;margin-top:16px}.hero img{width:96px;height:96px;border-radius:22px;flex:none;border:1px solid var(--bd)}
+.badge{display:inline-block;font-size:.78rem;font-weight:600;padding:2px 10px;border-radius:99px;background:var(--ac2);color:var(--ac);margin:0 6px 6px 0}
+.shots{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 12px;margin:0;list-style:none;-webkit-overflow-scrolling:touch}
+.shots li{flex:none;scroll-snap-align:start}.shots img{display:block;width:180px;height:auto;border-radius:18px;border:1px solid var(--bd)}
+ul.f{padding-left:1.2em}ul.f li{margin:.3em 0}
+.demo{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;text-align:center}
+.demo p{margin:.2em 0 .8em;color:var(--mut);font-size:.95rem}
+.stage{max-width:360px;margin:0 auto;padding:12px}
+.board{position:relative;width:100%;aspect-ratio:1;background:#161f6b;border-radius:10px;touch-action:none;user-select:none;-webkit-user-select:none}
+.cell{position:absolute;width:20%;height:20%;padding:3px;pointer-events:none}.cell::before{content:"";display:block;height:100%;background:#3646b4;border-radius:6px}
+.gate{position:absolute;background:var(--gc);border-radius:4px;pointer-events:none;box-shadow:0 0 0 2px #161f6b}
+.blk{position:absolute;padding:3px;cursor:grab;transition:left .1s,top .1s,transform .25s,opacity .25s}
+.blk::before{content:"";display:block;height:100%;border-radius:8px;background:var(--bc);box-shadow:inset 0 -4px 0 rgba(0,0,0,.2),inset 0 3px 0 rgba(255,255,255,.3)}
+.blk.drag{z-index:2;cursor:grabbing;transition:left .06s,top .06s}
+.blk.out{opacity:0;transform:translate(var(--ox),var(--oy)) scale(.5);pointer-events:none}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;max-width:360px;margin:0 auto .4em;font-size:.95rem}
+.bar span{color:var(--mut)}
+button{font:inherit;font-weight:600;color:var(--ac);background:var(--ac2);border:1px solid var(--bd);border-radius:99px;padding:6px 16px;cursor:pointer}
+button[hidden]{display:none}
+.msg{min-height:3.2em;margin-top:.6em;font-weight:600}
+.msg button{margin-left:8px}
+footer{margin-top:2.4em;padding-top:1em;border-top:1px solid var(--bd);color:var(--mut);font-size:.9rem}footer a{margin-right:14px}
+@media(prefers-reduced-motion:reduce){.blk,.blk.drag,.blk.out{transition:none}}
+</style></head><body>
+<a class="back" href="/games/">&larr; All games</a> &middot; <a class="back" href="https://ferhatatagun.com/">ferhatatagun.com</a>
+<header class="hero"><img src="/games/block-jam/img/icon.png" width="96" height="96" alt="Block Jam app icon"><div><h1>Block Jam</h1><p class="lead">Slide the blocks to their gates before time runs out.</p><div><span class="badge">iOS</span><span class="badge">Free</span><span class="badge">Contains ads</span><span class="badge">In TestFlight</span></div></div></header>
+<main>
+<h2>Screenshots</h2>
+<ul class="shots" aria-label="Screenshots, scroll sideways">
+<li><img src="/games/block-jam/img/1_home.jpg" width="600" height="1304" loading="lazy" alt="Block Jam home screen"></li>
+<li><img src="/games/block-jam/img/2_map.jpg" width="600" height="1304" loading="lazy" alt="Level map with a winding road of levels"></li>
+<li><img src="/games/block-jam/img/3_game.jpg" width="600" height="1304" loading="lazy" alt="A puzzle board with colored blocks and gates"></li>
+<li><img src="/games/block-jam/img/4_win.jpg" width="600" height="1304" loading="lazy" alt="Level complete screen"></li>
+<li><img src="/games/block-jam/img/5_shop.jpg" width="600" height="1304" loading="lazy" alt="Shop screen with boosters and coins"></li>
+</ul>
+<h2>What it is</h2>
+<p>Block Jam is an iPhone puzzle game. Slide colored blocks across the grid to the exit gate of the same color, and clear the board before the timer ends. It is coming to the App Store as &ldquo;Block Jam: Slide Puzzle&rdquo; and is in TestFlight now.</p>
+<h2>Try a mini puzzle</h2>
+<section class="demo" aria-label="Playable mini puzzle">
+<p>Drag a block. Push it into the gate of its own color to send it out. The gate must be at least as wide as the block.</p>
+<div class="bar"><span id="bjTitle">Puzzle 1 of 3</span><span>Moves: <b id="bjMoves">0</b></span><button type="button" id="bjReset">Reset</button></div>
+<div class="stage"><div class="board" id="bjBoard" role="group" aria-label="Sliding block puzzle board"></div></div>
+<div class="msg" id="bjMsg" role="status" aria-live="polite"></div>
+<noscript><p>Turn on JavaScript to play the mini puzzle.</p></noscript>
+</section>
+<p style="color:var(--mut);font-size:.95rem">The real game adds a timer, boosters and hundreds of levels.</p>
+<h2>Features</h2>
+<ul class="f">
+<li>Hundreds of levels on a road map</li>
+<li>Boosters: a hammer removes one block, a vacuum removes every block of one color, and extra time</li>
+<li>Crates and locked blocks from level 8</li>
+<li>Lives, coins and a daily reward</li>
+<li>A win-streak chest every 5 levels</li>
+<li>English and Turkish</li>
+<li>Free with ads, with one optional in-app purchase: Remove Ads</li>
+</ul>
+<h2>More</h2><div><a href="/games/block-jam/privacy/">Privacy Policy</a> &middot; <a href="/games/block-jam/support/">Support</a> &middot; <a href="/games/">All games</a></div>
+</main>
+<footer><a href="/games/block-jam/">Block Jam</a><a href="/games/block-jam/privacy/">Privacy</a><a href="/games/block-jam/support/">Support</a><a href="mailto:ferhatatagun2@gmail.com">ferhatatagun2@gmail.com</a></footer>
+<script>
+(function () {
+  // PUZZLES: block = color,row,col,height,width; gate = side,start,len,color (5x5 grid)
+  const B = (color, r, c, h, w) => ({ color, r, c, h, w });
+  const G = (side, start, len, color) => ({ side, start, len, color });
+  const PUZZLES = [
+    { gates: [G('right', 1, 2, 'red'), G('bottom', 0, 2, 'blue'), G('left', 3, 2, 'green')],
+      blocks: [B('red', 1, 0, 1, 2), B('blue', 2, 1, 1, 1), B('green', 3, 2, 2, 1)] },
+    { gates: [G('top', 1, 2, 'yellow'), G('right', 3, 2, 'purple'), G('bottom', 0, 1, 'orange')],
+      blocks: [B('yellow', 1, 1, 2, 2), B('purple', 3, 0, 1, 2), B('orange', 2, 3, 2, 1)] },
+    { gates: [G('left', 0, 2, 'red'), G('top', 3, 2, 'green'), G('right', 2, 1, 'blue'), G('bottom', 1, 2, 'yellow')],
+      blocks: [B('red', 1, 2, 2, 2), B('green', 0, 3, 1, 2), B('blue', 3, 1, 1, 1), B('yellow', 4, 3, 1, 2)] }
+  ]; //END
+  const N = 5;
+  const COLORS = { red: '#ff4757', green: '#2fd067', blue: '#3d8bff', yellow: '#ffc61a', purple: '#a254f2', orange: '#ff8a1f' };
+  const DIRS = { u: [-1, 0], d: [1, 0], l: [0, -1], r: [0, 1] };
+  const SIDES = { u: 'top', d: 'bottom', l: 'left', r: 'right' };
+  const board = document.getElementById('bjBoard'), msg = document.getElementById('bjMsg');
+  const movesEl = document.getElementById('bjMoves'), titleEl = document.getElementById('bjTitle');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  let idx = 0, moves = 0, blocks = [], gates = [];
+
+  function load(i) {
+    idx = i; moves = 0; board.textContent = ''; msg.textContent = '';
+    for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
+      const cell = document.createElement('div');
+      cell.className = 'cell'; cell.style.left = c * 20 + '%'; cell.style.top = r * 20 + '%';
+      board.append(cell);
+    }
+    gates = PUZZLES[i].gates;
+    gates.forEach(addGate);
+    blocks = PUZZLES[i].blocks.map(b => {
+      const o = { ...b, gone: false, el: document.createElement('div') };
+      o.el.className = 'blk'; o.el.style.setProperty('--bc', COLORS[b.color]);
+      o.el.style.width = b.w * 20 + '%'; o.el.style.height = b.h * 20 + '%';
+      place(o); enableDrag(o); board.append(o.el);
+      return o;
+    });
+    movesEl.textContent = '0';
+    titleEl.textContent = 'Puzzle ' + (i + 1) + ' of ' + PUZZLES.length;
+  }
+
+  function addGate(g) {
+    const el = document.createElement('div'), s = el.style, vert = g.side === 'top' || g.side === 'bottom';
+    el.className = 'gate'; s.setProperty('--gc', COLORS[g.color]);
+    if (vert) { s.left = g.start * 20 + 4 + '%'; s.width = g.len * 20 - 8 + '%'; s.height = '8px'; s[g.side] = '-4px'; }
+    else { s.top = g.start * 20 + 4 + '%'; s.height = g.len * 20 - 8 + '%'; s.width = '8px'; s[g.side] = '-4px'; }
+    board.append(el);
+  }
+
+  function place(b) { b.el.style.left = b.c * 20 + '%'; b.el.style.top = b.r * 20 + '%'; }
+
+  function isFree(b, r, c) {
+    return blocks.every(o => o === b || o.gone ||
+      r + b.h <= o.r || o.r + o.h <= r || c + b.w <= o.c || o.c + o.w <= c);
+  }
+
+  // A block touching the edge may leave through a gate of its color that is at least as wide.
+  function gateOpen(b, d) {
+    const vert = d === 'u' || d === 'd';
+    const from = vert ? b.c : b.r, len = vert ? b.w : b.h;
+    return gates.some(g => g.side === SIDES[d] && g.color === b.color && from >= g.start && from + len <= g.start + g.len);
+  }
+
+  function leave(b, d) {
+    b.gone = true;
+    const [dr, dc] = DIRS[d];
+    b.el.style.setProperty('--ox', dc * 60 + '%'); b.el.style.setProperty('--oy', dr * 60 + '%');
+    b.el.classList.add('out');
+    setTimeout(() => { b.el.remove(); checkWin(); }, reduced.matches ? 0 : 260);
+  }
+
+  // Returns true if the block moved one cell (or left the board).
+  function step(b, d) {
+    const r = b.r + DIRS[d][0], c = b.c + DIRS[d][1];
+    if (r < 0 || c < 0 || r + b.h > N || c + b.w > N) {
+      if (!gateOpen(b, d)) return false;
+      leave(b, d); return true;
+    }
+    if (!isFree(b, r, c)) return false;
+    b.r = r; b.c = c; place(b);
+    return true;
+  }
+
+  function enableDrag(b) {
+    let o = null;
+    b.el.addEventListener('pointerdown', e => {
+      if (b.gone || o) return;
+      e.preventDefault(); b.el.setPointerCapture(e.pointerId);
+      o = { x: e.clientX, y: e.clientY, r: b.r, c: b.c, u: board.clientWidth / N };
+      b.el.classList.add('drag');
+    });
+    b.el.addEventListener('pointermove', e => {
+      if (!o) return;
+      const tr = o.r + Math.round((e.clientY - o.y) / o.u), tc = o.c + Math.round((e.clientX - o.x) / o.u);
+      while (!b.gone && (b.r !== tr || b.c !== tc)) {
+        const dr = tr - b.r, dc = tc - b.c;
+        const v = dr < 0 ? 'u' : dr > 0 ? 'd' : null, h = dc < 0 ? 'l' : dc > 0 ? 'r' : null;
+        const order = Math.abs(dr) >= Math.abs(dc) ? [v, h] : [h, v];
+        if (!order.some(d => d && step(b, d))) break;
+      }
+      if (!o.counted && (b.gone || b.r !== o.r || b.c !== o.c)) { o.counted = true; movesEl.textContent = ++moves; }
+    });
+    const end = () => {
+      if (!o) return;
+      b.el.classList.remove('drag'); o = null;
+    };
+    b.el.addEventListener('pointerup', end);
+    b.el.addEventListener('pointercancel', end);
+  }
+
+  function checkWin() {
+    if (!blocks.every(b => b.gone)) return;
+    msg.textContent = 'Solved! ' + moves + (moves === 1 ? ' move. ' : ' moves. ');
+    const next = document.createElement('button');
+    next.type = 'button';
+    next.textContent = idx + 1 < PUZZLES.length ? 'Next puzzle' : 'Play again';
+    next.addEventListener('click', () => load((idx + 1) % PUZZLES.length));
+    msg.append(next);
+  }
+
+  document.getElementById('bjReset').addEventListener('click', () => load(idx));
+  load(0);
+})();
+</script>
+</body></html>
