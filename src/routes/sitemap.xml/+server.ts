@@ -45,6 +45,7 @@ export const GET: RequestHandler = async ({ url }) => {
 		{ path: '/games/block-jam/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/games/studio/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/games/tiny-fin/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
+		{ path: '/games/unsolve/', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/play', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/play/shell-quiz', lastmod: buildDate, priority: '0.6', changefreq: 'monthly' },
 		{ path: '/blog/feed.xml', lastmod: newestPost, priority: '0.4', changefreq: 'daily' },
